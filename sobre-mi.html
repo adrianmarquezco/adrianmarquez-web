@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre mí — Adrián Márquez Corral | Consultor Marketing Digital & IA</title>
+<meta name="description" content="Adrián Márquez Corral: consultor de marketing digital, automatización con IA y estrategia de negocio con sede en Galicia y servicio en toda España. Más de 4 años de experiencia en empresas de servicios.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adrianmarquez.es/sobre-mi.html">
+<meta property="og:title" content="Sobre mí — Adrián Márquez Corral">
+<meta property="og:description" content="Consultor de marketing digital con más de 4 años de experiencia. Perfil híbrido entre estrategia de negocio y ejecución técnica.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "description": "Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en España. Más de 4 años de experiencia liderando proyectos digitales completos.",
+    "url": "https://adrianmarquez.es",
+    "email": "adrymarquez96@gmail.com",
+    "telephone": "+34630780358",
+    "sameAs": ["https://www.linkedin.com/in/adrian-marquez-corral/"],
+    "knowsAbout": ["Marketing Digital","SEO","GEO","Automatización","n8n","Inteligencia Artificial","Google Ads","Meta Ads","Consultoría de negocio","Formación empresarial","CRM","Desarrollo web"],
+    "areaServed": "España",
+    "address": {"@type": "PostalAddress","addressRegion": "Galicia","addressCountry": "ES"}
+  }
+}
+</script>
+<style>
+.about-hero { display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;padding:2rem 5rem 5rem; }
+.about-photo { position:relative; }
+.about-photo-frame { aspect-ratio:3/4;background:var(--bg3);border:1px solid var(--border);overflow:hidden;display:flex;align-items:center;justify-content:center; }
+.about-photo-frame img { width:100%;height:100%;object-fit:cover; }
+.about-photo-initials { font-family:'Playfair Display',serif;font-size:8rem;font-weight:900;color:rgba(201,168,76,0.08); }
+.about-photo-deco { position:absolute;bottom:-1.5rem;right:-1.5rem;width:80px;height:80px;border:1px solid rgba(201,168,76,0.3); }
+.about-content { }
+.about-quote { font-family:'Playfair Display',serif;font-size:1.6rem;font-style:italic;font-weight:400;color:var(--gold-light);line-height:1.4;margin-bottom:2rem;padding-left:1.5rem;border-left:2px solid var(--gold); }
+.skills-section { background:var(--bg2);padding:5rem; }
+.skills-grid { display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);margin-top:3rem; }
+.skill-group { background:var(--bg3);padding:2rem; }
+.skill-group-title { font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--border); }
+.skill-list { list-style:none;display:flex;flex-direction:column;gap:0.5rem; }
+.skill-list li { font-size:0.82rem;color:rgba(240,237,232,0.75);padding-left:1rem;position:relative; }
+.skill-list li::before { content:'→';position:absolute;left:0;color:var(--gold-dim);font-size:0.75rem; }
+.experience-section { background:var(--bg);padding:5rem; }
+.exp-grid { display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:var(--border);margin-top:3rem; }
+.exp-item { background:var(--bg3);padding:2rem;border:none; }
+.exp-period { font-size:0.68rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.5rem; }
+.exp-title { font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.3rem; }
+.exp-company { font-size:0.82rem;color:var(--gold);margin-bottom:0.8rem; }
+.exp-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted); }
+.langs-section { background:var(--bg2);padding:5rem; }
+.lang-bar-wrap { display:flex;flex-direction:column;gap:1.2rem;margin-top:2rem;max-width:500px; }
+.lang-item { }
+.lang-label { display:flex;justify-content:space-between;margin-bottom:0.4rem; }
+.lang-name { font-size:0.85rem;color:var(--text); }
+.lang-level { font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted); }
+.lang-bar { height:2px;background:rgba(201,168,76,0.15);position:relative; }
+.lang-fill { height:100%;background:var(--gold);transition:width 1s ease; }
+@media(max-width:900px){
+  .about-hero{grid-template-columns:1fr;padding:1rem 1.5rem 3rem;gap:3rem;}
+  .skills-grid{grid-template-columns:1fr 1fr;}
+  .exp-grid{grid-template-columns:1fr;}
+  .skills-section,.experience-section,.langs-section{padding:4rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="index.html" class="nav-logo">AM.</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="sobre-mi.html" class="active">Sobre mí</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Hablemos</a>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Inicio</a> › <span>Sobre mí</span></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Quién soy</div>
+  <h1>Adrián <em>Márquez</em></h1>
+  <p class="page-hero-desc">Consultor de marketing digital, automatización con IA y estrategia de negocio. Gallego, con servicio en toda España. Más de 4 años convirtiendo retos digitales en resultados medibles para empresas de servicios.</p>
+  <div class="page-hero-line"></div>
+</div>
+
+<div class="about-hero">
+  <div class="about-photo fade-up">
+    <div class="about-photo-frame" id="aboutImgWrap">
+      <div class="about-photo-initials">AM</div>
+    </div>
+    <div class="about-photo-deco"></div>
+    <div style="margin-top:3rem;display:flex;flex-direction:column;gap:0.8rem;">
+      <a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:0.5rem;border:1px solid var(--border);padding:0.8rem 1rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='var(--border)'">→ LinkedIn</a>
+      <a href="https://wa.me/34630780358" target="_blank" style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:0.5rem;border:1px solid var(--border);padding:0.8rem 1rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='var(--border)'">→ WhatsApp: 630 780 358</a>
+      <a href="mailto:adrymarquez96@gmail.com" style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;display:flex;align-items:center;gap:0.5rem;border:1px solid var(--border);padding:0.8rem 1rem;transition:border-color 0.3s;" onmouseover="this.style.borderColor='rgba(201,168,76,0.5)'" onmouseout="this.style.borderColor='var(--border)'">→ adrymarquez96@gmail.com</a>
+    </div>
+  </div>
+  <div class="about-content fade-up">
+    <blockquote class="about-quote">"No soy un especialista. Soy el profesional que ve el cuadro completo y sabe ejecutarlo."</blockquote>
+    <div class="prose">
+      <p>Soy Adrián Márquez, nacido en Galicia y con más de cuatro años trabajando en marketing digital, automatización e inteligencia artificial para empresas de servicios. Mi perfil es híbrido por necesidad y por convicción: combino la visión estratégica de negocio con la capacidad técnica de implementación.</p>
+      <p>Lo que me diferencia no es una especialidad concreta, sino la capacidad de entregar soluciones completas. Puedo diseñar la estrategia, montar las campañas, implementar las automatizaciones, optimizar el SEO y formar al equipo. Todo bajo el mismo criterio: resultados medibles, no actividad por actividad.</p>
+      <h2>El origen del perfil</h2>
+      <p>Mi formación y trayectoria me llevaron a trabajar en una correduría de seguros en expansión, donde gestioné en solitario el marketing, la comunicación digital, las herramientas tecnológicas, la integración de nuevas oficinas y la formación del equipo. Esa experiencia forjó un perfil que pocas empresas encuentran: alguien que sabe tanto de estrategia como de ejecución técnica, y que entiende cómo el marketing digital conecta con el negocio real.</p>
+      <p>Actualmente desarrollo mi actividad profesional propia bajo la marca <strong style="color:var(--gold)">Nodens</strong>, mi consultora especializada en automatización, IA y marketing para empresas de servicios, con especial foco en el sector asegurador y los servicios profesionales.</p>
+      <h2>Mi filosofía de trabajo</h2>
+      <p>Trabajo con un número limitado de clientes para poder dedicar atención real a cada proyecto. No prometo milagros ni resultados imposibles. Doy diagnósticos honestos, planes realistas y ejecución comprometida. Si algo no va a funcionar, lo digo antes de empezar.</p>
+      <p>La transparencia en la comunicación y el reporting es innegociable. Sabrás en todo momento qué se está haciendo, por qué y qué resultados está generando.</p>
+    </div>
+  </div>
+</div>
+
+<div class="skills-section">
+  <div class="section-label">Stack & Herramientas</div>
+  <h2 class="section-title">Conocimientos y <em>herramientas</em></h2>
+  <div class="skills-grid">
+    <div class="skill-group fade-up">
+      <div class="skill-group-title">Publicidad Digital</div>
+      <ul class="skill-list">
+        <li>Google Ads (Search, Display, PMax)</li>
+        <li>Meta Ads (Facebook & Instagram)</li>
+        <li>Google Tag Manager</li>
+        <li>Analytics 4 avanzado</li>
+        <li>Configuración de conversiones</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-up">
+      <div class="skill-group-title">SEO & Contenido</div>
+      <ul class="skill-list">
+        <li>SEO técnico y on-page</li>
+        <li>GEO para motores de IA</li>
+        <li>Schema markup avanzado</li>
+        <li>Email marketing</li>
+        <li>Copywriting y contenido</li>
+        <li>Google Search Console</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-up">
+      <div class="skill-group-title">Automatización & IA</div>
+      <ul class="skill-list">
+        <li>n8n (experto)</li>
+        <li>IA Generativa (GPT, Claude)</li>
+        <li>Chatbots con IA</li>
+        <li>WhatsApp Business API</li>
+        <li>Flujos de captación de leads</li>
+        <li>Integraciones API</li>
+      </ul>
+    </div>
+    <div class="skill-group fade-up">
+      <div class="skill-group-title">Web & Tecnología</div>
+      <ul class="skill-list">
+        <li>WordPress / WooCommerce</li>
+        <li>HTML / CSS</li>
+        <li>CRM avanzado</li>
+        <li>Gestión de VPS / servidores</li>
+        <li>Cloudflare / DNS</li>
+        <li>Canva & diseño gráfico</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="experience-section">
+  <div class="section-label">Experiencia</div>
+  <h2 class="section-title">Trayectoria <em>profesional</em></h2>
+  <div class="exp-grid">
+    <div class="exp-item fade-up">
+      <div class="exp-period">2022 — Actualidad</div>
+      <div class="exp-title">Director de Marketing, Comunicación y Operaciones</div>
+      <div class="exp-company">Cascudo Correduría de Seguros</div>
+      <p class="exp-desc">Liderazgo integral del marketing y comunicación digital de una correduría en expansión. Gestión de Google Ads, Meta Ads, SEO, email marketing, CRM, branding, desarrollo web, automatizaciones e integración tecnológica de nuevas oficinas. Formación del equipo en herramientas digitales.</p>
+    </div>
+    <div class="exp-item fade-up">
+      <div class="exp-period">2024 — Actualidad</div>
+      <div class="exp-title">Fundador & Consultor</div>
+      <div class="exp-company">Nodens Consulting</div>
+      <p class="exp-desc">Consultoría especializada en automatización, IA y marketing digital para empresas de servicios. Proyectos de presencia digital local, automatización con n8n e IA, estrategia de contenido y formación empresarial para clientes en toda España.</p>
+    </div>
+    <div class="exp-item fade-up">
+      <div class="exp-period">Proyectos freelance</div>
+      <div class="exp-title">Consultor Digital Independiente</div>
+      <div class="exp-company">Varios clientes · España</div>
+      <p class="exp-desc">Proyectos de marketing digital, SEO, WooCommerce, presencia digital local (Google Business Profile, redes sociales, directorios), automatizaciones con n8n y estrategia de contenido para pymes y autónomos en Galicia y el resto de España.</p>
+    </div>
+    <div class="exp-item fade-up">
+      <div class="exp-period">Formación continua</div>
+      <div class="exp-title">Especialización autodidacta</div>
+      <div class="exp-company">Marketing Digital, IA & Automatización</div>
+      <p class="exp-desc">Formación continua en las áreas de mayor evolución: inteligencia artificial generativa, GEO (Generative Engine Optimization), automatización avanzada con n8n, publicidad digital y estrategia de negocio digital.</p>
+    </div>
+  </div>
+</div>
+
+<div class="langs-section">
+  <div class="section-label">Idiomas</div>
+  <h2 class="section-title">Comunicación <em>sin barreras</em></h2>
+  <div class="lang-bar-wrap">
+    <div class="lang-item fade-up">
+      <div class="lang-label"><span class="lang-name">Español</span><span class="lang-level">Nativo</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+    </div>
+    <div class="lang-item fade-up">
+      <div class="lang-label"><span class="lang-name">Gallego</span><span class="lang-level">Nativo</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+    </div>
+    <div class="lang-item fade-up">
+      <div class="lang-label"><span class="lang-name">Portugués</span><span class="lang-level">Avanzado</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:75%"></div></div>
+    </div>
+    <div class="lang-item fade-up">
+      <div class="lang-label"><span class="lang-name">Inglés</span><span class="lang-level">Intermedio</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:55%"></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <h2>¿Trabajamos <em>juntos</em>?</h2>
+    <p>Primera consulta gratuita para valorar tu proyecto y ver si hay encaje.</p>
+  </div>
+  <div class="cta-strip-actions">
+    <a href="contacto.html" class="btn-primary">Contactar ahora</a>
+    <a href="servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO & GEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="index.html">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a><a href="mailto:adrymarquez96@gmail.com">Email</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
