@@ -49,10 +49,10 @@
 .hero-title { font-family:'Playfair Display',serif;font-size:clamp(1rem,2vw,1.3rem);font-style:italic;color:var(--text-muted);margin-bottom:2.5rem; }
 .hero-desc { font-size:0.92rem;line-height:1.85;color:rgba(240,237,232,0.7);max-width:440px;margin-bottom:3rem; }
 .hero-ctas { display:flex;gap:1rem;flex-wrap:wrap; }
-.hero-right { position:relative;overflow:hidden; }
-.hero-img-wrap { width:100%;height:100%;position:relative;overflow:hidden; }
-.hero-img-wrap img { width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(15%) contrast(1.05); }
-.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 25%),linear-gradient(to top,var(--bg) 0%,transparent 30%); }
+.hero-right { position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center; }
+.hero-img-wrap { width:72%;position:relative;overflow:hidden; }
+.hero-img-wrap img { width:100%;height:auto;display:block;filter:none; }
+.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(8,8,8,0) 25%),linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 30%); }
 .hero-placeholder { width:100%;height:100%;background:linear-gradient(135deg,#161616 0%,#1a1a1a 50%,#111 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem; }
 .hero-placeholder-initials { font-family:'Playfair Display',serif;font-size:7rem;font-weight:900;color:rgba(201,168,76,0.1);line-height:1; }
 .hero-placeholder-note { font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted); }
@@ -118,7 +118,7 @@
     <li><a href="/" class="active">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
     <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
-    <li><a href="proyectos.html">Proyectos</a></li><li><a href="blog/">Blog</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
   <a href="contacto.html" class="nav-cta">Hablemos</a>
@@ -128,7 +128,7 @@
 <section class="hero" aria-label="Presentación de Adrián Márquez">
   <div class="hero-left">
     <div class="hero-eyebrow">Disponible para proyectos · España</div>
-    <h1 class="hero-name">Adrián<br><em>Márquez</em></h1>
+    <h1 class="hero-name">Adrián <em>Márquez</em> — Consultor de <em>Marketing Digital</em> e IA en España</h1>
     <p class="hero-title">Consultor de Marketing Digital, Automatización e IA</p>
     <p class="hero-desc">Construyo estrategias digitales que generan resultados reales para empresas de servicios. Marketing, automatización con inteligencia artificial, SEO/GEO y formación especializada, todo integrado bajo una visión de negocio clara.</p>
     <div class="hero-ctas">
@@ -138,14 +138,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap" id="heroImgWrap">
-      <div class="hero-placeholder" id="heroPH">
-        <div class="hero-placeholder-initials">AM</div>
-        <p class="hero-placeholder-note">Foto de portada</p>
-        <label style="cursor:pointer;margin-top:0.5rem;">
-          <span style="font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.4);padding:0.5rem 1.2rem;display:inline-block;">Subir foto</span>
-          <input type="file" accept="image/*" id="photoInput" style="display:none">
-        </label>
-      </div>
+      <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez" style="width:100%;height:auto;display:block;filter:none;">
     </div>
     <div class="hero-img-overlay"></div>
     <div class="hero-deco"></div>
