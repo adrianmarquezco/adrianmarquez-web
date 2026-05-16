@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Marketing Digital, IA y Automatización | Adrián Márquez</title>
+<meta name="description" content="Artículos prácticos sobre marketing digital, automatización con IA, SEO, Google Ads y estrategia de negocio para empresas de servicios en España. Actualizado cada semana.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Adrián Márquez Corral">
+<link rel="canonical" href="https://adrianmarquez.es/blog/">
+<meta property="og:title" content="Blog — Marketing Digital, IA y Automatización | Adrián Márquez">
+<meta property="og:description" content="Artículos prácticos sobre marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en España.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adrianmarquez.es/blog/">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de Adrián Márquez",
+  "description": "Artículos sobre marketing digital, automatización con IA, SEO/GEO y estrategia de negocio para empresas de servicios en España",
+  "url": "https://adrianmarquez.es/blog/",
+  "author": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es"
+  },
+  "inLanguage": "es-ES"
+}
+</script>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="/" class="nav-logo">AM.</a>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/sobre-mi.html">Sobre mí</a></li>
+    <li><a href="/servicios.html">Servicios</a></li>
+    <li><a href="/proyectos.html">Proyectos</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <a href="/contacto.html" class="nav-cta">Hablemos</a>
+</nav>
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <span>Blog</span></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Blog</div>
+  <h1>Ideas que <em>mueven negocios</em></h1>
+  <p class="page-hero-desc">Artículos prácticos sobre marketing digital, automatización con IA, SEO y estrategia de negocio. Sin teoría vacía — solo lo que funciona para empresas de servicios en España.</p>
+  <div class="page-hero-line"></div>
+</div>
+
+<section style="background:var(--bg);padding:3rem 5rem 5rem;">
+  <div id="blog-filters" class="projects-filter" style="margin-bottom:2rem;">
+    <button class="filter-btn active" onclick="filterArticles('all', this)">Todos</button>
+    <button class="filter-btn" onclick="filterArticles('Automatización', this)">Automatización</button>
+    <button class="filter-btn" onclick="filterArticles('Marketing Digital', this)">Marketing Digital</button>
+    <button class="filter-btn" onclick="filterArticles('SEO', this)">SEO & GEO</button>
+    <button class="filter-btn" onclick="filterArticles('IA', this)">Inteligencia Artificial</button>
+    <button class="filter-btn" onclick="filterArticles('Productividad', this)">Productividad</button>
+  </div>
+
+  <div id="blog-grid" class="blog-index-grid">
+    <div class="blog-empty">
+      <p>Cargando artículos...</p>
+    </div>
+  </div>
+
+  <div id="blog-pagination" style="display:flex;justify-content:center;gap:1rem;margin-top:3rem;"></div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <h2>¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
+    <p>Primera consulta gratuita, sin compromiso.</p>
+  </div>
+  <div class="cta-strip-actions">
+    <a href="/contacto.html" class="btn-primary">Hablemos</a>
+    <a href="/servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="/servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="/servicios/seo-geo.html">SEO & GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="/servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="/servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="/sobre-mi.html">Sobre mí</a></li><li><a href="/proyectos.html">Proyectos</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a><a href="mailto:adrymarquez96@gmail.com">Email</a></div></div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  let allArticles = [];
+  let currentFilter = 'all';
+  const ARTICLES_PER_PAGE = 9;
+  let currentPage = 1;
+
+  // Cargar artículos desde index.json
+  fetch('/blog/index.json')
+    .then(r => r.json())
+    .then(data => {
+      allArticles = data;
+      renderArticles();
+    })
+    .catch(() => {
+      document.getElementById('blog-grid').innerHTML = `
+        <div class="blog-empty">
+          <p>Próximamente — los primeros artículos se publicarán en breve.</p>
+        </div>`;
+    });
+
+  function filterArticles(category, btn) {
+    currentFilter = category;
+    currentPage = 1;
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderArticles();
+  }
+
+  function renderArticles() {
+    const filtered = currentFilter === 'all'
+      ? allArticles
+      : allArticles.filter(a => a.category && a.category.includes(currentFilter));
+
+    const start = (currentPage - 1) * ARTICLES_PER_PAGE;
+    const paginated = filtered.slice(start, start + ARTICLES_PER_PAGE);
+
+    const grid = document.getElementById('blog-grid');
+
+    if (paginated.length === 0) {
+      grid.innerHTML = `<div class="blog-empty"><p>No hay artículos en esta categoría todavía.</p></div>`;
+      document.getElementById('blog-pagination').innerHTML = '';
+      return;
+    }
+
+    grid.innerHTML = paginated.map(article => `
+      <a href="/blog/${article.slug}.html" class="blog-card fade-up">
+        ${article.imageUrl ? `<div style="height:180px;overflow:hidden;margin:-2rem -2rem 1.5rem;"><img src="${article.imageUrl}" alt="${article.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>` : ''}
+        <div class="blog-card-cat">${article.category || 'Marketing Digital'}</div>
+        <h2 class="blog-card-title">${article.title}</h2>
+        <p class="blog-card-excerpt">${article.excerpt || ''}</p>
+        <div class="blog-card-meta">
+          <span>${article.dateStr || article.date}</span>
+          <span class="blog-card-link">${article.readingTime || '8 min'} →</span>
+        </div>
+      </a>
+    `).join('');
+
+    // Reiniciar observer para fade-up
+    document.querySelectorAll('.fade-up').forEach(el => {
+      observer.observe(el);
+    });
+
+    // Paginación
+    const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
+    const pagination = document.getElementById('blog-pagination');
+    if (totalPages <= 1) {
+      pagination.innerHTML = '';
+      return;
+    }
+    pagination.innerHTML = Array.from({length: totalPages}, (_, i) => i + 1).map(p => `
+      <button onclick="goToPage(${p})" class="filter-btn ${p === currentPage ? 'active' : ''}">${p}</button>
+    `).join('');
+  }
+
+  function goToPage(page) {
+    currentPage = page;
+    renderArticles();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+</script>
+</body>
+</html>
