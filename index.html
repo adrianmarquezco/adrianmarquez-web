@@ -52,7 +52,7 @@
 .hero-right { position:relative;overflow:hidden;display:flex;align-items:flex-end;justify-content:center; }
 .hero-img-wrap { width:72%;position:relative;overflow:hidden; }
 .hero-img-wrap img { width:100%;height:auto;display:block;filter:none; }
-.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,transparent 25%),linear-gradient(to top,var(--bg) 0%,transparent 30%); }
+.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(8,8,8,0) 25%),linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 30%); }
 .hero-placeholder { width:100%;height:100%;background:linear-gradient(135deg,#161616 0%,#1a1a1a 50%,#111 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem; }
 .hero-placeholder-initials { font-family:'Playfair Display',serif;font-size:7rem;font-weight:900;color:rgba(201,168,76,0.1);line-height:1; }
 .hero-placeholder-note { font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted); }
@@ -112,9 +112,9 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <nav>
-  <a href="index.html" class="nav-logo">AM.</a>
+  <a href="/" class="nav-logo">AM.</a>
   <ul class="nav-links">
-    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="/" class="active">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
     <li><a href="servicios.html">Servicios</a></li>
     <li><a href="proyectos.html">Proyectos</a></li>
@@ -137,7 +137,7 @@
   </div>
   <div class="hero-right">
     <div class="hero-img-wrap" id="heroImgWrap">
-      <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez" style="width:100%;height:100%;object-fit:contain;object-position:center bottom;filter:none;">
+      <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez" style="width:100%;height:auto;display:block;filter:none;">
     </div>
     <div class="hero-img-overlay"></div>
     <div class="hero-deco"></div>
@@ -309,7 +309,7 @@
     <div>
       <div class="footer-col-title">Navegación</div>
       <ul class="footer-col-links">
-        <li><a href="index.html">Inicio</a></li>
+        <li><a href="/">Inicio</a></li>
         <li><a href="sobre-mi.html">Sobre mí</a></li>
         <li><a href="proyectos.html">Proyectos</a></li>
         <li><a href="contacto.html">Contacto</a></li>

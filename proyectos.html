@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos y Casos de Éxito — Adrián Márquez | Marketing Digital & IA</title>
+<meta name="description" content="Proyectos reales de marketing digital, automatización con IA y estrategia de negocio. Casos de éxito en corredurías de seguros, negocios locales y empresas de servicios en España.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adrianmarquez.es/proyectos.html">
+<meta property="og:title" content="Proyectos — Adrián Márquez | Marketing Digital & IA">
+<meta property="og:description" content="Casos de éxito reales en marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en España.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adrianmarquez.es/proyectos.html">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Proyectos de Adrián Márquez",
+  "description": "Portfolio de proyectos de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en España",
+  "url": "https://adrianmarquez.es/proyectos.html",
+  "author": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Puedo ver más detalles de los proyectos?","acceptedAnswer":{"@type":"Answer","text":"Sí, puedes contactarme directamente para solicitar más información sobre cualquier proyecto. En algunos casos puedo compartir métricas detalladas bajo acuerdo de confidencialidad."}},
+    {"@type":"Question","name":"¿Trabajas con empresas pequeñas o solo con grandes empresas?","acceptedAnswer":{"@type":"Answer","text":"Trabajo con empresas de todos los tamaños, desde autónomos y microempresas hasta empresas medianas. Lo importante no es el tamaño sino tener objetivos claros y compromiso con el proceso."}}
+  ]
+}
+</script>
+<style>
+.projects-filter { display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0; }
+.filter-btn { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1px solid var(--border);color:var(--text-muted);background:none;cursor:pointer;transition:all 0.3s; }
+.filter-btn.active, .filter-btn:hover { border-color:var(--gold);color:var(--gold); }
+.projects-grid-full { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border); }
+.project-card-full { background:var(--bg);padding:2.5rem;position:relative;overflow:hidden;transition:background 0.3s; }
+.project-card-full:hover { background:var(--bg3); }
+.project-card-full::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
+.project-card-full:hover::before { height:100%; }
+.project-cat { font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem; }
+.project-num { font-family:'Playfair Display',serif;font-size:0.75rem;color:rgba(201,168,76,0.3);margin-bottom:1rem; }
+.project-title { font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;line-height:1.2; }
+.project-desc { font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem; }
+.project-results { background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.1);padding:1rem;margin-bottom:1.5rem; }
+.project-results-title { font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.6rem; }
+.project-result-item { font-size:0.82rem;color:rgba(240,237,232,0.8);display:flex;gap:0.5rem;margin-bottom:0.3rem; }
+.project-result-item::before { content:'↑';color:var(--gold);flex-shrink:0; }
+.project-tags { display:flex;flex-wrap:wrap;gap:0.4rem; }
+.project-tag { font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;background:rgba(201,168,76,0.06);color:var(--gold-dim);border:1px solid rgba(201,168,76,0.12); }
+.project-card-featured { grid-column:span 2;background:var(--bg3); }
+.featured-inner { display:grid;grid-template-columns:1fr 1fr;gap:3rem;height:100%; }
+.featured-label { font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem; }
+.featured-label::before { content:'★';font-size:0.6rem; }
+@media(max-width:900px){
+  .projects-grid-full{grid-template-columns:1fr;}
+  .project-card-featured{grid-column:span 1;}
+  .featured-inner{grid-template-columns:1fr;gap:1.5rem;}
+  section{padding:4rem 1.5rem;}
+}
+</style>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="/" class="nav-logo">AM.</a>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="sobre-mi.html">Sobre mí</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="proyectos.html" class="active">Proyectos</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+  </ul>
+  <a href="contacto.html" class="nav-cta">Hablemos</a>
+</nav>
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <span>Proyectos</span></div>
+
+<div class="page-hero">
+  <div class="page-hero-label">Portfolio</div>
+  <h1>Lo que he <em>construido</em></h1>
+  <p class="page-hero-desc">Proyectos reales con resultados reales. Marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en España.</p>
+  <div class="page-hero-line"></div>
+</div>
+
+<section style="background:var(--bg);padding:3rem 5rem 5rem;">
+  <div class="projects-grid-full">
+
+    <!-- PROYECTO DESTACADO -->
+    <div class="project-card-full project-card-featured fade-up">
+      <div class="featured-inner">
+        <div>
+          <div class="featured-label">Proyecto destacado</div>
+          <div class="project-cat">Correduría de seguros · Marketing integral</div>
+          <h2 class="project-title">Cascudo Correduría de Seguros</h2>
+          <p class="project-desc">Dirección integral de marketing y comunicación digital de una correduría en expansión en Galicia. Estrategia omnicanal, automatizaciones con n8n e IA, gestión tecnológica, integración de nuevas oficinas y formación del equipo. Más de 4 años de trabajo continuo construyendo la presencia digital de la empresa desde cero.</p>
+        </div>
+        <div>
+          <div class="project-results">
+            <div class="project-results-title">Resultados principales</div>
+            <div class="project-result-item">Presencia digital construida desde cero</div>
+            <div class="project-result-item">Campañas de Google Ads y Meta Ads activas</div>
+            <div class="project-result-item">CRM implementado y operativo</div>
+            <div class="project-result-item">Flujos de automatización con n8n activos</div>
+            <div class="project-result-item">Equipo formado en herramientas digitales</div>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Marketing</span>
+            <span class="project-tag">Google Ads</span>
+            <span class="project-tag">Meta Ads</span>
+            <span class="project-tag">n8n</span>
+            <span class="project-tag">CRM</span>
+            <span class="project-tag">Branding</span>
+            <span class="project-tag">Formación</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">02</div>
+      <div class="project-cat">Automatización · IA</div>
+      <h2 class="project-title">Sistema de Captación Automatizada de Leads</h2>
+      <p class="project-desc">Diseño e implementación de un flujo completo de captación y cualificación de leads con n8n e IA. El sistema captura leads desde web y WhatsApp, los cualifica automáticamente con IA, notifica al comercial y hace seguimiento por email sin intervención humana.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">Tiempo de respuesta: de horas a segundos</div>
+        <div class="project-result-item">0 leads perdidos por falta de seguimiento</div>
+        <div class="project-result-item">-70% tiempo del equipo comercial en tareas manuales</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">IA</span><span class="project-tag">WhatsApp API</span><span class="project-tag">CRM</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">03</div>
+      <div class="project-cat">Presencia digital local · SEO</div>
+      <h2 class="project-title">Digitalización de Negocio Local — Val Miñor</h2>
+      <p class="project-desc">Creación de presencia digital completa para un negocio local en la comarca del Val Miñor: Google Business Profile, web en WordPress con WooCommerce, redes sociales y estrategia de contenido orgánico. De cero presencia online a aparecer en los primeros resultados locales.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">Top 3 en búsquedas locales del sector</div>
+        <div class="project-result-item">+340% visibilidad en Google Maps</div>
+        <div class="project-result-item">Primera venta online en 3 semanas</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">SEO local</span><span class="project-tag">WordPress</span><span class="project-tag">WooCommerce</span><span class="project-tag">GBP</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">04</div>
+      <div class="project-cat">Automatización · Redes sociales</div>
+      <h2 class="project-title">La Comarca en Juego</h2>
+      <p class="project-desc">Proyecto de comunicación deportiva local automatizado al 100%. El sistema recoge resultados y clasificaciones de las ligas locales gallegas, genera las imágenes con la plantilla de marca usando IA y las publica automáticamente en Instagram sin intervención humana.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">Publicaciones automáticas 3 veces por semana</div>
+        <div class="project-result-item">0 horas de trabajo manual semanal</div>
+        <div class="project-result-item">Crecimiento orgánico sostenido en Instagram</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">n8n</span><span class="project-tag">IA</span><span class="project-tag">Instagram</span><span class="project-tag">Automatización</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">05</div>
+      <div class="project-cat">Formación · IA empresarial</div>
+      <h2 class="project-title">Formación en IA para Equipos Comerciales</h2>
+      <p class="project-desc">Taller práctico de un día completo para el equipo comercial de una empresa de servicios profesionales en Galicia. Uso de IA generativa para redacción de propuestas, seguimiento de clientes y preparación de reuniones. Contenido adaptado al sector y casos de uso reales del equipo.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">12 comerciales formados en un día</div>
+        <div class="project-result-item">Adopción inmediata de herramientas IA</div>
+        <div class="project-result-item">-40% tiempo en redacción de propuestas</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">Formación</span><span class="project-tag">IA</span><span class="project-tag">Equipos</span><span class="project-tag">Comercial</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">06</div>
+      <div class="project-cat">Marca · Consultoría</div>
+      <h2 class="project-title">Nodens — Consultoría de Automatización & IA</h2>
+      <p class="project-desc">Desarrollo completo de la marca y posicionamiento de mi propia consultora especializada en automatización, IA y marketing para empresas de servicios. Desde la identidad visual hasta la estrategia de contenido y captación de clientes.</p>
+      <div class="project-results">
+        <div class="project-results-title">En desarrollo</div>
+        <div class="project-result-item">Identidad de marca definida</div>
+        <div class="project-result-item">Web y presencia digital activa</div>
+        <div class="project-result-item">Primeros clientes captados orgánicamente</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">Branding</span><span class="project-tag">Estrategia</span><span class="project-tag">Consultoría</span><span class="project-tag">Marketing</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">07</div>
+      <div class="project-cat">SEO & Contenido · Coach</div>
+      <h2 class="project-title">Posicionamiento Web — Luisa Corral Coach</h2>
+      <p class="project-desc">Estrategia SEO y creación de contenido para una coach profesional. Auditoría técnica, keyword research, optimización on-page y creación de artículos orientados a posicionar en búsquedas de alta intención. Resultado: multiplicar por 4 el tráfico orgánico en 6 meses.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">+300% tráfico orgánico en 6 meses</div>
+        <div class="project-result-item">Top 5 en keywords objetivo del sector</div>
+        <div class="project-result-item">+60% leads captados desde orgánico</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">SEO</span><span class="project-tag">Contenido</span><span class="project-tag">Keyword research</span><span class="project-tag">Analytics</span></div>
+    </div>
+
+    <div class="project-card-full fade-up">
+      <div class="project-num">08</div>
+      <div class="project-cat">E-commerce · Artesanía</div>
+      <h2 class="project-title">Bebés Reborn Artesanales — Presencia Digital Completa</h2>
+      <p class="project-desc">Creación de presencia digital completa para una artesana especializada en bebés reborn. Web en WooCommerce, fotografía de producto, redes sociales y automatización de publicación de contenido. De venta exclusivamente por recomendación a tener clientes de toda España.</p>
+      <div class="project-results">
+        <div class="project-results-title">Resultados</div>
+        <div class="project-result-item">Primera tienda online activa y funcionando</div>
+        <div class="project-result-item">Clientes de toda España por primera vez</div>
+        <div class="project-result-item">Contenido automatizado en redes sociales</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">WooCommerce</span><span class="project-tag">E-commerce</span><span class="project-tag">Social Media</span><span class="project-tag">Automatización</span></div>
+    </div>
+
+    <!-- PRÓXIMO PROYECTO -->
+    <div class="project-card-full fade-up" style="display:flex;align-items:center;justify-content:center;min-height:300px;border:1px dashed rgba(201,168,76,0.15);background:var(--bg);">
+      <div style="text-align:center;">
+        <div style="font-size:2.5rem;color:rgba(201,168,76,0.15);margin-bottom:1rem;">+</div>
+        <p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;">Tu proyecto aquí</p>
+        <a href="contacto.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Hablemos →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="background:var(--bg2);padding:5rem;">
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2 class="section-title">Sobre los <em>proyectos</em></h2>
+  <div class="faq-list prose">
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿Puedo ver más detalles de los proyectos?</div>
+      <p class="faq-a">Sí, puedes contactarme directamente para solicitar más información sobre cualquier proyecto. En algunos casos puedo compartir métricas detalladas bajo acuerdo de confidencialidad con los clientes.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿Trabajas con empresas pequeñas o solo con grandes empresas?</div>
+      <p class="faq-a">Trabajo con empresas de todos los tamaños, desde autónomos y microempresas hasta empresas medianas. Lo importante no es el tamaño sino tener objetivos claros y compromiso con el proceso. Algunos de los proyectos con mejores resultados han sido con negocios pequeños que tenían mucho margen de mejora.</p>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <h2>¿Tu proyecto es el <em>siguiente</em>?</h2>
+    <p>Primera consulta gratuita para ver cómo puedo ayudarte.</p>
+  </div>
+  <div class="cta-strip-actions">
+    <a href="contacto.html" class="btn-primary">Contactar ahora</a>
+    <a href="servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO & GEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a><a href="mailto:adrymarquez96@gmail.com">Email</a></div></div>
+</footer>
+<script src="main.js"></script>
+</body>
+</html>
