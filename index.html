@@ -99,8 +99,10 @@
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;min-height:auto;}
   .hero-left{padding:6rem 1.5rem 3rem;}
-  .hero-right{height:75vw;}
-  .hero-img-wrap{width:90%;}
+  .hero-right{height:auto;overflow:visible;}
+  .hero-img-wrap{width:80%;margin:0 auto;}
+  .hero-img-overlay{background:linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 40%);}
+  .hero-deco{display:none;}
   .stats-bar{flex-wrap:wrap;padding:2rem 1.5rem;justify-content:center;}
   .service-cards,.testi-grid{grid-template-columns:1fr;}
   .about-grid{grid-template-columns:1fr;gap:2rem;}
@@ -121,6 +123,7 @@
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
+  <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menú">&#9776;</button>
   <a href="contacto.html" class="nav-cta">Hablemos</a>
 </nav>
 
@@ -128,7 +131,7 @@
 <section class="hero" aria-label="Presentación de Adrián Márquez">
   <div class="hero-left">
     <div class="hero-eyebrow">Disponible para proyectos · España</div>
-    <h1 class="hero-name">Adrián <em>Márquez</em> — Consultor de <em>Marketing Digital</em> e IA en España</h1>
+    <h1 class="hero-name">Adrián <em>Márquez</em></h1>
     <p class="hero-title">Consultor de Marketing Digital, Automatización e IA</p>
     <p class="hero-desc">Construyo estrategias digitales que generan resultados reales para empresas de servicios. Marketing, automatización con inteligencia artificial, SEO/GEO y formación especializada, todo integrado bajo una visión de negocio clara.</p>
     <div class="hero-ctas">
@@ -231,7 +234,9 @@
 <section class="about-preview">
   <div class="about-grid">
     <div class="about-img-side">
-      <div class="about-img-placeholder"><span>AM</span></div>
+      <div class="about-img-placeholder" style="background:var(--bg3);border:1px solid var(--border);overflow:hidden;">
+        <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez consultor marketing digital" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+      </div>
       <div class="about-deco"></div>
     </div>
     <div>
