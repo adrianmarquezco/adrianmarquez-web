@@ -22,26 +22,48 @@ if (cursor && ring && !isTouch) {
 // MOBILE NAV
 const mobileBtn = document.getElementById('navMobileBtn');
 const navLinks = document.querySelector('.nav-links');
+const navParent = navLinks ? navLinks.parentNode : null;
+const navNextSibling = navLinks ? navLinks.nextSibling : null;
+
+function openMobileNav() {
+  // Move nav-links to body to escape nav's stacking context
+  document.body.appendChild(navLinks);
+  // Use innerHeight to cover full viewport including browser chrome
+  navLinks.style.height = window.innerHeight + 'px';
+  navLinks.classList.add('open');
+  document.body.classList.add('nav-open');
+  mobileBtn.classList.add('is-open');
+  mobileBtn.innerHTML = '&#10005;';
+  // Move close button into the overlay so it's above it in z-index
+  navLinks.appendChild(mobileBtn);
+}
+
+function closeMobileNav() {
+  // Move button back to nav before moving nav-links
+  if (navParent) navParent.appendChild(mobileBtn);
+  navLinks.classList.remove('open');
+  navLinks.style.height = '';
+  document.body.classList.remove('nav-open');
+  mobileBtn.classList.remove('is-open');
+  mobileBtn.innerHTML = '&#9776;';
+  // Move nav-links back inside nav
+  if (navParent) navParent.insertBefore(navLinks, mobileBtn);
+}
+
 if (mobileBtn && navLinks) {
   mobileBtn.addEventListener('click',()=>{
-    const open = navLinks.classList.toggle('open');
-    document.body.classList.toggle('nav-open', open);
-    mobileBtn.innerHTML = open ? '&#10005;' : '&#9776;';
+    navLinks.classList.contains('open') ? closeMobileNav() : openMobileNav();
   });
-  navLinks.querySelectorAll('a:not(.has-dropdown > a)').forEach(a=>{
-    a.addEventListener('click',()=>{
-      navLinks.classList.remove('open');
-      document.body.classList.remove('nav-open');
-      mobileBtn.innerHTML = '&#9776;';
-    });
-  });
-  navLinks.querySelectorAll('.has-dropdown > a').forEach(a=>{
-    a.addEventListener('click',e=>{
-      if(window.innerWidth<=900){
-        e.preventDefault();
-        a.closest('.has-dropdown').classList.toggle('dd-open');
-      }
-    });
+  navLinks.addEventListener('click', e=>{
+    const link = e.target.closest('a');
+    if (!link) return;
+    const isDropdownToggle = link.closest('.has-dropdown') && link.parentElement.classList.contains('has-dropdown');
+    if (isDropdownToggle && window.innerWidth <= 900) {
+      e.preventDefault();
+      link.closest('.has-dropdown').classList.toggle('dd-open');
+      return;
+    }
+    if (window.innerWidth <= 900) closeMobileNav();
   });
 }
 
