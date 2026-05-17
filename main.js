@@ -67,6 +67,22 @@ if (mobileBtn && navLinks) {
   });
 }
 
+// COOKIE BANNER
+(function(){
+  if(localStorage.getItem('cookie_consent')) return;
+  const banner = document.getElementById('cookieBanner');
+  if(!banner) return;
+  setTimeout(()=>banner.classList.add('show'), 800);
+  document.getElementById('cookieAccept').addEventListener('click',()=>{
+    localStorage.setItem('cookie_consent','accepted');
+    banner.classList.remove('show');
+  });
+  document.getElementById('cookieReject').addEventListener('click',()=>{
+    localStorage.setItem('cookie_consent','rejected');
+    banner.classList.remove('show');
+  });
+})();
+
 // FADE UP
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
