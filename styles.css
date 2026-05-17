@@ -137,6 +137,11 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 .footer-social a { font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.3s; }
 .footer-social a:hover { color:var(--gold); }
 
+/* WHATSAPP FAB */
+.whatsapp-fab{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:8000;box-shadow:0 4px 16px rgba(0,0,0,0.35);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;}
+.whatsapp-fab:hover{transform:scale(1.1);box-shadow:0 6px 20px rgba(0,0,0,0.45);}
+.whatsapp-fab svg{width:28px;height:28px;fill:#fff;}
+
 /* FADE UP */
 .fade-up { opacity:0;transform:translateY(25px);transition:opacity 0.7s ease,transform 0.7s ease; }
 .fade-up.visible { opacity:1;transform:translateY(0); }
