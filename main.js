@@ -68,7 +68,7 @@ if (mobileBtn && navLinks) {
 }
 
 // COOKIE BANNER
-(function(){
+document.addEventListener('DOMContentLoaded',function(){
   if(localStorage.getItem('cookie_consent')) return;
   const banner = document.getElementById('cookieBanner');
   if(!banner) return;
@@ -81,7 +81,7 @@ if (mobileBtn && navLinks) {
     localStorage.setItem('cookie_consent','rejected');
     banner.classList.remove('show');
   });
-})();
+});
 
 // FADE UP
 const observer = new IntersectionObserver(entries=>{
