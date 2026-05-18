@@ -6,7 +6,7 @@
 <link rel="apple-touch-icon" href="/images/adrian-marquez-profesional.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto — Adrián Márquez | Consultor Marketing Digital & IA</title>
-<meta name="description" content="Contacta con Adrián Márquez para hablar de tu proyecto de marketing digital, automatización con IA o consultoría de negocio. Email, WhatsApp o formulario directo.">
+<meta name="description" content="Contacta con Adrián Márquez para hablar de tu proyecto de marketing digital, IA o automatización. Primera consulta gratuita.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://adrianmarquez.es/contacto.html">
 <meta property="og:title" content="Contacto — Adrián Márquez | Consultor Marketing Digital & IA">
@@ -129,50 +129,52 @@
     <div class="contact-form-wrap">
       <div class="form-title">Formulario de contacto</div>
       <p class="form-subtitle">Cuéntame brevemente qué necesitas y te respondo en menos de 24h.</p>
+      <form id="contactForm" method="post">
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label">Nombre *</label>
-          <input type="text" class="form-input" id="fname" placeholder="Tu nombre" required>
+          <label class="form-label" for="fname">Nombre *</label>
+          <input type="text" class="form-input" id="fname" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
         </div>
         <div class="form-group">
-          <label class="form-label">Apellidos</label>
-          <input type="text" class="form-input" id="lname" placeholder="Apellidos">
+          <label class="form-label" for="lname">Apellidos</label>
+          <input type="text" class="form-input" id="lname" name="apellidos" placeholder="Apellidos" autocomplete="family-name">
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label">Email *</label>
-        <input type="email" class="form-input" id="email" placeholder="tu@email.com" required>
+        <label class="form-label" for="email">Email *</label>
+        <input type="email" class="form-input" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
       </div>
       <div class="form-group">
-        <label class="form-label">Teléfono / WhatsApp</label>
-        <input type="tel" class="form-input" id="phone" placeholder="+34 600 000 000">
+        <label class="form-label" for="phone">Teléfono / WhatsApp</label>
+        <input type="tel" class="form-input" id="phone" name="telefono" placeholder="+34 600 000 000" autocomplete="tel">
       </div>
       <div class="form-group">
-        <label class="form-label">Empresa / Web (si aplica)</label>
-        <input type="text" class="form-input" id="company" placeholder="Nombre de tu empresa o web">
+        <label class="form-label" for="company">Empresa / Web (si aplica)</label>
+        <input type="text" class="form-input" id="company" name="empresa" placeholder="Nombre de tu empresa o web" autocomplete="organization">
       </div>
       <div class="form-group">
-        <label class="form-label">Servicio de interés</label>
-        <select class="form-select" id="service">
+        <label class="form-label" for="service">Servicio de interés</label>
+        <select class="form-select" id="service" name="servicio">
           <option value="">Selecciona un servicio...</option>
-          <option>Consultoría de negocio digital</option>
-          <option>SEO & GEO</option>
-          <option>Automatización con IA & n8n</option>
-          <option>Formación para empresas</option>
-          <option>Publicidad digital (Google Ads / Meta Ads)</option>
-          <option>Estrategia digital</option>
-          <option>Varios servicios / No lo tengo claro</option>
+          <option value="consultoria">Consultoría de negocio digital</option>
+          <option value="seo-geo">SEO & GEO</option>
+          <option value="automatizacion">Automatización con IA & n8n</option>
+          <option value="formacion">Formación para empresas</option>
+          <option value="publicidad">Publicidad digital (Google Ads / Meta Ads)</option>
+          <option value="estrategia">Estrategia digital</option>
+          <option value="varios">Varios servicios / No lo tengo claro</option>
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Cuéntame tu proyecto *</label>
-        <textarea class="form-textarea" id="message" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes? Cuanto más detallado, mejor podré orientarte." required></textarea>
+        <label class="form-label" for="message">Cuéntame tu proyecto *</label>
+        <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes? Cuanto más detallado, mejor podré orientarte." required></textarea>
       </div>
-      <button class="btn-primary form-submit" onclick="submitForm()">Enviar mensaje</button>
+      <button type="submit" class="btn-primary form-submit">Enviar mensaje</button>
       <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.6;">Al enviar este formulario aceptas nuestra <a href="/politica-privacidad.html" style="color:var(--gold);text-decoration:underline;">Política de Privacidad</a>. Tus datos serán tratados únicamente para responder a tu consulta.</p>
       <div class="success-msg" id="successMsg">
         ✓ Mensaje recibido. Te responderé en menos de 24 horas laborables. Si es urgente, escríbeme por WhatsApp al 630 780 358.
       </div>
+      </form>
     </div>
   </div>
 </section>
@@ -204,15 +206,16 @@
 
 <script src="main.js"></script>
 <script>
-function submitForm() {
-  const name = document.getElementById('fname').value;
-  const email = document.getElementById('email').value;
-  const msg = document.getElementById('message').value;
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name = document.getElementById('fname').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
   if (!name || !email || !msg) { alert('Por favor rellena los campos obligatorios (nombre, email y mensaje).'); return; }
   document.getElementById('successMsg').style.display = 'block';
   document.querySelector('.form-submit').disabled = true;
   document.querySelector('.form-submit').textContent = 'Enviado ✓';
-}
+});
 </script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
