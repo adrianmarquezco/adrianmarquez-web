@@ -1,10 +1,29 @@
 [
   {
+    "slug": "automatizacion-procesos-pymes-servicios-espana",
+    "title": "Automatización de procesos en pymes de servicios",
+    "excerpt": "Cómo automatizar los procesos de tu pyme de servicios en España sin grandes inversiones. Herramientas reales, casos prácticos y resultados medibles.",
+    "category": "Automatización",
+    "date": "2026-05-18",
+    "dateStr": "18 de mayo de 2026",
+    "readingTime": "9 min"
+  },
+  {
+    "slug": "automatizar-procesos-administrativos-pymes-servicios",
+    "title": "Automatizar procesos administrativos en pymes de servicios",
+    "excerpt": "Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.",
+    "category": "Automatización",
+    "date": "2026-05-18",
+    "dateStr": "18 de mayo de 2026",
+    "readingTime": "9 min"
+  },
+  {
     "slug": "automatizar-procesos-pyme-servicios-herramientas-ia",
     "title": "Cómo automatizar procesos en una pyme de servicios con IA",
     "excerpt": "Descubre qué procesos puedes automatizar en tu pyme de servicios con IA y herramientas como n8n. Casos reales, costes y pasos concretos para empezar hoy.",
     "category": "Automatización",
     "date": "2026-05-17",
-    "readTime": "9 min"
+    "dateStr": "17 de mayo de 2026",
+    "readingTime": "9 min"
   }
 ]
