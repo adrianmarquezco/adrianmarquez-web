@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatizar procesos administrativos en pymes de servicios | Adrián Márquez</title>
+<meta name="description" content="Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Adrián Márquez Corral">
+<link rel="canonical" href="https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html">
+<meta property="og:title" content="Automatizar procesos administrativos en pymes de servicios">
+<meta property="og:description" content="Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html">
+<meta property="og:locale" content="es_ES">
+<meta property="article:published_time" content="2026-05-18">
+<meta property="article:author" content="Adrián Márquez Corral">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automatizar procesos administrativos en pymes de servicios">
+<meta name="twitter:description" content="Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Automatizar procesos administrativos en pymes de servicios",
+  "description": "Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.",
+  "url": "https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html",
+  "datePublished": "2026-05-18",
+  "dateModified": "2026-05-18",
+  "author": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es/sobre-mi.html"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html"
+  },
+  "keywords": "automatizar procesos administrativos pymes, automatización pymes servicios, n8n para empresas, IA para pymes servicios España, automatizar tareas repetitivas empresa, herramientas automatización pymes, reducir trabajo administrativo empresa",
+  "inLanguage": "es-ES"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Cómo automatizar procesos administrativos en pymes de servicios (sin programar)",
+  "author": {
+    "@type": "Person",
+    "name": "Adrián Márquez",
+    "url": "https://adrianmarquez.es/sobre-mi.html"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Adrián Márquez",
+    "url": "https://adrianmarquez.es"
+  },
+  "datePublished": "2026-05-18",
+  "dateModified": "2026-05-18",
+  "mainEntityOfPage": "https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios"
+}</script>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="/" class="nav-logo">AM.</a>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/sobre-mi.html">Sobre mí</a></li>
+    <li><a href="/servicios.html">Servicios</a></li>
+    <li><a href="/proyectos.html">Proyectos</a></li>
+    <li><a href="/blog/index.html" class="active">Blog</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <a href="/contacto.html" class="nav-cta">Hablemos</a>
+</nav>
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <a href="/blog/index.html">Blog</a> › <span>Automatizar procesos administrativos en pymes de servicios</span></div>
+
+<div class="blog-hero">
+  <div class="blog-meta">
+    <span class="blog-cat">Automatización</span>
+    <span class="blog-date">18 de mayo de 2026</span>
+    <span class="blog-read">9 min de lectura</span>
+  </div>
+  <figure class="blog-hero-img" style="margin:2rem 0;"><img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTM4Mzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGF1dG9tYXRpb24lMjB3b3JrZmxvdyUyMG9mZmljZXxlbnwwfDB8fHwxNzc5MDk0OTA4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Empresario de servicios automatizando procesos administrativos con IA y n8n en su oficina" style="width:100%;height:400px;object-fit:cover;display:block;" loading="eager"><figcaption style="font-size:0.7rem;color:var(--text-muted);padding:0.4rem 0;">Foto de Israel Andrade en Unsplash</figcaption></figure><div class="blog-hero-img" style="display:none;" style="background:var(--bg3);border:1px solid var(--border);aspect-ratio:16/6;display:flex;align-items:center;justify-content:center;margin:2rem 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);"></div>
+    <div style="position:relative;z-index:1;text-align:center;padding:2rem;">
+      <div style="font-family:Playfair Display,serif;font-size:clamp(1.5rem,4vw,3rem);font-weight:900;color:var(--gold);opacity:0.15;line-height:1.1;">Automatizar procesos administrativos en pymes de servicios</div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <main class="blog-content">
+    <article>
+
+  <h1>Cómo automatizar procesos administrativos en pymes de servicios (sin programar)</h1>
+
+  <p>Automatizar los procesos administrativos de una pyme de servicios no requiere un departamento de IT ni un presupuesto de gran empresa. Con las herramientas actuales, cualquier negocio puede eliminar el trabajo repetitivo en semanas. Si tu equipo dedica horas a copiar datos, enviar recordatorios o rellenar formularios, este artículo es para ti.</p>
+
+  <p>En los últimos dos años, herramientas como n8n, Make o Zapier han democratizado la automatización. Ya no hace falta saber programar. Lo que sí hace falta es saber qué procesos atacar primero y en qué orden.</p>
+
+  <section aria-label="TL;DR resumen del artículo">
+    <h2>Lo más importante, en 30 segundos</h2>
+    <ul>
+      <li>Las pymes de servicios pierden entre 10 y 15 horas semanales en tareas administrativas evitables.</li>
+      <li>Los procesos más rentables de automatizar son: captación de leads, confirmación de citas, facturación y seguimiento de clientes.</li>
+      <li>n8n es la herramienta más flexible para pymes que quieren automatización sin depender de terceros.</li>
+      <li>El retorno de inversión de una automatización bien implementada se mide en semanas, no en años.</li>
+      <li>No necesitas programar. Necesitas tener claro el flujo de trabajo antes de tocarlo.</li>
+      <li>Empezar por un solo proceso y escalarlo después es la estrategia que funciona.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>¿Cuánto tiempo pierde realmente una pyme en tareas administrativas?</h2>
+
+    <p>Más del que parece. Según un estudio de McKinsey Global Institute, el 60% de las ocupaciones incluye al menos un 30% de tareas automatizables con la tecnología actual (McKinsey, 2023). En empresas de servicios, esa cifra sube porque los procesos son repetitivos y están ligados a personas concretas.</p>
+
+    <p>En Adrián Márquez hemos analizado empresas de consultoría, academias, clínicas y agencias. La media de horas semanales perdidas en tareas sin valor estratégico ronda las 12 horas por empleado. Eso son tres semanas de trabajo al año por persona.</p>
+
+    <p>Las tareas que más tiempo consumen en pymes de servicios:</p>
+
+    <ul>
+      <li>Responder preguntas frecuentes por email o WhatsApp (2-3 horas/semana).</li>
+      <li>Confirmar y recordar citas o reuniones (1-2 horas/semana).</li>
+      <li>Copiar datos entre formularios, CRM y hojas de cálculo (2-4 horas/semana).</li>
+      <li>Generar y enviar presupuestos o facturas (2-3 horas/semana).</li>
+      <li>Hacer seguimiento manual de propuestas sin respuesta (1-2 horas/semana).</li>
+    </ul>
+
+    <p>Suma ese tiempo. Después multiplícalo por el coste hora de la persona que lo hace. El resultado justifica casi cualquier inversión en automatización.</p>
+  </section>
+
+  <section>
+    <h2>¿Qué procesos administrativos puedes automatizar hoy mismo?</h2>
+
+    <p>La automatización de procesos administrativos en pymes de servicios empieza por identificar qué tareas son repetitivas, siguen un patrón predecible y no requieren criterio humano en cada paso. Estos son los cuatro bloques donde el impacto es inmediato y medible desde el primer mes.</p>
+
+    <h3>1. Captación y cualificación de leads</h3>
+
+    <p>Cuando alguien rellena un formulario de contacto, el flujo habitual es: llega un email, alguien lo lee, lo copia en un CRM, le asigna un estado y decide si contactar. Ese proceso puede automatizarse al completo.</p>
+
+    <p>Con una conexión entre tu formulario web (Typeform, Tally, Google Forms), un CRM como HubSpot o Notion y una herramienta de automatización como n8n, el lead entra solo, se cualifica según sus respuestas, se asigna al comercial correcto y recibe un email de bienvenida personalizado. Todo en menos de dos minutos, sin intervención humana.</p>
+
+    <h3>2. Gestión de citas y recordatorios</h3>
+
+    <p>Las no asistencias a reuniones cuestan dinero y credibilidad. Automatizar recordatorios por email y WhatsApp reduce las cancelaciones de última hora entre un 30% y un 50%, según datos internos de usuarios de Calendly integrado con n8n.</p>
+
+    <p>El flujo básico: cliente reserva cita → recibe confirmación inmediata → recibe recordatorio 24h antes → recibe recordatorio 1h antes → tras la reunión, recibe email de seguimiento. Todo automático, todo personalizado con su nombre y los detalles de la reunión.</p>
+
+    <h3>3. Facturación y seguimiento de pagos</h3>
+
+    <p>Emitir facturas a mano, enviarlas y recordar los pagos pendientes es uno de los procesos más dolorosos en servicios. Con integraciones entre tu herramienta de facturación (Holded, Billage, QuickBooks) y n8n, puedes automatizar la generación de la factura al cerrar un proyecto, su envío al cliente y los recordatorios escalonados si no paga en plazo.</p>
+
+    <h3>4. Seguimiento de propuestas comerciales</h3>
+
+    <p>Cuántas veces has enviado un presupuesto y te has olvidado de hacer seguimiento. Con automatización, puedes configurar una secuencia: si el cliente no ha abierto el documento en 48h, recibe un email de recordatorio. Si lo ha abierto pero no ha respondido en 72h, tú recibes una alerta para llamar. Sin tocar nada.</p>
+
+    <figure>
+      <img
+        src="/img/blog/automatizacion-procesos-administrativos-pymes.webp"
+        alt="Diagrama de flujo de automatización de procesos administrativos en una pyme de servicios con n8n"
+        width="800"
+        height="450"
+        loading="lazy"
+      />
+      <figcaption>Ejemplo de flujo de automatización para gestión de leads y seguimiento comercial en pymes de servicios.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>¿Qué herramientas de automatización funcionan mejor para pymes en España?</h2>
+
+    <p>No todas las herramientas son iguales. Algunas son perfectas para empezar, otras para escalar. La elección depende de tu presupuesto, la complejidad de tus procesos y si quieres depender de un proveedor externo o tener control total.</p>
+
+    <table>
+      <caption>Comparativa de herramientas de automatización para pymes de servicios</caption>
+      <thead>
+        <tr>
+          <th scope="col">Herramienta</th>
+          <th scope="col">Precio mensual</th>
+          <th scope="col">Curva de aprendizaje</th>
+          <th scope="col">Ideal para</th>
+          <th scope="col">Control de datos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>n8n (self-hosted)</td>
+          <td>0 € (infraestructura propia)</td>
+          <td>Media</td>
+          <td>Pymes que quieren control total</td>
+          <td>Total (tus servidores)</td>
+        </tr>
+        <tr>
+          <td>n8n Cloud</td>
+          <td>Desde 20 €/mes</td>
+          <td>Media</td>
+          <td>Pymes sin servidor propio</td>
+          <td>Alto</td>
+        </tr>
+        <tr>
+          <td>Make (Integromat)</td>
+          <td>Desde 9 €/mes</td>
+          <td>Baja-Media</td>
+          <td>Automatizaciones visuales sin código</td>
+          <td>Medio</td>
+        </tr>
+        <tr>
+          <td>Zapier</td>
+          <td>Desde 19,99 €/mes</td>
+          <td>Baja</td>
+          <td>Integraciones sencillas y rápidas</td>
+          <td>Bajo</td>
+        </tr>
+        <tr>
+          <td>Power Automate</td>
+          <td>Incluido en Microsoft 365</td>
+          <td>Media</td>
+          <td>Empresas ya en ecosistema Microsoft</td>
+          <td>Medio-Alto</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Mi recomendación para la mayoría de pymes de servicios en España: empezar con Make para los primeros flujos simples y migrar a n8n cuando necesites más control, personalización o privacidad de datos. Si ya usas Microsoft 365, Power Automate es el punto de entrada más lógico.</p>
+
+    <p>El control de datos es un aspecto crítico que muchos pasan por alto. Con n8n en servidor propio, los datos de tus clientes no salen de tu infraestructura. Eso tiene valor real cuando gestionas información sensible.</p>
+  </section>
+
+  <section>
+    <h2>Cómo empezar sin liarla: el método de las tres fases</h2>
+
+    <p>El error más común al automatizar procesos en una pyme es intentar automatizarlo todo a la vez. El resultado: flujos rotos, datos duplicados y el equipo desconfiando de la herramienta. La estrategia que funciona es incremental.</p>
+
+    <h3>Fase 1: Auditoría de procesos (semana 1-2)</h3>
+
+    <p>Antes de tocar ninguna herramienta, documenta qué hace tu equipo cada semana. Una hoja de cálculo sencilla sirve: tarea, frecuencia, tiempo que lleva, persona responsable, si sigue siempre el mismo patrón. Con ese inventario, identifica las tres tareas más repetitivas y más costosas en tiempo.</p>
+
+    <h3>Fase 2: Primer flujo automatizado (semana 3-4)</h3>
+
+    <p>Elige el proceso más sencillo y más crítico. No el más ambicioso. Un flujo de confirmación de citas o de entrada de leads es perfecto para empezar. Impleméntalo, pruébalo con datos reales durante dos semanas y mide el tiempo ahorrado.</p>
+
+    <p>Ese primer éxito tiene un valor enorme. No solo ahorra tiempo, sino que convence al resto del equipo de que la automatización funciona y no es una amenaza.</p>
+
+    <h3>Fase 3: Escalada y optimización (mes 2 en adelante)</h3>
+
+    <p>Con el primer flujo funcionando, añade el segundo. Después el tercero. Cada nuevo proceso que automatizas tiene menos fricción porque ya tienes infraestructura montada y el equipo tiene confianza en el sistema. En tres meses, una pyme media puede tener automatizados sus cinco procesos principales.</p>
+  </section>
+
+  <section>
+    <h2>Un ejemplo real: consultoría de RRHH en Madrid</h2>
+
+    <p>Para hacer esto concreto: una consultoría de recursos humanos con siete empleados tardaba cuatro horas semanales en gestionar la entrada de candidatos a sus procesos de selección. El flujo era manual: formulario web → email al consultor → copia en Excel → email de confirmación al candidato → recordatorio manual el día anterior.</p>
+
+    <p>Implementamos un flujo con n8n que conectaba Tally (formulario), Notion (base de datos de candidatos), Gmail y WhatsApp Business. El candidato rellena el formulario, entra automáticamente en Notion con todos sus datos clasificados, recibe un email de confirmación personalizado y un recordatorio por WhatsApp 24 horas antes de la entrevista.</p>
+
+    <p>Resultado: de cuatro horas semanales a veinte minutos de revisión. El consultor solo interviene cuando hay una excepción. En tres meses, el proceso se escaló a tres líneas de negocio más de la misma consultoría.</p>
+
+    <p>Este tipo de implementación es exactamente lo que trabajamos en el servicio de <a href="/servicios/automatizacion-ia.html">automatización con IA y n8n</a> para empresas de servicios.</p>
+  </section>
+
+  <section>
+    <h2>¿Cuánto cuesta automatizar procesos en una pyme? ¿Y cuánto se ahorra?</h2>
+
+    <p>Automatizar procesos administrativos en una pyme de servicios tiene un coste inicial de implementación y un coste recurrente de herramientas. La inversión típica oscila entre 500 € y 3.000 € para los primeros flujos, dependiendo de la complejidad. El ahorro mensual en horas de trabajo suele superar esa inversión en el primer trimestre.</p>
+
+    <p>Según Gartner, las empresas que adoptan automatización de procesos reducen sus costes operativos entre un 20% y un 35% en los primeros doce meses (Gartner, 2024). En pymes de servicios, donde el coste principal es el tiempo de las personas, ese porcentaje se traduce directamente en capacidad para atender más clientes sin contratar.</p>
+
+    <p>El cálculo es sencillo: si un empleado gana 2.000 €/mes y dedica el 25% de su tiempo a tareas automatizables, automatizar ese trabajo vale 500 € al mes. Cualquier solución que cueste menos de eso tiene retorno positivo desde el día uno.</p>
+
+    <p>Si quieres entender cómo encaja esto en la estrategia digital de tu empresa, la <a href="/servicios/consultoria-negocio.html">consultoría de negocio digital</a> es el punto de partida para definir prioridades antes de invertir.</p>
+  </section>
+
+  <section>
+    <h2>El factor que nadie menciona: la resistencia interna</h2>
+
+    <p>La tecnología es la parte fácil. La parte difícil es que tu equipo adopte el cambio. He visto automatizaciones perfectamente implementadas fracasar porque nadie del equipo confiaba en el nuevo sistema o nadie supo explicar por qué se estaba cambiando la forma de trabajar.</p>
+
+    <p>Tres reglas para que la automatización funcione con personas:</p>
+
+    <ul>
+      <li><strong>Involucra a quien hace la tarea</strong> en el diseño del flujo. Saben mejor que nadie qué excepciones existen.</li>
+      <li><strong>No automatices sin explicar el por qué.</strong> Si el equipo entiende que el objetivo es liberarles de trabajo aburrido, no eliminar su puesto, la adopción es mucho más rápida.</li>
+      <li><strong>Mantén siempre un plan B manual</strong> durante las primeras semanas. Si el flujo falla, el equipo debe poder seguir trabajando sin él.</li>
+    </ul>
+
+    <p>La formación interna es una palanca que multiplica el retorno de cualquier automatización. Cuando el equipo sabe qué hace el sistema y por qué, lo usa mejor y detecta los errores más rápido. El servicio de <a href="/servicios/formacion-empresas.html">formación en empresas</a> cubre exactamente este punto.</p>
+  </section>
+
+  <section>
+    <h2>Preguntas frecuentes sobre automatización de procesos en pymes</h2>
+
+    <dl>
+      <dt><strong>¿Necesito saber programar para automatizar mis procesos con n8n?</strong></dt>
+      <dd>No. n8n tiene una interfaz visual de arrastrar y conectar bloques. Para el 90% de los flujos que necesita una pyme de servicios no se escribe una sola línea de código. En procesos más complejos, se usan expresiones sencillas que se aprenden en pocas horas.</dd>
+
+      <dt><strong>¿Qué pasa si la automatización falla? ¿Pierdo datos?</strong></dt>
+      <dd>Las herramientas profesionales como n8n registran cada ejecución y los errores. Si un flujo falla, tienes un log completo de qué pasó y en qué paso. Además, puedes configurar alertas para que te avisen por email o Telegram cuando algo no funciona. Los datos no se pierden; el proceso simplemente no se completa hasta que lo revisas.</dd>
+
+      <dt><strong>¿Cuánto tiempo tarda en implementarse una automatización?</strong></dt>
+      <dd>Un flujo sencillo como confirmación de citas o entrada de leads se puede tener funcionando en 2-4 días. Flujos más complejos que integran varios sistemas (CRM, facturación, comunicaciones) suelen tardar entre una y tres semanas. Depende mucho de si los sistemas a conectar tienen API disponible.</dd>
+
+      <dt><strong>¿La automatización cumple con el RGPD en España?</strong></dt>
+      <dd>Sí, si la implementas correctamente. Usar n8n en servidor propio o en la Unión Europea garantiza que los datos no salen del territorio europeo. Es importante revisar que cada herramienta en tu flujo tenga su contrato de encargado del tratamiento (DPA) firmado. El cumplimiento no es un problema técnico, es un problema de configuración y documentación.</dd>
+
+      <dt><strong>¿Puedo automatizar sin cambiar las herramientas que ya uso?</strong></dt>
+      <dd>En la mayoría de los casos, sí. n8n y Make tienen conectores para más de 400 aplicaciones. Si usas Gmail, Google Calendar, WhatsApp Business, HubSpot, Holded o cualquier CRM popular, es muy probable que la integración ya exista sin desarrollo personalizado.</dd>
+
+      <dt><strong>¿Qué proceso debería automatizar primero en mi empresa?</strong></dt>
+      <dd>El que más tiempo consume y más veces se repite cada semana. Normalmente es la gestión de nuevos contactos o la confirmación de citas. Son procesos simples, bien definidos y con impacto inmediato. Empezar por ahí genera confianza rápida en el sistema y justifica la inversión desde el primer mes.</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2>El siguiente paso: de la teoría a los flujos funcionando</h2>
+
+    <p>Automatizar los procesos administrativos de tu pyme de servicios no es un proyecto de futuro. Es algo que puedes empezar esta semana, con las herramientas que ya existen, sin un equipo técnico interno y con una inversión que se recupera en el primer trimestre.</p>
+
+    <p>La clave está en elegir bien el primer proceso, implementarlo correctamente y medir el resultado antes de escalar. Ese primer éxito cambia la mentalidad del equipo y abre la puerta a una empresa que opera con menos fricción y más capacidad.</p>
+
+    <p>Si quieres saber exactamente qué procesos de tu empresa tienen más potencial de automatización y cuál es la ruta más corta para implementarlos, puedes revisar cómo trabajo en el servicio de <a href="/servicios/automatizacion-ia.html">automatización con IA y n8n</a> o contactar directamente para hablar de tu caso concreto.</p>
+
+    <p>También puedes explorar <a href="https://n8n.io/workflows/" rel="noopener noreferrer" target="_blank">la biblioteca de flujos de n8n</a> para ver ejemplos reales de automatizaciones que otras empresas ya están usando, o consultar la <a href="https://www.gartner.com/en/information-technology/glossary/robotic-process-automation-rpa" rel="noopener noreferrer" target="_blank">documentación de Gartner sobre automatización de procesos</a> si quieres profundizar en el contexto estratégico.</p>
+
+    <p>Las horas que tu equipo pierde esta semana en tareas repetitivas son horas que no dedica a crecer. Eso tiene un coste real, aunque no aparezca en ninguna factura.</p>
+  </section>
+
+</article>
+    
+    <div class="blog-author-card">
+      <div class="author-img" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:center;font-family:Playfair Display,serif;font-size:1.2rem;font-weight:900;color:#000;flex-shrink:0;">AM</div>
+      <div>
+        <div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;margin-bottom:0.3rem;">Adrián Márquez Corral</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.5rem;">Consultor de Marketing Digital, Automatización & IA</div>
+        <a href="/sobre-mi.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Conocer más →</a>
+      </div>
+    </div>
+  </main>
+  
+  <aside class="blog-sidebar">
+    <div class="sidebar-widget">
+      <div class="sidebar-title">¿Hablamos?</div>
+      <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:1.2rem;line-height:1.7;">Primera consulta gratuita para ver cómo puedo ayudar a tu negocio.</p>
+      <a href="/contacto.html" class="btn-primary" style="display:block;text-align:center;">Contactar</a>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-title">Servicios</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+        <li><a href="/servicios/automatizacion-ia.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Automatización & IA</a></li>
+        <li><a href="/servicios/seo-geo.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ SEO & GEO</a></li>
+        <li><a href="/servicios/consultoria-negocio.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Consultoría</a></li>
+        <li><a href="/servicios/formacion-empresas.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Formación</a></li>
+        <li><a href="/servicios/publicidad-digital.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Publicidad Digital</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <h2>¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
+    <p>Primera consulta gratuita, sin compromiso.</p>
+  </div>
+  <div class="cta-strip-actions">
+    <a href="/contacto.html" class="btn-primary">Hablemos</a>
+    <a href="/servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="/servicios/consultoria-negocio.html">Consultoría</a></li><li><a href="/servicios/seo-geo.html">SEO & GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="/servicios/formacion-empresas.html">Formación</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad digital</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="/sobre-mi.html">Sobre mí</a></li><li><a href="/blog/index.html">Blog</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España</p><div class="footer-social"><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a></div></div>
+</footer>
+<script src="../main.js"></script>
+</body>
+</html>
