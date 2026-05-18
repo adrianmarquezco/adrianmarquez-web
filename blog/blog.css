@@ -61,12 +61,16 @@
 
 /* FAQ */
 .faq-list { list-style: none; padding: 0; margin: 1.5rem 0; }
-.faq-item { border-bottom: 1px solid var(--border); padding: 1.5rem 0; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 1.8rem 0; }
 .faq-item:first-child { border-top: 1px solid var(--border); }
-.faq-q { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 0.8rem; }
-.faq-a { font-size: 0.92rem; line-height: 1.8; color: rgba(240,237,232,0.78); margin: 0; }
+.faq-q { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--gold); margin-bottom: 0.7rem; display: flex; gap: 0.6rem; }
+.faq-q::before { content: '→'; flex-shrink: 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin-top: 0.1rem; }
+.faq-a { font-size: 0.92rem; line-height: 1.85; color: rgba(240,237,232,0.78); margin: 0; padding-left: 1.4rem; }
+
+.blog-section-wrap { padding: 3rem 5rem 5rem; }
 
 @media(max-width: 900px) {
+  .blog-section-wrap { padding: 2rem 1.5rem 4rem; }
   .blog-hero { padding: 0 1.5rem 2rem; }
   .blog-layout { grid-template-columns: 1fr; padding: 2rem 1.5rem 4rem; gap: 2rem; }
   .blog-sidebar { position: static; }
