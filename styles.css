@@ -180,7 +180,26 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 /* Close button inside the overlay */
 .nav-links.open .nav-mobile-btn { display:flex;position:absolute;top:1rem;right:1.5rem;z-index:1;border-color:rgba(201,168,76,0.3); }
 
-/* RESPONSIVE */
+/* RESPONSIVE — 768px (tablet) */
+@media(max-width:768px){
+  .footer-top{grid-template-columns:1fr 1fr;gap:1.5rem;}
+  .footer-brand{grid-column:span 2;padding-bottom:1.5rem;border-bottom:1px solid var(--border);}
+  .cta-strip{flex-direction:column;padding:2.5rem 2rem;}
+  .two-col-content{grid-template-columns:1fr;gap:2rem;}
+  .grid-3{grid-template-columns:1fr 1fr;}
+  .page-hero h1{font-size:clamp(2rem,6vw,3.5rem);}
+}
+
+/* RESPONSIVE — 480px (mobile) */
+@media(max-width:480px){
+  .footer-top{grid-template-columns:1fr;}
+  .footer-brand{grid-column:span 1;}
+  .grid-3,.grid-2{grid-template-columns:1fr;}
+  .section-title{font-size:1.6rem;}
+  .btn-primary,.btn-outline{padding:0.75rem 1.5rem;font-size:0.72rem;}
+}
+
+/* RESPONSIVE — 900px (mobile nav) */
 @media(max-width:900px){
   nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
