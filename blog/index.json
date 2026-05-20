@@ -1,32 +1,32 @@
 [
   {
-    "slug": "automatizacion-procesos-pymes-servicios-espana",
-    "title": "Automatización de procesos en pymes de servicios",
-    "excerpt": "Cómo automatizar los procesos de tu pyme de servicios en España sin grandes inversiones. Herramientas reales, casos prácticos y resultados medibles.",
-    "category": "Automatización",
-    "date": "2026-05-18",
-    "dateStr": "18 de mayo de 2026",
-    "readingTime": "9 min",
-    "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-  },
-  {
     "slug": "automatizar-procesos-administrativos-pymes-servicios",
-    "title": "Automatizar procesos administrativos en pymes de servicios",
-    "excerpt": "Cómo automatizar los procesos administrativos de tu empresa de servicios con IA y n8n. Ahorra horas cada semana y reduce errores desde el primer mes.",
-    "category": "Automatización",
-    "date": "2026-05-18",
-    "dateStr": "18 de mayo de 2026",
-    "readingTime": "9 min",
+    "title": "6 procesos administrativos para automatizar en tu empresa de servicios: flujos reales con n8n",
+    "excerpt": "Flujos reales con n8n para automatizar captación de leads, recordatorio de citas, seguimiento de presupuestos, informes periódicos, onboarding y cobro de impagados. Tiempo ahorrado y coste por proceso.",
+    "category": "Implementación",
+    "date": "2026-05-20",
+    "dateStr": "20 de mayo de 2026",
+    "readingTime": "18 min",
     "imageUrl": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
   },
   {
+    "slug": "automatizacion-procesos-pymes-servicios-espana",
+    "title": "Estrategia de automatización para pymes de servicios en España: ROI real y hoja de ruta 2026",
+    "excerpt": "Cómo calcular el ROI de la automatización en tu pyme con datos reales del INE (22,8 €/hora), cuánto financia el Kit Digital (hasta 6.000 €) y la hoja de ruta en 4 fases para implementarla correctamente.",
+    "category": "Estrategia",
+    "date": "2026-05-20",
+    "dateStr": "20 de mayo de 2026",
+    "readingTime": "14 min",
+    "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+  },
+  {
     "slug": "automatizar-procesos-pyme-servicios-herramientas-ia",
-    "title": "Cómo automatizar procesos en una pyme de servicios con IA",
-    "excerpt": "Descubre qué procesos puedes automatizar en tu pyme de servicios con IA y herramientas como n8n. Casos reales, costes y pasos concretos para empezar hoy.",
-    "category": "Automatización",
-    "date": "2026-05-17",
-    "dateStr": "17 de mayo de 2026",
-    "readingTime": "9 min",
+    "title": "n8n, Make o Zapier: qué herramienta de automatización elegir para tu pyme de servicios en 2026",
+    "excerpt": "Comparativa completa de n8n, Make, Zapier, Power Automate y ActiveCampaign para pymes de servicios: precios reales, integraciones, curva de aprendizaje y árbol de decisión para elegir sin equivocarte.",
+    "category": "Herramientas",
+    "date": "2026-05-20",
+    "dateStr": "20 de mayo de 2026",
+    "readingTime": "16 min",
     "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
   }
 ]
