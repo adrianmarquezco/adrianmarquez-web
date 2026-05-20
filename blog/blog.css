@@ -38,7 +38,7 @@
 .blog-author-card { display: flex; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg3); border: 1px solid var(--border); margin-top: 3rem; }
 
 /* Sidebar */
-.blog-sidebar { position: sticky; top: 7rem; align-self: start; }
+.blog-sidebar { align-self: start; }
 .sidebar-widget { background: var(--bg3); border: 1px solid var(--border); padding: 1.8rem; margin-bottom: 1.5rem; }
 .sidebar-title { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; padding-bottom: 0.8rem; border-bottom: 1px solid var(--border); }
 
