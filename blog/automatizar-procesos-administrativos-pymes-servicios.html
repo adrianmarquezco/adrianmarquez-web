@@ -12,8 +12,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/images/adrian-marquez-profesional.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>6 Procesos Administrativos para Automatizar en tu Empresa de Servicios: Flujos Reales con n8n | Adrián Márquez</title>
-<meta name="description" content="Cómo automatizar 6 procesos administrativos clave en pymes de servicios con n8n: flujos reales, nodos, tiempo ahorrado y coste por proceso. Guía de implementación 2026.">
+<title>Automatizar procesos administrativos con n8n: 6 flujos reales</title>
+<meta name="description" content="6 procesos administrativos para automatizar con n8n: leads, citas, presupuestos, informes, onboarding e impagados. Flujos reales y tiempo ahorrado.">
 <meta name="robots" content="index, follow">
 <meta name="author" content="Adrián Márquez Corral">
 <link rel="canonical" href="https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html">
@@ -449,13 +449,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h2>RGPD y datos de clientes en flujos de automatización</h2>
 
-  <p>Todos estos flujos procesan datos personales de clientes: nombres, emails, importes, información de proyectos. El cumplimiento del RGPD no es opcional y no es complicado si se configura bien desde el principio:</p>
+  <p>Todos estos flujos procesan datos personales de clientes: nombres, emails, importes, información de proyectos. El cumplimiento del RGPD no es opcional y no es complicado si se configura bien desde el principio. La <a href="https://www.aepd.es/es/areas-de-actuacion/inteligencia-artificial-y-privacidad/herramientas-de-automatizacion" target="_blank" rel="noopener nofollow">Agencia Española de Protección de Datos (AEPD)</a> ha publicado guías específicas sobre automatización y privacidad que conviene consultar antes de desplegar flujos con datos de clientes.</p>
 
   <ul>
-    <li><strong>Usa n8n self-hosted o n8n Cloud (servidores en la UE).</strong> Los datos de tus clientes no deben salir del territorio europeo sin base legal. n8n Cloud tiene sus servidores en la UE por defecto.</li>
+    <li><strong>Usa n8n self-hosted o n8n Cloud (servidores en la UE).</strong> Los datos de tus clientes no deben salir del territorio europeo sin base legal. Consulta la <a href="https://docs.n8n.io/hosting/security/" target="_blank" rel="noopener nofollow">documentación de seguridad de n8n</a> para configurar cifrado y acceso correcto desde el primer día.</li>
     <li><strong>Firma el DPA con cada herramienta del stack.</strong> Notion, HubSpot, Gmail (Google Workspace), Holded, DocuSign, Twilio tienen sus Acuerdos de Encargado del Tratamiento disponibles para firmar. Sin DPA firmado, estás incumpliendo el RGPD incluso aunque los datos estén cifrados.</li>
     <li><strong>Documenta cada flujo en tu Registro de Actividades de Tratamiento.</strong> El RGPD obliga a documentar qué datos tratas, con qué base legal, durante cuánto tiempo y qué medidas de seguridad aplicas. Un párrafo por flujo en tu RAT es suficiente.</li>
     <li><strong>Configura retención y borrado automático.</strong> Los datos de leads que no se convierten en clientes no deberían conservarse indefinidamente. Puedes añadir un nodo en n8n que borre registros de Notion o Google Sheets después de X meses de inactividad.</li>
+    <li><strong>Flujo 6 (impagados) y facturación electrónica:</strong> si emites facturas electrónicas, el sistema debe cumplir con la <a href="https://www.agenciatributaria.gob.es/AEAT.internet/Inicio/Empresas_y_profesionales/Facturacion_electronica/Facturacion_electronica.shtml" target="_blank" rel="noopener nofollow">normativa de la Agencia Tributaria</a> (Reglamento VeriFactu). Los flujos de impagados deben integrarse con software de facturación homologado, no generar PDFs manualmente.</li>
   </ul>
 
   <h2>Por dónde empezar si tienes los 6 procesos sin automatizar</h2>
@@ -558,10 +559,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
     <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="/servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="/servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
     <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="/sobre-mi.html">Sobre mí</a></li><li><a href="/proyectos.html">Proyectos</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
-    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">WhatsApp: 630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:adrymarquez96@gmail.com">adrymarquez96@gmail.com</a></li><li><a href="https://wa.me/34630780358" target="_blank">WhatsApp: 630 780 358</a></li></ul></div>
     <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="/aviso-legal.html">Aviso legal</a></li><li><a href="/politica-privacidad.html">Política de privacidad</a></li><li><a href="/politica-cookies.html">Política de cookies</a></li></ul></div>
   </div>
-  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener">YouTube</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a><a href="mailto:adrymarquez96@gmail.com">Email</a></div></div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
 <script src="../main.js"></script>
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
