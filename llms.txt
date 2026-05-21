@@ -1,4 +1,4 @@
-# Adrian Marquez - Consultor de Marketing Digital, IA y Automatizacion
+﻿# Adrian Marquez - Consultor de Marketing Digital, IA y Automatizacion
 
 Consultor de marketing digital especializado en empresas de servicios en Espana. Ayudo a empresas a crecer a traves de estrategia digital, posicionamiento SEO/GEO, publicidad de pago, automatizacion con IA y formacion especializada.
 
@@ -22,6 +22,6 @@ Sede en Galicia. Servicio en toda Espana.
 ## Contacto
 
 - Web: [adrianmarquez.es](https://adrianmarquez.es)
-- Email: adrymarquez96@gmail.com
+- Email: hola@adrianmarquez.es
 - Telefono: +34 630 780 358
 - LinkedIn: [linkedin.com/in/adrian-marquez-corral](https://www.linkedin.com/in/adrian-marquez-corral/)
