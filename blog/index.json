@@ -6,7 +6,7 @@
     "date": "2026-05-22",
     "dateStr": "22 de mayo de 2026",
     "excerpt": "Formar a tu equipo en IA no es un curso de un día ni un PDF de 40 páginas. Es un proceso estructurado que, bien ejecutado, multiplica el retorno de cualquier herramienta que ya tengas. Esta guía explica cómo hacerlo en una pyme de servicios real.",
-    "category": "Automatizacion",
+    "category": "Formación para empresas",
     "readingTime": "9 min",
     "keywords": [
       "formación inteligencia artificial pymes",
@@ -15,7 +15,10 @@
       "IA aplicada al puesto de trabajo",
       "transformación digital pymes España"
     ],
-    "imageUrl": "https://images.unsplash.com/photo-1618758992242-2d4bc63a1be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTM4Mzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwdHJhaW5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwd29ya3Nob3B8ZW58MHwwfHx8MTc3OTQ3MjY3MHww&ixlib=rb-4.1.0&q=80&w=1080"
+    "imageUrl": "https://images.unsplash.com/photo-1618758992242-2d4bc63a1be7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTM4Mzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwdHJhaW5pbmclMjBhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwd29ya3Nob3B8ZW58MHwwfHx8MTc3OTQ3MjY3MHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "tipoArticulo": "PILAR",
+    "clusterCategoria": "formación-ia",
+    "pillarSlug": null
   },
   {
     "slug": "automatizacion-procesos-pymes-servicios-espana",
