@@ -1,15 +1,5 @@
 [
   {
-    "slug": "automatizar-procesos-administrativos-pymes-servicios",
-    "title": "6 procesos administrativos para automatizar en tu empresa de servicios: flujos reales con n8n",
-    "excerpt": "Flujos reales con n8n para automatizar captación de leads, recordatorio de citas, seguimiento de presupuestos, informes periódicos, onboarding y cobro de impagados. Tiempo ahorrado y coste por proceso.",
-    "category": "Implementación",
-    "date": "2026-05-20",
-    "dateStr": "20 de mayo de 2026",
-    "readingTime": "18 min",
-    "imageUrl": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
-  },
-  {
     "slug": "automatizacion-procesos-pymes-servicios-espana",
     "title": "Estrategia de automatización para pymes de servicios en España: ROI real y hoja de ruta 2026",
     "excerpt": "Cómo calcular el ROI de la automatización en tu pyme con datos reales del INE (22,8 €/hora), cuánto financia el Kit Digital (hasta 6.000 €) y la hoja de ruta en 4 fases para implementarla correctamente.",
@@ -17,7 +7,23 @@
     "date": "2026-05-20",
     "dateStr": "20 de mayo de 2026",
     "readingTime": "14 min",
-    "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+    "imageUrl": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tipoArticulo": "PILAR",
+    "clusterCategoria": "automatización",
+    "pillarSlug": null
+  },
+  {
+    "slug": "automatizar-procesos-administrativos-pymes-servicios",
+    "title": "6 procesos administrativos para automatizar en tu empresa de servicios: flujos reales con n8n",
+    "excerpt": "Flujos reales con n8n para automatizar captación de leads, recordatorio de citas, seguimiento de presupuestos, informes periódicos, onboarding y cobro de impagados. Tiempo ahorrado y coste por proceso.",
+    "category": "Implementación",
+    "date": "2026-05-20",
+    "dateStr": "20 de mayo de 2026",
+    "readingTime": "18 min",
+    "imageUrl": "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tipoArticulo": "SATÉLITE",
+    "clusterCategoria": "automatización",
+    "pillarSlug": "automatizacion-procesos-pymes-servicios-espana"
   },
   {
     "slug": "automatizar-procesos-pyme-servicios-herramientas-ia",
@@ -27,6 +33,9 @@
     "date": "2026-05-20",
     "dateStr": "20 de mayo de 2026",
     "readingTime": "16 min",
-    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800"
+    "imageUrl": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800",
+    "tipoArticulo": "SATÉLITE",
+    "clusterCategoria": "automatización",
+    "pillarSlug": "automatizacion-procesos-pymes-servicios-espana"
   }
 ]
