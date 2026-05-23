@@ -119,7 +119,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .hero-name em { font-style:italic;color:var(--gold); }
 .hero-title { font-family:'Playfair Display',serif;font-size:clamp(1rem,2vw,1.3rem);font-style:italic;color:var(--text-muted);margin-top:0.6rem;margin-bottom:2.5rem; }
 .hero-desc { font-size:0.92rem;line-height:1.85;color:rgba(240,237,232,0.7);max-width:440px;margin-bottom:3rem;font-family:'DM Sans',sans-serif;font-weight:400; }
-.hero-desc--follow { margin-top:-1.5rem; }
 .hero-ctas { display:flex;gap:1rem;flex-wrap:wrap; }
 .hero-right { position:relative;overflow:hidden; }
 .hero-img-wrap { position:absolute;inset:0; }
@@ -158,8 +157,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .about-deco { position:absolute;bottom:-1.5rem;right:-1.5rem;width:80px;height:80px;border:1px solid rgba(201,168,76,0.3); }
 .marquee-strip { background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;overflow:hidden; }
 .marquee-inner { display:flex;gap:3rem;white-space:nowrap;animation:marquee 25s linear infinite; }
-.marquee-item { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;font-style:italic;color:rgba(240,237,232,0.11);text-transform:uppercase;flex-shrink:0; }
-.marquee-dot { color:rgba(201,168,76,0.12); }
+.marquee-item { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;font-style:italic;color:rgba(240,237,232,0.28);text-transform:uppercase;flex-shrink:0; }
+.marquee-dot { color:rgba(201,168,76,0.35); }
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .testimonials-section { background:var(--bg2); }
 .testi-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem; }
@@ -214,8 +213,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="hero-eyebrow">Disponible para proyectos · España</div>
     <h1 class="hero-name">Adrián <em>Márquez</em></h1>
     <p class="hero-title">Consultor de Marketing Digital, Automatización e IA</p>
-    <p class="hero-desc">Estrategia, automatización e IA para empresas de servicios que quieren crecer sin multiplicar el equipo.</p>
-    <p class="hero-desc hero-desc--follow">Construyo estrategias digitales que generan resultados reales para empresas de servicios. Marketing, automatización con inteligencia artificial, SEO/GEO y formación especializada, todo integrado bajo una visión de negocio clara.</p>
+    <p class="hero-desc">Construyo estrategias digitales que generan resultados reales para empresas de servicios. Marketing, automatización con inteligencia artificial, SEO, GEO y AEO, y formación especializada, todo integrado bajo una visión de negocio clara.</p>
     <div class="hero-ctas">
       <a href="servicios.html" class="btn-primary">Ver servicios</a>
       <a href="contacto.html" class="btn-outline">Hablemos</a>
@@ -324,17 +322,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="marquee-inner">
     <span class="marquee-item">Marketing Digital</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Automatización IA</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">SEO & GEO</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">SEO, GEO y AEO</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Consultoría</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">n8n Workflows</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Estrategia Digital</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Motores de IA</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Formación Empresas</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Marketing Digital</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Automatización IA</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">SEO & GEO</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">SEO, GEO y AEO</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Consultoría</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">n8n Workflows</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Estrategia Digital</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Motores de IA</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Formación Empresas</span><span class="marquee-dot"> ✦ </span>
   </div>
 </div>
@@ -443,7 +447,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="footer-col-title">Servicios</div>
       <ul class="footer-col-links">
         <li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li>
-        <li><a href="servicios/seo-geo.html">SEO & GEO</a></li>
+        <li><a href="servicios/seo-geo.html">SEO, GEO y AEO</a></li>
         <li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li>
         <li><a href="servicios/formacion-empresas.html">Formación empresas</a></li>
         <li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li>
