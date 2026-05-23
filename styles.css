@@ -28,7 +28,7 @@ body {
 .cursor-ring.hover { width:60px;height:60px;border-color:var(--gold); }
 
 /* NAV */
-nav { position:fixed;top:0;left:0;right:0;z-index:100;padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(8,8,8,0.97),transparent);backdrop-filter:blur(4px); }
+body > nav { position:fixed;top:0;left:0;right:0;z-index:1000;padding:1.5rem 4rem;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(to bottom,rgba(8,8,8,0.97),transparent);backdrop-filter:blur(4px); }
 .nav-logo { font-family:'Playfair Display',serif;font-size:1.1rem;color:var(--gold);letter-spacing:0.05em;text-decoration:none; }
 .nav-links { display:flex;gap:2rem;list-style:none; }
 .nav-links a { font-size:0.75rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.3s;padding:0.5rem 0.2rem; }
@@ -181,7 +181,7 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 .nav-links.open li.has-dropdown.dd-open > a::after { content:' −'; }
 body.nav-open { overflow:hidden; }
 /* Removing backdrop-filter when menu is open fixes position:fixed containment bug */
-body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
+body.nav-open > nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 
 /* Close button inside the overlay */
 .nav-links.open .nav-mobile-btn { display:flex;position:absolute;top:1rem;right:1.5rem;z-index:1;border-color:rgba(201,168,76,0.3); }
@@ -207,7 +207,7 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 
 /* RESPONSIVE — 900px (mobile nav) */
 @media(max-width:900px){
-  nav{padding:1rem 1.5rem;}
+  body > nav{padding:1rem 1.5rem;}
   .nav-links{display:none;}
   .nav-mobile-btn{display:flex;}
   .nav-cta{display:none;}
@@ -262,7 +262,7 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
   padding-top:7rem;
   border-radius:2rem 2rem 0 0;
   position:relative;
-  z-index:3;
+  z-index:1;
   box-shadow:0 -24px 48px rgba(0,0,0,0.18);
 }
 
@@ -279,7 +279,7 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
   color:var(--text-muted);
   margin-bottom:1rem;
 }
-.service-links-hub nav {
+.service-links-hub-list {
   display:flex;
   flex-wrap:wrap;
   gap:0.5rem 0.35rem;
@@ -343,5 +343,5 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 @media(max-width:900px){
   .white-section--curve{margin-top:-1.5rem;padding-top:5rem;border-radius:1.25rem 1.25rem 0 0;}
   .white-section .process-steps{grid-template-columns:1fr;}
-  .service-links-hub nav{gap:0.65rem 0.5rem;}
+  .service-links-hub-list{gap:0.65rem 0.5rem;}
 }
