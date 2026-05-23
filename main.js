@@ -83,11 +83,11 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 
-// FADE UP
+// SCROLL ANIMATIONS
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-},{threshold:0.12});
-document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+},{threshold:0.1});
+document.querySelectorAll('.fade-up,.slide-left,.slide-right,.fade-scale').forEach(el=>observer.observe(el));
 
 // SMOOTH NAV
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
