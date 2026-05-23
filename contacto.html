@@ -197,23 +197,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="form-group">
         <label class="form-label">Prefiero que me contactes por</label>
-        <div class="form-contact-opts" id="contactOpts">
-          <label class="form-copt">
-            <input type="radio" name="contacto_preferido" value="email">
-            <span class="form-copt-icon">✉</span>
-            <span class="form-copt-label">Email</span>
-          </label>
-          <label class="form-copt">
-            <input type="radio" name="contacto_preferido" value="whatsapp">
-            <span class="form-copt-icon">💬</span>
-            <span class="form-copt-label">WhatsApp</span>
-          </label>
-          <label class="form-copt">
-            <input type="radio" name="contacto_preferido" value="llamada">
-            <span class="form-copt-icon">📞</span>
-            <span class="form-copt-label">Llamada</span>
-          </label>
+        <div class="form-cpref" id="contactPref">
+          <button type="button" class="form-cpref-btn" data-val="email">Email</button>
+          <button type="button" class="form-cpref-btn" data-val="whatsapp">WhatsApp</button>
+          <button type="button" class="form-cpref-btn" data-val="llamada">Llamada</button>
         </div>
+        <input type="hidden" name="contacto_preferido" id="contactPrefVal">
       </div>
       <div class="form-group">
         <label class="form-label" for="message">Cuéntame tu proyecto *</label>
@@ -230,7 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- SECCIÓN BLANCA -->
-<section class="white-section">
+<div class="white-section">
   <div class="fade-up">
     <div class="section-label">Por qué trabajar conmigo</div>
     <h2 class="ws-title">Lo que puedes esperar <em>desde el primer mensaje</em></h2>
@@ -256,7 +245,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="wsc-tag">Servicio nacional</span>
     </div>
   </div>
-</section>
+</div>
 
 <div class="cta-strip" style="background:var(--bg2);">
   <div class="cta-strip-text">
@@ -292,10 +281,11 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   document.querySelector('.form-submit').textContent = 'Enviado ✓';
 });
 
-document.querySelectorAll('.form-copt').forEach(label => {
-  label.addEventListener('click', () => {
-    document.querySelectorAll('.form-copt').forEach(l => l.classList.remove('checked'));
-    label.classList.add('checked');
+document.querySelectorAll('.form-cpref-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.form-cpref-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('contactPrefVal').value = btn.dataset.val;
   });
 });
 </script>
