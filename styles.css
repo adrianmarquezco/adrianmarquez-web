@@ -255,3 +255,93 @@ body.nav-open nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 
 @media(max-width:900px){ .white-section{padding:4rem 2rem;} .ws-grid-3,.ws-grid-4{grid-template-columns:1fr;} .ws-grid-3 .wsc,.ws-grid-4 .wsc{border-right:none;border-bottom:1px solid rgba(13,12,10,0.1);} .wsc:last-child{border-bottom:none;} }
 @media(max-width:600px){ .white-section{padding:3rem 1.5rem;} }
+
+/* Curved transition into first light block (home) */
+.white-section--curve {
+  margin-top:-2.75rem;
+  padding-top:7rem;
+  border-radius:2rem 2rem 0 0;
+  position:relative;
+  z-index:3;
+  box-shadow:0 -24px 48px rgba(0,0,0,0.18);
+}
+
+/* Service link hub — keeps internal links for SEO without 6 large cards */
+.service-links-hub {
+  margin-top:2.5rem;
+  padding-top:2rem;
+  border-top:1px solid var(--border);
+}
+.service-links-hub-label {
+  font-size:0.68rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--text-muted);
+  margin-bottom:1rem;
+}
+.service-links-hub nav {
+  display:flex;
+  flex-wrap:wrap;
+  gap:0.5rem 0.35rem;
+  align-items:center;
+}
+.service-links-hub a {
+  font-size:0.8rem;
+  color:var(--text-muted);
+  text-decoration:none;
+  transition:color 0.25s;
+  white-space:nowrap;
+}
+.service-links-hub a:hover { color:var(--gold); }
+.service-links-hub .hub-sep {
+  color:rgba(201,168,76,0.35);
+  font-size:0.65rem;
+  user-select:none;
+}
+
+/* Process steps on light sections */
+.white-section .process-steps {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1px;
+  background:rgba(13,12,10,0.1);
+  border:1px solid rgba(13,12,10,0.1);
+  margin-top:2.5rem;
+}
+.white-section .process-step {
+  background:#fff;
+  padding:2rem 1.75rem;
+  transition:background 0.3s,transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s ease;
+}
+.white-section .process-step:hover {
+  background:#fff;
+  transform:translateY(-4px);
+  box-shadow:0 14px 36px rgba(13,12,10,0.08);
+  z-index:1;
+  position:relative;
+}
+.white-section .process-step-num {
+  font-family:'Playfair Display',serif;
+  font-size:2.5rem;
+  font-weight:900;
+  color:rgba(201,168,76,0.22);
+  line-height:1;
+  margin-bottom:0.85rem;
+}
+.white-section .process-step-title {
+  font-family:'Playfair Display',serif;
+  font-size:1rem;
+  font-weight:700;
+  color:#0d0c0a;
+  margin-bottom:0.55rem;
+}
+.white-section .process-step-desc {
+  font-size:0.82rem;
+  line-height:1.75;
+  color:rgba(13,12,10,0.58);
+}
+@media(max-width:900px){
+  .white-section--curve{margin-top:-1.5rem;padding-top:5rem;border-radius:1.25rem 1.25rem 0 0;}
+  .white-section .process-steps{grid-template-columns:1fr;}
+  .service-links-hub nav{gap:0.65rem 0.5rem;}
+}

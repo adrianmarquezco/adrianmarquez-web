@@ -13,7 +13,7 @@ if (cursor && ring && !isTouch) {
     requestAnimationFrame(animateCursor);
   }
   animateCursor();
-  document.querySelectorAll('a,button,.grid-card,.faq-item').forEach(el=>{
+  document.querySelectorAll('a,button,.grid-card,.faq-item,.service-card,.wsc,.process-step').forEach(el=>{
     el.addEventListener('mouseenter',()=>ring.classList.add('hover'));
     el.addEventListener('mouseleave',()=>ring.classList.remove('hover'));
   });
@@ -88,6 +88,39 @@ const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
 },{threshold:0.1});
 document.querySelectorAll('.fade-up,.slide-left,.slide-right,.fade-scale').forEach(el=>observer.observe(el));
+
+// STAT COUNTERS (home)
+function animateStat(el) {
+  if (el.dataset.statAnimated === '1') return;
+  if (el.dataset.statType === 'text') {
+    el.dataset.statAnimated = '1';
+    return;
+  }
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    el.dataset.statAnimated = '1';
+    return;
+  }
+  el.dataset.statAnimated = '1';
+  const end = parseFloat(el.dataset.statValue || '0');
+  const prefix = el.dataset.statPrefix || '';
+  const suffix = el.dataset.statSuffix || '';
+  const duration = 1400;
+  const start = performance.now();
+  function tick(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    const current = Math.round(end * eased);
+    el.textContent = prefix + current + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) animateStat(e.target);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('[data-stat-value]').forEach(el => statObserver.observe(el));
 
 // SMOOTH NAV
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
