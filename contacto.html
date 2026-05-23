@@ -37,7 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* CONTACT SPLIT */
 .contact-split { display:grid;grid-template-columns:1fr 1.2fr; }
 .contact-split-left { position:relative;background:#050505;overflow:hidden;display:flex;flex-direction:column;padding:5rem 4rem;min-height:680px; }
-.contact-split-content { position:relative;z-index:4;flex:1; }
+.contact-split-content { position:relative;z-index:3;flex:1; }
 .contact-split-title { font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.2vw,2.4rem);font-weight:900;line-height:1.2;margin-bottom:1rem;color:#ffffff;letter-spacing:-0.01em; }
 .contact-split-title em { font-style:italic;color:var(--gold); }
 .contact-split-desc { font-size:0.84rem;line-height:1.9;color:rgba(255,255,255,0.38);margin-bottom:2.5rem;max-width:320px; }
@@ -48,14 +48,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .csc-val { font-size:0.87rem;color:var(--gold);transition:color 0.3s; }
 .contact-split-channel:hover .csc-type { color:rgba(255,255,255,0.5); }
 .contact-split-channel:hover .csc-val { color:var(--gold-light); }
-/* Photo + single clean gradient overlay */
-.contact-split-photo { position:absolute;bottom:0;right:0;width:62%;z-index:1;pointer-events:none; }
+/* Photo — single smooth gradient, no stripes */
+.contact-split-photo { position:absolute;bottom:0;right:0;width:65%;z-index:1;pointer-events:none; }
 .contact-split-photo img { width:100%;height:auto;display:block; }
 .contact-split-left::before {
   content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
-  background:
-    linear-gradient(to top, #050505 0%, rgba(5,5,5,0.6) 22%, transparent 42%),
-    linear-gradient(to right, #050505 28%, rgba(5,5,5,0.9) 44%, rgba(5,5,5,0.35) 65%, transparent 88%);
+  background: linear-gradient(to right, #050505 22%, rgba(5,5,5,0.9) 38%, rgba(5,5,5,0.35) 60%, rgba(5,5,5,0.05) 82%, transparent 100%);
 }
 /* Right: form panel */
 .contact-split-right { background:var(--bg2);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(201,168,76,0.05); }
@@ -72,37 +70,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .form-submit { width:100%;margin-top:0.5rem;font-family:'DM Sans',sans-serif;padding:0.95rem;font-size:0.8rem; }
 .success-msg { display:none;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);padding:1.2rem 1.5rem;margin-top:1rem;font-size:0.85rem;color:var(--gold-light); }
 
-/* WHITE SECTION */
-.contact-white { background:#f7f4ef;padding:6rem 5rem; }
-.contact-white .section-label { color:var(--gold);margin-bottom:1rem; }
-.contact-white-title { font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.5vw,2.5rem);font-weight:900;line-height:1.2;color:#0d0c0a;margin-bottom:0.5rem; }
-.contact-white-title em { color:var(--gold);font-style:italic; }
-.contact-white-sub { font-size:0.86rem;color:rgba(13,12,10,0.55);max-width:480px;line-height:1.8;margin-bottom:3.5rem; }
-.contact-white-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(13,12,10,0.1); }
-.cwc { background:#f7f4ef;padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s; }
-.cwc::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
-.cwc:hover { background:#ffffff; }
-.cwc:hover::before { height:100%; }
-.cwc-num { font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:rgba(201,168,76,0.18);line-height:1;margin-bottom:1rem; }
-.cwc-title { font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:#0d0c0a;margin-bottom:0.6rem; }
-.cwc-desc { font-size:0.82rem;line-height:1.75;color:rgba(13,12,10,0.6); }
-.cwc-tag { display:inline-block;margin-top:1.2rem;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,0.35);padding-bottom:0.15rem; }
-
-@media(max-width:1100px){ .contact-split-left { padding:4rem 3rem; } .contact-split-right { padding:4rem 3rem; } .contact-white { padding:5rem 3rem; } }
+@media(max-width:1100px){ .contact-split-left{padding:4rem 3rem;} .contact-split-right{padding:4rem 3rem;} }
 @media(max-width:900px){
-  .contact-split { grid-template-columns:1fr; }
-  .contact-split-left { min-height:500px;padding:4rem 2rem 3rem; }
-  .contact-split-photo { width:52%; }
-  .contact-split-right { padding:3rem 2rem; }
-  .form-row { grid-template-columns:1fr; }
-  .contact-white { padding:4rem 2rem; }
-  .contact-white-grid { grid-template-columns:1fr; }
+  .contact-split{grid-template-columns:1fr;}
+  .contact-split-left{min-height:480px;padding:4rem 2rem 3rem;}
+  .contact-split-photo{width:52%;}
+  .contact-split-right{padding:3rem 2rem;}
+  .form-row{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
-  .contact-split-left { min-height:420px;padding:3rem 1.5rem 2.5rem; }
-  .contact-split-photo { width:50%; }
-  .contact-split-right { padding:2.5rem 1.5rem; }
-  .contact-white { padding:3rem 1.5rem; }
+  .contact-split-left{min-height:400px;padding:3rem 1.5rem 2.5rem;}
+  .contact-split-photo{width:48%;}
+  .contact-split-right{padding:2.5rem 1.5rem;}
 }
 </style>
 <script type="application/ld+json">
@@ -186,8 +165,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="form-row">
         <div class="form-group">
-          <label class="form-label" for="email">Email *</label>
-          <input type="email" class="form-input" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+          <label class="form-label" for="email">Email</label>
+          <input type="email" class="form-input" id="email" name="email" placeholder="tu@email.com" autocomplete="email">
         </div>
         <div class="form-group">
           <label class="form-label" for="phone">Teléfono / WhatsApp</label>
@@ -212,6 +191,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </select>
       </div>
       <div class="form-group">
+        <label class="form-label">Forma de contacto preferida</label>
+        <div class="form-radios" id="contactRadios">
+          <label class="form-radio"><input type="radio" name="contacto_preferido" value="email"> Email</label>
+          <label class="form-radio"><input type="radio" name="contacto_preferido" value="whatsapp"> WhatsApp</label>
+          <label class="form-radio"><input type="radio" name="contacto_preferido" value="llamada"> Llamada</label>
+        </div>
+      </div>
+      <div class="form-group">
         <label class="form-label" for="message">Cuéntame tu proyecto *</label>
         <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes?" required></textarea>
       </div>
@@ -226,30 +213,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- SECCIÓN BLANCA -->
-<section class="contact-white">
+<section class="white-section">
   <div class="fade-up">
     <div class="section-label">Por qué trabajar conmigo</div>
-    <h2 class="contact-white-title">Lo que puedes esperar <em>desde el primer mensaje</em></h2>
-    <p class="contact-white-sub">Trabajo con un número limitado de clientes para poder dedicar atención real a cada proyecto. Esto no es una agencia.</p>
+    <h2 class="ws-title">Lo que puedes esperar <em>desde el primer mensaje</em></h2>
+    <p class="ws-sub">Trabajo con un número limitado de clientes para poder dedicar atención real a cada proyecto. Esto no es una agencia.</p>
   </div>
-  <div class="contact-white-grid">
-    <div class="cwc slide-left">
-      <div class="cwc-num">24h</div>
-      <div class="cwc-title">Respuesta garantizada</div>
-      <p class="cwc-desc">Respondo a todos los mensajes en menos de 24 horas laborables. Sin formularios que se pierden ni semanas de espera.</p>
-      <span class="cwc-tag">Tiempo de respuesta</span>
+  <div class="ws-grid-3">
+    <div class="wsc slide-left">
+      <div class="wsc-num">24h</div>
+      <div class="wsc-title">Respuesta garantizada</div>
+      <p class="wsc-desc">Respondo a todos los mensajes en menos de 24 horas laborables. Sin formularios que se pierden ni semanas de espera.</p>
+      <span class="wsc-tag">Tiempo de respuesta</span>
     </div>
-    <div class="cwc fade-scale" style="--delay:0.1s">
-      <div class="cwc-num">01</div>
-      <div class="cwc-title">Trato directo, siempre</div>
-      <p class="cwc-desc">No hay intermediarios. Cuando contactas conmigo, hablas conmigo. Yo diseño la estrategia, yo la ejecuto, yo respondo.</p>
-      <span class="cwc-tag">Sin delegaciones</span>
+    <div class="wsc fade-scale" style="--delay:0.1s">
+      <div class="wsc-num">01</div>
+      <div class="wsc-title">Trato directo, siempre</div>
+      <p class="wsc-desc">No hay intermediarios. Cuando contactas conmigo, hablas conmigo. Yo diseño la estrategia, yo la ejecuto, yo respondo.</p>
+      <span class="wsc-tag">Sin delegaciones</span>
     </div>
-    <div class="cwc slide-right" style="--delay:0.15s">
-      <div class="cwc-num">ES</div>
-      <div class="cwc-title">Toda España, sin desplazamientos</div>
-      <p class="cwc-desc">Con sede en Galicia y clientes en toda España. Las reuniones son online, ágiles y sin burocracia.</p>
-      <span class="cwc-tag">Servicio nacional</span>
+    <div class="wsc slide-right" style="--delay:0.15s">
+      <div class="wsc-num">ES</div>
+      <div class="wsc-title">Toda España, sin desplazamientos</div>
+      <p class="wsc-desc">Con sede en Galicia y clientes en toda España. Las reuniones son online, ágiles y sin burocracia.</p>
+      <span class="wsc-tag">Servicio nacional</span>
     </div>
   </div>
 </section>
@@ -281,12 +268,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
   const name = document.getElementById('fname').value.trim();
-  const email = document.getElementById('email').value.trim();
   const msg = document.getElementById('message').value.trim();
-  if (!name || !email || !msg) { alert('Por favor rellena los campos obligatorios (nombre, email y mensaje).'); return; }
+  if (!name || !msg) { alert('Por favor rellena los campos obligatorios (nombre y mensaje).'); return; }
   document.getElementById('successMsg').style.display = 'block';
   document.querySelector('.form-submit').disabled = true;
   document.querySelector('.form-submit').textContent = 'Enviado ✓';
+});
+
+document.querySelectorAll('.form-radio').forEach(label => {
+  label.addEventListener('click', () => {
+    document.querySelectorAll('.form-radio').forEach(l => l.classList.remove('checked'));
+    label.classList.add('checked');
+  });
 });
 </script>
 
