@@ -48,12 +48,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .csc-val { font-size:0.87rem;color:var(--gold);transition:color 0.3s; }
 .contact-split-channel:hover .csc-type { color:rgba(255,255,255,0.5); }
 .contact-split-channel:hover .csc-val { color:var(--gold-light); }
-/* Photo — single smooth gradient, no stripes */
-.contact-split-photo { position:absolute;bottom:0;right:0;width:65%;z-index:1;pointer-events:none; }
-.contact-split-photo img { width:100%;height:auto;display:block; }
+/* Photo with mask — no gradient artifacts */
+.contact-split-photo { position:absolute;bottom:0;right:0;width:68%;z-index:1;pointer-events:none; }
+.contact-split-photo img {
+  width:100%;height:auto;display:block;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 88%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 30%, black 88%, transparent 100%);
+}
+/* Minimal overlay just to darken text area */
 .contact-split-left::before {
   content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
-  background: linear-gradient(to right, #050505 22%, rgba(5,5,5,0.9) 38%, rgba(5,5,5,0.35) 60%, rgba(5,5,5,0.05) 82%, transparent 100%);
+  background: linear-gradient(to right, #050505 32%, transparent 58%);
 }
 /* Right: form panel */
 .contact-split-right { background:var(--bg2);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(201,168,76,0.05); }
@@ -191,11 +196,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </select>
       </div>
       <div class="form-group">
-        <label class="form-label">Forma de contacto preferida</label>
-        <div class="form-radios" id="contactRadios">
-          <label class="form-radio"><input type="radio" name="contacto_preferido" value="email"> Email</label>
-          <label class="form-radio"><input type="radio" name="contacto_preferido" value="whatsapp"> WhatsApp</label>
-          <label class="form-radio"><input type="radio" name="contacto_preferido" value="llamada"> Llamada</label>
+        <label class="form-label">Prefiero que me contactes por</label>
+        <div class="form-contact-opts" id="contactOpts">
+          <label class="form-copt">
+            <input type="radio" name="contacto_preferido" value="email">
+            <span class="form-copt-icon">✉</span>
+            <span class="form-copt-label">Email</span>
+          </label>
+          <label class="form-copt">
+            <input type="radio" name="contacto_preferido" value="whatsapp">
+            <span class="form-copt-icon">💬</span>
+            <span class="form-copt-label">WhatsApp</span>
+          </label>
+          <label class="form-copt">
+            <input type="radio" name="contacto_preferido" value="llamada">
+            <span class="form-copt-icon">📞</span>
+            <span class="form-copt-label">Llamada</span>
+          </label>
         </div>
       </div>
       <div class="form-group">
@@ -275,9 +292,9 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   document.querySelector('.form-submit').textContent = 'Enviado ✓';
 });
 
-document.querySelectorAll('.form-radio').forEach(label => {
+document.querySelectorAll('.form-copt').forEach(label => {
   label.addEventListener('click', () => {
-    document.querySelectorAll('.form-radio').forEach(l => l.classList.remove('checked'));
+    document.querySelectorAll('.form-copt').forEach(l => l.classList.remove('checked'));
     label.classList.add('checked');
   });
 });
