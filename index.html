@@ -139,16 +139,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .stat-div { width:1px;height:50px;background:var(--border); }
 .services-preview { background:var(--bg2); }
 .service-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);margin-top:3rem; }
-.service-card { background:var(--bg);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.35s ease,transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s ease;text-decoration:none;display:block;color:inherit; }
+.service-card { background:var(--bg);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.35s ease,transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s ease;display:flex;flex-direction:column;color:inherit; }
 .service-card::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
 .service-card:hover { background:var(--bg3);transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,0.35); }
 .service-card:hover::before { height:100%; }
-.service-card:hover .service-card-link { letter-spacing:0.16em; }
-.service-card-link { transition:letter-spacing 0.3s ease,color 0.3s; }
+.service-card-foot { display:flex;flex-wrap:wrap;gap:1rem 1.25rem;margin-top:1.5rem;align-items:center; }
+.service-card-link { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:letter-spacing 0.3s ease,color 0.3s; }
+.service-card-link:hover { letter-spacing:0.16em;color:var(--gold-light); }
+.service-card-link--muted { color:var(--text-muted); }
+.service-card-link--muted:hover { color:var(--gold); }
 .service-icon { font-size:1.5rem;margin-bottom:1.5rem;opacity:0.6; }
 .service-card-title { font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:0.7rem; }
-.service-card-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem; }
-.service-card-link { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold); }
+.service-card-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted);margin-bottom:0;flex-grow:1; }
 .about-preview { background:var(--bg); }
 .about-grid { display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center; }
 .about-img-side { position:relative; }
@@ -251,30 +253,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2 class="section-title">Servicios que <em>mueven negocios</em></h2>
   <p style="font-size:0.92rem;line-height:1.8;color:var(--text-muted);max-width:580px;margin-bottom:0;">Tres pilares donde más impacto genero para empresas de servicios. El resto de especialidades están en la página de servicios y enlazadas abajo.</p>
   <div class="service-cards">
-    <a href="servicios/automatizacion-ia.html" class="service-card fade-up">
+    <article class="service-card fade-up">
       <div class="service-icon">⬡</div>
       <h3 class="service-card-title">Automatización &amp; IA</h3>
       <p class="service-card-desc">Flujos inteligentes con n8n e IA para ahorrar horas en tareas repetitivas. Captación de leads, CRM, contenido y seguimiento automatizados.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/seo-geo.html" class="service-card fade-up" style="--delay:0.08s">
+      <div class="service-card-foot">
+        <a href="servicios/automatizacion-ia.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=automatizacion" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
+    <article class="service-card fade-up" style="--delay:0.08s">
       <div class="service-icon">◎</div>
-      <h3 class="service-card-title">SEO &amp; GEO</h3>
+      <h3 class="service-card-title">SEO, GEO y AEO</h3>
       <p class="service-card-desc">Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini. Para que te encuentren en buscadores y en respuestas de IA.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/consultoria-negocio.html" class="service-card fade-up" style="--delay:0.16s">
+      <div class="service-card-foot">
+        <a href="servicios/seo-geo.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=seo-geo" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
+    <article class="service-card fade-up" style="--delay:0.16s">
       <div class="service-icon">◈</div>
       <h3 class="service-card-title">Consultoría de Negocio</h3>
       <p class="service-card-desc">Diagnóstico digital, oportunidades y plan de acción con métricas claras. Estrategia aplicable antes de invertir en tácticas sueltas.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
+      <div class="service-card-foot">
+        <a href="servicios/consultoria-negocio.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=consultoria" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
   </div>
   <div class="service-links-hub">
     <p class="service-links-hub-label">Todos los servicios</p>
     <div class="service-links-hub-list" role="navigation" aria-label="Enlaces a todas las páginas de servicio">
       <a href="servicios/automatizacion-ia.html">Automatización &amp; IA</a><span class="hub-sep" aria-hidden="true">·</span>
-      <a href="servicios/seo-geo.html">SEO &amp; GEO</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/seo-geo.html">SEO, GEO y AEO</a><span class="hub-sep" aria-hidden="true">·</span>
       <a href="servicios/consultoria-negocio.html">Consultoría de negocio</a><span class="hub-sep" aria-hidden="true">·</span>
       <a href="servicios/publicidad-digital.html">Publicidad digital</a><span class="hub-sep" aria-hidden="true">·</span>
       <a href="servicios/estrategia-digital.html">Estrategia digital</a><span class="hub-sep" aria-hidden="true">·</span>
