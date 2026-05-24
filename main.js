@@ -84,10 +84,42 @@ document.addEventListener('DOMContentLoaded',function(){
 });
 
 // SCROLL ANIMATIONS
+const animatedSelector = '.fade-up,.slide-left,.slide-right,.fade-scale,.stats-row .stat-box.fade-up,.page-hero .fade-up';
 const observer = new IntersectionObserver(entries=>{
   entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
 },{threshold:0.1});
-document.querySelectorAll('.fade-up,.slide-left,.slide-right,.fade-scale').forEach(el=>observer.observe(el));
+
+// Service pages — staggered entrance animations
+document.querySelectorAll('.page-hero').forEach(hero => {
+  hero.classList.add('fade-up');
+  hero.querySelectorAll('.page-hero-label, h1, .page-hero-desc, .page-hero > div:not(.page-hero-line)').forEach((el, i) => {
+    el.classList.add('fade-up');
+    el.style.setProperty('--delay', `${i * 0.08}s`);
+  });
+});
+document.querySelectorAll('.stats-row .stat-box').forEach((box, i) => {
+  box.classList.add('fade-up');
+  box.style.setProperty('--delay', `${i * 0.08}s`);
+});
+document.querySelectorAll('.two-col-content .prose').forEach(el => {
+  if (!el.classList.contains('slide-left')) el.classList.add('slide-left');
+});
+document.querySelectorAll('.two-col-content > div:not(.prose)').forEach(el => {
+  if (!el.classList.contains('slide-right')) el.classList.add('slide-right');
+});
+document.querySelectorAll('.cta-strip').forEach(el => {
+  if (!el.classList.contains('fade-up')) el.classList.add('fade-up');
+});
+document.querySelectorAll('section .section-label, section .section-title').forEach((el, i) => {
+  if (!el.classList.contains('fade-up')) {
+    el.classList.add('fade-up');
+    el.style.setProperty('--delay', `${(i % 3) * 0.06}s`);
+  }
+});
+document.querySelectorAll('.tldr-box').forEach(el => {
+  if (!el.classList.contains('fade-scale')) el.classList.add('fade-scale');
+});
+document.querySelectorAll(animatedSelector).forEach(el=>observer.observe(el));
 
 // STAT COUNTERS (home)
 function animateStat(el) {

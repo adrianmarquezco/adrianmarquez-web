@@ -27,7 +27,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 <style>
 /* Hero compacto — contacto inmediato */
 .contact-hero-compact { padding:7rem 5rem 2rem;position:relative; }
@@ -40,7 +40,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 /* Split layout */
 .contact-split { display:grid;grid-template-columns:1fr 1.15fr; }
 .contact-split-left { order:1;position:relative;background:#050505;overflow:hidden;display:flex;flex-direction:column;padding:3.5rem 4rem 4rem;min-height:620px; }
-.contact-split-content { position:relative;z-index:3;flex:1; }
+.contact-split-content { position:relative;z-index:5;flex:1;max-width:52%; }
+.contact-split-left .section-label::after { display:none; }
 .contact-split-title { font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2vw,2rem);font-weight:900;line-height:1.2;margin-bottom:0.75rem;color:#fff; }
 .contact-split-title em { font-style:italic;color:var(--gold); }
 .contact-split-desc { font-size:0.84rem;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:2rem;max-width:320px; }
@@ -51,9 +52,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .csc-val { font-size:0.87rem;color:var(--gold);transition:color 0.3s; }
 .contact-split-channel:hover .csc-type { color:rgba(255,255,255,0.65); }
 .contact-split-channel:hover .csc-val { color:var(--gold-light); }
-.contact-split-photo { position:absolute;bottom:0;right:0;width:65%;z-index:1;pointer-events:none; }
-.contact-split-photo img { width:100%;height:auto;display:block;-webkit-mask-image:linear-gradient(to right,transparent 0%,black 28%,black 88%,transparent 100%);mask-image:linear-gradient(to right,transparent 0%,black 28%,black 88%,transparent 100%); }
-.contact-split-left::before { content:'';position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(to right,#050505 34%,transparent 58%); }
+.contact-split-photo { position:absolute;bottom:0;right:0;width:62%;z-index:4;pointer-events:none; }
+.contact-split-photo img { width:100%;height:auto;display:block;position:relative;z-index:1;-webkit-mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,0.4) 18%,black 38%),linear-gradient(to right,transparent 0%,black 28%,black 100%);mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,0.4) 18%,black 38%),linear-gradient(to right,transparent 0%,black 28%,black 100%);-webkit-mask-composite:source-in;mask-composite:intersect; }
+.contact-split-photo::after { content:'';position:absolute;bottom:0;left:0;right:0;height:55%;z-index:2;pointer-events:none;background:linear-gradient(to top,#050505 0%,rgba(5,5,5,0.95) 18%,rgba(5,5,5,0.55) 45%,transparent 100%); }
+.contact-split-left::before { content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(to right,#050505 38%,rgba(5,5,5,0.75) 52%,transparent 68%); }
 
 /* Panel formulario — crema */
 .contact-split-right { order:2;background:#f7f4ef;padding:3.5rem 4rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(13,12,10,0.06);scroll-margin-top:5rem; }
@@ -94,7 +96,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .contact-split{grid-template-columns:1fr;}
   .contact-split-right{order:-1;padding:2.5rem 1.5rem;border-left:none;border-bottom:1px solid rgba(13,12,10,0.08);}
   .contact-split-left{order:1;min-height:420px;padding:3rem 1.5rem 2.5rem;}
-  .contact-split-photo{width:50%;}
+  .contact-split-photo{width:58%;}
+  .contact-split-content{max-width:100%;}
   .form-row{grid-template-columns:1fr;}
   .contact-faq{padding:3rem 1.5rem;}
 }
