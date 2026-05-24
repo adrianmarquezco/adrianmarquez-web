@@ -258,3 +258,207 @@ document.querySelectorAll('.process-timeline .process-step').forEach(step => {
     step.classList.add('is-active');
   });
 });
+
+// Hero — entrada por líneas
+document.addEventListener('DOMContentLoaded', () => {
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    requestAnimationFrame(() => document.body.classList.add('hero-ready'));
+  } else {
+    document.body.classList.add('hero-ready');
+  }
+});
+
+// Tarjetas de proyecto — tilt + glow
+document.querySelectorAll('[data-tilt]').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    const rotY = ((e.clientX - rect.left) / rect.width - 0.5) * 8;
+    const rotX = ((e.clientY - rect.top) / rect.height - 0.5) * -8;
+    card.style.setProperty('--mouse-x', `${x}%`);
+    card.style.setProperty('--mouse-y', `${y}%`);
+    card.style.transform = `perspective(900px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-4px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+  });
+});
+
+// Process timeline — línea y pasos al scroll
+const processTimeline = document.getElementById('processTimeline');
+if (processTimeline) {
+  const processSteps = processTimeline.querySelectorAll('.process-step');
+  const updateProcessProgress = () => {
+    const rect = processTimeline.getBoundingClientRect();
+    const vh = window.innerHeight;
+    const start = vh * 0.85;
+    const end = vh * 0.25;
+    const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end + rect.height * 0.5)));
+    processTimeline.style.setProperty('--process-progress', String(progress));
+    const litCount = Math.ceil(progress * processSteps.length);
+    processSteps.forEach((step, i) => step.classList.toggle('is-lit', i < litCount));
+    processTimeline.classList.toggle('is-in-view', rect.top < vh && rect.bottom > 0);
+  };
+  updateProcessProgress();
+  window.addEventListener('scroll', updateProcessProgress, { passive: true });
+}
+
+// Mini demo n8n — flujos orientativos por sector
+const FLOW_TEMPLATES = {
+  seguros: {
+    title: 'Captación en correduría de seguros',
+    metric: 'Resultado típico: <strong>respuesta al lead en segundos</strong>',
+    nodes: [
+      { type: 'Trigger', title: 'Web / WhatsApp' },
+      { type: 'IA', title: 'Cualifica lead' },
+      { type: 'CRM', title: 'Alta y etiquetas' },
+      { type: 'Email', title: 'Respuesta auto' },
+      { type: 'Alerta', title: 'Aviso comercial' }
+    ]
+  },
+  retail: {
+    title: 'Negocio local — captación y reservas',
+    metric: 'Resultado típico: <strong>+ visibilidad y leads desde Maps</strong>',
+    nodes: [
+      { type: 'Trigger', title: 'Google Maps / web' },
+      { type: 'IA', title: 'Clasifica consulta' },
+      { type: 'CRM', title: 'Ficha cliente' },
+      { type: 'WhatsApp', title: 'Respuesta rápida' },
+      { type: 'Recordatorio', title: 'Seguimiento' }
+    ]
+  },
+  coaching: {
+    title: 'Coach / servicios profesionales',
+    metric: 'Resultado típico: <strong>+ tráfico orgánico y leads cualificados</strong>',
+    nodes: [
+      { type: 'Trigger', title: 'Formulario / blog' },
+      { type: 'IA', title: 'Resume necesidad' },
+      { type: 'CRM', title: 'Pipeline ventas' },
+      { type: 'Email', title: 'Secuencia nurturing' },
+      { type: 'Calendario', title: 'Cita propuesta' }
+    ]
+  },
+  ecommerce: {
+    title: 'E-commerce y artesanía online',
+    metric: 'Resultado típico: <strong>pedidos y clientes fuera de la zona local</strong>',
+    nodes: [
+      { type: 'Trigger', title: 'Pedido / carrito' },
+      { type: 'IA', title: 'Soporte básico' },
+      { type: 'CRM', title: 'Historial compra' },
+      { type: 'Email', title: 'Post-venta' },
+      { type: 'Social', title: 'Contenido auto' }
+    ]
+  },
+  b2b: {
+    title: 'Servicios B2B y equipos comerciales',
+    metric: 'Resultado típico: <strong>-70% tiempo manual en seguimiento</strong>',
+    nodes: [
+      { type: 'Trigger', title: 'Lead entrante' },
+      { type: 'IA', title: 'Scoring lead' },
+      { type: 'CRM', title: 'Asignación' },
+      { type: 'Email', title: 'Propuesta base' },
+      { type: 'Informe', title: 'KPIs semanales' }
+    ]
+  }
+};
+
+function renderN8nFlow(sector) {
+  const canvas = document.getElementById('n8nCanvasInner');
+  const titleEl = document.getElementById('flowDemoTitle');
+  const metricEl = document.getElementById('flowDemoMetric');
+  if (!canvas || !FLOW_TEMPLATES[sector]) return;
+
+  const tpl = FLOW_TEMPLATES[sector];
+  if (titleEl) titleEl.textContent = tpl.title;
+  if (metricEl) metricEl.innerHTML = tpl.metric;
+
+  canvas.innerHTML = '';
+  tpl.nodes.forEach((node, i) => {
+    if (i > 0) {
+      const conn = document.createElement('span');
+      conn.className = 'n8n-connector';
+      conn.setAttribute('aria-hidden', 'true');
+      canvas.appendChild(conn);
+    }
+    const el = document.createElement('div');
+    el.className = 'n8n-node';
+    el.innerHTML = `<div class="n8n-node-type">${node.type}</div><div class="n8n-node-title">${node.title}</div>`;
+    canvas.appendChild(el);
+  });
+}
+
+let n8nAnimTimer = null;
+function runN8nAnimation() {
+  const canvas = document.getElementById('n8nCanvasInner');
+  if (!canvas || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    canvas?.querySelectorAll('.n8n-node').forEach(n => n.classList.add('is-active'));
+    return;
+  }
+  if (n8nAnimTimer) clearInterval(n8nAnimTimer);
+  const nodes = canvas.querySelectorAll('.n8n-node');
+  const connectors = canvas.querySelectorAll('.n8n-connector');
+  let step = 0;
+  const tick = () => {
+    nodes.forEach((n, i) => n.classList.toggle('is-active', i === step));
+    connectors.forEach((c, i) => c.classList.toggle('is-active', i === step));
+    step = (step + 1) % (nodes.length + 1);
+  };
+  tick();
+  n8nAnimTimer = setInterval(tick, 1100);
+}
+
+function initFlowDemo() {
+  const wrap = document.getElementById('flowDemo');
+  if (!wrap) return;
+
+  let currentSector = 'seguros';
+  renderN8nFlow(currentSector);
+  runN8nAnimation();
+
+  wrap.querySelectorAll('.flow-demo-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const sector = tab.dataset.sector;
+      if (!sector || sector === currentSector) return;
+      currentSector = sector;
+      wrap.querySelectorAll('.flow-demo-tab').forEach(t => {
+        const active = t === tab;
+        t.classList.toggle('is-active', active);
+        t.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      renderN8nFlow(sector);
+      runN8nAnimation();
+    });
+  });
+
+  const demoObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) runN8nAnimation();
+      else if (n8nAnimTimer) clearInterval(n8nAnimTimer);
+    });
+  }, { threshold: 0.25 });
+  demoObs.observe(wrap);
+}
+
+initFlowDemo();
+
+function selectFlowSector(sector) {
+  const tab = document.querySelector(`.flow-demo-tab[data-sector="${sector}"]`);
+  if (tab) tab.click();
+}
+
+document.querySelectorAll('.sector-chip[data-sector]').forEach(chip => {
+  const go = () => {
+    const sector = chip.dataset.sector;
+    const target = document.getElementById('automatizacion');
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setTimeout(() => selectFlowSector(sector), 400);
+  };
+  chip.addEventListener('click', go);
+  chip.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      go();
+    }
+  });
+});
