@@ -160,6 +160,12 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 .fade-up.visible { opacity:1;transform:translateY(0); }
 .slide-left { opacity:0;transform:translateX(-35px);transition:opacity 0.75s ease var(--delay,0s),transform 0.75s ease var(--delay,0s); }
 .slide-left.visible { opacity:1;transform:translateX(0); }
+.page-hero.fade-up.visible .page-hero-label { transition-delay:0s; }
+.page-hero.fade-up.visible h1 { transition-delay:0.08s; }
+.page-hero.fade-up.visible .page-hero-desc { transition-delay:0.16s; }
+.page-hero.fade-up.visible > div:not(.page-hero-line) { transition-delay:0.24s; }
+.stats-row .stat-box.fade-up { opacity:0;transform:translateY(20px); }
+.stats-row .stat-box.fade-up.visible { opacity:1;transform:translateY(0); }
 .slide-right { opacity:0;transform:translateX(35px);transition:opacity 0.75s ease var(--delay,0s),transform 0.75s ease var(--delay,0s); }
 .slide-right.visible { opacity:1;transform:translateX(0); }
 .fade-scale { opacity:0;transform:scale(0.94);transition:opacity 0.65s ease var(--delay,0s),transform 0.65s ease var(--delay,0s); }
@@ -292,6 +298,14 @@ body.nav-open > nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
   transition:color 0.25s;
   white-space:nowrap;
 }
+.service-links-hub a.hub-contact {
+  font-size:0.62rem;
+  letter-spacing:0.06em;
+  text-transform:lowercase;
+  color:rgba(201,168,76,0.45);
+  margin-left:0.1rem;
+}
+.service-links-hub a.hub-contact:hover { color:var(--gold); }
 .service-links-hub a:hover { color:var(--gold); }
 .service-links-hub .hub-sep {
   color:rgba(201,168,76,0.35);
