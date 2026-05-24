@@ -524,8 +524,11 @@ body > nav.nav-scrolled {
 .about-page .about-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 5rem;
+  gap: 4rem;
   align-items: start;
+  padding: 0 5rem 5rem;
+  position: relative;
+  z-index: 2;
 }
 .about-page .about-photo-frame {
   aspect-ratio: 3/4;
@@ -539,24 +542,100 @@ body > nav.nav-scrolled {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
 }
 .about-page .about-photo-deco {
   position: absolute;
-  bottom: -1.5rem;
-  right: -1.5rem;
-  width: 80px;
-  height: 80px;
-  border: 1px solid rgba(201,168,76,0.3);
+  bottom: 1rem;
+  right: 1rem;
+  width: 64px;
+  height: 64px;
+  border: 1px solid rgba(201,168,76,0.35);
+  pointer-events: none;
+}
+.about-page .link-chips {
+  margin-top: 2rem;
 }
 .about-page .about-quote {
   font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 2.2vw, 1.5rem);
   font-style: italic;
   color: var(--gold-light);
-  line-height: 1.4;
-  margin-bottom: 2rem;
-  padding-left: 1.5rem;
+  line-height: 1.45;
+  margin: 0 0 2rem;
+  padding: 0 0 0 1.25rem;
+  border: none;
   border-left: 2px solid var(--gold);
+}
+.about-page .about-content .prose {
+  max-width: none;
+}
+.about-page .skills-section.about-skills-block {
+  margin-top: 0;
+  padding: 5rem;
+  background: var(--bg2);
+  border-radius: 1.75rem 1.75rem 0 0;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 -12px 32px rgba(0,0,0,0.18);
+}
+.about-page .certs-showcase {
+  padding: 5rem;
+  background: var(--bg2);
+}
+.about-page .certs-group {
+  margin-top: 2.5rem;
+}
+.about-page .certs-group-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.about-page .certs-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.about-page .cert-pill {
+  font-size: 0.78rem;
+  line-height: 1.35;
+  padding: 0.55rem 0.95rem;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: rgba(240,237,232,0.82);
+}
+.about-page .cert-pill strong {
+  color: var(--gold);
+  font-weight: 500;
+}
+.about-page .cert-pill--highlight {
+  border-color: rgba(201,168,76,0.4);
+  background: rgba(201,168,76,0.07);
+}
+.about-page .edu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+  margin-top: 2.5rem;
+}
+.about-page .edu-item {
+  background: var(--bg3);
+  padding: 1.75rem;
+}
+.about-page .edu-item strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  margin-bottom: 0.35rem;
+  color: var(--text);
+}
+.about-page .edu-item span {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 .about-page .skills-section,
 .projects-page .projects-faq {
@@ -723,7 +802,10 @@ body > nav.nav-scrolled {
   .featured-projects, .automation-section, .blog-teaser { padding: 4rem 1.5rem; }
   .section-dark--curve { margin-top: -1rem; padding-top: 4.5rem; border-radius: 1.25rem 1.25rem 0 0; }
   .about-page .about-hero { grid-template-columns: 1fr; padding: 0 1.5rem 3rem; gap: 2.5rem; }
-  .about-page .skills-grid { grid-template-columns: 1fr 1fr; }
+  .about-page .about-photo-deco { width: 48px; height: 48px; bottom: 0.75rem; right: 0.75rem; }
+  .about-page .skills-section.about-skills-block,
+  .about-page .certs-showcase { padding: 4rem 1.5rem; }
+  .about-page .edu-grid { grid-template-columns: 1fr; }
   .about-page .exp-grid { grid-template-columns: 1fr; }
   .about-page .skills-section, .projects-page .projects-faq { padding: 4rem 1.5rem; }
   .projects-page .projects-main { padding: 0 1.5rem 4rem; }
