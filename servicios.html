@@ -30,7 +30,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="components-premium.css?v=1">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -68,16 +69,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 .service-card-full:hover { background:var(--bg3); }
 .service-card-full:hover::before { height:100%; }
 .service-num { font-family:'Playfair Display',serif;font-size:0.75rem;color:var(--gold-dim);letter-spacing:0.1em;margin-bottom:1.5rem; }
-.service-icon-big { font-size:2rem;margin-bottom:1rem;opacity:0.5; }
+.service-icon-big { display:none; }
 .service-card-title { font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.8rem; }
 .service-card-desc { font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem; }
 .service-card-tags { display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.5rem; }
 .service-tag { font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;background:rgba(201,168,76,0.06);color:var(--gold-dim);border:1px solid rgba(201,168,76,0.12); }
 .service-link { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold); }
 .process-section { background:var(--bg2);padding:5rem; }
-.process-steps { display:grid;grid-template-columns:repeat(4,1fr);gap:1.5px;background:var(--border);margin-top:3rem; }
+.process-steps { display:none; }
 .process-step { background:var(--bg3);padding:2rem; }
-.process-step-num { font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:rgba(201,168,76,0.1);line-height:1;margin-bottom:1rem; }
+.process-step-num { display:none; }
 .process-step-title { font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;margin-bottom:0.6rem; }
 .process-step-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted); }
 @media(max-width:900px){
@@ -124,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="services-grid-full">
     <a href="servicios/consultoria-negocio.html" class="service-card-full fade-up" style="--delay:0.05s">
       <div class="service-num">01</div>
-      <div class="service-icon-big">◈</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 17v-5M12 17V8M16 17v-3"/></svg></span>
       <h2 class="service-card-title">Consultoría de Negocio Digital</h2>
       <p class="service-card-desc">Diagnóstico completo de tu situación digital, identificación de oportunidades y plan de acción con métricas claras. Sin informes vacíos, solo estrategia aplicable para empresas de servicios.</p>
       <div class="service-card-tags"><span class="service-tag">Estrategia</span><span class="service-tag">Diagnóstico</span><span class="service-tag">Plan de acción</span></div>
@@ -132,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="servicios/seo-geo.html" class="service-card-full fade-up" style="--delay:0.1s">
       <div class="service-num">02</div>
-      <div class="service-icon-big">◎</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
       <h2 class="service-card-title">SEO, GEO y AEO</h2>
       <p class="service-card-desc">Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini. En 2026 no basta con rankear en Google: también tienes que aparecer en las respuestas de la inteligencia artificial.</p>
       <div class="service-card-tags"><span class="service-tag">SEO técnico</span><span class="service-tag">GEO</span><span class="service-tag">AEO</span><span class="service-tag">Schema</span></div>
@@ -140,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="servicios/automatizacion-ia.html" class="service-card-full fade-up" style="--delay:0.15s">
       <div class="service-num">03</div>
-      <div class="service-icon-big">⬡</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
       <h2 class="service-card-title">Automatización con IA & n8n</h2>
       <p class="service-card-desc">Flujos inteligentes que trabajan por ti. Captación de leads, publicación de contenido, CRM y seguimiento automatizados con n8n e IA. Las empresas que automatizan crecen más con los mismos recursos.</p>
       <div class="service-card-tags"><span class="service-tag">n8n</span><span class="service-tag">IA Generativa</span><span class="service-tag">Flujos</span><span class="service-tag">CRM</span></div>
@@ -148,7 +149,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="servicios/formacion-empresas.html" class="service-card-full fade-up" style="--delay:0.2s">
       <div class="service-num">04</div>
-      <div class="service-icon-big">◇</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5c1-.7 2.2-1 3.5-1H20V5H7.5C6.2 5 5 5.3 4 6v13.5z"/><path d="M4 6h16"/></svg></span>
       <h2 class="service-card-title">Formación en Empresas</h2>
       <p class="service-card-desc">Talleres y formaciones presenciales u online en marketing digital, IA y automatización para equipos. Contenido 100% práctico adaptado a la realidad de cada empresa. Sin teoría vacía.</p>
       <div class="service-card-tags"><span class="service-tag">Talleres</span><span class="service-tag">IA</span><span class="service-tag">Marketing</span><span class="service-tag">Equipos</span></div>
@@ -156,7 +157,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="servicios/publicidad-digital.html" class="service-card-full fade-up" style="--delay:0.25s">
       <div class="service-num">05</div>
-      <div class="service-icon-big">◉</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="2"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
       <h2 class="service-card-title">Publicidad Digital</h2>
       <p class="service-card-desc">Campañas de Google Ads y Meta Ads orientadas a conversión. Gestión completa, optimización continua y reporting transparente. Sin métricas de vanidad, solo resultados reales para tu negocio.</p>
       <div class="service-card-tags"><span class="service-tag">Google Ads</span><span class="service-tag">Meta Ads</span><span class="service-tag">SEM</span><span class="service-tag">Conversión</span></div>
@@ -164,7 +165,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="servicios/estrategia-digital.html" class="service-card-full fade-up" style="--delay:0.3s">
       <div class="service-num">06</div>
-      <div class="service-icon-big">◆</div>
+      <span class="svc-icon svc-icon--big" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 21s7-4.5 7-11a7 7 0 10-14 0c0 6.5 7 11 7 11z"/><path d="M12 10l3-1-1 3-3 1 1-3z"/></svg></span>
       <h2 class="service-card-title">Estrategia Digital</h2>
       <p class="service-card-desc">Planificación omnicanal, definición de audiencias, propuesta de valor y hoja de ruta digital a 6 y 12 meses. La visión estratégica que muchas empresas nunca tienen pero todas necesitan.</p>
       <div class="service-card-tags"><span class="service-tag">Planificación</span><span class="service-tag">Audiencias</span><span class="service-tag">Omnicanal</span><span class="service-tag">KPIs</span></div>
@@ -182,19 +183,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="ws-grid-3">
     <div class="wsc slide-left">
-      <div class="wsc-num">↑</div>
+      <div class="wsc-num">01</div>
       <div class="wsc-title">Más visibilidad, más leads</div>
       <p class="wsc-desc">SEO/GEO, publicidad y estrategia de contenido coordinados para que tu empresa aparezca donde están tus clientes — en Google y en la IA.</p>
       <span class="wsc-tag">Captación</span>
     </div>
     <div class="wsc fade-scale" style="--delay:0.1s">
-      <div class="wsc-num">→</div>
+      <div class="wsc-num">02</div>
       <div class="wsc-title">Procesos automatizados</div>
       <p class="wsc-desc">Las empresas que automatizan crecen más con los mismos recursos. Flujos con n8n e IA que trabajan 24/7 sin intervención humana.</p>
       <span class="wsc-tag">Automatización</span>
     </div>
     <div class="wsc slide-right" style="--delay:0.15s">
-      <div class="wsc-num">◈</div>
+      <div class="wsc-num">03</div>
       <div class="wsc-title">Estrategia que conecta con el negocio</div>
       <p class="wsc-desc">No ejecuto actividad por actividad. Cada acción responde a un objetivo de negocio claro, con métricas que demuestran el retorno.</p>
       <span class="wsc-tag">Negocio real</span>
@@ -205,24 +206,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="process-section">
   <div class="section-label">Cómo trabajo</div>
   <h2 class="section-title" style="color:#ffffff">Un proceso <em>sin sorpresas</em></h2>
-  <div class="process-steps">
-    <div class="process-step fade-up" style="--delay:0.05s">
-      <div class="process-step-num">01</div>
+  <div class="process-timeline">
+    <div class="process-step fade-up is-active" style="--delay:0.05s">
+      <div class="process-step-icon">01</div>
       <h3 class="process-step-title">Primera conversación</h3>
       <p class="process-step-desc">Gratuita y sin compromiso. Entiendo tu situación, tus objetivos y veo si hay encaje. Si no lo hay, te lo digo.</p>
     </div>
     <div class="process-step fade-up" style="--delay:0.15s">
-      <div class="process-step-num">02</div>
+      <div class="process-step-icon">02</div>
       <h3 class="process-step-title">Propuesta concreta</h3>
       <p class="process-step-desc">Alcance, plazos, entregables y condiciones claras por escrito antes de empezar. Sin letra pequeña.</p>
     </div>
     <div class="process-step fade-up" style="--delay:0.25s">
-      <div class="process-step-num">03</div>
+      <div class="process-step-icon">03</div>
       <h3 class="process-step-title">Ejecución</h3>
       <p class="process-step-desc">Trabajo con comunicación directa y reporting regular. Sabes en todo momento qué se está haciendo y por qué.</p>
     </div>
     <div class="process-step fade-up" style="--delay:0.35s">
-      <div class="process-step-num">04</div>
+      <div class="process-step-icon">04</div>
       <h3 class="process-step-title">Resultados medibles</h3>
       <p class="process-step-desc">KPIs definidos desde el principio. Los resultados se miden, se reportan y se optimizan continuamente.</p>
     </div>
@@ -275,7 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
-<script src="main.js?v=4"></script>
+<script src="main.js?v=5"></script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
