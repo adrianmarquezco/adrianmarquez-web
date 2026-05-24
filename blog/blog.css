@@ -152,12 +152,20 @@
   font: inherit;
 }
 
+/* Filtros del índice — coherente con tema oscuro */
+#blog-filters.projects-filter { margin-bottom: 1.5rem; }
+#blog-filters .filter-btn { white-space: normal; text-align: center; max-width: 100%; }
+
 @media(max-width: 900px) {
   .blog-search { flex-wrap: wrap; max-width: none; }
   .blog-search-input { width: 100%; flex: 1 1 100%; }
   .blog-search-btn,
   .blog-search-clear { flex: 1; }
   .blog-section-wrap { padding: 2rem 1.5rem 4rem; }
+  .blog-card { padding: 1.5rem; }
+  .blog-card h2.blog-card-title { font-size: 1.05rem; }
+  .blog-content { overflow-wrap: anywhere; }
+  .blog-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .blog-hero { padding: 0 1.5rem 2rem; }
   .blog-layout { grid-template-columns: 1fr; padding: 2rem 1.5rem 4rem; gap: 2rem; }
   .blog-sidebar { position: static; }

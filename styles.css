@@ -176,6 +176,39 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 .fade-scale { opacity:0;transform:scale(0.94);transition:opacity 0.65s ease var(--delay,0s),transform 0.65s ease var(--delay,0s); }
 .fade-scale.visible { opacity:1;transform:scale(1); }
 
+/* Filter chips — blog, proyectos (evita fondo blanco del botón nativo) */
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.65rem;
+  align-items: center;
+}
+.projects-filter .filter-btn,
+#blog-pagination .filter-btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  background: var(--bg3);
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  line-height: 1.35;
+}
+.projects-filter .filter-btn.active,
+.projects-filter .filter-btn:hover,
+#blog-pagination .filter-btn.active,
+#blog-pagination .filter-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.12);
+}
+
 /* MOBILE NAV BUTTON */
 .nav-mobile-btn { display:none;background:none;border:1px solid rgba(201,168,76,0.4);color:var(--gold);font-size:1.2rem;width:38px;height:38px;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;line-height:1; }
 .nav-mobile-btn:hover { background:rgba(201,168,76,0.08); }
@@ -214,6 +247,10 @@ body.nav-open > nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
   .grid-3,.grid-2{grid-template-columns:1fr;}
   .section-title{font-size:1.6rem;}
   .btn-primary,.btn-outline{padding:0.75rem 1.5rem;font-size:0.72rem;}
+  .projects-filter .filter-btn,
+  #blog-pagination .filter-btn{font-size:0.6rem;padding:0.5rem 0.7rem;letter-spacing:0.06em;}
+  .cta-strip-text h2{font-size:1.45rem;}
+  .whatsapp-fab{bottom:1rem;right:1rem;width:48px;height:48px;}
 }
 
 /* RESPONSIVE — 900px (mobile nav) */
@@ -225,6 +262,8 @@ body.nav-open > nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
   .breadcrumb{padding-top:5rem;padding-left:1.5rem;padding-right:1.5rem;}
   .page-hero,section,.cta-strip{padding-left:1.5rem;padding-right:1.5rem;}
   .page-hero{padding-top:1.5rem;}
+  .page-hero-line{left:1.5rem;right:1.5rem;}
+  .page-hero-seo{font-size:0.88rem;line-height:1.65;}
   section{padding-top:3rem;padding-bottom:3rem;}
   .grid-3,.grid-2{grid-template-columns:1fr;}
   .two-col-content{grid-template-columns:1fr;gap:2rem;}

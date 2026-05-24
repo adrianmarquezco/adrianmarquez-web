@@ -806,7 +806,17 @@ body > nav.nav-scrolled {
   .about-page .skills-section.about-skills-block,
   .about-page .certs-showcase { padding: 4rem 1.5rem; }
   .about-page .edu-grid { grid-template-columns: 1fr; }
+  .about-page .skills-grid { grid-template-columns: 1fr; }
   .about-page .exp-grid { grid-template-columns: 1fr; }
+  .about-page .skill-group,
+  .about-page .exp-item { padding: 1.5rem; min-width: 0; }
+  .about-page .experience-section,
+  .about-page .langs-section { padding: 3.5rem 1.5rem; }
+  .about-page .skills-section.about-skills-block {
+    border-radius: 1.25rem 1.25rem 0 0;
+    overflow: hidden;
+  }
+  .about-page .cert-pill { max-width: 100%; }
   .about-page .skills-section, .projects-page .projects-faq { padding: 4rem 1.5rem; }
   .projects-page .projects-main { padding: 0 1.5rem 4rem; }
   .projects-page .projects-grid-full { grid-template-columns: 1fr; }
@@ -819,6 +829,11 @@ body > nav.nav-scrolled {
   .home-stat-div { display: none; }
   .home-stats-bar .stat-item { background: var(--bg3); padding: 1.5rem 1rem; }
   .home-stats-bar > div:nth-child(9) { grid-column: span 2; }
+  .page-section-pad { padding: 4rem 1.5rem; }
+  .about-page .link-chip { font-size: 0.72rem; word-break: break-word; }
+  .sector-strip { padding: 1.25rem 1.5rem; }
+  .automation-section,
+  .svc-compare-wrap { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -920,6 +935,12 @@ body > nav.nav-scrolled {
 @media (max-width: 520px) {
   .brand-wordmark .brand-text { font-size: 0.82rem; }
   .brand-mark { width: 24px; height: 24px; }
+  .about-page .experience-section,
+  .about-page .langs-section,
+  .about-page .skills-section.about-skills-block,
+  .about-page .certs-showcase { padding: 3rem 1.25rem; }
+  .trust-bar-certs { flex-direction: column; align-items: stretch; width: 100%; }
+  .trust-cert { justify-content: center; }
 }
 
 /* ── Sector strip ── */
