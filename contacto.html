@@ -453,7 +453,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   if (servicio) {
     const sel = document.getElementById('service');
     const opt = sel.querySelector('option[value="' + servicio + '"]');
-    if (opt) sel.value = servicio;
+    if (opt) {
+      sel.value = servicio;
+      const form = document.getElementById('contacto-form');
+      if (form) {
+        requestAnimationFrame(function () {
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    }
   }
 })();
 </script>
