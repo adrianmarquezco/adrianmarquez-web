@@ -37,7 +37,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=7">
-<link rel="stylesheet" href="components-premium.css?v=1">
+<link rel="stylesheet" href="components-premium.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Adrián Márquez","url":"https://adrianmarquez.es","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://adrianmarquez.es/blog/?s={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
@@ -111,84 +111,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<style>
-.hero { min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden; }
-.hero-left { display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 6rem 5rem;position:relative;z-index:2; }
-.hero-eyebrow { font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1rem; }
-.hero-eyebrow::before { content:'';width:40px;height:1px;background:var(--gold); }
-.hero-name { font-family:'Playfair Display',serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;line-height:0.95;margin-bottom:0.2em; }
-.hero-name em { font-style:italic;color:var(--gold); }
-.hero-title { font-family:'Playfair Display',serif;font-size:clamp(1rem,2vw,1.3rem);font-style:italic;color:var(--text-muted);margin-top:0.6rem;margin-bottom:2.5rem; }
-.hero-desc { font-size:0.92rem;line-height:1.85;color:rgba(240,237,232,0.7);max-width:440px;margin-bottom:3rem;font-family:'DM Sans',sans-serif;font-weight:400; }
-.hero-ctas { display:flex;gap:1rem;flex-wrap:wrap; }
-.hero-right { position:relative;overflow:hidden; }
-.hero-img-wrap { position:absolute;inset:0; }
-.hero-img-wrap img { width:100%;height:100%;object-fit:cover;object-position:top center;display:block; }
-.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(8,8,8,0) 25%),linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 8%); }
-.hero-placeholder { width:100%;height:100%;background:linear-gradient(135deg,#161616 0%,#1a1a1a 50%,#111 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem; }
-.hero-placeholder-initials { font-family:'Playfair Display',serif;font-size:7rem;font-weight:900;color:rgba(201,168,76,0.1);line-height:1; }
-.hero-placeholder-note { font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted); }
-.hero-deco { position:absolute;bottom:3rem;right:3rem;width:100px;height:100px;border:1px solid rgba(201,168,76,0.2); }
-.scroll-hint { position:absolute;bottom:2.5rem;left:5rem;display:flex;align-items:center;gap:0.75rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);z-index:2; }
-.scroll-line { width:40px;height:1px;background:var(--text-muted);position:relative;overflow:hidden; }
-.scroll-line::after { content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--gold);animation:scrollpulse 2s ease-in-out infinite; }
-@keyframes scrollpulse{0%,100%{left:-100%}50%{left:100%}}
-.stats-bar { background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem; }
-.stat-item { text-align:center; }
-.stat-num-big { font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1; }
-.stat-label-sm { font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-top:0.4rem; }
-.stat-div { width:1px;height:50px;background:var(--border); }
-.services-preview { background:var(--bg2); }
-.service-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);margin-top:3rem; }
-.service-card { background:var(--bg);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.35s ease,transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s ease;display:flex;flex-direction:column;color:inherit; }
-.service-card::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
-.service-card:hover { background:var(--bg3);transform:translateY(-6px);box-shadow:0 16px 48px rgba(0,0,0,0.35); }
-.service-card:hover::before { height:100%; }
-.service-card-foot { display:flex;flex-wrap:wrap;gap:1rem 1.25rem;margin-top:1.5rem;align-items:center; }
-.service-card-link { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);text-decoration:none;transition:letter-spacing 0.3s ease,color 0.3s; }
-.service-card-link:hover { letter-spacing:0.16em;color:var(--gold-light); }
-.service-card-link--muted { color:var(--text-muted); }
-.service-card-link--muted:hover { color:var(--gold); }
-.service-icon { font-size:1.5rem;margin-bottom:1.5rem;opacity:0.6; }
-.service-card-title { font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:0.7rem; }
-.service-card-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted);margin-bottom:0;flex-grow:1; }
-.about-preview { background:var(--bg); }
-.about-grid { display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center; }
-.about-img-side { position:relative; }
-.about-img-placeholder { aspect-ratio:3/4;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center; }
-.about-img-placeholder span { font-family:'Playfair Display',serif;font-size:6rem;font-weight:900;color:rgba(201,168,76,0.08); }
-.about-deco { position:absolute;bottom:-1.5rem;right:-1.5rem;width:80px;height:80px;border:1px solid rgba(201,168,76,0.3); }
-.marquee-strip { background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;overflow:hidden; }
-.marquee-inner { display:flex;gap:3rem;white-space:nowrap;animation:marquee 25s linear infinite; }
-.marquee-item { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;font-style:italic;color:rgba(240,237,232,0.28);text-transform:uppercase;flex-shrink:0; }
-.marquee-dot { color:rgba(201,168,76,0.35); }
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.testimonials-section { background:var(--bg2); }
-.testi-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem; }
-.testi-card { background:var(--bg3);padding:2rem;border:1px solid var(--border);position:relative; }
-.testi-card::before { content:'"';font-family:'Playfair Display',serif;font-size:4rem;color:rgba(201,168,76,0.08);position:absolute;top:0.5rem;left:1.5rem;line-height:1; }
-.testi-text { font-size:0.87rem;line-height:1.75;color:rgba(240,237,232,0.8);margin-bottom:1.5rem;font-style:italic;position:relative;z-index:1; }
-.testi-author { display:flex;align-items:center;gap:0.8rem; }
-.testi-avatar { width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:500;color:#000;flex-shrink:0; }
-.testi-name { font-size:0.82rem;font-weight:500; }
-.testi-role { font-size:0.7rem;color:var(--text-muted); }
-@media(max-width:900px){
-  .hero{display:flex;flex-direction:column;min-height:auto;padding-top:0;padding-bottom:0;}
-  .hero-right{order:-1;height:380px;overflow:hidden;}
-  .hero-left{order:1;padding:1.5rem 1.5rem 2.5rem;}
-  .hero-img-wrap{position:absolute;inset:0;}
-  .hero-img-overlay{background:linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 45%);}
-  .hero-deco{display:none;}
-  .stat-div{display:none;}
-  .stats-bar{display:grid;grid-template-columns:1fr 1fr;background:var(--border);gap:1px;padding:0;align-items:stretch;}
-  .stat-item{background:var(--bg3);padding:1.5rem 1rem;text-align:center;flex:unset;border:none;}
-  .stats-bar > div:nth-child(9){grid-column:span 2;}
-  .service-cards,.testi-grid{grid-template-columns:1fr;}
-  .about-grid{grid-template-columns:1fr;gap:2rem;}
-  .services-preview,.about-preview{padding:4rem 1.5rem;}
-  .scroll-hint{display:none;}
-}
-</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -249,16 +171,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="stat-item fade-up"><div class="stat-num-big" data-stat-type="text" data-stat-value="ES">ES</div><div class="stat-label-sm">Servicio en toda España</div></div>
 </div>
 
-<div class="trust-bar fade-up">
+<div class="trust-bar trust-bar--certs-only fade-up">
   <div class="trust-bar-certs">
-    <span class="trust-cert"><strong>Google Ads</strong> Certified</span>
-    <span class="trust-cert"><strong>Meta</strong> Blueprint</span>
-    <span class="trust-cert"><strong>GA4</strong> Certified</span>
-  </div>
-  <div class="trust-bar-stats">
-    <div class="trust-stat"><strong>+4 años</strong> experiencia digital</div>
-    <div class="trust-stat"><strong>15+</strong> proyectos entregados</div>
-    <div class="trust-stat"><strong>ES</strong> servicio nacional</div>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l5-9v4h3l-5 9z"/></svg></span><span><strong>Google Ads</strong> Certified</span></span>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.5 3-4 6.5-4 10a4 4 0 108 0c0-3.5-1.5-7-4-10zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg></span><span><strong>Meta</strong> Blueprint</span></span>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17h4v4H3v-4zm7-9h4v13h-4V8zm7 4h4v9h-4v-9z"/></svg></span><span><strong>GA4</strong> Certified</span></span>
   </div>
 </div>
 
@@ -266,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="services-preview" id="servicios-destacados">
   <div class="section-label">Lo que hago</div>
   <h2 class="section-title">Servicios que <em>mueven negocios</em></h2>
-  <p style="font-size:0.92rem;line-height:1.8;color:var(--text-muted);max-width:580px;margin-bottom:0;">Tres pilares donde más impacto genero para empresas de servicios. El resto de especialidades están en la página de servicios y enlazadas abajo.</p>
+  <p class="section-intro">Tres pilares donde más impacto genero para empresas de servicios. El resto de especialidades están en la página de servicios y enlazadas abajo.</p>
   <div class="service-cards">
     <article class="service-card fade-up">
       <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
@@ -307,13 +224,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a href="servicios/formacion-empresas.html">Formación empresas</a><a href="contacto.html?servicio=formacion" class="hub-contact">consultar</a>
     </div>
   </div>
-  <div style="text-align:center;margin-top:2.5rem;">
+  <div class="section-cta-center">
     <a href="servicios.html" class="btn-outline">Ver todos los servicios</a>
   </div>
 </section>
 
 <!-- CASOS DE ÉXITO -->
-<section class="featured-projects" id="casos-exito">
+<section class="featured-projects white-section--curve" id="casos-exito">
   <div class="fade-up section-glow-title">
     <div class="section-label">Resultados reales</div>
     <h2 class="section-title">Proyectos que <em>hablan solos</em></h2>
@@ -322,7 +239,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="featured-projects-grid">
     <a href="proyectos.html" class="fp-card fp-card--featured fade-up">
       <div class="fp-cat">SEO local · Val Miñor</div>
-      <div class="fp-metric">+340%</div>
+      <div class="fp-metric" data-stat-value="340" data-stat-prefix="+" data-stat-suffix="%">+340%</div>
       <div class="fp-metric-label">visibilidad en Google Maps</div>
       <h3 class="fp-title">Digitalización de negocio local</h3>
       <p class="fp-desc">De cero presencia online a Top 3 en búsquedas locales del sector. WordPress, WooCommerce y Google Business Profile.</p>
@@ -330,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="proyectos.html" class="fp-card fade-up" style="--delay:0.08s">
       <div class="fp-cat">Automatización · n8n</div>
-      <div class="fp-metric">-70%</div>
+      <div class="fp-metric" data-stat-value="70" data-stat-prefix="-" data-stat-suffix="%">-70%</div>
       <div class="fp-metric-label">tiempo manual comercial</div>
       <h3 class="fp-title">Captación de leads automatizada</h3>
       <p class="fp-desc">Respuesta en segundos, cualificación con IA y seguimiento sin perder ningún lead.</p>
@@ -338,7 +255,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
     <a href="proyectos.html" class="fp-card fade-up" style="--delay:0.16s">
       <div class="fp-cat">SEO · Coach profesional</div>
-      <div class="fp-metric">+300%</div>
+      <div class="fp-metric" data-stat-value="300" data-stat-prefix="+" data-stat-suffix="%">+300%</div>
       <div class="fp-metric-label">tráfico orgánico en 6 meses</div>
       <h3 class="fp-title">Posicionamiento web — Luisa Corral</h3>
       <p class="fp-desc">Estrategia SEO y contenido. Top 5 en keywords objetivo del sector coaching.</p>
@@ -412,7 +329,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="fade-up section-glow-title">
     <div class="section-label">Automatización con IA</div>
     <h2 class="section-title">Flujos que trabajan <em>mientras duermes</em></h2>
-    <p style="font-size:0.9rem;line-height:1.8;color:var(--text-muted);max-width:560px;">Así conecto captación, CRM y seguimiento con n8n — el mismo enfoque que aplico en proyectos reales.</p>
+    <p class="section-intro section-intro--wide">Así conecto captación, CRM y seguimiento con n8n — el mismo enfoque que aplico en proyectos reales.</p>
   </div>
   <div class="auto-flow fade-up">
     <div class="auto-node"><div class="auto-node-label">Entrada</div><div class="auto-node-title">Lead desde web o WhatsApp</div></div>
@@ -424,13 +341,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="auto-node"><div class="auto-node-label">Salida</div><div class="auto-node-title">Email + aviso al comercial</div></div>
   </div>
   <p class="auto-flow-note">Tiempo de respuesta de horas a segundos. Caso real: <strong style="color:var(--gold);font-weight:500;">-70% tiempo manual</strong> del equipo comercial.</p>
-  <div style="margin-top:2rem;text-align:center;">
+  <div class="section-cta-center">
     <a href="servicios/automatizacion-ia.html" class="btn-outline">Ver servicio de automatización</a>
   </div>
 </section>
 
 <!-- SECCIÓN BLANCA: DIFERENCIADORES -->
-<div class="white-section" style="margin-top:-1.5rem;padding-top:5rem;border-radius:1.5rem 1.5rem 0 0;position:relative;z-index:1;box-shadow:0 -16px 40px rgba(0,0,0,0.15);">
+<div class="white-section white-section--curve">
   <div class="fade-up">
     <div class="section-label">Por qué elegirme</div>
     <h2 class="ws-title">Lo que me diferencia <em>del resto</em></h2>
@@ -605,7 +522,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<script src="main.js?v=5"></script>
+<script src="main.js?v=6"></script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
