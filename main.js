@@ -169,3 +169,92 @@ document.querySelectorAll('.nav-links a').forEach(a=>{
     a.classList.add('active');
   }
 });
+
+// NAV — solid on scroll
+const siteNav = document.querySelector('body > nav');
+if (siteNav) {
+  const onNavScroll = () => siteNav.classList.toggle('nav-scrolled', window.scrollY > 48);
+  onNavScroll();
+  window.addEventListener('scroll', onNavScroll, { passive: true });
+}
+
+// HERO — parallax suave
+const heroParallax = document.querySelector('[data-hero-parallax]');
+if (heroParallax && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight * 1.1) {
+      heroParallax.style.transform = `translate3d(0, ${y * 0.14}px, 0) scale(1.06)`;
+    }
+  }, { passive: true });
+}
+
+// FAQ acordeón
+function initFaqAccordion() {
+  document.querySelectorAll('.faq-list').forEach(list => {
+    const items = list.querySelectorAll('.faq-item');
+    items.forEach((item, index) => {
+      let btn = item.querySelector('.faq-q');
+      const answer = item.querySelector('.faq-a');
+      if (!btn || !answer) return;
+
+      if (btn.tagName !== 'BUTTON') {
+        const newBtn = document.createElement('button');
+        newBtn.type = 'button';
+        newBtn.className = 'faq-q';
+        newBtn.innerHTML = btn.innerHTML;
+        btn.replaceWith(newBtn);
+        btn = newBtn;
+      }
+
+      let panel = answer.closest('.faq-panel');
+      if (!panel) {
+        panel = document.createElement('div');
+        panel.className = 'faq-panel';
+        answer.parentNode.insertBefore(panel, answer);
+        panel.appendChild(answer);
+      }
+
+      const panelId = panel.id || `faq-${Math.random().toString(36).slice(2, 9)}`;
+      panel.id = panelId;
+      btn.setAttribute('aria-expanded', 'false');
+      btn.setAttribute('aria-controls', panelId);
+
+      if (index === 0) {
+        item.classList.add('is-open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+
+      btn.addEventListener('click', () => {
+        const isOpen = item.classList.contains('is-open');
+        items.forEach(el => {
+          el.classList.remove('is-open');
+          const q = el.querySelector('.faq-q');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('is-open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+}
+initFaqAccordion();
+
+// Sidebar servicio — highlight al hacer scroll
+const serviceSidebar = document.querySelector('.service-sidebar-card');
+if (serviceSidebar) {
+  const sideObs = new IntersectionObserver(([e]) => {
+    serviceSidebar.classList.toggle('is-stuck', e.intersectionRatio < 1 && e.boundingClientRect.top < 120);
+  }, { threshold: [1], rootMargin: '-100px 0px 0px 0px' });
+  sideObs.observe(serviceSidebar);
+}
+
+// Process steps — activar al hover (desktop)
+document.querySelectorAll('.process-timeline .process-step').forEach(step => {
+  step.addEventListener('mouseenter', () => {
+    step.closest('.process-timeline')?.querySelectorAll('.process-step').forEach(s => s.classList.remove('is-active'));
+    step.classList.add('is-active');
+  });
+});
