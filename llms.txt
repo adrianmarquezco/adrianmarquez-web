@@ -7,7 +7,7 @@ Sede en Galicia. Servicio en toda Espana.
 ## Servicios
 
 - [Estrategia Digital](https://adrianmarquez.es/servicios/estrategia-digital.html): Planificacion estrategica completa: audiencias, propuesta de valor, hoja de ruta y KPIs.
-- [SEO & GEO](https://adrianmarquez.es/servicios/seo-geo.html): Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini.
+- [SEO, GEO y AEO](https://adrianmarquez.es/servicios/seo-geo.html): Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini.
 - [Automatizacion con IA](https://adrianmarquez.es/servicios/automatizacion-ia.html): Flujos inteligentes con n8n para captacion de leads, CRM y procesos repetitivos.
 - [Publicidad Digital](https://adrianmarquez.es/servicios/publicidad-digital.html): Gestion de campanas Google Ads y Meta Ads con reporting transparente.
 - [Consultoria de Negocio](https://adrianmarquez.es/servicios/consultoria-negocio.html): Diagnostico, estrategia y plan de accion para crecer con marketing digital.
