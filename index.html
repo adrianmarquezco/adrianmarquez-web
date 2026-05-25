@@ -36,7 +36,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="components-premium.css?v=5">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"Adrián Márquez","url":"https://adrianmarquez.es","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://adrianmarquez.es/blog/?s={search_term_string}"},"query-input":"required name=search_term_string"}}
 </script>
@@ -81,80 +82,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebPage","@id":"https://adrianmarquez.es/#webpage","name":"Adrián Márquez — Consultor SEO, IA y Automatización para Empresas | España","url":"https://adrianmarquez.es/","description":"Consultor de marketing digital, automatización con IA y SEO/GEO para empresas de servicios en España.","author":{"@type":"Person","name":"Adrián Márquez Corral","url":"https://adrianmarquez.es"},"isPartOf":{"@type":"WebSite","url":"https://adrianmarquez.es","name":"Adrián Márquez"}}
 </script>
-<style>
-.hero { min-height:100vh;display:grid;grid-template-columns:1fr 1fr;position:relative;overflow:hidden; }
-.hero-left { display:flex;flex-direction:column;justify-content:center;padding:8rem 4rem 6rem 5rem;position:relative;z-index:2; }
-.hero-eyebrow { font-size:0.72rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:2rem;display:flex;align-items:center;gap:1rem; }
-.hero-eyebrow::before { content:'';width:40px;height:1px;background:var(--gold); }
-.hero-name { font-family:'Playfair Display',serif;font-size:clamp(3.5rem,6vw,6rem);font-weight:900;line-height:0.95;margin-bottom:0.2em; }
-.hero-name em { font-style:italic;color:var(--gold); }
-.hero-title { font-family:'Playfair Display',serif;font-size:clamp(1rem,2vw,1.3rem);font-style:italic;color:var(--text-muted);margin-top:0.6rem;margin-bottom:2.5rem; }
-.hero-desc { font-size:0.92rem;line-height:1.85;color:rgba(240,237,232,0.7);max-width:440px;margin-bottom:3rem; }
-.hero-ctas { display:flex;gap:1rem;flex-wrap:wrap; }
-.hero-right { position:relative;overflow:hidden; }
-.hero-img-wrap { position:absolute;inset:0; }
-.hero-img-wrap img { width:100%;height:100%;object-fit:cover;object-position:top center;display:block; }
-.hero-img-overlay { position:absolute;inset:0;background:linear-gradient(to right,var(--bg) 0%,rgba(8,8,8,0) 25%),linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 8%); }
-.hero-placeholder { width:100%;height:100%;background:linear-gradient(135deg,#161616 0%,#1a1a1a 50%,#111 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem; }
-.hero-placeholder-initials { font-family:'Playfair Display',serif;font-size:7rem;font-weight:900;color:rgba(201,168,76,0.1);line-height:1; }
-.hero-placeholder-note { font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted); }
-.hero-deco { position:absolute;bottom:3rem;right:3rem;width:100px;height:100px;border:1px solid rgba(201,168,76,0.2); }
-.scroll-hint { position:absolute;bottom:2.5rem;left:5rem;display:flex;align-items:center;gap:0.75rem;font-size:0.7rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);z-index:2; }
-.scroll-line { width:40px;height:1px;background:var(--text-muted);position:relative;overflow:hidden; }
-.scroll-line::after { content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--gold);animation:scrollpulse 2s ease-in-out infinite; }
-@keyframes scrollpulse{0%,100%{left:-100%}50%{left:100%}}
-.stats-bar { background:var(--bg3);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:2.5rem 5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem; }
-.stat-item { text-align:center; }
-.stat-num-big { font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--gold);line-height:1; }
-.stat-label-sm { font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-top:0.4rem; }
-.stat-div { width:1px;height:50px;background:var(--border); }
-.services-preview { background:var(--bg2); }
-.service-cards { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);margin-top:3rem; }
-.service-card { background:var(--bg);padding:2.5rem 2rem;position:relative;overflow:hidden;transition:background 0.3s;text-decoration:none;display:block;color:inherit; }
-.service-card::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
-.service-card:hover { background:var(--bg3); }
-.service-card:hover::before { height:100%; }
-.service-icon { font-size:1.5rem;margin-bottom:1.5rem;opacity:0.6; }
-.service-card-title { font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin-bottom:0.7rem; }
-.service-card-desc { font-size:0.82rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem; }
-.service-card-link { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold); }
-.about-preview { background:var(--bg); }
-.about-grid { display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center; }
-.about-img-side { position:relative; }
-.about-img-placeholder { aspect-ratio:3/4;background:var(--bg3);border:1px solid var(--border);display:flex;align-items:center;justify-content:center; }
-.about-img-placeholder span { font-family:'Playfair Display',serif;font-size:6rem;font-weight:900;color:rgba(201,168,76,0.08); }
-.about-deco { position:absolute;bottom:-1.5rem;right:-1.5rem;width:80px;height:80px;border:1px solid rgba(201,168,76,0.3); }
-.marquee-strip { background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:3rem 0;overflow:hidden; }
-.marquee-inner { display:flex;gap:3rem;white-space:nowrap;animation:marquee 25s linear infinite; }
-.marquee-item { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;font-style:italic;color:rgba(240,237,232,0.05);text-transform:uppercase;flex-shrink:0; }
-.marquee-dot { color:rgba(201,168,76,0.12); }
-@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
-.testimonials-section { background:var(--bg2); }
-.testi-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem; }
-.testi-card { background:var(--bg3);padding:2rem;border:1px solid var(--border);position:relative; }
-.testi-card::before { content:'"';font-family:'Playfair Display',serif;font-size:4rem;color:rgba(201,168,76,0.08);position:absolute;top:0.5rem;left:1.5rem;line-height:1; }
-.testi-text { font-size:0.87rem;line-height:1.75;color:rgba(240,237,232,0.8);margin-bottom:1.5rem;font-style:italic;position:relative;z-index:1; }
-.testi-author { display:flex;align-items:center;gap:0.8rem; }
-.testi-avatar { width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:center;font-size:0.78rem;font-weight:500;color:#000;flex-shrink:0; }
-.testi-name { font-size:0.82rem;font-weight:500; }
-.testi-role { font-size:0.7rem;color:var(--text-muted); }
-@media(max-width:900px){
-  .hero{display:flex;flex-direction:column;min-height:auto;padding-top:0;padding-bottom:0;}
-  .hero-right{order:-1;height:380px;overflow:hidden;}
-  .hero-left{order:1;padding:1.5rem 1.5rem 2.5rem;}
-  .hero-img-wrap{position:absolute;inset:0;}
-  .hero-img-overlay{background:linear-gradient(to top,var(--bg) 0%,rgba(8,8,8,0) 45%);}
-  .hero-deco{display:none;}
-  .stat-div{display:none;}
-  .stats-bar{display:grid;grid-template-columns:1fr 1fr;background:var(--border);gap:1px;padding:0;align-items:stretch;}
-  .stat-item{background:var(--bg3);padding:1.5rem 1rem;text-align:center;flex:unset;border:none;}
-  .stats-bar > div:nth-child(9){grid-column:span 2;}
-  .service-cards,.testi-grid{grid-template-columns:1fr;}
-  .about-grid{grid-template-columns:1fr;gap:2rem;}
-  .services-preview,.about-preview{padding:4rem 1.5rem;}
-  .scroll-hint{display:none;}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Servicios de marketing digital, SEO/GEO y automatización con IA",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Automatización e IA","url":"https://adrianmarquez.es/servicios/automatizacion-ia.html"},
+    {"@type":"ListItem","position":2,"name":"SEO, GEO y AEO","url":"https://adrianmarquez.es/servicios/seo-geo.html"},
+    {"@type":"ListItem","position":3,"name":"Consultoría de negocio","url":"https://adrianmarquez.es/servicios/consultoria-negocio.html"},
+    {"@type":"ListItem","position":4,"name":"Publicidad digital","url":"https://adrianmarquez.es/servicios/publicidad-digital.html"},
+    {"@type":"ListItem","position":5,"name":"Estrategia digital","url":"https://adrianmarquez.es/servicios/estrategia-digital.html"},
+    {"@type":"ListItem","position":6,"name":"Formación en empresas","url":"https://adrianmarquez.es/servicios/formacion-empresas.html"}
+  ]
 }
-</style>
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Cómo trabajo con empresas de servicios",
+  "description": "Proceso de consultoría en marketing digital, automatización con IA y SEO/GEO para empresas en España.",
+  "step": [
+    {"@type":"HowToStep","position":1,"name":"Diagnóstico","text":"Primera conversación gratuita para entender situación, objetivos y encaje."},
+    {"@type":"HowToStep","position":2,"name":"Plan de acción","text":"Propuesta con alcance, plazos, KPIs y entregables claros por escrito."},
+    {"@type":"HowToStep","position":3,"name":"Implementación","text":"Ejecución de campañas, SEO/GEO, automatizaciones n8n e IA con reporting regular."},
+    {"@type":"HowToStep","position":4,"name":"Medición y optimización","text":"Seguimiento de resultados, reporting transparente y mejora continua."}
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -164,11 +120,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <nav>
-  <a href="/" class="nav-logo">AM.</a>
+  <a href="/" class="nav-logo brand-wordmark" aria-label="Adrián Márquez — Inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="16" r="3.5" fill="#C9A84C"/><circle cx="24" cy="8" r="3.5" fill="#C9A84C"/><circle cx="24" cy="24" r="3.5" fill="#C9A84C"/><path d="M11.5 15L20.5 9.5M11.5 17L20.5 22.5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="brand-text">Adrián <span class="brand-accent">Márquez</span></span></a>
   <ul class="nav-links">
     <li><a href="/" class="active">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
+    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
@@ -180,19 +136,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero" aria-label="Presentación de Adrián Márquez">
   <div class="hero-left">
     <div class="hero-eyebrow">Disponible para proyectos · España</div>
-    <h1 class="hero-name">Adrián <em>Márquez</em></h1>
-    <p class="hero-title">Consultor de Marketing Digital, Automatización e IA</p>
-    <p class="hero-desc">Construyo estrategias digitales que generan resultados reales para empresas de servicios. Marketing, automatización con inteligencia artificial, SEO/GEO y formación especializada, todo integrado bajo una visión de negocio clara.</p>
+    <div class="hero-badge"><span class="hero-badge-dot" aria-hidden="true"></span> Primera consulta gratuita · Respuesta en 24h</div>
+    <h1 class="hero-headline hero-reveal"><span class="hero-reveal-line">Marketing, IA y automatización que</span><span class="hero-reveal-line"><em>mueven negocios</em></span></h1>
+    <p class="hero-subline">Adrián Márquez — consultor para empresas de servicios en toda España.</p>
+    <p class="hero-desc-short">Estrategia digital, SEO/GEO/AEO y flujos con n8n desde un solo criterio de negocio: resultados medibles, sin ruido.</p>
     <div class="hero-ctas">
       <a href="servicios.html" class="btn-primary">Ver servicios</a>
       <a href="contacto.html" class="btn-outline">Hablemos</a>
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-img-wrap" id="heroImgWrap">
+    <div class="hero-img-wrap" id="heroImgWrap" data-hero-parallax>
       <picture style="width:100%;height:100%;display:block;">
         <source srcset="images/adrian-marquez-profesional.webp" type="image/webp">
-        <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez, consultor de marketing digital, automatización e IA en Galicia" width="843" height="1264" loading="eager" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:top center;display:block;">
+        <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez, consultor de marketing digital, automatización e IA en Galicia" width="843" height="1264" loading="eager" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:50% 25%;display:block;">
       </picture>
     </div>
     <div class="hero-img-overlay"></div>
@@ -202,88 +159,217 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- STATS -->
-<div class="stats-bar">
-  <div class="stat-item fade-up"><div class="stat-num-big">+4</div><div class="stat-label-sm">Años de experiencia</div></div>
+<div class="stats-bar" id="stats-bar">
+  <div class="stat-item fade-up"><div class="stat-num-big" data-stat-value="4" data-stat-prefix="+">+4</div><div class="stat-label-sm">Años de experiencia</div></div>
   <div class="stat-div"></div>
-  <div class="stat-item fade-up"><div class="stat-num-big">15+</div><div class="stat-label-sm">Proyectos completados</div></div>
+  <div class="stat-item fade-up"><div class="stat-num-big" data-stat-value="15" data-stat-suffix="+">15+</div><div class="stat-label-sm">Proyectos completados</div></div>
   <div class="stat-div"></div>
-  <div class="stat-item fade-up"><div class="stat-num-big">8</div><div class="stat-label-sm">Servicios especializados</div></div>
+  <div class="stat-item fade-up"><div class="stat-num-big" data-stat-value="6">6</div><div class="stat-label-sm">Servicios especializados</div></div>
   <div class="stat-div"></div>
-  <div class="stat-item fade-up"><div class="stat-num-big">100%</div><div class="stat-label-sm">Orientado a resultados</div></div>
+  <div class="stat-item fade-up"><div class="stat-num-big" data-stat-value="100" data-stat-suffix="%">100%</div><div class="stat-label-sm">Orientado a resultados</div></div>
   <div class="stat-div"></div>
-  <div class="stat-item fade-up"><div class="stat-num-big">ES</div><div class="stat-label-sm">Servicio en toda España</div></div>
+  <div class="stat-item fade-up"><div class="stat-num-big" data-stat-type="text" data-stat-value="ES">ES</div><div class="stat-label-sm">Servicio en toda España</div></div>
 </div>
 
-<!-- SERVICIOS PREVIEW -->
-<section class="services-preview">
+<div class="trust-bar trust-bar--certs-only fade-up">
+  <div class="trust-bar-certs">
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H8l5-9v4h3l-5 9z"/></svg></span><span><strong>Google Ads</strong> Certified</span></span>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c-2.5 3-4 6.5-4 10a4 4 0 108 0c0-3.5-1.5-7-4-10zm0 18a8 8 0 110-16 8 8 0 010 16z"/></svg></span><span><strong>Meta</strong> Blueprint</span></span>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 17h4v4H3v-4zm7-9h4v13h-4V8zm7 4h4v9h-4v-9z"/></svg></span><span><strong>GA4</strong> Certified</span></span>
+    <span class="trust-cert"><span class="trust-cert-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46A7.93 7.93 0 0020 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74A7.93 7.93 0 004 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg></span><span><strong>n8n + IA</strong> Certified</span></span>
+  </div>
+</div>
+
+<div class="sector-strip fade-up" aria-label="Sectores con experiencia">
+  <span class="sector-strip-label">Experiencia en</span>
+  <div class="sector-strip-items">
+    <span class="sector-chip" data-sector="seguros" role="button" tabindex="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3L4 9v12h16V9l-8-6z"/><path d="M9 21v-6h6v6"/></svg> Seguros</span>
+    <span class="sector-chip" data-sector="retail" role="button" tabindex="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9l9-6 9 6v11H3V9z"/><path d="M9 21V12h6v9"/></svg> Retail local</span>
+    <span class="sector-chip" data-sector="coaching" role="button" tabindex="0"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0112 0v2"/></svg> Coaching</span>
+    <span class="sector-chip" data-sector="ecommerce" role="button" tabindex="0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12L6 6z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg> E-commerce</span>
+    <span class="sector-chip" data-sector="b2b" role="button" tabindex="0"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="1"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg> Servicios B2B</span>
+  </div>
+</div>
+
+<!-- SERVICIOS PREVIEW (3 destacados + enlaces a los 6 para SEO) -->
+<section class="services-preview" id="servicios-destacados">
   <div class="section-label">Lo que hago</div>
   <h2 class="section-title">Servicios que <em>mueven negocios</em></h2>
-  <p style="font-size:0.92rem;line-height:1.8;color:var(--text-muted);max-width:580px;margin-bottom:0;">Cada servicio está diseñado para empresas de servicios que necesitan resultados reales, no promesas vacías. Estrategia + ejecución técnica bajo el mismo techo.</p>
+  <p class="section-intro">Tres pilares donde más impacto genero para empresas de servicios. El resto de especialidades están en la página de servicios y enlazadas abajo.</p>
   <div class="service-cards">
-    <a href="servicios/consultoria-negocio.html" class="service-card fade-up">
-      <div class="service-icon">◈</div>
+    <article class="service-card fade-up">
+      <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg></span>
+      <h3 class="service-card-title">Automatización &amp; IA</h3>
+      <p class="service-card-desc">Flujos inteligentes con n8n e IA para ahorrar horas en tareas repetitivas. Captación de leads, CRM, contenido y seguimiento automatizados.</p>
+      <div class="service-card-foot">
+        <a href="servicios/automatizacion-ia.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=automatizacion" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
+    <article class="service-card fade-up" style="--delay:0.08s">
+      <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35M11 8v6M8 11h6"/></svg></span>
+      <h3 class="service-card-title">SEO, GEO y AEO</h3>
+      <p class="service-card-desc">Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini. Para que te encuentren en buscadores y en respuestas de IA.</p>
+      <div class="service-card-foot">
+        <a href="servicios/seo-geo.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=seo-geo" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
+    <article class="service-card fade-up" style="--delay:0.16s">
+      <span class="svc-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 17v-5M12 17V8M16 17v-3"/></svg></span>
       <h3 class="service-card-title">Consultoría de Negocio</h3>
-      <p class="service-card-desc">Diagnóstico de tu situación digital, identificación de oportunidades y plan de acción con métricas claras. Sin humo, solo estrategia aplicable.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/seo-geo.html" class="service-card fade-up">
-      <div class="service-icon">◎</div>
-      <h3 class="service-card-title">SEO & GEO</h3>
-      <p class="service-card-desc">Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini. Para que te encuentren tanto los buscadores como la inteligencia artificial.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/automatizacion-ia.html" class="service-card fade-up">
-      <div class="service-icon">⬡</div>
-      <h3 class="service-card-title">Automatización & IA</h3>
-      <p class="service-card-desc">Flujos inteligentes con n8n e IA para ahorrar horas en tareas repetitivas. Captación de leads, publicación de contenido, CRM y seguimiento automatizados.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/formacion-empresas.html" class="service-card fade-up">
-      <div class="service-icon">◇</div>
-      <h3 class="service-card-title">Formación en Empresas</h3>
-      <p class="service-card-desc">Talleres y formaciones presenciales u online en marketing digital, IA y automatización para equipos. Contenido práctico, sin teoría vacía.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/publicidad-digital.html" class="service-card fade-up">
-      <div class="service-icon">◉</div>
-      <h3 class="service-card-title">Publicidad Digital</h3>
-      <p class="service-card-desc">Campañas de Google Ads y Meta Ads optimizadas para generar leads y ventas reales. Gestión completa, reporting transparente y optimización continua.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
-    <a href="servicios/estrategia-digital.html" class="service-card fade-up">
-      <div class="service-icon">◆</div>
-      <h3 class="service-card-title">Estrategia Digital</h3>
-      <p class="service-card-desc">Planificación omnicanal, definición de audiencias, propuesta de valor y hoja de ruta digital. La visión estratégica que muchas empresas nunca tienen.</p>
-      <span class="service-card-link">Ver servicio →</span>
-    </a>
+      <p class="service-card-desc">Diagnóstico digital, oportunidades y plan de acción con métricas claras. Estrategia aplicable antes de invertir en tácticas sueltas.</p>
+      <div class="service-card-foot">
+        <a href="servicios/consultoria-negocio.html" class="service-card-link">Ver servicio →</a>
+        <a href="contacto.html?servicio=consultoria" class="service-card-link service-card-link--muted">Consultar →</a>
+      </div>
+    </article>
   </div>
-  <div style="text-align:center;margin-top:3rem;">
+  <div class="service-links-hub">
+    <p class="service-links-hub-label">Todos los servicios</p>
+    <div class="service-links-hub-list" role="navigation" aria-label="Enlaces a todas las páginas de servicio">
+      <a href="servicios/automatizacion-ia.html">Automatización &amp; IA</a><a href="contacto.html?servicio=automatizacion" class="hub-contact">consultar</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/seo-geo.html">SEO, GEO y AEO</a><a href="contacto.html?servicio=seo-geo" class="hub-contact">consultar</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/consultoria-negocio.html">Consultoría de negocio</a><a href="contacto.html?servicio=consultoria" class="hub-contact">consultar</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/publicidad-digital.html">Publicidad digital</a><a href="contacto.html?servicio=publicidad" class="hub-contact">consultar</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/estrategia-digital.html">Estrategia digital</a><a href="contacto.html?servicio=estrategia" class="hub-contact">consultar</a><span class="hub-sep" aria-hidden="true">·</span>
+      <a href="servicios/formacion-empresas.html">Formación empresas</a><a href="contacto.html?servicio=formacion" class="hub-contact">consultar</a>
+    </div>
+  </div>
+  <div class="section-cta-center">
     <a href="servicios.html" class="btn-outline">Ver todos los servicios</a>
   </div>
 </section>
+
+<!-- CASOS DE ÉXITO -->
+<section class="featured-projects white-section--curve" id="casos-exito">
+  <div class="fade-up section-glow-title">
+    <div class="section-label">Resultados reales</div>
+    <h2 class="section-title">Proyectos que <em>hablan solos</em></h2>
+    <p style="font-size:0.9rem;line-height:1.8;color:var(--text-muted);max-width:560px;">Métricas de clientes en marketing digital, SEO local y automatización con IA. Sin promesas vacías.</p>
+  </div>
+  <div class="featured-projects-grid">
+    <a href="proyectos.html" class="fp-card fp-card--featured fade-up" data-tilt>
+      <div class="fp-cat">SEO local · Val Miñor</div>
+      <div class="fp-metric" data-stat-value="340" data-stat-prefix="+" data-stat-suffix="%">+340%</div>
+      <div class="fp-metric-label">visibilidad en Google Maps</div>
+      <h3 class="fp-title">Digitalización de negocio local</h3>
+      <p class="fp-desc">De cero presencia online a Top 3 en búsquedas locales del sector. WordPress, WooCommerce y Google Business Profile.</p>
+      <span class="fp-link">Ver caso →</span>
+    </a>
+    <a href="proyectos.html" class="fp-card fade-up" data-tilt style="--delay:0.08s">
+      <div class="fp-cat">Automatización · n8n</div>
+      <div class="fp-metric" data-stat-value="70" data-stat-prefix="-" data-stat-suffix="%">-70%</div>
+      <div class="fp-metric-label">tiempo manual comercial</div>
+      <h3 class="fp-title">Captación de leads automatizada</h3>
+      <p class="fp-desc">Respuesta en segundos, cualificación con IA y seguimiento sin perder ningún lead.</p>
+      <span class="fp-link">Ver caso →</span>
+    </a>
+    <a href="proyectos.html" class="fp-card fade-up" data-tilt style="--delay:0.16s">
+      <div class="fp-cat">SEO · Coach profesional</div>
+      <div class="fp-metric" data-stat-value="300" data-stat-prefix="+" data-stat-suffix="%">+300%</div>
+      <div class="fp-metric-label">tráfico orgánico en 6 meses</div>
+      <h3 class="fp-title">Posicionamiento web — Luisa Corral</h3>
+      <p class="fp-desc">Estrategia SEO y contenido. Top 5 en keywords objetivo del sector coaching.</p>
+      <span class="fp-link">Ver caso →</span>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="proyectos.html" class="btn-outline">Ver todos los proyectos</a>
+  </div>
+</section>
+
+<!-- CÓMO TRABAJO (bloque claro con transición curva) -->
+<div class="white-section white-section--curve" id="como-trabajo">
+  <div class="fade-up">
+    <div class="section-label">Cómo trabajo</div>
+    <h2 class="ws-title">Un proceso <em>sin sorpresas</em></h2>
+    <p class="ws-sub">Desde el primer mensaje hasta la medición de resultados: marketing, automatización e IA con el mismo criterio de negocio.</p>
+  </div>
+  <div class="process-timeline" id="processTimeline">
+    <div class="process-step fade-up is-active" style="--delay:0.05s">
+      <div class="process-step-icon">01</div>
+      <h3 class="process-step-title">Diagnóstico</h3>
+      <p class="process-step-desc">Primera conversación gratuita. Entiendo tu situación, objetivos y veo si hay encaje real. Si no lo hay, te lo digo.</p>
+    </div>
+    <div class="process-step fade-up" style="--delay:0.12s">
+      <div class="process-step-icon">02</div>
+      <h3 class="process-step-title">Plan de acción</h3>
+      <p class="process-step-desc">Alcance, plazos, KPIs y entregables por escrito. Sabes qué se hace, cuándo y con qué métricas se mide el éxito.</p>
+    </div>
+    <div class="process-step fade-up" style="--delay:0.2s">
+      <div class="process-step-icon">03</div>
+      <h3 class="process-step-title">Implementación</h3>
+      <p class="process-step-desc">Campañas, SEO/GEO/AEO, automatizaciones con n8n e IA. Comunicación directa y reporting regular.</p>
+    </div>
+    <div class="process-step fade-up" style="--delay:0.28s">
+      <div class="process-step-icon">04</div>
+      <h3 class="process-step-title">Medición</h3>
+      <p class="process-step-desc">Resultados medidos, reportados y mejorados de forma continua. Sin métricas de vanidad.</p>
+    </div>
+  </div>
+</div>
 
 <!-- MARQUEE -->
 <div class="marquee-strip" aria-hidden="true">
   <div class="marquee-inner">
     <span class="marquee-item">Marketing Digital</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Automatización IA</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">SEO & GEO</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">SEO, GEO y AEO</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Consultoría</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">n8n Workflows</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Estrategia Digital</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Motores de IA</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Formación Empresas</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Marketing Digital</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Automatización IA</span><span class="marquee-dot"> ✦ </span>
-    <span class="marquee-item">SEO & GEO</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">SEO, GEO y AEO</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Google Ads</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Meta Ads</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Consultoría</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">n8n Workflows</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Estrategia Digital</span><span class="marquee-dot"> ✦ </span>
+    <span class="marquee-item">Motores de IA</span><span class="marquee-dot"> ✦ </span>
     <span class="marquee-item">Formación Empresas</span><span class="marquee-dot"> ✦ </span>
   </div>
 </div>
 
+<!-- AUTOMATIZACIÓN EN ACCIÓN -->
+<section class="automation-section" id="automatizacion">
+  <div class="fade-up section-glow-title">
+    <div class="section-label">Automatización con IA</div>
+    <h2 class="section-title">Flujos que trabajan <em>mientras duermes</em></h2>
+    <p class="section-intro section-intro--wide">Plantillas orientativas por sector — cada proyecto real se diseña a medida en consultoría privada.</p>
+  </div>
+  <div class="flow-demo-wrap fade-up" id="flowDemo">
+    <div class="flow-demo-header">
+      <div>
+        <p class="flow-demo-label">Mini demo interactiva</p>
+        <h3 class="flow-demo-title" id="flowDemoTitle">Captación en correduría de seguros</h3>
+      </div>
+      <div class="flow-demo-tabs" role="tablist" aria-label="Sector para ver flujo orientativo">
+        <button type="button" class="flow-demo-tab is-active" role="tab" aria-selected="true" data-sector="seguros">Seguros</button>
+        <button type="button" class="flow-demo-tab" role="tab" aria-selected="false" data-sector="retail">Retail</button>
+        <button type="button" class="flow-demo-tab" role="tab" aria-selected="false" data-sector="coaching">Coaching</button>
+        <button type="button" class="flow-demo-tab" role="tab" aria-selected="false" data-sector="ecommerce">E-commerce</button>
+        <button type="button" class="flow-demo-tab" role="tab" aria-selected="false" data-sector="b2b">B2B</button>
+      </div>
+    </div>
+    <div class="n8n-canvas" aria-live="polite">
+      <div class="n8n-canvas-inner" id="n8nCanvasInner"></div>
+    </div>
+    <p class="flow-demo-metric" id="flowDemoMetric">Resultado típico: <strong>respuesta al lead en segundos</strong></p>
+    <p class="flow-demo-disclaimer">Flujo de alto nivel con fines ilustrativos. No expone integraciones, credenciales ni lógica de clientes reales. <a href="contacto.html">Pide tu diagnóstico</a> para el diseño a medida.</p>
+  </div>
+  <div class="section-cta-center">
+    <a href="servicios/automatizacion-ia.html" class="btn-outline">Ver servicio de automatización</a>
+  </div>
+</section>
+
 <!-- SECCIÓN BLANCA: DIFERENCIADORES -->
-<div class="white-section">
+<div class="white-section white-section--curve">
   <div class="fade-up">
     <div class="section-label">Por qué elegirme</div>
     <h2 class="ws-title">Lo que me diferencia <em>del resto</em></h2>
@@ -335,8 +421,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<!-- BLOG -->
+<section class="blog-teaser" id="blog-reciente">
+  <div class="fade-up">
+    <div class="section-label">Blog</div>
+    <h2 class="section-title">Ideas que <em>puedes aplicar ya</em></h2>
+    <p style="font-size:0.9rem;line-height:1.8;color:var(--text-muted);max-width:520px;">Artículos prácticos sobre automatización, SEO/GEO/AEO y estrategia para pymes de servicios.</p>
+  </div>
+  <div class="blog-teaser-grid">
+    <a href="blog/automatizar-procesos-pyme-servicios-herramientas-ia.html" class="blog-teaser-card fade-up">
+      <div class="blog-teaser-tag">Automatización</div>
+      <h3 class="blog-teaser-title">n8n vs Make vs Zapier: qué herramienta elegir</h3>
+      <p class="blog-teaser-excerpt">Comparativa práctica para pymes de servicios que quieren automatizar sin tirar el dinero.</p>
+      <span class="blog-teaser-read">Leer artículo →</span>
+    </a>
+    <a href="blog/automatizacion-procesos-pymes-servicios-espana.html" class="blog-teaser-card fade-up" style="--delay:0.08s">
+      <div class="blog-teaser-tag">Estrategia</div>
+      <h3 class="blog-teaser-title">Automatización y ROI para pymes en España</h3>
+      <p class="blog-teaser-excerpt">Cómo priorizar procesos, calcular retorno y empezar con los flujos que más impacto generan.</p>
+      <span class="blog-teaser-read">Leer artículo →</span>
+    </a>
+    <a href="blog/formacion-ia-equipos-pymes-servicios-espana.html" class="blog-teaser-card fade-up" style="--delay:0.16s">
+      <div class="blog-teaser-tag">Formación</div>
+      <h3 class="blog-teaser-title">Formación en IA para equipos de servicios</h3>
+      <p class="blog-teaser-excerpt">Cómo preparar a tu equipo para usar IA con criterio, sin caer en el hype ni en herramientas sueltas.</p>
+      <span class="blog-teaser-read">Leer artículo →</span>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:2.5rem;">
+    <a href="blog/" class="btn-outline">Ver todo el blog</a>
+  </div>
+</section>
+
 <!-- TESTIMONIOS -->
-<section class="testimonials-section">
+<section class="testimonials-section section-dark--curve">
   <div class="section-label">Testimonios</div>
   <h2 class="section-title">Lo que dicen <em>quienes han confiado</em></h2>
   <div class="testi-grid">
@@ -379,14 +497,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer>
   <div class="footer-top">
     <div class="footer-brand">
-      <span class="footer-logo">AM.</span>
+      <span class="footer-logo">Adrián <em>Márquez</em></span>
       <p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p>
     </div>
     <div>
       <div class="footer-col-title">Servicios</div>
       <ul class="footer-col-links">
         <li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li>
-        <li><a href="servicios/seo-geo.html">SEO & GEO</a></li>
+        <li><a href="servicios/seo-geo.html">SEO, GEO y AEO</a></li>
         <li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li>
         <li><a href="servicios/formacion-empresas.html">Formación empresas</a></li>
         <li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li>
@@ -426,7 +544,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </footer>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=7"></script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
