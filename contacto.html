@@ -13,7 +13,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <link rel="apple-touch-icon" href="/images/adrian-marquez-profesional.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contacto — Adrián Márquez | Consultor Marketing Digital & IA</title>
-<meta name="description" content="Contacta con Adrián Márquez para hablar de tu proyecto de marketing digital, IA o automatización. Primera consulta gratuita.">
+<meta name="description" content="Contacta con Adrián Márquez para hablar de tu proyecto de marketing digital, IA o automatización. Primera consulta gratuita. Respondo en 24h.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://adrianmarquez.es/contacto.html">
 <link rel="alternate" hreflang="es-ES" href="https://adrianmarquez.es/contacto.html">
@@ -21,72 +21,86 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Contacto — Adrián Márquez | Consultor Marketing Digital & IA">
 <meta property="og:description" content="Contacta con Adrián Márquez para hablar de tu proyecto. Primera consulta gratuita. Email, WhatsApp o formulario directo.">
 <meta property="og:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
-<meta property="og:image:width" content="800">
-<meta property="og:image:height" content="1067">
-<meta name="twitter:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://adrianmarquez.es/contacto.html">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Contacto — Adrián Márquez | Consultor Marketing Digital & IA">
-<meta name="twitter:description" content="Contacta con Adrián Márquez para hablar de tu proyecto. Primera consulta gratuita. Email, WhatsApp o formulario directo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="components-premium.css?v=5">
 <style>
-/* CONTACT SPLIT */
-.contact-split { display:grid;grid-template-columns:1fr 1.2fr; }
-.contact-split-left { position:relative;background:#050505;overflow:hidden;display:flex;flex-direction:column;padding:5rem 4rem;min-height:680px; }
-.contact-split-content { position:relative;z-index:3;flex:1; }
-.contact-split-title { font-family:'Playfair Display',serif;font-size:clamp(1.6rem,2.2vw,2.4rem);font-weight:900;line-height:1.2;margin-bottom:1rem;color:#ffffff;letter-spacing:-0.01em; }
+/* Hero compacto — contacto inmediato */
+.contact-hero-compact { padding:7rem 5rem 2rem;position:relative; }
+.contact-hero-compact .breadcrumb { padding:0;margin-bottom:1.25rem; }
+.contact-hero-compact h1 { font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:900;line-height:1.08;color:#fff;margin-bottom:0.75rem; }
+.contact-hero-compact h1 em { font-style:italic;color:var(--gold); }
+.contact-hero-lead { font-size:0.92rem;line-height:1.75;color:rgba(240,237,232,0.65);max-width:520px;margin-bottom:1.75rem; }
+.contact-hero-actions { display:flex;flex-wrap:wrap;gap:0.75rem; }
+
+/* Split layout */
+.contact-split { display:grid;grid-template-columns:1fr 1.15fr; }
+.contact-split-left { order:1;position:relative;background:#050505;overflow:hidden;display:flex;flex-direction:column;padding:3.5rem 4rem 4rem;min-height:620px; }
+.contact-split-content { position:relative;z-index:5;flex:1;max-width:52%; }
+.contact-split-left .section-label::after { display:none; }
+.contact-split-title { font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2vw,2rem);font-weight:900;line-height:1.2;margin-bottom:0.75rem;color:#fff; }
 .contact-split-title em { font-style:italic;color:var(--gold); }
-.contact-split-desc { font-size:0.84rem;line-height:1.9;color:rgba(255,255,255,0.38);margin-bottom:2.5rem;max-width:320px; }
+.contact-split-desc { font-size:0.84rem;line-height:1.85;color:rgba(255,255,255,0.55);margin-bottom:2rem;max-width:320px; }
 .contact-split-channels { display:flex;flex-direction:column; }
-.contact-split-channel { display:flex;flex-direction:column;gap:0.15rem;padding:0.9rem 0;border-bottom:1px solid rgba(255,255,255,0.06);text-decoration:none;color:inherit;transition:all 0.3s; }
-.contact-split-channel:first-child { border-top:1px solid rgba(255,255,255,0.06); }
-.csc-type { font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.25);transition:color 0.3s; }
+.contact-split-channel { display:flex;flex-direction:column;gap:0.15rem;padding:0.85rem 0;border-bottom:1px solid rgba(255,255,255,0.08);text-decoration:none;color:inherit;transition:all 0.3s; }
+.contact-split-channel:first-child { border-top:1px solid rgba(255,255,255,0.08); }
+.csc-type { font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.4);transition:color 0.3s; }
 .csc-val { font-size:0.87rem;color:var(--gold);transition:color 0.3s; }
-.contact-split-channel:hover .csc-type { color:rgba(255,255,255,0.5); }
+.contact-split-channel:hover .csc-type { color:rgba(255,255,255,0.65); }
 .contact-split-channel:hover .csc-val { color:var(--gold-light); }
-/* Photo with mask — no gradient artifacts */
-.contact-split-photo { position:absolute;bottom:0;right:0;width:68%;z-index:1;pointer-events:none; }
-.contact-split-photo img {
-  width:100%;height:auto;display:block;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%, black 88%, transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0%, black 30%, black 88%, transparent 100%);
-}
-/* Minimal overlay just to darken text area */
-.contact-split-left::before {
-  content:'';position:absolute;inset:0;z-index:2;pointer-events:none;
-  background: linear-gradient(to right, #050505 32%, transparent 58%);
-}
-/* Right: form panel */
-.contact-split-right { background:var(--bg2);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(201,168,76,0.05); }
-.form-title { font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:0.4rem;color:#ffffff; }
-.form-subtitle { font-size:0.82rem;color:var(--text-muted);margin-bottom:1.8rem; }
-.form-group { margin-bottom:1.1rem; }
-.form-label { display:block;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.4rem; }
-.form-input,.form-select,.form-textarea { width:100%;background:var(--bg3);border:1px solid rgba(201,168,76,0.12);padding:0.82rem 1rem;color:var(--text);font-family:'DM Sans',sans-serif;font-size:0.87rem;outline:none;transition:border-color 0.3s,background 0.3s;-webkit-appearance:none;border-radius:2px; }
-.form-input::placeholder,.form-textarea::placeholder { color:rgba(240,237,232,0.18); }
-.form-input:focus,.form-select:focus,.form-textarea:focus { border-color:rgba(201,168,76,0.45);background:var(--bg4); }
-.form-textarea { min-height:100px;resize:vertical; }
+.contact-split-photo { position:absolute;bottom:0;right:0;width:62%;z-index:4;pointer-events:none; }
+.contact-split-photo img { width:100%;height:auto;display:block;position:relative;z-index:1;-webkit-mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,0.4) 18%,black 38%),linear-gradient(to right,transparent 0%,black 28%,black 100%);mask-image:linear-gradient(to top,transparent 0%,rgba(0,0,0,0.4) 18%,black 38%),linear-gradient(to right,transparent 0%,black 28%,black 100%);-webkit-mask-composite:source-in;mask-composite:intersect; }
+.contact-split-photo::after { content:'';position:absolute;bottom:0;left:0;right:0;height:55%;z-index:2;pointer-events:none;background:linear-gradient(to top,#050505 0%,rgba(5,5,5,0.95) 18%,rgba(5,5,5,0.55) 45%,transparent 100%); }
+.contact-split-left::before { content:'';position:absolute;inset:0;z-index:3;pointer-events:none;background:linear-gradient(to right,#050505 38%,rgba(5,5,5,0.75) 52%,transparent 68%); }
+
+/* Panel formulario — crema */
+.contact-split-right { order:2;background:#f7f4ef;padding:3.5rem 4rem;display:flex;flex-direction:column;justify-content:center;border-left:1px solid rgba(13,12,10,0.06);scroll-margin-top:5rem; }
+.form-title { font-family:'Playfair Display',serif;font-size:1.45rem;font-weight:700;margin-bottom:0.35rem;color:#0d0c0a; }
+.form-subtitle { font-size:0.82rem;color:rgba(13,12,10,0.52);margin-bottom:1.5rem;line-height:1.65; }
+.form-group { margin-bottom:1rem; }
+.form-label { display:block;font-size:0.62rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(13,12,10,0.45);margin-bottom:0.35rem; }
+.form-input,.form-select,.form-textarea { width:100%;background:#fff;border:1px solid rgba(13,12,10,0.12);padding:0.82rem 1rem;color:#0d0c0a;font-family:'DM Sans',sans-serif;font-size:0.87rem;outline:none;transition:border-color 0.3s,box-shadow 0.3s;-webkit-appearance:none;border-radius:2px; }
+.form-input::placeholder,.form-textarea::placeholder { color:rgba(13,12,10,0.28); }
+.form-input:focus,.form-select:focus,.form-textarea:focus { border-color:rgba(201,168,76,0.65);box-shadow:0 0 0 3px rgba(201,168,76,0.12); }
+.form-input.is-error,.form-select.is-error,.form-textarea.is-error { border-color:#b85454;box-shadow:0 0 0 3px rgba(184,84,84,0.12); }
+.form-textarea { min-height:110px;resize:vertical; }
 .form-select { background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%238A6B2E' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 1rem center;padding-right:2.5rem;cursor:pointer; }
 .form-row { display:grid;grid-template-columns:1fr 1fr;gap:1rem; }
-.form-submit { width:100%;margin-top:0.5rem;font-family:'DM Sans',sans-serif;padding:0.95rem;font-size:0.8rem; }
-.success-msg { display:none;background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.3);padding:1.2rem 1.5rem;margin-top:1rem;font-size:0.85rem;color:var(--gold-light); }
+.form-submit { width:100%;margin-top:0.35rem;font-family:'DM Sans',sans-serif;padding:0.95rem;font-size:0.8rem; }
+.form-submit:disabled { opacity:0.65;cursor:not-allowed;transform:none; }
+.form-trust { font-size:0.72rem;color:rgba(13,12,10,0.45);margin-top:0.65rem;line-height:1.55;text-align:center; }
+.form-error-msg { display:none;font-size:0.74rem;color:#a94444;margin-top:0.35rem;line-height:1.45; }
+.form-error-msg.visible { display:block; }
+.form-alert { display:none;padding:0.9rem 1.1rem;margin-bottom:1rem;font-size:0.84rem;line-height:1.55;border-radius:2px; }
+.form-alert-error { background:rgba(184,84,84,0.1);border:1px solid rgba(184,84,84,0.35);color:#8b3030; }
+.form-alert-success { background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:#6b5520; }
+.form-alert.visible { display:block; }
+.form-privacy { font-size:0.75rem;color:rgba(13,12,10,0.45);margin-top:0.75rem;line-height:1.6; }
+.form-privacy a { color:var(--gold-dim);text-decoration:underline; }
+.contact-split-right .form-cpref-btn { border-color:rgba(13,12,10,0.15);color:rgba(13,12,10,0.55); }
+.contact-split-right .form-cpref-btn:hover { border-color:rgba(201,168,76,0.55);color:#0d0c0a; }
+.contact-split-right .form-cpref-btn.active { background:var(--gold);border-color:var(--gold);color:#000; }
 
-@media(max-width:1100px){ .contact-split-left{padding:4rem 3rem;} .contact-split-right{padding:4rem 3rem;} }
+/* FAQ contacto */
+.contact-faq { padding:4rem 5rem;background:var(--bg); }
+.contact-faq .section-title { color:#fff; }
+.contact-faq .faq-list { max-width:760px; }
+
+@media(max-width:1100px){ .contact-hero-compact{padding:6.5rem 3rem 1.5rem;} .contact-split-left,.contact-split-right{padding:3rem;} }
 @media(max-width:900px){
+  .contact-hero-compact{padding:6rem 1.5rem 1.25rem;}
   .contact-split{grid-template-columns:1fr;}
-  .contact-split-left{min-height:480px;padding:4rem 2rem 3rem;}
-  .contact-split-photo{width:52%;}
-  .contact-split-right{padding:3rem 2rem;}
+  .contact-split-right{order:-1;padding:2.5rem 1.5rem;border-left:none;border-bottom:1px solid rgba(13,12,10,0.08);}
+  .contact-split-left{order:1;min-height:420px;padding:3rem 1.5rem 2.5rem;}
+  .contact-split-photo{width:58%;}
+  .contact-split-content{max-width:100%;}
   .form-row{grid-template-columns:1fr;}
-}
-@media(max-width:600px){
-  .contact-split-left{min-height:400px;padding:3rem 1.5rem 2.5rem;}
-  .contact-split-photo{width:48%;}
-  .contact-split-right{padding:2.5rem 1.5rem;}
+  .contact-faq{padding:3rem 1.5rem;}
 }
 </style>
 <script type="application/ld+json">
@@ -95,91 +109,85 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://adrianmarquez.es/"},{"@type":"ListItem","position":2,"name":"Contacto","item":"https://adrianmarquez.es/contacto.html"}]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Cuánto tarda Adrián Márquez en responder?","acceptedAnswer":{"@type":"Answer","text":"Respondo a todos los mensajes en menos de 24 horas laborables, ya sea por formulario, email o WhatsApp."}},
+    {"@type":"Question","name":"¿La primera consulta es gratuita?","acceptedAnswer":{"@type":"Answer","text":"Sí. La primera conversación es gratuita y sin compromiso para entender tu situación, objetivos y ver si hay encaje real."}},
+    {"@type":"Question","name":"¿Con qué tipo de empresas trabaja Adrián Márquez?","acceptedAnswer":{"@type":"Answer","text":"Trabajo con empresas de servicios en toda España: consultoras, clínicas, academias, despachos, negocios locales y pymes que necesitan marketing digital, SEO/GEO/AEO o automatización con IA."}},
+    {"@type":"Question","name":"¿Puedo contactar por WhatsApp directamente?","acceptedAnswer":{"@type":"Answer","text":"Sí. Puedes escribirme al 630 780 358 por WhatsApp o usar el botón de contacto directo en esta página."}}
+  ]
+}
+</script>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVWMWFW6"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVWMWFW6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <nav>
-  <a href="/" class="nav-logo">AM.</a>
+  <a href="/" class="nav-logo brand-wordmark" aria-label="Adrián Márquez — Inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="16" r="3.5" fill="#C9A84C"/><circle cx="24" cy="8" r="3.5" fill="#C9A84C"/><circle cx="24" cy="24" r="3.5" fill="#C9A84C"/><path d="M11.5 15L20.5 9.5M11.5 17L20.5 22.5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="brand-text">Adrián <span class="brand-accent">Márquez</span></span></a>
   <ul class="nav-links">
     <li><a href="/">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
+    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
     <li><a href="proyectos.html">Proyectos</a></li>
     <li><a href="contacto.html" class="active">Contacto</a></li>
   </ul>
   <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menú">&#9776;</button>
-  <a href="https://wa.me/34630780358" target="_blank" class="nav-cta">WhatsApp directo</a>
+  <a href="#contacto-form" class="nav-cta">Hablemos</a>
 </nav>
 
-<div class="breadcrumb"><a href="/">Inicio</a> › <span>Contacto</span></div>
-
-<div class="page-hero">
-  <div class="page-hero-label">Hablemos</div>
-  <h1 style="color:#ffffff">Primera consulta <em>gratuita</em> — sin compromiso</h1>
-  <p class="page-hero-desc">Rellena el formulario, escríbeme por WhatsApp o envía un email. Respondo en menos de 24 horas laborables a empresas de servicios en toda España.</p>
-  <div class="page-hero-line"></div>
+<!-- Hero compacto -->
+<div class="contact-hero-compact">
+  <div class="breadcrumb"><a href="/">Inicio</a> › <span>Contacto</span></div>
+  <h1>Primera consulta <em>gratuita</em></h1>
+  <p class="contact-hero-lead">Respondo en menos de 24 horas laborables. Escríbeme por WhatsApp, email o rellena el formulario — como prefieras.</p>
+  <div class="contact-hero-actions">
+    <a href="https://wa.me/34630780358?text=Hola%20Adri%C3%A1n,%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn-primary">WhatsApp</a>
+    <a href="mailto:hola@adrianmarquez.es" class="btn-outline">Email</a>
+  </div>
 </div>
 
 <section class="contact-split">
 
-  <!-- Panel izquierdo: oscuro con foto emergente -->
-  <div class="contact-split-left">
-    <div class="contact-split-content slide-left">
-      <div class="section-label" style="margin-bottom:1.5rem;">Canales directos</div>
-      <h2 class="contact-split-title">Elige <em>cómo<br>hablar</em> conmigo</h2>
-      <p class="contact-split-desc">Respondo personalmente a cada mensaje. Sin asistentes, sin plantillas. Solo trato directo.</p>
-      <div class="contact-split-channels">
-        <a href="mailto:hola@adrianmarquez.es" class="contact-split-channel">
-          <span class="csc-type">Email directo</span>
-          <span class="csc-val">hola@adrianmarquez.es ↗</span>
-        </a>
-        <a href="https://wa.me/34630780358?text=Hola%20Adrián,%20me%20gustaría%20hablar%20de%20un%20proyecto" target="_blank" class="contact-split-channel">
-          <span class="csc-type">WhatsApp — respuesta rápida</span>
-          <span class="csc-val">630 780 358 ↗</span>
-        </a>
-        <a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" class="contact-split-channel">
-          <span class="csc-type">LinkedIn</span>
-          <span class="csc-val">Adrián Márquez Corral ↗</span>
-        </a>
-      </div>
-    </div>
-    <div class="contact-split-photo">
-      <img src="/images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital en España">
-    </div>
-  </div>
-
-  <!-- Panel derecho: formulario -->
-  <div class="contact-split-right slide-right">
+  <!-- Formulario primero en móvil -->
+  <div class="contact-split-right slide-right" id="contacto-form">
     <div class="form-title">Cuéntame tu proyecto</div>
-    <p class="form-subtitle">Cuanto más detallado, mejor podré orientarte desde el primer mensaje.</p>
-    <form id="contactForm" method="post">
+    <p class="form-subtitle">Cuanto más contexto me des, mejor podré orientarte desde el primer mensaje.</p>
+    <div class="form-alert form-alert-error" id="formAlertError" role="alert"></div>
+    <div class="form-alert form-alert-success" id="formAlertSuccess" role="status"></div>
+    <form id="contactForm" action="https://formspree.io/f/mdajdpby" method="POST" novalidate>
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="hidden" name="_subject" value="Nuevo contacto desde adrianmarquez.es">
       <div class="form-row">
         <div class="form-group">
           <label class="form-label" for="fname">Nombre *</label>
-          <input type="text" class="form-input" id="fname" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+          <input type="text" class="form-input" id="fname" name="nombre" placeholder="Tu nombre" autocomplete="given-name">
+          <span class="form-error-msg" id="error-fname" role="alert"></span>
         </div>
         <div class="form-group">
           <label class="form-label" for="lname">Apellidos</label>
           <input type="text" class="form-input" id="lname" name="apellidos" placeholder="Apellidos" autocomplete="family-name">
         </div>
       </div>
-      <div class="form-row">
+      <div class="form-row" id="contactFieldsRow">
         <div class="form-group">
           <label class="form-label" for="email">Email</label>
           <input type="email" class="form-input" id="email" name="email" placeholder="tu@email.com" autocomplete="email">
+          <span class="form-error-msg" id="error-email" role="alert"></span>
         </div>
         <div class="form-group">
           <label class="form-label" for="phone">Teléfono / WhatsApp</label>
           <input type="tel" class="form-input" id="phone" name="telefono" placeholder="+34 600 000 000" autocomplete="tel">
+          <span class="form-error-msg" id="error-phone" role="alert"></span>
         </div>
       </div>
+      <p class="form-error-msg" id="error-contact" role="alert" style="margin-top:-0.35rem;margin-bottom:0.75rem;"></p>
       <div class="form-group">
-        <label class="form-label" for="company">Empresa / Web (si aplica)</label>
+        <label class="form-label" for="company">Empresa / Web (opcional)</label>
         <input type="text" class="form-input" id="company" name="empresa" placeholder="Nombre de tu empresa o web" autocomplete="organization">
       </div>
       <div class="form-group">
@@ -187,8 +195,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select class="form-select" id="service" name="servicio">
           <option value="">Selecciona un servicio...</option>
           <option value="consultoria">Consultoría de negocio digital</option>
-          <option value="seo-geo">SEO & GEO</option>
-          <option value="automatizacion">Automatización con IA & n8n</option>
+          <option value="seo-geo">SEO, GEO y AEO</option>
+          <option value="automatizacion">Automatización con IA &amp; n8n</option>
           <option value="formacion">Formación para empresas</option>
           <option value="publicidad">Publicidad digital (Google Ads / Meta Ads)</option>
           <option value="estrategia">Estrategia digital</option>
@@ -197,28 +205,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="form-group">
         <label class="form-label">Prefiero que me contactes por</label>
-        <div class="form-cpref" id="contactPref">
-          <button type="button" class="form-cpref-btn" data-val="email">Email</button>
-          <button type="button" class="form-cpref-btn" data-val="whatsapp">WhatsApp</button>
-          <button type="button" class="form-cpref-btn" data-val="llamada">Llamada</button>
+        <div class="form-cpref" id="contactPref" role="group" aria-label="Preferencia de contacto">
+          <button type="button" class="form-cpref-btn" data-val="email" aria-pressed="false">Email</button>
+          <button type="button" class="form-cpref-btn" data-val="whatsapp" aria-pressed="false">WhatsApp</button>
+          <button type="button" class="form-cpref-btn" data-val="llamada" aria-pressed="false">Llamada</button>
         </div>
         <input type="hidden" name="contacto_preferido" id="contactPrefVal">
       </div>
       <div class="form-group">
         <label class="form-label" for="message">Cuéntame tu proyecto *</label>
-        <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes?" required></textarea>
+        <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes?"></textarea>
+        <span class="form-error-msg" id="error-message" role="alert"></span>
       </div>
-      <button type="submit" class="btn-primary form-submit">Enviar mensaje →</button>
-      <p style="font-size:0.75rem;color:var(--text-muted);margin-top:0.75rem;line-height:1.6;">Al enviar aceptas nuestra <a href="/politica-privacidad.html" style="color:var(--gold);text-decoration:underline;">Política de Privacidad</a>.</p>
-      <div class="success-msg" id="successMsg">
-        ✓ Mensaje recibido. Te responderé en menos de 24 horas. Si es urgente, escríbeme por WhatsApp al 630 780 358.
-      </div>
+      <button type="submit" class="btn-primary form-submit" id="formSubmitBtn">Enviar mensaje →</button>
+      <p class="form-trust">Respondo en menos de 24 h laborables · Sin spam · Trato directo contigo</p>
+      <p class="form-privacy">Al enviar aceptas nuestra <a href="/politica-privacidad.html">Política de Privacidad</a>.</p>
     </form>
+  </div>
+
+  <!-- Canales directos -->
+  <div class="contact-split-left">
+    <div class="contact-split-content slide-left">
+      <div class="section-label" style="margin-bottom:1.25rem;">Canales directos</div>
+      <h2 class="contact-split-title">Elige <em>cómo hablar</em> conmigo</h2>
+      <p class="contact-split-desc">Respondo personalmente a cada mensaje. Sin asistentes, sin plantillas.</p>
+      <div class="contact-split-channels">
+        <a href="mailto:hola@adrianmarquez.es" class="contact-split-channel">
+          <span class="csc-type">Email directo</span>
+          <span class="csc-val">hola@adrianmarquez.es ↗</span>
+        </a>
+        <a href="https://wa.me/34630780358?text=Hola%20Adri%C3%A1n,%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="contact-split-channel">
+          <span class="csc-type">WhatsApp — respuesta rápida</span>
+          <span class="csc-val">630 780 358 ↗</span>
+        </a>
+        <a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener noreferrer" class="contact-split-channel">
+          <span class="csc-type">LinkedIn</span>
+          <span class="csc-val">Adrián Márquez Corral ↗</span>
+        </a>
+      </div>
+    </div>
+    <div class="contact-split-photo">
+      <img src="/images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital en España" loading="lazy" width="843" height="1264">
+    </div>
   </div>
 
 </section>
 
-<!-- SECCIÓN BLANCA -->
+<!-- Expectativas -->
 <div class="white-section">
   <div class="fade-up">
     <div class="section-label">Por qué trabajar conmigo</div>
@@ -247,47 +280,194 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </div>
 
+<!-- FAQ -->
+<section class="contact-faq">
+  <div class="section-label">Preguntas frecuentes</div>
+  <h2 class="section-title">Dudas <em>habituales</em> sobre contacto</h2>
+  <div class="faq-list">
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿Cuánto tardas en responder?</div>
+      <p class="faq-a">En menos de 24 horas laborables, ya sea por formulario, email o WhatsApp. Si es urgente, escríbeme directamente por WhatsApp al 630 780 358.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿La primera consulta es gratuita?</div>
+      <p class="faq-a">Sí. La primera conversación es gratuita y sin compromiso. Sirve para entender tu situación, tus objetivos y ver si hay encaje real antes de proponer nada.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿Con qué tipo de empresas trabajas?</div>
+      <p class="faq-a">Con empresas de servicios en toda España: consultoras, clínicas, academias, despachos, negocios locales y pymes. Si vendes servicios y necesitas marketing digital, SEO/GEO/AEO o automatización con IA, encajamos.</p>
+    </div>
+    <div class="faq-item fade-up">
+      <div class="faq-q">¿Puedo contactarte solo por WhatsApp?</div>
+      <p class="faq-a">Por supuesto. Muchos clientes prefieren empezar por WhatsApp. Usa el botón de arriba o escríbeme al 630 780 358 con un breve resumen de tu proyecto.</p>
+    </div>
+  </div>
+</section>
+
 <div class="cta-strip" style="background:var(--bg2);">
   <div class="cta-strip-text">
-    <h2>¿Prefieres llamar o <em>WhatsApp</em>?</h2>
-    <p>Sin esperas ni formularios. Escríbeme y hablamos directamente.</p>
+    <h2>¿Prefieres <em>WhatsApp</em> ahora?</h2>
+    <p>Sin esperas. Escríbeme y hablamos directamente.</p>
   </div>
   <div class="cta-strip-actions">
-    <a href="https://wa.me/34630780358?text=Hola%20Adrián,%20me%20gustaría%20hablar%20de%20un%20proyecto" target="_blank" class="btn-primary">Abrir WhatsApp</a>
+    <a href="https://wa.me/34630780358?text=Hola%20Adri%C3%A1n,%20me%20gustar%C3%ADa%20hablar%20de%20un%20proyecto" target="_blank" rel="noopener noreferrer" class="btn-primary">Abrir WhatsApp</a>
     <a href="mailto:hola@adrianmarquez.es" class="btn-outline">Enviar email</a>
   </div>
 </div>
 
 <footer>
   <div class="footer-top">
-    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
-    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO & GEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div class="footer-brand"><span class="footer-logo">Adrián <em>Márquez</em></span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
     <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="blog/">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
-    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:hola@adrianmarquez.es">hola@adrianmarquez.es</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li></ul></div>
-    <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="/aviso-legal.html">Aviso legal</a></li><li><a href="/politica-privacidad.html">Pol&#237;tica de privacidad</a></li><li><a href="/politica-cookies.html">Pol&#237;tica de cookies</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:hola@adrianmarquez.es">hola@adrianmarquez.es</a></li><li><a href="https://wa.me/34630780358" target="_blank" rel="noopener">630 780 358</a></li></ul></div>
+    <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="/aviso-legal.html">Aviso legal</a></li><li><a href="/politica-privacidad.html">Política de privacidad</a></li><li><a href="/politica-cookies.html">Política de cookies</a></li></ul></div>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
 
-<script src="main.js?v=2"></script>
+<script src="main.js?v=7"></script>
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const name = document.getElementById('fname').value.trim();
-  const msg = document.getElementById('message').value.trim();
-  if (!name || !msg) { alert('Por favor rellena los campos obligatorios (nombre y mensaje).'); return; }
-  document.getElementById('successMsg').style.display = 'block';
-  document.querySelector('.form-submit').disabled = true;
-  document.querySelector('.form-submit').textContent = 'Enviado ✓';
-});
+(function () {
+  const FORM_ENDPOINT = 'https://formspree.io/f/mdajdpby';
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('formSubmitBtn');
+  const alertError = document.getElementById('formAlertError');
+  const alertSuccess = document.getElementById('formAlertSuccess');
 
-document.querySelectorAll('.form-cpref-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.form-cpref-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('contactPrefVal').value = btn.dataset.val;
+  const fieldMap = {
+    nombre: 'fname',
+    email: 'email',
+    telefono: 'phone',
+    mensaje: 'message'
+  };
+
+  function showFieldError(fieldId, msg) {
+    const input = document.getElementById(fieldId);
+    const err = document.getElementById('error-' + fieldId);
+    if (input) input.classList.add('is-error');
+    if (err) { err.textContent = msg; err.classList.add('visible'); }
+  }
+
+  function clearErrors() {
+    form.querySelectorAll('.is-error').forEach(el => el.classList.remove('is-error'));
+    form.querySelectorAll('.form-error-msg').forEach(el => { el.textContent = ''; el.classList.remove('visible'); });
+    alertError.classList.remove('visible');
+    alertError.textContent = '';
+    alertSuccess.classList.remove('visible');
+    alertSuccess.textContent = '';
+  }
+
+  function validate() {
+    let valid = true;
+    const name = document.getElementById('fname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const msg = document.getElementById('message').value.trim();
+
+    if (!name) { showFieldError('fname', 'Indica tu nombre.'); valid = false; }
+    if (!email && !phone) {
+      const contactErr = document.getElementById('error-contact');
+      contactErr.textContent = 'Indica un email o teléfono para poder responderte.';
+      contactErr.classList.add('visible');
+      document.getElementById('email').classList.add('is-error');
+      document.getElementById('phone').classList.add('is-error');
+      valid = false;
+    } else if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showFieldError('email', 'Introduce un email válido.');
+      valid = false;
+    }
+    if (!msg) { showFieldError('message', 'Cuéntame brevemente tu proyecto o consulta.'); valid = false; }
+    return valid;
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    clearErrors();
+    if (!validate()) {
+      alertError.textContent = 'Revisa los campos marcados antes de enviar.';
+      alertError.classList.add('visible');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando…';
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok) {
+        alertSuccess.textContent = '✓ Mensaje recibido. Te responderé en menos de 24 horas laborables.';
+        alertSuccess.classList.add('visible');
+        form.reset();
+        document.querySelectorAll('.form-cpref-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+        document.getElementById('contactPrefVal').value = '';
+      } else if (data.errors && data.errors.length) {
+        data.errors.forEach(function (err) {
+          const id = fieldMap[err.field] || err.field;
+          if (document.getElementById('error-' + id) || document.getElementById(id)) {
+            showFieldError(id, err.message || 'Revisa este campo.');
+          }
+        });
+        alertError.textContent = data.error || 'No se pudo enviar. Revisa los campos e inténtalo de nuevo.';
+        alertError.classList.add('visible');
+      } else {
+        alertError.textContent = data.error || 'Error al enviar. Inténtalo de nuevo o escríbeme por WhatsApp al 630 780 358.';
+        alertError.classList.add('visible');
+      }
+    } catch {
+      alertError.textContent = 'Error de conexión. Comprueba tu red o escríbeme directamente por WhatsApp.';
+      alertError.classList.add('visible');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje →';
+    }
   });
-});
+
+  ['fname', 'email', 'phone', 'message'].forEach(function (id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('input', function () {
+      el.classList.remove('is-error');
+      const err = document.getElementById('error-' + id);
+      if (err) { err.classList.remove('visible'); err.textContent = ''; }
+      document.getElementById('error-contact').classList.remove('visible');
+    });
+  });
+
+  document.querySelectorAll('.form-cpref-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      document.querySelectorAll('.form-cpref-btn').forEach(function (b) {
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed', 'true');
+      document.getElementById('contactPrefVal').value = btn.dataset.val;
+    });
+  });
+
+  const params = new URLSearchParams(window.location.search);
+  const servicio = params.get('servicio');
+  if (servicio) {
+    const sel = document.getElementById('service');
+    const opt = sel.querySelector('option[value="' + servicio + '"]');
+    if (opt) {
+      sel.value = servicio;
+      const form = document.getElementById('contacto-form');
+      if (form) {
+        requestAnimationFrame(function () {
+          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      }
+    }
+  }
+})();
 </script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>

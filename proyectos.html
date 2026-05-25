@@ -30,7 +30,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=2">
+<link rel="stylesheet" href="styles.css?v=8">
+<link rel="stylesheet" href="components-premium.css?v=5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,7 +47,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 }
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ItemList","name":"Proyectos y Casos de Éxito — Adrián Márquez","description":"Portfolio de proyectos de marketing digital, automatización con IA y estrategia digital para empresas de servicios en España","url":"https://adrianmarquez.es/proyectos.html","itemListElement":[{"@type":"ListItem","position":1,"name":"Cascudo Correduría de Seguros","description":"Dirección integral de marketing digital, automatización con n8n e IA y gestión tecnológica para correduría de seguros en Galicia. Más de 4 años construyendo presencia digital desde cero con resultados medibles."},{"@type":"ListItem","position":2,"name":"Sistema de Captación Automatizada de Leads","description":"Flujo completo de captación y cualificación de leads con n8n e IA. Tiempo de respuesta reducido de horas a segundos. -70% tiempo manual del equipo comercial."},{"@type":"ListItem","position":3,"name":"Digitalización de Negocio Local — Val Miñor","description":"Presencia digital completa para negocio local: WordPress, WooCommerce, Google Business Profile, SEO local. Top 3 en búsquedas locales, +340% visibilidad en Google Maps."},{"@type":"ListItem","position":4,"name":"La Comarca en Juego","description":"Proyecto de comunicación deportiva local automatizado al 100% con n8n e IA. Publicaciones automáticas 3 veces por semana sin intervención humana en Instagram."},{"@type":"ListItem","position":5,"name":"Formación en IA para Equipos Comerciales","description":"Taller de formación en IA generativa para equipo comercial. 12 comerciales formados en un día. -40% tiempo en redacción de propuestas comerciales."},{"@type":"ListItem","position":6,"name":"Nodens — Consultoría de Automatización & IA","description":"Desarrollo completo de marca, identidad visual y posicionamiento de consultora especializada en automatización, IA y marketing para empresas de servicios."},{"@type":"ListItem","position":7,"name":"Posicionamiento Web — Luisa Corral Coach","description":"Estrategia SEO y creación de contenido para coach profesional. +300% tráfico orgánico en 6 meses. Top 5 en keywords objetivo del sector."},{"@type":"ListItem","position":8,"name":"Bebés Reborn Artesanales — Presencia Digital Completa","description":"Presencia digital completa para artesana: WooCommerce, fotografía de producto, redes sociales y automatización de contenido. Clientes de toda España."}]}
+{"@context":"https://schema.org","@type":"ItemList","name":"Proyectos y Casos de Éxito — Adrián Márquez","description":"Portfolio de proyectos de marketing digital, automatización con IA y estrategia digital para empresas de servicios en España","url":"https://adrianmarquez.es/proyectos.html","itemListElement":[{"@type":"ListItem","position":1,"name":"Cascudo Correduría de Seguros","description":"Dirección integral de marketing digital, automatización con n8n e IA y gestión tecnológica para correduría de seguros en Galicia. Más de 4 años construyendo presencia digital desde cero con resultados medibles."},{"@type":"ListItem","position":2,"name":"Sistema de Captación Automatizada de Leads","description":"Flujo completo de captación y cualificación de leads con n8n e IA. Tiempo de respuesta reducido de horas a segundos. -70% tiempo manual del equipo comercial."},{"@type":"ListItem","position":3,"name":"Digitalización de Negocio Local — Val Miñor","description":"Presencia digital completa para negocio local: WordPress, WooCommerce, Google Business Profile, SEO local. Top 3 en búsquedas locales, +340% visibilidad en Google Maps."},{"@type":"ListItem","position":4,"name":"La Comarca en Juego","description":"Proyecto de comunicación deportiva local automatizado al 100% con n8n e IA. Publicaciones automáticas 3 veces por semana sin intervención humana en Instagram."},{"@type":"ListItem","position":5,"name":"Formación en IA para Equipos Comerciales","description":"Taller de formación en IA generativa para equipo comercial. 12 comerciales formados en un día. -40% tiempo en redacción de propuestas comerciales."},{"@type":"ListItem","position":6,"name":"Nodens — Consultoría de Automatización & IA","description":"Desarrollo completo de marca, identidad visual y posicionamiento de consultora especializada en automatización, IA y marketing para empresas de servicios."},{"@type":"ListItem","position":7,"name":"Posicionamiento Web — Luisa Corral Coach","description":"Estrategia SEO y creación de contenido para coach profesional. +300% tráfico orgánico en 6 meses. Top 5 en keywords objetivo del sector."},{"@type":"ListItem","position":8,"name":"Bebés Reborn Artesanales — Presencia Digital Completa","description":"Presencia digital completa para artesana: WooCommerce, fotografía de producto, redes sociales y automatización de contenido. Clientes de toda España."},{"@type":"ListItem","position":9,"name":"Mi Garaje — Gestión de vehículos y comunidad","description":"Aplicación propia para gestión de vehículos y comunidad de usuarios: registro de mantenimiento, historial, alertas y espacio social entre propietarios."}]}
 </script>
 <script type="application/ld+json">
 {
@@ -58,38 +59,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<style>
-.projects-filter { display:flex;gap:1rem;flex-wrap:wrap;margin:2rem 0; }
-.filter-btn { font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;padding:0.5rem 1.2rem;border:1px solid var(--border);color:var(--text-muted);background:none;cursor:pointer;transition:all 0.3s; }
-.filter-btn.active, .filter-btn:hover { border-color:var(--gold);color:var(--gold); }
-.projects-grid-full { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border); }
-.project-card-full { background:var(--bg);padding:2.5rem;position:relative;overflow:hidden;transition:background 0.3s; }
-.project-card-full:hover { background:var(--bg3); }
-.project-card-full::before { content:'';position:absolute;top:0;left:0;width:3px;height:0;background:var(--gold);transition:height 0.4s; }
-.project-card-full:hover::before { height:100%; }
-.project-cat { font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:1rem; }
-.project-num { font-family:'Playfair Display',serif;font-size:0.75rem;color:rgba(201,168,76,0.3);margin-bottom:1rem; }
-.project-title { font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;margin-bottom:0.8rem;line-height:1.2; }
-.project-desc { font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.5rem; }
-.project-results { background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.1);padding:1rem;margin-bottom:1.5rem; }
-.project-results-title { font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:0.6rem; }
-.project-result-item { font-size:0.82rem;color:rgba(240,237,232,0.8);display:flex;gap:0.5rem;margin-bottom:0.3rem; }
-.project-result-item::before { content:'↑';color:var(--gold);flex-shrink:0; }
-.project-tags { display:flex;flex-wrap:wrap;gap:0.4rem; }
-.project-tag { font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;padding:0.2rem 0.6rem;background:rgba(201,168,76,0.06);color:var(--gold-dim);border:1px solid rgba(201,168,76,0.12); }
-.project-card-featured { grid-column:span 2;background:var(--bg3); }
-.featured-inner { display:grid;grid-template-columns:1fr 1fr;gap:3rem;height:100%; }
-.featured-label { font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem; }
-.featured-label::before { content:'★';font-size:0.6rem; }
-@media(max-width:900px){
-  .projects-grid-full{grid-template-columns:1fr;}
-  .project-card-featured{grid-column:span 1;}
-  .featured-inner{grid-template-columns:1fr;gap:1.5rem;}
-  section{padding:4rem 1.5rem;}
-}
-</style>
-
-<script type="application/ld+json">
+</head>
+<body class="projects-page">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://adrianmarquez.es/"},{"@type":"ListItem","position":2,"name":"Proyectos","item":"https://adrianmarquez.es/proyectos.html"}]}
 </script>
 </head>
@@ -101,11 +72,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <nav>
-  <a href="/" class="nav-logo">AM.</a>
+  <a href="/" class="nav-logo brand-wordmark" aria-label="Adrián Márquez — Inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="16" r="3.5" fill="#C9A84C"/><circle cx="24" cy="8" r="3.5" fill="#C9A84C"/><circle cx="24" cy="24" r="3.5" fill="#C9A84C"/><path d="M11.5 15L20.5 9.5M11.5 17L20.5 22.5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="brand-text">Adrián <span class="brand-accent">Márquez</span></span></a>
   <ul class="nav-links">
     <li><a href="/">Inicio</a></li>
     <li><a href="sobre-mi.html">Sobre mí</a></li>
-    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
+    <li class="has-dropdown"><a href="servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
     <li><a href="proyectos.html" class="active">Proyectos</a></li>
     <li><a href="contacto.html">Contacto</a></li>
   </ul>
@@ -117,12 +88,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="page-hero">
   <div class="page-hero-label">Casos de éxito</div>
-  <h1>Proyectos de Marketing Digital y <em>Automatización con IA</em> para Empresas en España</h1>
-  <p class="page-hero-desc">Resultados reales para empresas de servicios: más visibilidad, más leads y procesos automatizados. Marketing digital, SEO/GEO, Google Ads e inteligencia artificial aplicada al negocio.</p>
+  <h1>Proyectos y <em>casos de éxito</em></h1>
+  <p class="page-hero-desc">Resultados reales en marketing digital, SEO/GEO, automatización con IA y publicidad para empresas de servicios en España.</p>
+  <p class="page-hero-seo"><strong>Portfolio de proyectos de marketing digital y automatización con IA.</strong> Casos en corredurías de seguros, negocios locales, coaches profesionales y PYMES de servicios: más visibilidad en Google Maps, flujos n8n, e-commerce y formación en IA para equipos comerciales.</p>
   <div class="page-hero-line"></div>
 </div>
 
-<section style="background:var(--bg);">
+<section class="projects-main">
   <div class="projects-grid-full">
 
     <!-- PROYECTO DESTACADO -->
@@ -254,12 +226,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="project-tags"><span class="project-tag">WooCommerce</span><span class="project-tag">E-commerce</span><span class="project-tag">Social Media</span><span class="project-tag">Automatización</span></div>
     </div>
 
+    <div class="project-card-full fade-up">
+      <div class="project-num">09</div>
+      <div class="project-cat">App · Producto propio</div>
+      <h3 class="project-title">Mi Garaje — Gestión de vehículos y comunidad</h3>
+      <p class="project-desc">Aplicación propia para gestión de vehículos y comunidad de usuarios: registro de mantenimiento, historial, alertas y espacio social entre propietarios. Proyecto que demuestra capacidad de llevar una idea de producto digital de concepto a app funcional.</p>
+      <div class="project-results">
+        <div class="project-results-title">Enfoque</div>
+        <div class="project-result-item">Producto digital propio end-to-end</div>
+        <div class="project-result-item">UX orientada a uso recurrente</div>
+        <div class="project-result-item">Comunidad + utilidad práctica</div>
+      </div>
+      <div class="project-tags"><span class="project-tag">App</span><span class="project-tag">Producto</span><span class="project-tag">Comunidad</span><span class="project-tag">Automoción</span></div>
+    </div>
+
     <!-- PRÓXIMO PROYECTO -->
-    <div class="project-card-full fade-up" style="display:flex;align-items:center;justify-content:center;min-height:300px;border:1px dashed rgba(201,168,76,0.15);background:var(--bg);">
-      <div style="text-align:center;">
-        <div style="font-size:2.5rem;color:rgba(201,168,76,0.15);margin-bottom:1rem;">+</div>
-        <p style="font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.5rem;">Tu proyecto aquí</p>
-        <a href="contacto.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Hablemos →</a>
+    <div class="project-card-full project-placeholder-card fade-up">
+      <div class="project-placeholder-inner">
+        <div class="project-placeholder-icon">+</div>
+        <p class="project-cat">Tu proyecto aquí</p>
+        <a href="contacto.html" class="service-card-link">Hablemos →</a>
       </div>
     </div>
 
@@ -267,7 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <!-- SECCIÓN BLANCA: RESULTADOS EN NÚMEROS -->
-<div class="white-section">
+<div class="white-section white-section--curve">
   <div class="fade-up">
     <div class="section-label">Resultados en números</div>
     <h2 class="ws-title">Impacto <em>medible</em> en cada proyecto</h2>
@@ -275,19 +261,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="ws-grid-3">
     <div class="wsc slide-left">
-      <div class="wsc-num">+340%</div>
+      <div class="wsc-num" data-stat-value="340" data-stat-prefix="+" data-stat-suffix="%">+340%</div>
       <div class="wsc-title">Visibilidad en Google Maps</div>
       <p class="wsc-desc">Negocio local de 0 presencia online a Top 3 en búsquedas locales del sector. Primera venta online en 3 semanas.</p>
       <span class="wsc-tag">SEO local</span>
     </div>
     <div class="wsc fade-scale" style="--delay:0.1s">
-      <div class="wsc-num">-70%</div>
+      <div class="wsc-num" data-stat-value="70" data-stat-prefix="-" data-stat-suffix="%">-70%</div>
       <div class="wsc-title">Tiempo manual reducido</div>
       <p class="wsc-desc">Flujos de automatización n8n + IA en el equipo comercial. De horas a segundos en tiempo de respuesta a leads.</p>
       <span class="wsc-tag">Automatización</span>
     </div>
     <div class="wsc slide-right" style="--delay:0.15s">
-      <div class="wsc-num">+300%</div>
+      <div class="wsc-num" data-stat-value="300" data-stat-prefix="+" data-stat-suffix="%">+300%</div>
       <div class="wsc-title">Tráfico orgánico SEO</div>
       <p class="wsc-desc">Estrategia SEO y contenido para coach profesional. Top 5 en keywords objetivo del sector en 6 meses.</p>
       <span class="wsc-tag">SEO & Contenido</span>
@@ -323,8 +309,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <footer>
   <div class="footer-top">
-    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
-    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO & GEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div class="footer-brand"><span class="footer-logo">Adrián <em>Márquez</em></span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="servicios/automatizacion-ia.html">Automatización & IA</a></li><li><a href="servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
     <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="sobre-mi.html">Sobre mí</a></li><li><a href="proyectos.html">Proyectos</a></li><li><a href="blog/">Blog</a></li><li><a href="contacto.html">Contacto</a></li></ul></div>
     <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:hola@adrianmarquez.es">hola@adrianmarquez.es</a></li><li>
 <a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li></ul></div>
@@ -332,7 +318,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
-<script src="main.js?v=2"></script>
+<script src="main.js?v=7"></script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
