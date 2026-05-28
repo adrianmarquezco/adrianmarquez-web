@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/adrian-marquez-profesional.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Power BI para pymes de servicios: guía práctica 2026 | Adrián Márquez</title>
+<meta name="description" content="Descubre cómo usar Power BI en tu pyme de servicios en España: desde la primera conexión hasta dashboards que toman decisiones reales. Guía práctica con ejemplos.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Adrián Márquez Corral">
+<link rel="canonical" href="https://adrianmarquez.es/blog/power-bi-pymes-servicios-espana-guia-practica.html">
+<meta property="og:title" content="Power BI para pymes de servicios: guía práctica 2026">
+<meta property="og:description" content="Descubre cómo usar Power BI en tu pyme de servicios en España: desde la primera conexión hasta dashboards que toman decisiones reales. Guía práctica con ejemplos.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://adrianmarquez.es/blog/power-bi-pymes-servicios-espana-guia-practica.html">
+<meta property="og:locale" content="es_ES">
+<meta property="og:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="1067">
+<meta property="article:published_time" content="2026-05-28">
+<meta property="article:author" content="Adrián Márquez Corral">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Power BI para pymes de servicios: guía práctica 2026">
+<meta name="twitter:description" content="Descubre cómo usar Power BI en tu pyme de servicios en España: desde la primera conexión hasta dashboards que toman decisiones reales. Guía práctica con ejemplos.">
+<meta name="twitter:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="blog.css">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Power BI para pymes de servicios: guía práctica 2026",
+  "description": "Descubre cómo usar Power BI en tu pyme de servicios en España: desde la primera conexión hasta dashboards que toman decisiones reales. Guía práctica con ejemplos.",
+  "image": "https://adrianmarquez.es/images/adrian-marquez-profesional.png",
+  "url": "https://adrianmarquez.es/blog/power-bi-pymes-servicios-espana-guia-practica.html",
+  "datePublished": "2026-05-28",
+  "dateModified": "2026-05-28",
+  "author": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es/sobre-mi.html"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Adrián Márquez Corral",
+    "url": "https://adrianmarquez.es"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://adrianmarquez.es/blog/power-bi-pymes-servicios-espana-guia-practica.html"
+  },
+  "keywords": "Power BI pymes, Power BI empresas servicios España, analítica de datos pymes, dashboards pymes servicios, Business Intelligence pymes España",
+  "inLanguage": "es-ES"
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Inicio",
+      "item": "https://adrianmarquez.es/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://adrianmarquez.es/blog/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Power BI para pymes de servicios: guía práctica 2026"
+    }
+  ]
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta Power BI para una pyme en España?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Power BI Desktop es gratuito. Power BI Pro cuesta 9,40 € por usuario al mes (precio oficial Microsoft 2025). Para una pyme de 5-10 usuarios que necesita compartir informes, el coste mensual total ronda los 50-100 €, lo que lo convierte en una de las herramientas de Business Intelligence más accesibles del mercado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué diferencia hay entre Power BI Desktop y Power BI Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Power BI Desktop es la aplicación gratuita para crear informes en tu ordenador. Power BI Pro es la versión de pago que permite publicar, compartir y colaborar en informes desde el navegador. Para una pyme que necesita que varios empleados accedan a los mismos dashboards, Pro es imprescindible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto tiempo se tarda en implementar Power BI en una pyme de servicios?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Con un proyecto bien estructurado, una pyme de servicios puede tener sus primeros dashboards operativos en 2 a 4 semanas. La fase crítica es la limpieza y conexión de datos. Si la empresa ya usa Excel o un CRM como HubSpot, el tiempo se reduce considerablemente."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Power BI funciona con Excel, HubSpot o Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Power BI conecta de forma nativa con Excel, Google Sheets, HubSpot, Salesforce, bases de datos SQL, SharePoint y más de 100 fuentes de datos adicionales. Para una pyme de servicios, la conexión más común es Excel o Google Sheets como fuente de datos inicial."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito saber programar para usar Power BI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Power BI tiene una interfaz visual de arrastrar y soltar que permite crear informes sin programar. Para análisis más avanzados existe el lenguaje DAX, pero no es necesario en los primeros meses. La curva de aprendizaje es más corta que la de Excel avanzado."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué métricas debería medir primero una pyme de servicios con Power BI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Las tres métricas con mayor impacto inicial son: facturación por cliente o proyecto, margen por servicio y tiempo medio de cierre de presupuestos. Estas tres variables juntas ya permiten detectar qué servicios son rentables, qué clientes generan más valor y dónde se pierde dinero."
+      }
+    }
+  ]
+}</script>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="/" class="nav-logo">AM.</a>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/sobre-mi.html">Sobre mí</a></li>
+    <li class="has-dropdown"><a href="/servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li></ul></li>
+    <li><a href="/proyectos.html">Proyectos</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menú">&#9776;</button>
+  <a href="/contacto.html" class="nav-cta">Hablemos</a>
+</nav>
+
+<div class="breadcrumb"><a href="/">Inicio</a> › <a href="/blog/">Blog</a> › <span>Power BI para pymes de servicios: guía práctica 2026</span></div>
+
+<div class="blog-hero">
+  <div class="blog-meta">
+    <span class="blog-cat">IA</span>
+    <span class="blog-date">28 de mayo de 2026</span>
+    <span class="blog-read">9 min de lectura</span>
+  </div>
+  <figure class="blog-hero-img" style="margin:2rem 0;"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTM4Mzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGludGVsbGlnZW5jZSUyMGRhc2hib2FyZCUyMG9mZmljZXxlbnwwfDB8fHwxNzc5OTU4OTEzfDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Dashboard de Power BI en pantalla de ordenador en oficina de pyme española" style="width:100%;height:400px;object-fit:cover;display:block;" loading="eager"><figcaption style="font-size:0.7rem;color:var(--text-muted);padding:0.4rem 0;">Foto de Luke Chesser en Unsplash</figcaption></figure><div class="blog-hero-img" style="display:none;" style="background:var(--bg3);border:1px solid var(--border);aspect-ratio:16/6;display:flex;align-items:center;justify-content:center;margin:2rem 0;position:relative;overflow:hidden;">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a1a 100%);"></div>
+    <div style="position:relative;z-index:1;text-align:center;padding:2rem;">
+      <div style="font-family:Playfair Display,serif;font-size:clamp(1.5rem,4vw,3rem);font-weight:900;color:var(--gold);opacity:0.15;line-height:1.1;">Power BI para pymes de servicios: guía práctica 2026</div>
+    </div>
+  </div>
+</div>
+
+<div class="blog-layout">
+  <main class="blog-content">
+    <article>
+
+  <h1>Power BI para pymes de servicios en España: guía práctica 2026</h1>
+
+  <p>Power BI permite a cualquier pyme de servicios tomar decisiones con datos reales en lugar de intuiciones. No necesitas un departamento de IT, ni un presupuesto de gran empresa. Necesitas datos limpios, un objetivo claro y saber por dónde empezar. Esta guía te da exactamente eso: un punto de partida práctico, con ejemplos reales del sector servicios en España.</p>
+
+  <p>Si llevas años exportando datos a Excel para hacer un informe a mano cada mes, esta herramienta va a cambiar tu forma de trabajar. Y más rápido de lo que crees.</p>
+
+  <h2>TL;DR — Lo más importante en 30 segundos</h2>
+  <ul>
+    <li>Power BI Desktop es gratuito. Power BI Pro cuesta 9,40 €/usuario/mes (Microsoft, 2025).</li>
+    <li>Una pyme de servicios puede tener sus primeros dashboards en 2-4 semanas si los datos ya están en Excel o en un CRM.</li>
+    <li>Las tres métricas clave para empezar: facturación por cliente, margen por servicio y tiempo de cierre de presupuestos.</li>
+    <li>Power BI conecta con más de 100 fuentes: Excel, Google Sheets, HubSpot, Salesforce, SQL...</li>
+    <li>El mayor obstáculo no es la herramienta: es tener los datos ordenados. Ahí se invierte el 60-70% del tiempo inicial.</li>
+    <li>Las pymes que usan analítica de datos estructurada toman decisiones un 26% más rápido que las que no lo hacen (McKinsey, 2023).</li>
+  </ul>
+
+  <h2>¿Qué es Power BI y por qué importa ahora a las pymes de servicios?</h2>
+
+  <p>Power BI es la herramienta de Business Intelligence de Microsoft. Transforma datos dispersos (Excel, CRM, facturación, Google Ads...) en paneles visuales interactivos. Permite ver en tiempo real qué está pasando en tu negocio sin esperar al cierre de mes.</p>
+
+  <p>Para una pyme de servicios, el problema habitual no es la falta de datos. Es que esos datos están en cinco sitios distintos y nadie los mira juntos. Power BI resuelve exactamente eso: centraliza, visualiza y permite actuar.</p>
+
+  <p>Según <a href="https://www.mckinsey.com" target="_blank" rel="noopener">McKinsey</a>, las empresas que toman decisiones basadas en datos son un 23 veces más propensas a captar nuevos clientes que las que no lo hacen (2023). Ese dato ya no es solo para grandes corporaciones.</p>
+
+  <h2>Power BI Desktop vs Power BI Pro: ¿cuál necesita tu pyme?</h2>
+
+  <p>Power BI Desktop es gratuito y sirve para crear informes en tu ordenador. Power BI Pro (9,40 €/usuario/mes) permite publicar esos informes en la nube y compartirlos con todo el equipo. Para una pyme de servicios con 3-10 personas que necesitan ver los mismos datos, Pro es el siguiente paso lógico.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Característica</th>
+        <th>Power BI Desktop</th>
+        <th>Power BI Pro</th>
+        <th>Power BI Premium por usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Precio</td>
+        <td>Gratuito</td>
+        <td>9,40 €/mes por usuario</td>
+        <td>20 €/mes por usuario</td>
+      </tr>
+      <tr>
+        <td>Crear informes</td>
+        <td>✓</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Compartir con equipo</td>
+        <td>✗</td>
+        <td>✓</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Actualización automática de datos</td>
+        <td>Manual</td>
+        <td>8 actualizaciones/día</td>
+        <td>48 actualizaciones/día</td>
+      </tr>
+      <tr>
+        <td>IA integrada (Copilot)</td>
+        <td>Limitada</td>
+        <td>Limitada</td>
+        <td>✓</td>
+      </tr>
+      <tr>
+        <td>Para quién</td>
+        <td>Uso individual, aprendizaje</td>
+        <td>Pymes con equipo</td>
+        <td>Análisis avanzado o volumen alto</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>Para la mayoría de pymes de servicios en España, la combinación Desktop (para configurar) + Pro (para compartir) cubre el 95% de los casos. Premium solo tiene sentido si manejas grandes volúmenes de datos o necesitas IA conversacional integrada.</p>
+
+  <h2>El mayor obstáculo real: los datos, no la herramienta</h2>
+
+  <p>Cuando una pyme arranca con Power BI, el primer choque es este: la herramienta funciona bien, pero los datos están mal. Fechas en texto, nombres de clientes escritos de tres formas distintas, facturas en una hoja y contratos en otra. Antes de crear un dashboard, hay que resolver eso.</p>
+
+  <p>En proyectos de analítica con pymes de servicios, el 60-70% del tiempo inicial se va en limpiar y estructurar datos. No en aprender la herramienta. Ese trabajo previo es lo que determina si el dashboard va a ser útil o va a ser bonito pero inútil.</p>
+
+  <h3>Tres señales de que tus datos están listos para Power BI</h3>
+  <ul>
+    <li>Tienes un registro consistente de clientes con nombres uniformes (sin duplicados ni variaciones).</li>
+    <li>Las fechas están en formato fecha, no en texto como "enero 25" o "1er trimestre".</li>
+    <li>Cada servicio o producto tiene un identificador o categoría única y coherente.</li>
+  </ul>
+
+  <p>Si no cumples estas tres condiciones, el primer trabajo es ordenar eso antes de tocar Power BI. Power Query (la herramienta de transformación dentro de Power BI) puede ayudar, pero no hace milagros si el origen es caótico.</p>
+
+  <h2>¿Por dónde empieza una pyme de servicios? Las tres métricas que más impacto tienen</h2>
+
+  <p>No empieces queriendo medir todo. Elige tres métricas, conéctalas a tus datos y crea un dashboard simple. Eso ya cambia cómo gestionas el negocio. Las tres con mayor retorno para pymes de servicios son: facturación por cliente, margen por servicio y tiempo de cierre de presupuestos.</p>
+
+  <h3>1. Facturación por cliente</h3>
+  <p>Parece obvio, pero la mayoría de pymes no tienen esto en un gráfico actualizado. Saber qué clientes representan el 80% de tus ingresos en tiempo real cambia las decisiones de ventas, retención y recursos. En muchos casos, dos o tres clientes sostienen el 60% de la facturación y la empresa no lo tenía visualizado.</p>
+
+  <h3>2. Margen por servicio</h3>
+  <p>No todos los servicios son igual de rentables. Una consultoría que factura 10.000 € al mes puede estar perdiendo dinero en un servicio concreto que consume horas y materiales sin que nadie lo sepa. Con Power BI puedes cruzar ingresos, costes directos y horas por tipo de servicio y ver el margen real de cada línea de negocio.</p>
+
+  <h3>3. Tiempo de cierre de presupuestos</h3>
+  <p>En servicios B2B, el ciclo de venta es crítico. Medir cuántos días pasan desde que envías un presupuesto hasta que se firma (o se pierde) te dice dónde hay fricción en el proceso comercial. Esta métrica sola puede revelar si el problema es el precio, el seguimiento o el perfil del cliente al que te diriges.</p>
+
+  <h2>Ejemplo real: cómo una gestoría puede usar Power BI en 30 días</h2>
+
+  <p>Imagina una gestoría con 8 empleados, 120 clientes activos y los datos repartidos entre Excel, un software de facturación y Gmail. Sin departamento de IT. Este es un escenario típico en España.</p>
+
+  <p><strong>Semana 1:</strong> Exportar datos de facturación del software contable a Excel. Limpiar nombres de clientes y categorías de servicio. Crear una tabla maestra con: cliente, servicio, fecha, importe, horas dedicadas.</p>
+
+  <p><strong>Semana 2:</strong> Conectar esa tabla a Power BI Desktop. Crear las tres métricas base: facturación por cliente, margen por servicio (si tienen costes registrados) y volumen de servicios por mes. Primer dashboard operativo.</p>
+
+  <p><strong>Semana 3:</strong> Publicar en Power BI Pro. Configurar actualización automática semanal. Compartir acceso con el gerente y la responsable comercial. Ajustar visualizaciones según lo que necesitan ver.</p>
+
+  <p><strong>Semana 4:</strong> Primera reunión de gestión usando el dashboard en lugar de un informe en PDF. Detectan que el servicio de asesoría laboral tiene el menor margen pese a ser el que más horas consume. Primera decisión basada en datos.</p>
+
+  <p>Ese es el ciclo real. No es magia. Es proceso.</p>
+
+  <h2>Power BI y la IA: qué cambia en 2025-2026</h2>
+
+  <p>Microsoft ha integrado Copilot en Power BI Premium. Esto permite hacer preguntas en lenguaje natural directamente al dashboard: "¿Qué cliente tuvo mayor crecimiento en el último trimestre?" o "¿Qué servicio tiene peor margen en los últimos 6 meses?". La herramienta genera la visualización de forma automática.</p>
+
+  <p>Para una pyme, esto reduce la barrera técnica todavía más. No necesitas saber construir un gráfico específico si puedes pedírselo en lenguaje natural. Según <a href="https://www.gartner.com" target="_blank" rel="noopener">Gartner</a>, para 2026 el 30% de las consultas de analítica en empresas se harán en lenguaje natural sin intervención técnica (2024).</p>
+
+  <p>Si ya estás usando IA en otros procesos de tu empresa, la integración con Power BI es el siguiente paso lógico. En la <a href="/blog/inteligencia-artificial-empresas-servicios-espana-guia-completa.html">guía completa de IA para empresas de servicios en España</a> tienes el mapa completo de herramientas y casos de uso donde encaja este tipo de analítica.</p>
+
+  <h2>Errores frecuentes que cometen las pymes al implementar Power BI</h2>
+
+  <p>Hay patrones que se repiten. Conocerlos antes de empezar ahorra semanas de frustración.</p>
+
+  <ul>
+    <li><strong>Empezar con demasiados dashboards.</strong> Un dashboard con 20 métricas no se usa. Uno con 5 métricas clave sí. Empieza pequeño.</li>
+    <li><strong>No asignar un responsable de datos.</strong> Si nadie actualiza o revisa la calidad de los datos de entrada, el dashboard se vuelve obsoleto en semanas.</li>
+    <li><strong>Usar Power BI como sustituto de Excel para todo.</strong> Excel sigue siendo mejor para entrada manual de datos. Power BI es para visualizar y analizar, no para introducir registros.</li>
+    <li><strong>Ignorar la formación del equipo.</strong> Si solo una persona sabe leer el dashboard, la inversión pierde la mitad de su valor. Todos los que toman decisiones deben entender lo que están viendo.</li>
+    <li><strong>No conectar los datos con decisiones concretas.</strong> Un dashboard que nadie usa para cambiar nada es decorativo. Define desde el primer día qué decisión va a tomar cada persona con cada métrica.</li>
+  </ul>
+
+  <h2>Formación en Power BI para equipos de pymes: qué nivel necesitas realmente</h2>
+
+  <p>No todo el equipo necesita saber crear informes. Hay dos perfiles con necesidades distintas en una pyme de servicios típica.</p>
+
+  <p><strong>El creador de dashboards</strong> (1-2 personas): Necesita 20-30 horas de formación práctica para manejar Power Query, el modelo de datos y DAX básico. Con ese nivel ya puede construir y mantener dashboards operativos.</p>
+
+  <p><strong>El lector de dashboards</strong> (el resto del equipo): Necesita 2-4 horas para entender cómo navegar el panel, aplicar filtros y leer los datos correctamente. Esto es lo que diferencia una empresa que usa sus datos de una que simplemente los tiene.</p>
+
+  <p>Si quieres estructurar esa formación de forma que el equipo la asimile y la aplique desde el primer día, en el servicio de <a href="/servicios/formacion-empresas.html">formación para empresas</a> trabajamos exactamente este tipo de programas: prácticos, aplicados a vuestros datos reales y sin teoría innecesaria.</p>
+
+  <h2>¿Power BI solo o como parte de una estrategia digital más amplia?</h2>
+
+  <p>Power BI tiene más impacto cuando no está solo. Una pyme de servicios que automatiza la captación de leads con su CRM, conecta esos datos a Power BI y mide el ROI de cada canal de adquisición tiene una ventaja operativa real frente a competidores que todavía toman decisiones "a ojo".</p>
+
+  <p>La analítica de datos es una capa que potencia todo lo demás: la <a href="/servicios/estrategia-digital.html">estrategia digital</a> gana precisión cuando puedes medir resultados en tiempo real. La publicidad digital se optimiza cuando sabes qué clientes generan más margen. Las decisiones de crecimiento se vuelven más sólidas cuando tienes datos históricos coherentes.</p>
+
+  <p>Si estás en un momento en el que quieres conectar estas piezas de forma estructurada, la <a href="/servicios/consultoria-negocio.html">consultoría de negocio digital</a> puede ayudarte a diseñar ese mapa completo antes de empezar a implementar herramientas por separado.</p>
+
+  <h2>Preguntas frecuentes sobre Power BI para pymes de servicios</h2>
+
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto cuesta Power BI para una pyme en España?</div>
+      <div class="faq-a">Power BI Desktop es gratuito. Power BI Pro cuesta 9,40 € por usuario al mes (precio oficial Microsoft 2025). Para una pyme de 5-10 usuarios que necesita compartir informes, el coste mensual total ronda los 50-100 €, lo que lo convierte en una de las herramientas de Business Intelligence más accesibles del mercado.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué diferencia hay entre Power BI Desktop y Power BI Pro?</div>
+      <div class="faq-a">Power BI Desktop es la aplicación gratuita para crear informes en tu ordenador. Power BI Pro es la versión de pago que permite publicar, compartir y colaborar en informes desde el navegador. Para una pyme que necesita que varios empleados accedan a los mismos dashboards, Pro es imprescindible.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Cuánto tiempo se tarda en implementar Power BI en una pyme de servicios?</div>
+      <div class="faq-a">Con un proyecto bien estructurado, una pyme de servicios puede tener sus primeros dashboards operativos en 2 a 4 semanas. La fase crítica es la limpieza y conexión de datos. Si la empresa ya usa Excel o un CRM como HubSpot, el tiempo se reduce considerablemente.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Power BI funciona con Excel, HubSpot o Google Sheets?</div>
+      <div class="faq-a">Sí. Power BI conecta de forma nativa con Excel, Google Sheets, HubSpot, Salesforce, bases de datos SQL, SharePoint y más de 100 fuentes de datos adicionales. Para una pyme de servicios, la conexión más común es Excel o Google Sheets como fuente de datos inicial.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Necesito saber programar para usar Power BI?</div>
+      <div class="faq-a">No. Power BI tiene una interfaz visual de arrastrar y soltar que permite crear informes sin programar. Para análisis más avanzados existe el lenguaje DAX, pero no es necesario en los primeros meses. La curva de aprendizaje es más corta que la de Excel avanzado.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">¿Qué métricas debería medir primero una pyme de servicios con Power BI?</div>
+      <div class="faq-a">Las tres métricas con mayor impacto inicial son: facturación por cliente o proyecto, margen por servicio y tiempo medio de cierre de presupuestos. Estas tres variables juntas ya permiten detectar qué servicios son rentables, qué clientes generan más valor y dónde se pierde dinero.</div>
+    </div>
+  </div>
+
+  <h2>El siguiente paso: de los datos a las decisiones</h2>
+
+  <p>Power BI no resuelve problemas de gestión por sí solo. Pero sí hace que esos problemas sean visibles. Y cuando un problema es visible, se puede resolver. La mayoría de pymes de servicios en España no tienen un problema de datos: tienen un problema de acceso y de estructura. Power BI resuelve exactamente eso.</p>
+
+  <p>Si quieres pasar de exportar Excel a mano cada mes a tener un panel de control actualizado que tu equipo use de verdad para tomar decisiones, el primer paso es hablar con alguien que haya hecho ese proceso antes. <a href="/contacto.html">Cuéntame dónde está tu empresa ahora</a> y te digo qué tiene sentido para vosotros.</p>
+
+</article>
+    
+    <div class="blog-author-card">
+      <div class="author-img" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:center;font-family:Playfair Display,serif;font-size:1.2rem;font-weight:900;color:#000;flex-shrink:0;">AM</div>
+      <div>
+        <div style="font-family:Playfair Display,serif;font-size:1rem;font-weight:700;margin-bottom:0.3rem;">Adrián Márquez Corral</div>
+        <div style="font-size:0.82rem;color:var(--text-muted);margin-bottom:0.5rem;">Consultor de Marketing Digital, Automatización &amp; IA</div>
+        <a href="/sobre-mi.html" style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);text-decoration:none;">Conocer más →</a>
+      </div>
+    </div>
+  </main>
+  
+  <aside class="blog-sidebar">
+    <div class="sidebar-widget">
+      <div class="sidebar-title">¿Hablamos?</div>
+      <p style="font-size:0.83rem;color:var(--text-muted);margin-bottom:1.2rem;line-height:1.7;">Primera consulta gratuita para ver cómo puedo ayudar a tu negocio.</p>
+      <a href="/contacto.html" class="btn-primary" style="display:block;text-align:center;">Contactar</a>
+    </div>
+    <div class="sidebar-widget">
+      <div class="sidebar-title">Servicios</div>
+      <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;">
+        <li><a href="/servicios/automatizacion-ia.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Automatización &amp; IA</a></li>
+        <li><a href="/servicios/seo-geo.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ SEO &amp; GEO</a></li>
+        <li><a href="/servicios/consultoria-negocio.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Consultoría</a></li>
+        <li><a href="/servicios/formacion-empresas.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Formación</a></li>
+        <li><a href="/servicios/publicidad-digital.html" style="font-size:0.82rem;color:var(--text-muted);text-decoration:none;transition:color 0.3s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">→ Publicidad Digital</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+<div class="cta-strip">
+  <div class="cta-strip-text">
+    <h2>¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
+    <p>Primera consulta gratuita, sin compromiso.</p>
+  </div>
+  <div class="cta-strip-actions">
+    <a href="/contacto.html" class="btn-primary">Hablemos</a>
+    <a href="/servicios.html" class="btn-outline">Ver servicios</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">AM.</span><p class="footer-tagline">Consultor de marketing digital, automatización con IA y estrategia de negocio para empresas de servicios en toda España.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="/servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="/servicios/seo-geo.html">SEO &amp; GEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="/servicios/estrategia-digital.html">Estrategia digital</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="/sobre-mi.html">Sobre mí</a></li><li><a href="/proyectos.html">Proyectos</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:hola@adrianmarquez.es">hola@adrianmarquez.es</a></li><li><a href="https://wa.me/34630780358" target="_blank">WhatsApp: 630 780 358</a></li><li><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a></li></ul></div>
+    <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="/aviso-legal.html">Aviso legal</a></li><li><a href="/politica-privacidad.html">Política de privacidad</a></li><li><a href="/politica-cookies.html">Política de cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank">LinkedIn</a><a href="https://wa.me/34630780358" target="_blank">WhatsApp</a><a href="mailto:hola@adrianmarquez.es">Email</a></div></div>
+</footer>
+<script src="../main.js"></script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias y de <a href="/politica-cookies.html">Google Fonts</a> para el funcionamiento del sitio. Puedes aceptar o rechazar su uso. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
+<a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>
