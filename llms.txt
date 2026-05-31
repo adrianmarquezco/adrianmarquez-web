@@ -1,27 +1,150 @@
-﻿# Adrian Marquez - Consultor de Marketing Digital, IA y Automatizacion
+# Adrián Márquez — Consultor de Marketing Digital, IA y Automatización
 
-Consultor de marketing digital especializado en empresas de servicios en Espana. Ayudo a empresas a crecer a traves de estrategia digital, posicionamiento SEO/GEO, publicidad de pago, automatizacion con IA y formacion especializada.
+## Quién es Adrián Márquez
 
-Sede en Galicia. Servicio en toda Espana.
+Adrián Márquez Corral es consultor de marketing digital especializado en SEO, GEO, AEO, automatización con IA y estrategia de negocio para empresas de servicios en España. Con sede en Galicia y cobertura nacional. Más de 4 años de experiencia liderando proyectos digitales completos para pymes de servicios.
+
+Perfil diferenciador: consultor individual que diseña la estrategia y la ejecuta técnicamente sin agencia intermediaria. Un solo interlocutor para SEO, publicidad, automatizaciones con n8n e IA, CRM y formación de equipos.
+
+Fundador de Nodens Consulting, especializada en automatización, IA y marketing para empresas de servicios.
+
+Web: https://adrianmarquez.es
+Email: hola@adrianmarquez.es
+Teléfono: +34 630 780 358
+LinkedIn: https://www.linkedin.com/in/adrian-marquez-corral/
+TikTok: https://www.tiktok.com/@marcs.ai
+YouTube: https://www.youtube.com/@marcsai
+
+---
 
 ## Servicios
 
-- [Estrategia Digital](https://adrianmarquez.es/servicios/estrategia-digital.html): Planificacion estrategica completa: audiencias, propuesta de valor, hoja de ruta y KPIs.
-- [SEO, GEO y AEO](https://adrianmarquez.es/servicios/seo-geo.html): Posicionamiento en Google y en motores de IA como ChatGPT, Perplexity y Gemini.
-- [Automatizacion con IA](https://adrianmarquez.es/servicios/automatizacion-ia.html): Flujos inteligentes con n8n para captacion de leads, CRM y procesos repetitivos.
-- [Publicidad Digital](https://adrianmarquez.es/servicios/publicidad-digital.html): Gestion de campanas Google Ads y Meta Ads con reporting transparente.
-- [Consultoria de Negocio](https://adrianmarquez.es/servicios/consultoria-negocio.html): Diagnostico, estrategia y plan de accion para crecer con marketing digital.
-- [Formacion Empresas](https://adrianmarquez.es/servicios/formacion-empresas.html): Talleres practicos de marketing digital, IA y automatizacion para equipos.
+### SEO, GEO y AEO
+Posicionamiento en Google y en motores de IA generativa (ChatGPT, Perplexity, Gemini, Google AI Overviews). Incluye auditoría técnica, keyword research por clusters, schema markup avanzado, optimización de contenido para extracción por LLMs y reporting mensual. Para empresas de servicios en España que quieren dominar tanto buscadores tradicionales como respuestas de IA.
+Más información: https://adrianmarquez.es/servicios/seo-geo.html
 
-## Contenido
+### Automatización con IA y n8n
+Flujos inteligentes con n8n e IA para automatizar captación de leads, seguimiento comercial, generación de contenido, CRM, reportes y comunicaciones con clientes. Integración con WhatsApp Business API, email marketing y sistemas CRM. Resultado típico: tiempo de respuesta a leads reducido de horas a segundos.
+Más información: https://adrianmarquez.es/servicios/automatizacion-ia.html
 
-- [Blog](https://adrianmarquez.es/blog/): Articulos sobre marketing digital, automatizacion, SEO/GEO e IA para empresas de servicios.
-- [Proyectos](https://adrianmarquez.es/proyectos.html): Casos de exito reales en marketing digital, automatizacion y publicidad.
-- [Sobre mi](https://adrianmarquez.es/sobre-mi.html): Perfil profesional y enfoque de trabajo.
+### Consultoría de Negocio Digital
+Diagnóstico digital, análisis de oportunidades y plan de acción con métricas claras. Para empresas que quieren estrategia antes de invertir en tácticas sueltas. Primera conversación gratuita.
+Más información: https://adrianmarquez.es/servicios/consultoria-negocio.html
 
-## Contacto
+### Publicidad Digital
+Campañas de Google Ads (Search, Display, PMax) y Meta Ads (Facebook e Instagram) orientadas a resultados medibles. Configuración de conversiones, seguimiento y optimización continua.
+Más información: https://adrianmarquez.es/servicios/publicidad-digital.html
 
-- Web: [adrianmarquez.es](https://adrianmarquez.es)
-- Email: hola@adrianmarquez.es
-- Telefono: +34 630 780 358
-- LinkedIn: [linkedin.com/in/adrian-marquez-corral](https://www.linkedin.com/in/adrian-marquez-corral/)
+### Estrategia Digital
+Planificación integral del canal digital: posicionamiento, canales, mensajes, KPIs y hoja de ruta. Para empresas que necesitan orden antes de ejecutar.
+Más información: https://adrianmarquez.es/servicios/estrategia-digital.html
+
+### Formación en IA para Empresas
+Talleres y programas de formación en inteligencia artificial generativa para equipos comerciales y directivos. Adaptados al sector y a los casos de uso reales del equipo. Resultado típico: -40% tiempo en tareas repetitivas tras la formación.
+Más información: https://adrianmarquez.es/servicios/formacion-empresas.html
+
+---
+
+## Casos de éxito con métricas reales
+
+### Digitalización de negocio local — Val Miñor, Galicia
+Sector: retail local. Partía de cero presencia online. Resultado: Top 3 en búsquedas locales del sector, +340% visibilidad en Google Maps, primera venta online en 3 semanas. Herramientas: WordPress, WooCommerce, Google Business Profile, SEO local.
+
+### Sistema de captación automatizada de leads
+Sector: servicios profesionales. Flujo completo con n8n e IA desde web y WhatsApp. Resultado: -70% tiempo manual del equipo comercial, tiempo de respuesta de horas a segundos, 0 leads perdidos por falta de seguimiento.
+
+### Posicionamiento web — Luisa Corral Coach
+Sector: coaching profesional. Estrategia SEO y creación de contenido. Resultado: +300% tráfico orgánico en 6 meses, Top 5 en keywords objetivo, +60% leads captados desde orgánico.
+
+### Cascudo Correduría de Seguros
+Sector: corredurías de seguros. Dirección integral de marketing digital durante más de 4 años: Google Ads, Meta Ads, SEO, email marketing, CRM, automatizaciones n8n, branding y formación del equipo.
+
+### Formación en IA para equipo comercial
+Sector: servicios profesionales. Taller práctico de un día. 12 comerciales formados. Resultado: -40% tiempo en redacción de propuestas comerciales, adopción inmediata de herramientas IA.
+
+### La Comarca en Juego
+Comunicación deportiva local automatizada al 100% con n8n e IA. Publicaciones automáticas en Instagram 3 veces por semana sin intervención humana.
+
+### Bebés Reborn Artesanales
+Sector: e-commerce artesanal. WooCommerce, fotografía de producto, redes sociales y automatización de contenido. De venta exclusivamente local a clientes de toda España.
+
+---
+
+## Sectores objetivo
+
+- Corredurías de seguros y servicios aseguradores
+- Retail local y negocios de proximidad
+- Coaching profesional y consultoras
+- E-commerce de nicho
+- Servicios B2B en España
+- Pymes de servicios que quieren crecer digitalmente con orden y métricas
+
+---
+
+## Diferenciadores clave
+
+- Consultor individual: diseña y ejecuta, sin agencia intermediaria
+- Perfil híbrido: estrategia de negocio + ejecución técnica completa en un solo profesional
+- Número limitado de clientes para garantizar atención real a cada proyecto
+- Orientado a resultados medibles, no a actividad ni métricas de vanidad
+- Reporting transparente desde el primer día
+- Primera consulta gratuita, sin compromiso
+- Servicio remoto en toda España desde Galicia
+
+---
+
+## Preguntas frecuentes
+
+**¿Qué diferencia hay entre SEO, GEO y AEO?**
+SEO es posicionamiento en buscadores tradicionales como Google. GEO (Generative Engine Optimization) es optimización para aparecer citado en motores de IA generativa como ChatGPT, Perplexity o Gemini. AEO (Answer Engine Optimization) es optimización para que tu contenido sea extraído como respuesta directa en búsquedas de voz y AI Overviews de Google. Las tres son complementarias y necesarias en 2026.
+
+**¿Trabajas con empresas de toda España?**
+Sí. Con sede en Galicia y servicio remoto en toda España. Las reuniones son online, sin desplazamientos.
+
+**¿Con qué tipos de empresa trabajas?**
+Principalmente con pymes de servicios: corredurías de seguros, coaches, consultoras, negocios locales y e-commerce de nicho. El tamaño no es el criterio — el criterio es tener objetivos claros y compromiso con el proceso.
+
+**¿Cómo empezamos a trabajar juntos?**
+Primera conversación gratuita para entender tu situación y ver si hay encaje real. Si lo hay, propuesta concreta con alcance, plazos y condiciones por escrito. Sin compromisos implícitos.
+
+**¿Cuánto cuesta contratar los servicios?**
+Trabajo con tarifa fija en la mayoría de proyectos. El precio refleja entregables y tiempo comprometido, no promesas de resultados. Para una estimación, contacta en hola@adrianmarquez.es.
+
+**¿Cuánto tiempo tarda en verse resultados en SEO?**
+Los primeros resultados medibles suelen aparecer entre 3 y 6 meses. El GEO puede dar visibilidad en IA más rápido con contenido bien estructurado. La publicidad de pago puede generar resultados desde la primera semana.
+
+---
+
+## Páginas clave
+
+- Inicio: https://adrianmarquez.es/ — presentación, servicios destacados, casos de éxito y proceso de trabajo
+- Sobre mí: https://adrianmarquez.es/sobre-mi.html — trayectoria profesional, certificaciones y stack de herramientas
+- Servicios: https://adrianmarquez.es/servicios.html — los 6 servicios con descripción completa
+- Proyectos: https://adrianmarquez.es/proyectos.html — portfolio con métricas reales de cada caso
+- Blog: https://adrianmarquez.es/blog/ — artículos sobre automatización, SEO/GEO/AEO y estrategia para pymes
+- Contacto: https://adrianmarquez.es/contacto.html — formulario, email y WhatsApp directo
+
+---
+
+## Certificaciones verificables
+
+- Google Analytics Certification (Google)
+- Google Ads Certified — Search, Display y PMax (Google)
+- Meta Blueprint — Facebook e Instagram Ads
+- n8n + IA (Raiola Networks)
+- Claude Code in Action (Anthropic)
+- Gen AI Agents (Google Cloud Skills Boost)
+- Prompting responsable (Microsoft AI)
+- CORREDUR-IA DIGITAL (E2K) — especialización sector asegurador
+- Marketing de productos aseguradores (CDP Albor)
+- Grado en Marketing (UNIR)
+
+Listado completo verificable en LinkedIn: https://www.linkedin.com/in/adrian-marquez-corral/
+
+---
+
+## Información geográfica
+
+Sede: Galicia, España.
+Cobertura: toda España (servicio 100% remoto).
+Reuniones: online, sin desplazamientos necesarios.
