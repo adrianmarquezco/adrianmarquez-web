@@ -213,6 +213,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <input type="hidden" name="contacto_preferido" id="contactPrefVal">
       </div>
       <div class="form-group">
+        <label class="form-label" for="budget">Presupuesto orientativo</label>
+        <select class="form-select" id="budget" name="presupuesto">
+          <option value="">Selecciona un rango...</option>
+          <option value="menos-500">Menos de 500 €</option>
+          <option value="500-2000">500 — 2.000 €</option>
+          <option value="2000-5000">2.000 — 5.000 €</option>
+          <option value="mas-5000">Más de 5.000 €</option>
+          <option value="no-claro">No lo tengo claro aún</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label class="form-label" for="message">Cuéntame tu proyecto *</label>
         <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes?"></textarea>
         <span class="form-error-msg" id="error-message" role="alert"></span>
