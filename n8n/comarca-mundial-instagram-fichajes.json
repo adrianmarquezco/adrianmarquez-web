@@ -1,0 +1,561 @@
+{
+  "name": "Comarca — Mundial goles + fichajes → Instagram",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## Imágenes y datos (todo desde internet)\n\n**Goles**: API-Football → eventos, marcador, goleador. Imagen = foto del jugador (CDN api-sports.io); si no hay, escudo del equipo; si no, escudo de la liga.\n\n**Fichajes**: API-Football `/transfers` (equipos de tu comarca) o webhook solo con nombre del jugador → búsqueda `/players?search=` para la foto.\n\n**No hace falta** `BRAND_IMAGE_*` ni subir fotos a mano.\n\n**Horario**: cada 3 min solo de 14:00 a 01:59 (hora del servidor n8n; pon el servidor en Europe/Madrid). Fuera de esa franja: 1 consulta de “¿hay partido?” y para — ahorra cuota.\n\nVariables: `API_FOOTBALL_KEY`, `IG_USER_ID`, `META_ACCESS_TOKEN`, `LEAGUE_ID`, `SEASON_YEAR`, `TEAM_IDS`, `IG_HASHTAGS`, `COMARCA_NAME`, `WEBHOOK_SECRET`",
+        "height": 400,
+        "width": 440,
+        "color": 5
+      },
+      "id": "a1000000-0000-4000-8000-000000000001",
+      "name": "Nota — Imágenes y horarios",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [-140, -280]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "*/3 14-23,0-1 * * *"
+            }
+          ]
+        }
+      },
+      "id": "a1000000-0000-4000-8000-000000000010",
+      "name": "Cada 3 min (14h–01h)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [380, 0]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://v3.football.api-sports.io/fixtures",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "live", "value": "all" },
+            { "name": "league", "value": "={{ $env.LEAGUE_ID || '1' }}" },
+            { "name": "season", "value": "={{ $env.SEASON_YEAR || '2026' }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-apisports-key", "value": "={{ $env.API_FOOTBALL_KEY }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000011",
+      "name": "API — Partidos en vivo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [620, 0],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const res = $input.first().json;\nconst fixtures = res.response || [];\nconst teamFilter = ($env.TEAM_IDS || '').split(',').map(s => s.trim()).filter(Boolean);\n\nconst filtered = fixtures.filter(f => {\n  if (!teamFilter.length) return true;\n  const home = String(f.teams?.home?.id ?? '');\n  const away = String(f.teams?.away?.id ?? '');\n  return teamFilter.includes(home) || teamFilter.includes(away);\n});\n\nif (!filtered.length) {\n  return [{ json: { skip: true, reason: 'no_live_fixtures' } }];\n}\n\nreturn filtered.map(f => ({\n  json: {\n    skip: false,\n    fixture: f,\n    season: f.league?.season || $env.SEASON_YEAR || '2026',\n    leagueLogo: f.league?.logo || ''\n  }\n}));"
+      },
+      "id": "a1000000-0000-4000-8000-000000000012",
+      "name": "Filtrar equipos comarca",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [860, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "has-match",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000013",
+      "name": "¿Hay partido en vivo?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1100, 0]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://v3.football.api-sports.io/fixtures/events",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "fixture", "value": "={{ $json.fixture.fixture.id }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-apisports-key", "value": "={{ $env.API_FOOTBALL_KEY }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000014",
+      "name": "API — Eventos (goles)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1340, -60]
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000015",
+      "name": "Unir partido + eventos",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [1580, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\nif (!staticData.seenGoalKeys) staticData.seenGoalKeys = {};\n\nconst outputs = [];\n\nfor (const item of $input.all()) {\n  const fixtureBlock = item.json.fixture || {};\n  const fixture = fixtureBlock.fixture || {};\n  const teams = fixtureBlock.teams || {};\n  const events = Array.isArray(item.json.response) ? item.json.response : [];\n  const season = item.json.season || fixtureBlock.league?.season || $env.SEASON_YEAR || '2026';\n  const leagueLogo = item.json.leagueLogo || fixtureBlock.league?.logo || '';\n  const fixtureId = fixture.id;\n\n  if (!fixtureId) continue;\n\n  const home = teams.home?.name || 'Local';\n  const away = teams.away?.name || 'Visitante';\n  const scoreHome = fixture.goals?.home ?? '?';\n  const scoreAway = fixture.goals?.away ?? '?';\n  const homeLogo = teams.home?.logo || '';\n  const awayLogo = teams.away?.logo || '';\n\n  for (const ev of events) {\n    if (ev.type !== 'Goal') continue;\n\n    const minute = ev.time?.elapsed ?? 0;\n    const extra = ev.time?.extra ? `+${ev.time.extra}` : '';\n    const player = ev.player?.name || 'Gol';\n    const playerId = ev.player?.id || null;\n    const teamId = ev.team?.id;\n    const teamName = ev.team?.name || '';\n    const detail = ev.detail || '';\n\n    const teamLogo = teamId === teams.home?.id ? homeLogo : (teamId === teams.away?.id ? awayLogo : homeLogo);\n\n    const key = `${fixtureId}-${minute}-${playerId || player}-${detail}`;\n    if (staticData.seenGoalKeys[key]) continue;\n    staticData.seenGoalKeys[key] = Date.now();\n\n    const caption = [\n      `⚽ ¡GOL! ${minute}'${extra}`,\n      `${home} ${scoreHome} - ${scoreAway} ${away}`,\n      `👤 ${player}${teamName ? ` (${teamName})` : ''}`,\n      detail ? `📋 ${detail}` : '',\n      '',\n      $env.IG_HASHTAGS || '#Mundial #Fútbol'\n    ].filter(Boolean).join('\\n');\n\n    outputs.push({\n      json: {\n        postType: 'goal',\n        skip: false,\n        caption,\n        playerId,\n        season,\n        image_url: teamLogo || leagueLogo,\n        meta: { home, away, minute, player, teamName, scoreHome, scoreAway, teamLogo, leagueLogo }\n      }\n    });\n  }\n}\n\nreturn outputs.length ? outputs : [{ json: { skip: true, reason: 'no_new_goals' } }];"
+      },
+      "id": "a1000000-0000-4000-8000-000000000016",
+      "name": "Detectar gol nuevo",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1820, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "is-goal",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000017",
+      "name": "¿Publicar gol?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [2060, 0]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "has-player-id",
+              "leftValue": "={{ $json.playerId }}",
+              "rightValue": "",
+              "operator": { "type": "number", "operation": "exists" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000018",
+      "name": "¿Tiene ID jugador?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [2300, 0]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://v3.football.api-sports.io/players",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "id", "value": "={{ $json.playerId }}" },
+            { "name": "season", "value": "={{ $json.season }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-apisports-key", "value": "={{ $env.API_FOOTBALL_KEY }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000019",
+      "name": "API — Foto jugador",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [2540, -80],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $('Detectar gol nuevo').item.json;\nconst api = $input.first().json;\nconst playerPhoto = api.response?.[0]?.player?.photo || '';\n\nconst image_url = playerPhoto || prev.image_url || prev.meta?.teamLogo || prev.meta?.leagueLogo;\n\nif (!image_url) {\n  throw new Error('No se encontró imagen pública para el gol');\n}\n\nreturn [{ json: { ...prev, image_url, imageSource: playerPhoto ? 'player_photo' : 'team_logo' } }];"
+      },
+      "id": "a1000000-0000-4000-8000-00000000001a",
+      "name": "Imagen gol (jugador o escudo)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2780, -80]
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $input.first().json;\nif (!prev.image_url) {\n  throw new Error('No hay escudo de equipo para el gol');\n}\nreturn [{ json: { ...prev, imageSource: 'team_logo_only' } }];"
+      },
+      "id": "a1000000-0000-4000-8000-00000000001b",
+      "name": "Imagen gol (solo escudo)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2540, 100]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "hours", "hoursInterval": 6 }
+          ]
+        }
+      },
+      "id": "a1000000-0000-4000-8000-000000000040",
+      "name": "Cada 6h — Fichajes API",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [380, 520]
+    },
+    {
+      "parameters": {
+        "jsCode": "const teamFilter = ($env.TEAM_IDS || '').split(',').map(s => s.trim()).filter(Boolean);\nif (!teamFilter.length) {\n  return [{ json: { skip: true, reason: 'define_TEAM_IDS' } }];\n}\nreturn teamFilter.map(id => ({ json: { teamId: id, skip: false } }));"
+      },
+      "id": "a1000000-0000-4000-8000-000000000041",
+      "name": "Equipos a vigilar fichajes",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 520]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://v3.football.api-sports.io/transfers",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "team", "value": "={{ $json.teamId }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-apisports-key", "value": "={{ $env.API_FOOTBALL_KEY }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000042",
+      "name": "API — Traspasos equipo",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [860, 520]
+    },
+    {
+      "parameters": {
+        "jsCode": "const staticData = $getWorkflowStaticData('global');\nif (!staticData.seenTransfers) staticData.seenTransfers = {};\n\nconst outputs = [];\nconst comarca = $env.COMARCA_NAME || 'La comarca';\n\nfor (const item of $input.all()) {\n  const list = item.json.response || [];\n  for (const block of list) {\n    const player = block.player;\n    const transfers = block.transfers || [];\n    const latest = transfers[0];\n    if (!latest || !player) continue;\n\n    const key = `${player.id}-${latest.date}-${latest.teams?.in?.id}-${latest.teams?.out?.id}`;\n    if (staticData.seenTransfers[key]) continue;\n\n    const daysAgo = (Date.now() - new Date(latest.date).getTime()) / 86400000;\n    if (daysAgo > 14) continue;\n\n    staticData.seenTransfers[key] = Date.now();\n\n    const playerName = player.name || 'Jugador';\n    const fromClub = latest.teams?.out?.name || '';\n    const toClub = latest.teams?.in?.name || '';\n    const fee = latest.type || '';\n\n    const caption = [\n      `🔄 FICHAJE | ${comarca}`,\n      `👤 ${playerName}`,\n      fromClub && toClub ? `${fromClub} → ${toClub}` : (toClub || fromClub),\n      fee ? `📋 ${fee}` : '',\n      '',\n      $env.IG_HASHTAGS_TRANSFER || $env.IG_HASHTAGS || '#Fichajes'\n    ].filter(Boolean).join('\\n');\n\n    outputs.push({\n      json: {\n        postType: 'transfer',\n        skip: false,\n        caption,\n        playerId: player.id,\n        playerName,\n        image_url: player.photo || latest.teams?.in?.logo || latest.teams?.out?.logo || '',\n        meta: { fromClub, toClub, fee, date: latest.date }\n      }\n    });\n  }\n}\n\nreturn outputs.length ? outputs : [{ json: { skip: true, reason: 'no_new_transfers' } }];"
+      },
+      "id": "a1000000-0000-4000-8000-000000000043",
+      "name": "Fichaje nuevo (API)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1100, 520]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "new-transfer",
+              "leftValue": "={{ $json.skip }}",
+              "rightValue": true,
+              "operator": { "type": "boolean", "operation": "notEquals" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000044",
+      "name": "¿Publicar fichaje?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [1340, 520]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "fichaje-nuevo",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000020",
+      "name": "Webhook — Fichaje manual",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [380, 720],
+      "webhookId": "comarca-fichaje-nuevo"
+    },
+    {
+      "parameters": {
+        "jsCode": "const body = $input.first().json.body || $input.first().json;\nconst secret = $env.WEBHOOK_SECRET;\nif (secret && body.token !== secret) throw new Error('Webhook token inválido');\n\nconst playerName = body.player || body.jugador;\nif (!playerName) throw new Error('Falta player/jugador');\n\nconst fromClub = body.from_club || body.club_origen || '';\nconst toClub = body.to_club || body.club_destino || '';\nconst fee = body.fee || body.cantidad || '';\nconst comarca = body.comarca || $env.COMARCA_NAME || 'La comarca';\nconst link = body.url || body.link || '';\n\nconst caption = [\n  `🔄 FICHAJE | ${comarca}`,\n  `👤 ${playerName}`,\n  fromClub && toClub ? `${fromClub} → ${toClub}` : (toClub || fromClub),\n  fee ? `💰 ${fee}` : '',\n  link ? `🔗 ${link}` : '',\n  '',\n  $env.IG_HASHTAGS_TRANSFER || $env.IG_HASHTAGS || '#Fichajes'\n].filter(Boolean).join('\\n');\n\nreturn [{\n  json: {\n    postType: 'transfer',\n    skip: false,\n    caption,\n    playerName,\n    playerId: body.player_id || null,\n    season: $env.SEASON_YEAR || '2026',\n    image_url: body.image_url || body.foto || ''\n  }\n}];"
+      },
+      "id": "a1000000-0000-4000-8000-000000000021",
+      "name": "Preparar fichaje webhook",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [620, 720]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "leftValue": "", "typeValidation": "strict" },
+          "conditions": [
+            {
+              "id": "needs-photo-lookup",
+              "leftValue": "={{ $json.image_url }}",
+              "rightValue": "",
+              "operator": { "type": "string", "operation": "isEmpty" }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000045",
+      "name": "¿Buscar foto jugador?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [860, 720]
+    },
+    {
+      "parameters": {
+        "method": "GET",
+        "url": "https://v3.football.api-sports.io/players",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "search", "value": "={{ $json.playerName }}" },
+            { "name": "season", "value": "={{ $json.season }}" }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-apisports-key", "value": "={{ $env.API_FOOTBALL_KEY }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000046",
+      "name": "API — Buscar jugador",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1100, 640]
+    },
+    {
+      "parameters": {
+        "jsCode": "const prev = $('Preparar fichaje webhook').item.json;\nconst api = $input.first().json;\nconst hit = api.response?.[0]?.player;\nconst image_url = hit?.photo || prev.image_url;\nif (!image_url) throw new Error('No se encontró foto del jugador en API-Football');\nreturn [{ json: { ...prev, image_url, playerId: hit?.id || prev.playerId, imageSource: 'player_search' } }];"
+      },
+      "id": "a1000000-0000-4000-8000-000000000047",
+      "name": "Imagen fichaje (API)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1340, 640]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ { ok: true, postType: 'transfer' } }}",
+        "options": { "responseCode": 200 }
+      },
+      "id": "a1000000-0000-4000-8000-000000000022",
+      "name": "Responder webhook OK",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [1820, 820]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $env.IG_USER_ID }}/media",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "image_url", "value": "={{ $json.image_url }}" },
+            { "name": "caption", "value": "={{ $json.caption }}" },
+            { "name": "access_token", "value": "={{ $env.META_ACCESS_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000030",
+      "name": "Instagram — Crear contenedor",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3020, 280]
+    },
+    {
+      "parameters": { "amount": 3, "unit": "seconds" },
+      "id": "a1000000-0000-4000-8000-000000000031",
+      "name": "Esperar imagen IG",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [3260, 280],
+      "webhookId": "ig-wait-media"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://graph.facebook.com/v21.0/{{ $env.IG_USER_ID }}/media_publish",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "creation_id", "value": "={{ $json.id }}" },
+            { "name": "access_token", "value": "={{ $env.META_ACCESS_TOKEN }}" }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1000000-0000-4000-8000-000000000032",
+      "name": "Instagram — Publicar",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [3500, 280]
+    }
+  ],
+  "connections": {
+    "Cada 3 min (14h–01h)": {
+      "main": [[{ "node": "API — Partidos en vivo", "type": "main", "index": 0 }]]
+    },
+    "API — Partidos en vivo": {
+      "main": [[{ "node": "Filtrar equipos comarca", "type": "main", "index": 0 }]]
+    },
+    "Filtrar equipos comarca": {
+      "main": [[{ "node": "¿Hay partido en vivo?", "type": "main", "index": 0 }]]
+    },
+    "¿Hay partido en vivo?": {
+      "main": [
+        [
+          { "node": "API — Eventos (goles)", "type": "main", "index": 0 },
+          { "node": "Unir partido + eventos", "type": "main", "index": 0 }
+        ],
+        []
+      ]
+    },
+    "API — Eventos (goles)": {
+      "main": [[{ "node": "Unir partido + eventos", "type": "main", "index": 1 }]]
+    },
+    "Unir partido + eventos": {
+      "main": [[{ "node": "Detectar gol nuevo", "type": "main", "index": 0 }]]
+    },
+    "Detectar gol nuevo": {
+      "main": [[{ "node": "¿Publicar gol?", "type": "main", "index": 0 }]]
+    },
+    "¿Publicar gol?": {
+      "main": [
+        [{ "node": "¿Tiene ID jugador?", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "¿Tiene ID jugador?": {
+      "main": [
+        [{ "node": "API — Foto jugador", "type": "main", "index": 0 }],
+        [{ "node": "Imagen gol (solo escudo)", "type": "main", "index": 0 }]
+      ]
+    },
+    "API — Foto jugador": {
+      "main": [[{ "node": "Imagen gol (jugador o escudo)", "type": "main", "index": 0 }]]
+    },
+    "Imagen gol (jugador o escudo)": {
+      "main": [[{ "node": "Instagram — Crear contenedor", "type": "main", "index": 0 }]]
+    },
+    "Imagen gol (solo escudo)": {
+      "main": [[{ "node": "Instagram — Crear contenedor", "type": "main", "index": 0 }]]
+    },
+    "Cada 6h — Fichajes API": {
+      "main": [[{ "node": "Equipos a vigilar fichajes", "type": "main", "index": 0 }]]
+    },
+    "Equipos a vigilar fichajes": {
+      "main": [[{ "node": "API — Traspasos equipo", "type": "main", "index": 0 }]]
+    },
+    "API — Traspasos equipo": {
+      "main": [[{ "node": "Fichaje nuevo (API)", "type": "main", "index": 0 }]]
+    },
+    "Fichaje nuevo (API)": {
+      "main": [[{ "node": "¿Publicar fichaje?", "type": "main", "index": 0 }]]
+    },
+    "¿Publicar fichaje?": {
+      "main": [
+        [{ "node": "Instagram — Crear contenedor", "type": "main", "index": 0 }],
+        []
+      ]
+    },
+    "Webhook — Fichaje manual": {
+      "main": [[{ "node": "Preparar fichaje webhook", "type": "main", "index": 0 }]]
+    },
+    "Preparar fichaje webhook": {
+      "main": [
+        [
+          { "node": "¿Buscar foto jugador?", "type": "main", "index": 0 },
+          { "node": "Responder webhook OK", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "¿Buscar foto jugador?": {
+      "main": [
+        [{ "node": "API — Buscar jugador", "type": "main", "index": 0 }],
+        [{ "node": "Instagram — Crear contenedor", "type": "main", "index": 0 }]
+      ]
+    },
+    "API — Buscar jugador": {
+      "main": [[{ "node": "Imagen fichaje (API)", "type": "main", "index": 0 }]]
+    },
+    "Imagen fichaje (API)": {
+      "main": [
+        [
+          { "node": "Instagram — Crear contenedor", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Instagram — Crear contenedor": {
+      "main": [[{ "node": "Esperar imagen IG", "type": "main", "index": 0 }]]
+    },
+    "Esperar imagen IG": {
+      "main": [[{ "node": "Instagram — Publicar", "type": "main", "index": 0 }]]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Madrid"
+  },
+  "staticData": null,
+  "tags": [{ "name": "mundial" }, { "name": "instagram" }, { "name": "comarca" }],
+  "meta": { "instanceId": "comarca-mundial-v2" },
+  "versionId": "comarca-mundial-instagram-fichajes-v2"
+}
