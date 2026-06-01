@@ -67,6 +67,14 @@ if (mobileBtn && navLinks) {
   });
 }
 
+// GTM — solo carga con consentimiento
+function loadGTM() {
+  if (window._gtmLoaded) return;
+  window._gtmLoaded = true;
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NVWMWFW6');
+}
+if (localStorage.getItem('cookie_consent') === 'accepted') loadGTM();
+
 // COOKIE BANNER
 document.addEventListener('DOMContentLoaded',function(){
   if(localStorage.getItem('cookie_consent')) return;
@@ -76,6 +84,7 @@ document.addEventListener('DOMContentLoaded',function(){
   document.getElementById('cookieAccept').addEventListener('click',()=>{
     localStorage.setItem('cookie_consent','accepted');
     banner.classList.remove('show');
+    loadGTM();
   });
   document.getElementById('cookieReject').addEventListener('click',()=>{
     localStorage.setItem('cookie_consent','rejected');

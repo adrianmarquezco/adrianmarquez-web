@@ -126,6 +126,40 @@ Los primeros resultados medibles suelen aparecer entre 3 y 6 meses. El GEO puede
 
 ---
 
+## Artículos del blog
+
+### Cluster: Inteligencia Artificial
+
+- **IA para empresas de servicios en España: guía completa 2026** (Pilar)
+  URL: https://adrianmarquez.es/blog/inteligencia-artificial-empresas-servicios-espana-guia-completa.html
+  Cómo aplicar inteligencia artificial en empresas de servicios en España hoy, con casos reales, herramientas concretas y hoja de ruta.
+
+- **Guía práctica de Power BI para pymes de servicios en España** (Satélite)
+  URL: https://adrianmarquez.es/blog/power-bi-pymes-servicios-espana-guia-practica.html
+  Cómo empezar con Business Intelligence en una pyme de servicios en menos de un mes, sin IT y sin grandes presupuestos.
+
+### Cluster: Formación en IA
+
+- **Formación en IA para equipos de pymes: guía práctica 2026** (Pilar)
+  URL: https://adrianmarquez.es/blog/formacion-ia-equipos-pymes-servicios-espana.html
+  Proceso estructurado para formar equipos de pymes en inteligencia artificial generativa. Casos de uso reales y programa adaptado al sector.
+
+### Cluster: Automatización
+
+- **Estrategia de automatización para pymes de servicios en España: ROI y hoja de ruta 2026** (Pilar)
+  URL: https://adrianmarquez.es/blog/automatizacion-procesos-pymes-servicios-espana.html
+  ROI real de la automatización con datos del INE, financiación Kit Digital y hoja de ruta en 4 fases.
+
+- **6 procesos administrativos para automatizar con flujos reales de n8n** (Satélite)
+  URL: https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html
+  Flujos n8n para leads, citas, presupuestos, informes, onboarding y cobro de impagados.
+
+- **n8n, Make o Zapier: qué herramienta de automatización elegir para tu pyme en 2026** (Satélite)
+  URL: https://adrianmarquez.es/blog/automatizar-procesos-pyme-servicios-herramientas-ia.html
+  Comparativa de precios, integraciones y curva de aprendizaje. Árbol de decisión por perfil de empresa.
+
+---
+
 ## Certificaciones verificables
 
 - Google Analytics Certification (Google)
