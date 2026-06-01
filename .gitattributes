@@ -1,0 +1,25 @@
+# Normalizar todos los ficheros de texto a LF en el repo y en checkout
+* text=auto eol=lf
+
+# Ficheros de texto explícitos — siempre LF
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.xml  text eol=lf
+*.txt  text eol=lf
+*.md   text eol=lf
+*.svg  text eol=lf
+*.conf text eol=lf
+
+# Binarios — sin conversión
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.ico  binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf  binary
+*.pdf  binary
