@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -28,6 +28,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css?v=9">
 <link rel="stylesheet" href="../components-premium.css?v=5">
+<style>
+.sector-card:hover { background: var(--bg3) !important; }
+.sector-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:var(--gold); transition:height 0.4s; }
+.sector-card:hover::before { height:100%; }
+</style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://adrianmarquez.es/"},{"@type":"ListItem","position":2,"name":"Sectores","item":"https://adrianmarquez.es/sectores/"}]}
 </script>
@@ -119,63 +124,63 @@
 
     <a href="/sectores/asesorias-despachos.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Servicios profesionales</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Asesorías y despachos profesionales</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Asesorías y despachos profesionales</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">SEO local, Google Ads en períodos clave y automatización del onboarding de clientes para asesorías fiscales, laborales y gestorías.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/clinicas-salud.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Salud</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Clínicas y centros de salud</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Clínicas y centros de salud</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Captación de pacientes, SEO local por especialidad y automatización de citas para clínicas privadas, centros médicos y especialistas.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/hosteleria.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Hostelería</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Hostelería y restauración</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Hostelería y restauración</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Visibilidad en Google Maps, gestión de reseñas, captación de reservas y automatización de comunicación para restaurantes, bares y hoteles.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/inmobiliarias.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Inmobiliario</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Agencias inmobiliarias</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Agencias inmobiliarias</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Captación de vendedores y compradores, SEO para mandatos de venta y automatización de seguimiento de leads sin depender de Idealista o Fotocasa.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/abogados-despachos.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Servicios jurídicos</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Abogados y despachos jurídicos</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Abogados y despachos jurídicos</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">SEO por especialidad y ciudad, Google Ads para consultas urgentes y automatización de primera consulta para despachos que quieren captar más allá de los referidos.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/academias-formacion.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Formación</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Academias y centros de formación</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Academias y centros de formación</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Captación de alumnos con SEO local, campañas estacionales en septiembre y enero, y automatización del proceso de matriculación de principio a fin.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/estetica-peluquerias.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Belleza</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Estética y peluquerías</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Estética y peluquerías</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Agenda llena con SEO local, gestión activa de reseñas y automatización de reservas con confirmación y recordatorio automático para reducir no-shows.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/reformas-construccion.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Construcción</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Reformas y construcción</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Reformas y construcción</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Más presupuestos con SEO local, Google Ads para urgencias y automatización de respuesta a solicitudes en menos de 1 hora para no perder proyectos ante la competencia.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
 
     <a href="/sectores/psicologos-terapeutas.html" class="sector-card" style="background:var(--bg);padding:2rem;text-decoration:none;color:inherit;display:block;position:relative;overflow:hidden;transition:background 0.3s;">
       <div style="font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.8rem;">Salud mental</div>
-      <h2 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Psicólogos y terapeutas</h2>
+      <h3 style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;line-height:1.25;margin-bottom:0.7rem;">Psicólogos y terapeutas</h3>
       <p style="font-size:0.83rem;line-height:1.7;color:var(--text-muted);margin-bottom:1.2rem;">Captación de pacientes con SEO local y para consulta online, automatización de primeras citas con respeto a la privacidad, y reputación digital cuidada.</p>
       <span style="font-size:0.75rem;color:var(--gold);letter-spacing:0.08em;">Ver estrategia →</span>
     </a>
@@ -246,11 +251,6 @@
   <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España · Servicio en toda España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a></div></div>
 </footer>
 <script src="../main.js?v=8"></script>
-<style>
-.sector-card:hover { background: var(--bg3) !important; }
-.sector-card::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:var(--gold); transition:height 0.4s; }
-.sector-card:hover::before { height:100%; }
-</style>
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias, de Google Fonts y de Google Analytics (GTM) para análisis de visitas. Puedes aceptar o rechazar las analíticas. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 </body>
