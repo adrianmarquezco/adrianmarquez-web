@@ -89,7 +89,7 @@ section { padding:5rem 5rem; }
 .tldr-box li::before { content:'→';position:absolute;left:-0.2rem;color:var(--gold);font-size:0.8rem; }
 
 /* TWO-COL CONTENT LAYOUT (prose + sidebar) */
-.two-col-content { display:grid;grid-template-columns:2fr 1fr;gap:5rem;align-items:start; }
+.two-col-content { display:grid;grid-template-columns:2fr 1fr;gap:5rem;align-items:stretch; }
 
 /* GRID 3 */
 .grid-3 { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border); }
