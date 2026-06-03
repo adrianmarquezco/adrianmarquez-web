@@ -1077,6 +1077,11 @@ body > nav.nav-scrolled {
   gap: 1rem 1.5rem;
   margin-bottom: 1.5rem;
 }
+/* Compact sector list inside demo header — 2-col grid so it matches title height */
+.flow-demo-header .footer-col-title { font-size:0.6rem; margin-bottom:0.4rem; padding-bottom:0.25rem; }
+.flow-demo-header .footer-col-links { display:grid; grid-template-columns:1fr 1fr; gap:0.05rem 0.7rem; }
+.flow-demo-header .footer-col-links li { margin-bottom:0.1rem; }
+.flow-demo-header .footer-col-links a { font-size:0.7rem; }
 .flow-demo-label {
   font-size: 0.62rem;
   letter-spacing: 0.2em;
