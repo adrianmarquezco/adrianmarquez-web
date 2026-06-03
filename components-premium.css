@@ -1,4 +1,4 @@
-/* ===== Premium components v7 — shared across site ===== */
+﻿/* ===== Premium components v7 — shared across site ===== */
 
 /* Nav on scroll */
 body > nav { transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease; }
@@ -1072,7 +1072,7 @@ body > nav.nav-scrolled {
 .flow-demo-header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem 1.5rem;
   margin-bottom: 1.5rem;
