@@ -935,6 +935,7 @@ body > nav.nav-scrolled {
 @media (max-width: 520px) {
   .brand-wordmark .brand-text { font-size: 0.82rem; }
   .brand-mark { width: 24px; height: 24px; }
+  .service-card-link { font-size: 0.875rem; }
   .about-page .experience-section,
   .about-page .langs-section,
   .about-page .skills-section.about-skills-block,

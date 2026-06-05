@@ -75,7 +75,7 @@
   <a href="contacto.html" class="nav-cta">Hablemos</a>
 </nav>
 
-<div class="breadcrumb"><a href="/">Inicio</a> › <span>Sobre mí</span></div>
+<nav aria-label="Breadcrumb" class="breadcrumb"><a href="/">Inicio</a> › <span>Sobre mí</span></nav>
 
 <div class="page-hero">
   <div class="page-hero-label">Quién soy</div>
@@ -88,7 +88,10 @@
 <div class="about-hero">
   <div class="about-photo slide-left">
     <div class="about-photo-frame" id="aboutImgWrap">
-      <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital" loading="lazy" width="843" height="1264">
+      <picture>
+        <source srcset="images/adrian-marquez-profesional.webp" type="image/webp">
+        <img src="images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital" loading="lazy" width="843" height="1264">
+      </picture>
       <div class="about-photo-deco" aria-hidden="true"></div>
     </div>
     <div class="link-chips">

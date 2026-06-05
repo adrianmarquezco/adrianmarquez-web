@@ -75,8 +75,10 @@
 .form-alert-error { background:rgba(184,84,84,0.1);border:1px solid rgba(184,84,84,0.35);color:#8b3030; }
 .form-alert-success { background:rgba(201,168,76,0.12);border:1px solid rgba(201,168,76,0.35);color:#6b5520; }
 .form-alert.visible { display:block; }
-.form-privacy { font-size:0.75rem;color:rgba(13,12,10,0.45);margin-top:0.75rem;line-height:1.6; }
-.form-privacy a { color:var(--gold-dim);text-decoration:underline; }
+.form-group--consent { margin-top:0.5rem; }
+.form-consent-label { display:flex;align-items:flex-start;gap:0.65rem;cursor:pointer;font-size:0.75rem;color:rgba(13,12,10,0.52);line-height:1.6; }
+.form-consent-label input[type="checkbox"] { flex-shrink:0;margin-top:0.2rem;width:1rem;height:1rem;accent-color:#C9A84C;cursor:pointer; }
+.form-consent-label a { color:#8A6B2E;text-decoration:underline; }
 .contact-split-right .form-cpref-btn { border-color:rgba(13,12,10,0.15);color:rgba(13,12,10,0.55); }
 .contact-split-right .form-cpref-btn:hover { border-color:rgba(201,168,76,0.55);color:#0d0c0a; }
 .contact-split-right .form-cpref-btn.active { background:var(--gold);border-color:var(--gold);color:#000; }
@@ -135,7 +137,7 @@
 
 <!-- Hero compacto -->
 <div class="contact-hero-compact">
-  <div class="breadcrumb"><a href="/">Inicio</a> › <span>Contacto</span></div>
+  <nav aria-label="Breadcrumb" class="breadcrumb"><a href="/">Inicio</a> › <span>Contacto</span></nav>
   <h1>Primera consulta <em>gratuita</em></h1>
   <p class="contact-hero-lead">Respondo en menos de 24 horas laborables. Escríbeme por WhatsApp, email o rellena el formulario — como prefieras.</p>
   <div class="contact-hero-actions">
@@ -221,9 +223,15 @@
         <textarea class="form-textarea" id="message" name="mensaje" placeholder="¿Qué necesitas? ¿En qué situación estás? ¿Qué objetivos tienes?"></textarea>
         <span class="form-error-msg" id="error-message" role="alert"></span>
       </div>
+      <div class="form-group form-group--consent">
+        <label class="form-consent-label">
+          <input type="checkbox" id="consent" name="consentimiento" value="si">
+          <span>He leído y acepto la <a href="/politica-privacidad.html">Política de Privacidad</a> y consiento el tratamiento de mis datos para atender mi consulta.</span>
+        </label>
+        <span class="form-error-msg" id="error-consent" role="alert"></span>
+      </div>
       <button type="submit" class="btn-primary form-submit" id="formSubmitBtn">Enviar mensaje →</button>
       <p class="form-trust">Respondo en menos de 24 h laborables · Sin spam · Trato directo contigo</p>
-      <p class="form-privacy">Al enviar aceptas nuestra <a href="/politica-privacidad.html">Política de Privacidad</a>.</p>
     </form>
   </div>
 
@@ -249,7 +257,10 @@
       </div>
     </div>
     <div class="contact-split-photo">
-      <img src="/images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital en España" loading="lazy" width="843" height="1264">
+      <picture>
+        <source srcset="/images/adrian-marquez-profesional.webp" type="image/webp">
+        <img src="/images/adrian-marquez-profesional.png" alt="Adrián Márquez — Consultor de Marketing Digital en España" loading="lazy" width="843" height="1264">
+      </picture>
     </div>
   </div>
 
@@ -383,6 +394,7 @@
       valid = false;
     }
     if (!msg) { showFieldError('message', 'Cuéntame brevemente tu proyecto o consulta.'); valid = false; }
+    if (!document.getElementById('consent').checked) { showFieldError('consent', 'Debes aceptar la política de privacidad para continuar.'); valid = false; }
     return valid;
   }
 
@@ -432,6 +444,12 @@
       submitBtn.disabled = false;
       submitBtn.textContent = 'Enviar mensaje →';
     }
+  });
+
+  document.getElementById('consent').addEventListener('change', function () {
+    this.classList.remove('is-error');
+    const err = document.getElementById('error-consent');
+    if (err) { err.classList.remove('visible'); err.textContent = ''; }
   });
 
   ['fname', 'email', 'phone', 'message'].forEach(function (id) {
