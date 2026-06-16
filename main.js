@@ -23,38 +23,40 @@ if (cursor && ring && !isTouch) {
 const mobileBtn = document.getElementById('navMobileBtn');
 const navLinks = document.querySelector('.nav-links');
 const navParent = navLinks ? navLinks.parentNode : null;
-const navNextSibling = navLinks ? navLinks.nextSibling : null;
+
+// Backdrop overlay
+const navBackdrop = document.createElement('div');
+navBackdrop.className = 'nav-backdrop';
+document.body.appendChild(navBackdrop);
 
 function openMobileNav() {
-  // Move nav-links to body to escape nav's stacking context
   document.body.appendChild(navLinks);
-  // Use innerHeight to cover full viewport including browser chrome
   navLinks.style.height = window.innerHeight + 'px';
   navLinks.classList.add('open');
   document.body.classList.add('nav-open');
   mobileBtn.classList.add('is-open');
+  mobileBtn.setAttribute('aria-label', 'Cerrar menú');
   mobileBtn.innerHTML = '&#10005;';
-  // Move close button into the overlay so it's above it in z-index
   navLinks.appendChild(mobileBtn);
 }
 
 function closeMobileNav() {
-  // Move button back to nav before moving nav-links
   if (navParent) navParent.appendChild(mobileBtn);
   navLinks.classList.remove('open');
   navLinks.style.height = '';
   document.body.classList.remove('nav-open');
   mobileBtn.classList.remove('is-open');
+  mobileBtn.setAttribute('aria-label', 'Menú');
   mobileBtn.innerHTML = '&#9776;';
-  // Move nav-links back inside nav
   if (navParent) navParent.insertBefore(navLinks, mobileBtn);
 }
 
 if (mobileBtn && navLinks) {
-  mobileBtn.addEventListener('click',()=>{
+  mobileBtn.addEventListener('click', () => {
     navLinks.classList.contains('open') ? closeMobileNav() : openMobileNav();
   });
-  navLinks.addEventListener('click', e=>{
+  navBackdrop.addEventListener('click', closeMobileNav);
+  navLinks.addEventListener('click', e => {
     const link = e.target.closest('a');
     if (!link) return;
     const isDropdownToggle = link.closest('.has-dropdown') && link.parentElement.classList.contains('has-dropdown');
