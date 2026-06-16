@@ -885,6 +885,7 @@ body > nav.nav-scrolled {
 .marquee-item { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;font-style:italic;color:rgba(240,237,232,0.28);text-transform:uppercase;flex-shrink:0; }
 .marquee-dot { color:rgba(201,168,76,0.35); }
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@media(max-width:600px){ .marquee-inner{animation-duration:7s;} .marquee-item{font-size:1.15rem;} .marquee-strip{padding:2rem 0;} }
 .testimonials-section { background:var(--bg2); }
 .testi-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem; }
 .testi-card { background:var(--bg3);padding:2rem;border:1px solid var(--border);position:relative; }
