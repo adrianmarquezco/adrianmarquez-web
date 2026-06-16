@@ -169,7 +169,7 @@ section[style*="#f7f4ef"] .section-title em { color:var(--gold); }
 @media(max-width:600px){ .home-faq{padding:3rem 1.25rem;} }
 
 /* NAV BACKDROP */
-.nav-backdrop { display:none;position:fixed;inset:0;z-index:498;background:rgba(0,0,0,0.6);cursor:pointer; }
+.nav-backdrop { display:none;position:fixed;inset:0;z-index:1999;background:rgba(0,0,0,0.6);cursor:pointer; }
 body.nav-open .nav-backdrop { display:block; }
 
 /* WHATSAPP FAB */
@@ -231,7 +231,7 @@ body.nav-open .nav-backdrop { display:block; }
 .nav-mobile-btn:hover { background:rgba(201,168,76,0.08); }
 
 /* MOBILE NAV OVERLAY */
-.nav-links.open { display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;background:#080808;z-index:499;justify-content:flex-start;align-items:stretch;gap:0;padding:80px 0 2rem;overflow-y:auto; }
+.nav-links.open { display:flex !important;flex-direction:column;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100vh;background:#080808;z-index:2000;justify-content:flex-start;align-items:stretch;gap:0;padding:80px 0 2rem;overflow-y:auto; }
 .nav-links.open > li { width:100%;text-align:center;border-bottom:1px solid rgba(201,168,76,0.1); }
 .nav-links.open > li > a { display:block;padding:1.2rem 2rem;font-size:0.85rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted); }
 .nav-links.open > li > a:hover,.nav-links.open > li > a.active { color:var(--gold); }
@@ -245,7 +245,7 @@ body.nav-open { overflow:hidden; }
 body.nav-open > nav { backdrop-filter:none; background:rgba(8,8,8,0.97); }
 
 /* Close button inside the overlay */
-.nav-links.open .nav-mobile-btn { display:flex;position:absolute;top:1rem;right:1.5rem;z-index:1;border-color:rgba(201,168,76,0.3); }
+.nav-links.open .nav-mobile-btn { display:flex;position:absolute;top:1rem;right:1.5rem;z-index:2001;border-color:rgba(201,168,76,0.3);width:44px;height:44px;font-size:1.4rem; }
 
 /* RESPONSIVE — 768px (tablet) */
 @media(max-width:768px){
