@@ -160,6 +160,17 @@ section[style*="#f7f4ef"] { --text:#1a1310; --text-muted:#5a4f47; --border:rgba(
 section[style*="#f7f4ef"] .card { --text:#F0EDE8; --text-muted:#7A7570; --border:rgba(201,168,76,0.15); }
 section[style*="#f7f4ef"] .section-title { color:#1a1310; }
 section[style*="#f7f4ef"] .section-title em { color:var(--gold); }
+.white-section .section-title { color:#1a1310; }
+.white-section .section-title em { color:var(--gold); }
+
+/* HOME FAQ */
+.home-faq { background:var(--bg2);padding:5rem 5rem; }
+@media(max-width:900px){ .home-faq{padding:4rem 2rem;} }
+@media(max-width:600px){ .home-faq{padding:3rem 1.25rem;} }
+
+/* NAV BACKDROP */
+.nav-backdrop { display:none;position:fixed;inset:0;z-index:498;background:rgba(0,0,0,0.6);cursor:pointer; }
+body.nav-open .nav-backdrop { display:block; }
 
 /* WHATSAPP FAB */
 .whatsapp-fab{position:fixed;bottom:1.5rem;right:1.5rem;width:52px;height:52px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;z-index:8000;box-shadow:0 4px 16px rgba(0,0,0,0.35);transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;}
