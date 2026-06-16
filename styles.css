@@ -156,17 +156,17 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 @media(max-width:900px){.cookie-banner{padding:1rem 1.5rem;}.cookie-banner-actions{width:100%;justify-content:flex-end;}}
 
 /* CREAM SECTION TEXT OVERRIDES — sector hubs & service pages */
+/* .card tiene fondo transparente dentro de secciones crema → todo el texto debe ser oscuro */
 section[style*="#f7f4ef"] { --text:#1a1310; --text-muted:#5a4f47; --border:rgba(139,105,20,0.2); }
-section[style*="#f7f4ef"] .card { --text:#F0EDE8; --text-muted:#7A7570; --border:rgba(201,168,76,0.15); }
-section[style*="#f7f4ef"] .section-title,
-section[style*="#f7f4ef"] .section-label,
+section[style*="background:#f7f4ef"] h1,
 section[style*="background:#f7f4ef"] h2,
-section[style*="background:#f7f4ef"] h3 { color:#1a1310 !important; }
-section[style*="#f7f4ef"] .section-title em,
+section[style*="background:#f7f4ef"] h3,
+section[style*="background:#f7f4ef"] h4,
+section[style*="background:#f7f4ef"] .section-title,
+section[style*="background:#f7f4ef"] .section-label { color:#1a1310 !important; }
 section[style*="background:#f7f4ef"] h2 em,
-section[style*="background:#f7f4ef"] h3 em { color:var(--gold) !important; }
-section[style*="background:#f7f4ef"] .card h3,
-section[style*="background:#f7f4ef"] .card h2 { color:#F0EDE8 !important; }
+section[style*="background:#f7f4ef"] h3 em,
+section[style*="background:#f7f4ef"] .section-title em { color:var(--gold) !important; }
 .white-section .section-title { color:#1a1310 !important; }
 .white-section .section-title em { color:var(--gold) !important; }
 
