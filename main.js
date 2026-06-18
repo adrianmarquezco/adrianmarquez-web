@@ -317,17 +317,6 @@ if (processTimeline) {
 
 // Mini demo n8n — flujos orientativos por sector
 const FLOW_TEMPLATES = {
-  seguros: {
-    title: 'Captación en correduría de seguros',
-    metric: 'Resultado típico: <strong>respuesta al lead en segundos</strong>',
-    nodes: [
-      { type: 'Trigger', title: 'Web / WhatsApp' },
-      { type: 'IA', title: 'Cualifica lead' },
-      { type: 'CRM', title: 'Alta y etiquetas' },
-      { type: 'Email', title: 'Respuesta auto' },
-      { type: 'Alerta', title: 'Aviso comercial' }
-    ]
-  },
   retail: {
     title: 'Negocio local — captación y reservas',
     metric: 'Resultado típico: <strong>+ visibilidad y leads desde Maps</strong>',
@@ -423,7 +412,7 @@ function initFlowDemo() {
   const wrap = document.getElementById('flowDemo');
   if (!wrap) return;
 
-  let currentSector = 'seguros';
+  let currentSector = 'retail';
   renderN8nFlow(currentSector);
   runN8nAnimation();
 
