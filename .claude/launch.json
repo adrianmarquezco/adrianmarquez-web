@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "adrianmarquez-web",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "3400"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/static-server.js"],
       "port": 3400
     }
   ]
