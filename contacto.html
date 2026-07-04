@@ -479,17 +479,30 @@
 
   const params = new URLSearchParams(window.location.search);
   const servicio = params.get('servicio');
+  const ubicacion = params.get('ubicacion');
+  let shouldScroll = false;
   if (servicio) {
     const sel = document.getElementById('service');
     const opt = sel.querySelector('option[value="' + servicio + '"]');
     if (opt) {
       sel.value = servicio;
-      const form = document.getElementById('contacto-form');
-      if (form) {
-        requestAnimationFrame(function () {
-          form.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
-      }
+      shouldScroll = true;
+    }
+  }
+  if (ubicacion) {
+    const msg = document.getElementById('message');
+    if (msg && !msg.value) {
+      msg.value = 'Ubicación: ' + ubicacion + '\n\n';
+      msg.setSelectionRange(msg.value.length, msg.value.length);
+    }
+    shouldScroll = true;
+  }
+  if (shouldScroll) {
+    const form = document.getElementById('contacto-form');
+    if (form) {
+      requestAnimationFrame(function () {
+        form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
   }
 })();
