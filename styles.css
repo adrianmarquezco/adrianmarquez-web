@@ -120,7 +120,7 @@ section { padding:5rem 5rem; }
 
 /* STATS ROW */
 .stats-row { display:flex;gap:0;background:var(--border);margin:3rem 0; }
-.stat-box { flex:1;background:var(--bg3);padding:2rem;text-align:center;border-right:1px solid var(--border); }
+.stat-box { flex:1;background:var(--bg3);padding:2rem;text-align:center;border-right:1px solid var(--border);--text-muted:#7A7570; }
 .stat-box:last-child { border-right:none; }
 .stat-num { font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;color:var(--gold);line-height:1; }
 .stat-label { font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-muted);margin-top:0.4rem; }
