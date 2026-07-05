@@ -361,7 +361,7 @@ body > nav.nav-scrolled {
 .svc-compare-col li {
   font-size: 0.84rem;
   line-height: 1.6;
-  color: rgba(240,237,232,0.75);
+  color: var(--text-muted);
   padding: 0.35rem 0 0.35rem 1.1rem;
   position: relative;
 }
