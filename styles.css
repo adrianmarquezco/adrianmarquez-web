@@ -157,7 +157,7 @@ footer { background:var(--bg);border-top:1px solid var(--border);padding:3rem 5r
 
 /* CREAM SECTION TEXT OVERRIDES — sector hubs & service pages */
 /* .card tiene fondo transparente dentro de secciones crema → todo el texto debe ser oscuro */
-section[style*="#f7f4ef"] { --text:#1a1310; --text-muted:#5a4f47; --border:rgba(139,105,20,0.2); }
+section[style*="#f7f4ef"] { --text:#1a1310; --text-muted:#5a4f47; --border:rgba(139,105,20,0.2); color:#1a1310; }
 section[style*="background:#f7f4ef"] h1,
 section[style*="background:#f7f4ef"] h2,
 section[style*="background:#f7f4ef"] h3,
