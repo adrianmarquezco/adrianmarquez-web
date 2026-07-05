@@ -74,11 +74,11 @@ section { padding:5rem 5rem; }
 
 /* PROSE */
 .prose { max-width:760px; }
-.prose p { font-size:0.95rem;line-height:1.9;color:rgba(240,237,232,0.78);margin-bottom:1.4rem; }
+.prose p { font-size:0.95rem;line-height:1.9;color:var(--text-muted);margin-bottom:1.4rem; }
 .prose h2 { font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin:2.5rem 0 1rem;color:var(--text); }
 .prose h3 { font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;margin:2rem 0 0.8rem;color:var(--gold-light); }
 .prose ul { padding-left:1.2rem;margin-bottom:1.4rem; }
-.prose li { font-size:0.93rem;line-height:1.8;color:rgba(240,237,232,0.75);margin-bottom:0.4rem; }
+.prose li { font-size:0.93rem;line-height:1.8;color:var(--text-muted);margin-bottom:0.4rem; }
 .prose strong { color:var(--text);font-weight:500; }
 
 /* TLDR BOX */
