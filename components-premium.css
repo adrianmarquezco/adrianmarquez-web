@@ -414,6 +414,8 @@ body > nav.nav-scrolled {
   padding: 2rem;
   position: sticky;
   top: 6rem;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
   transition: box-shadow 0.35s, border-color 0.35s;
 }
 .service-sidebar-card.is-stuck {
