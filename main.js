@@ -189,14 +189,20 @@ if (siteNav) {
   window.addEventListener('scroll', onNavScroll, { passive: true });
 }
 
-// HERO — parallax suave
+// HERO — parallax suave (throttled a un cálculo por frame para evitar jank en scroll)
 const heroParallax = document.querySelector('[data-hero-parallax]');
 if (heroParallax && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  let heroTicking = false;
   window.addEventListener('scroll', () => {
-    const y = window.scrollY;
-    if (y < window.innerHeight * 1.1) {
-      heroParallax.style.transform = `translate3d(0, ${y * 0.14}px, 0) scale(1.06)`;
-    }
+    if (heroTicking) return;
+    heroTicking = true;
+    requestAnimationFrame(() => {
+      const y = window.scrollY;
+      if (y < window.innerHeight * 1.1) {
+        heroParallax.style.transform = `translate3d(0, ${y * 0.14}px, 0) scale(1.06)`;
+      }
+      heroTicking = false;
+    });
   }, { passive: true });
 }
 
@@ -312,7 +318,15 @@ if (processTimeline) {
     processTimeline.classList.toggle('is-in-view', rect.top < vh && rect.bottom > 0);
   };
   updateProcessProgress();
-  window.addEventListener('scroll', updateProcessProgress, { passive: true });
+  let processTicking = false;
+  window.addEventListener('scroll', () => {
+    if (processTicking) return;
+    processTicking = true;
+    requestAnimationFrame(() => {
+      updateProcessProgress();
+      processTicking = false;
+    });
+  }, { passive: true });
 }
 
 // Mini demo n8n — flujos orientativos por sector
