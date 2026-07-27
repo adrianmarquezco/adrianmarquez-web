@@ -1,5 +1,26 @@
 [
   {
+    "title": "Automatizar informes en pymes de servicios | 2026",
+    "slug": "automatizacion-reportes-informes-pymes-servicios",
+    "url": "/blog/automatizacion-reportes-informes-pymes-servicios.html",
+    "date": "2026-07-27",
+    "dateStr": "27 de julio de 2026",
+    "excerpt": "Generar informes a mano sigue siendo uno de los mayores ladrones de tiempo en pymes de servicios. Te explico cómo automatizar ese proceso con n8n e IA, qué herramientas funcionan de verdad y cuánto tiempo puedes recuperar cada semana.",
+    "category": "Automatizacion",
+    "readingTime": "9 min",
+    "keywords": [
+      "automatizar informes pymes",
+      "generación automática de reportes empresas servicios",
+      "automatización reportes n8n pymes España",
+      "informes automáticos pymes servicios 2026",
+      "reportes automatizados empresas servicios España"
+    ],
+    "imageUrl": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5NTM4Mzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGRhc2hib2FyZCUyMHJlcG9ydHMlMjBhdXRvbWF0aW9ufGVufDB8MHx8fDE3ODUxNDI5MjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "tipoArticulo": "SATELITE",
+    "clusterCategoria": "automatizacion",
+    "pillarSlug": "automatizacion-procesos-pymes-servicios-espana"
+  },
+  {
     "title": "Errores de automatización en pymes: cómo evitarlos",
     "slug": "automatizacion-errores-comunes-pymes-servicios-espana",
     "url": "/blog/automatizacion-errores-comunes-pymes-servicios-espana.html",
