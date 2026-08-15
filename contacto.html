@@ -353,6 +353,19 @@
   const alertError = document.getElementById('formAlertError');
   const alertSuccess = document.getElementById('formAlertSuccess');
 
+  // Google Ads / GA4 — form_start (una vez por visita al empezar el formulario)
+  let formStartFired = false;
+  function fireFormStart() {
+    if (formStartFired) return;
+    formStartFired = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'form_start' });
+    if (typeof gtag === 'function') {
+      gtag('event', 'form_start');
+    }
+  }
+  form.addEventListener('focusin', fireFormStart);
+
   const fieldMap = {
     nombre: 'fname',
     email: 'email',
@@ -426,6 +439,11 @@
         form.reset();
         document.querySelectorAll('.form-cpref-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
         document.getElementById('contactPrefVal').value = '';
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ event: 'generate_lead' });
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead');
+        }
       } else if (data.errors && data.errors.length) {
         data.errors.forEach(function (err) {
           const id = fieldMap[err.field] || err.field;
