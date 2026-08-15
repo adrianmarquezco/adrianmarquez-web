@@ -434,16 +434,17 @@
       const data = await res.json().catch(() => ({}));
 
       if (res.ok) {
-        alertSuccess.textContent = '✓ Mensaje recibido. Te responderé en menos de 24 horas laborables.';
-        alertSuccess.classList.add('visible');
-        form.reset();
-        document.querySelectorAll('.form-cpref-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
-        document.getElementById('contactPrefVal').value = '';
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ event: 'generate_lead' });
         if (typeof gtag === 'function') {
           gtag('event', 'generate_lead');
         }
+        alertSuccess.textContent = '✓ Mensaje recibido. Te responderé en menos de 24 horas laborables.';
+        alertSuccess.classList.add('visible');
+        form.reset();
+        document.querySelectorAll('.form-cpref-btn').forEach(b => { b.classList.remove('active'); b.setAttribute('aria-pressed', 'false'); });
+        const pref = document.getElementById('contactPrefVal');
+        if (pref) pref.value = '';
       } else if (data.errors && data.errors.length) {
         data.errors.forEach(function (err) {
           const id = fieldMap[err.field] || err.field;
