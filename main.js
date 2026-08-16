@@ -77,6 +77,28 @@ function loadGTM() {
 }
 if (localStorage.getItem('cookie_consent') === 'accepted') loadGTM();
 
+// WhatsApp click → GA4 / Ads (dataLayer + gtag)
+document.addEventListener('click', function (e) {
+  const link = e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="whatsapp.com"]');
+  if (!link) return;
+  const href = link.href;
+  const label = link.classList.contains('whatsapp-fab')
+    ? 'fab'
+    : (link.textContent || '').trim().slice(0, 40) || 'whatsapp';
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: 'whatsapp_click',
+    link_url: href,
+    link_label: label
+  });
+  if (typeof gtag === 'function') {
+    gtag('event', 'whatsapp_click', {
+      link_url: href,
+      link_label: label
+    });
+  }
+});
+
 // COOKIE BANNER
 document.addEventListener('DOMContentLoaded',function(){
   if(localStorage.getItem('cookie_consent')) return;
