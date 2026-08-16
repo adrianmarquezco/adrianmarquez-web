@@ -84,7 +84,7 @@ document.addEventListener('click', function (e) {
   const href = link.href;
   const label = link.classList.contains('whatsapp-fab')
     ? 'fab'
-    : (link.textContent || '').trim().slice(0, 40) || 'whatsapp';
+    : (link.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 40) || 'whatsapp';
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({
     event: 'whatsapp_click',
@@ -97,7 +97,7 @@ document.addEventListener('click', function (e) {
       link_label: label
     });
   }
-});
+}, true);
 
 // COOKIE BANNER
 document.addEventListener('DOMContentLoaded',function(){
