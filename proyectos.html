@@ -151,7 +151,7 @@
       <div class="project-num">03</div>
       <div class="project-cat">SaaS · Reformas</div>
       <h3 class="project-title">ObraBox — Software de gestión para empresas de reformas</h3>
-      <p class="project-desc">Producto propio diseñado para que empresas de reformas dejen atrás el Excel y los grupos de WhatsApp. Presupuestos con firma digital, control de obras por fases, Pipeline/CRM, facturación, fichaje GPS del equipo y portal del cliente — todo desde el móvil.</p>
+      <p class="project-desc">Producto propio diseñado para que empresas de reformas dejen atrás el Excel y los grupos de WhatsApp. Presupuestos con firma digital, control de obras por fases, Pipeline/CRM, facturación, fichaje GPS del equipo y portal del cliente — desde escritorio y móvil.</p>
       <div style="overflow-x:auto;margin:1.5rem -0.5rem 0;padding:0 0.5rem 0.75rem;scrollbar-width:thin;">
         <div style="display:flex;gap:1rem;min-width:max-content;">
           <div style="flex:0 0 auto;width:340px;">
@@ -174,7 +174,7 @@
       </div>
       <div class="project-results">
         <div class="project-results-title">Estado</div>
-        <div class="project-result-item">+500 reformistas en España usando la plataforma</div>
+        <div class="project-result-item">+50 reformistas en España usando la plataforma</div>
         <div class="project-result-item">14 días de prueba gratis · sin tarjeta de crédito</div>
         <div class="project-result-item">Construido con Next.js 14, Supabase y TypeScript</div>
       </div>
@@ -417,33 +417,30 @@
 </footer>
 <script src="main.js?v=12"></script>
 <style>
-#lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.92);z-index:9999;cursor:zoom-out;align-items:center;justify-content:center;}
+#lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.93);z-index:9999;cursor:pointer;align-items:center;justify-content:center;padding:1.5rem;}
 #lb-overlay.active{display:flex;}
-#lb-overlay img{max-width:92vw;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.6);}
-#lb-overlay .lb-close{position:absolute;top:1.2rem;right:1.4rem;color:#fff;font-size:2rem;line-height:1;cursor:pointer;opacity:0.7;}
-#lb-overlay .lb-close:hover{opacity:1;}
+#lb-overlay img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.6);pointer-events:none;}
+#lb-close{position:fixed;top:1rem;right:1.2rem;color:#fff;font-size:2.2rem;line-height:1;cursor:pointer;background:rgba(0,0,0,0.5);border-radius:50%;width:2.4rem;height:2.4rem;display:flex;align-items:center;justify-content:center;z-index:10000;user-select:none;}
 .gallery-img{cursor:zoom-in;}
 </style>
 <div id="lb-overlay" role="dialog" aria-modal="true">
-  <span class="lb-close" aria-label="Cerrar">&times;</span>
   <img id="lb-img" src="" alt="">
 </div>
+<div id="lb-close" aria-label="Cerrar">&#215;</div>
 <script>
 (function(){
   var overlay=document.getElementById('lb-overlay');
   var lbImg=document.getElementById('lb-img');
+  var closeBtn=document.getElementById('lb-close');
+  function openLb(src,alt){lbImg.src=src;lbImg.alt=alt;overlay.classList.add('active');closeBtn.style.display='flex';document.body.style.overflow='hidden';}
+  function closeLb(){overlay.classList.remove('active');closeBtn.style.display='none';document.body.style.overflow='';}
+  closeBtn.style.display='none';
   document.querySelectorAll('.gallery-img').forEach(function(img){
-    img.addEventListener('click',function(){
-      lbImg.src=img.src;
-      lbImg.alt=img.alt;
-      overlay.classList.add('active');
-      document.body.style.overflow='hidden';
-    });
+    img.addEventListener('click',function(){openLb(img.src,img.alt);});
   });
-  function close(){overlay.classList.remove('active');document.body.style.overflow='';}
-  overlay.addEventListener('click',function(e){if(e.target!==lbImg)close();});
-  document.querySelector('.lb-close').addEventListener('click',close);
-  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+  overlay.addEventListener('click',closeLb);
+  closeBtn.addEventListener('click',closeLb);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
 })();
 </script>
 
