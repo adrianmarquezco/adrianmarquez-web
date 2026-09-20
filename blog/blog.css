@@ -56,6 +56,14 @@
 .blog-empty { grid-column: span 3; text-align: center; padding: 5rem 2rem; background: var(--bg); }
 .blog-empty p { font-size: 0.88rem; color: var(--text-muted); }
 
+/* Table of Contents */
+.blog-toc { background: var(--bg3); border: 1px solid var(--border); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 0 0 2.5rem; }
+.blog-toc-title { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; font-family: 'DM Sans', sans-serif; }
+.blog-toc ol { padding-left: 1.3rem; margin: 0; }
+.blog-toc li { font-size: 0.88rem; line-height: 1.7; color: rgba(240,237,232,0.78); margin-bottom: 0.25rem; }
+.blog-toc a { color: rgba(240,237,232,0.72); text-decoration: none; transition: color 0.2s; }
+.blog-toc a:hover { color: var(--gold); }
+
 /* Neutralise global section padding inside article body */
 .blog-content section { padding: 0; margin: 0 0 2rem; }
 

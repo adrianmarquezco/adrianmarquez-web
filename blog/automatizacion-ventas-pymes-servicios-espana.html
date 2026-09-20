@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -175,7 +175,26 @@
 
 <p>En este artículo explico qué automatizar, con qué herramientas y en qué orden. Con ejemplos de sectores concretos como consultoría, gestoría, clínicas y agencias.</p>
 
-<h2>TL;DR — Lo más importante si tienes poco tiempo</h2>
+<nav class="blog-toc" aria-label="Índice del artículo">
+  <p class="blog-toc-title">En este artículo</p>
+  <ol>
+    <li><a href="#tldr-lo-mas-importante-si-tienes-poco-tiempo">TL;DR — Lo más importante si tienes poco tiempo</a></li>
+    <li><a href="#por-que-las-pymes-de-servicios-tienen-un-problema-de-ventas-que-no-es-de-ventas">¿Por qué las pymes de servicios tienen un problema de ventas que no es de ventas?</a></li>
+    <li><a href="#el-mapa-del-proceso-comercial-que-debes-automatizar">El mapa del proceso comercial que debes automatizar</a></li>
+    <li><a href="#que-herramientas-usar-para-automatizar-ventas-en-una-pyme-de-servicios">¿Qué herramientas usar para automatizar ventas en una pyme de servicios?</a></li>
+    <li><a href="#flujo-real-1-respuesta-inmediata-al-lead-nuevo-el-mas-importante">Flujo real 1: respuesta inmediata al lead nuevo (el más importante)</a></li>
+    <li><a href="#flujo-real-2-secuencia-de-seguimiento-postreunion">Flujo real 2: secuencia de seguimiento post-reunión</a></li>
+    <li><a href="#flujo-real-3-cualificacion-automatica-antes-de-la-reunion">Flujo real 3: cualificación automática antes de la reunión</a></li>
+    <li><a href="#cuanto-tiempo-lleva-implementar-esto-y-que-coste-tiene">¿Cuánto tiempo lleva implementar esto y qué coste tiene?</a></li>
+    <li><a href="#errores-comunes-al-automatizar-el-proceso-comercial">Errores comunes al automatizar el proceso comercial</a></li>
+    <li><a href="#que-metricas-debes-monitorizar-en-un-pipeline-automatizado">¿Qué métricas debes monitorizar en un pipeline automatizado?</a></li>
+    <li><a href="#preguntas-frecuentes-sobre-automatizacion-de-ventas-en-pymes-de-servicios">Preguntas frecuentes sobre automatización de ventas en pymes de servicios</a></li>
+    <li><a href="#siguiente-paso-empieza-por-un-solo-flujo">Siguiente paso: empieza por un solo flujo</a></li>
+    <li><a href="#quieres-aplicar-esto-en-tu-negocio">¿Quieres aplicar esto en tu negocio?</a></li>
+  </ol>
+</nav>
+
+<h2 id="tldr-lo-mas-importante-si-tienes-poco-tiempo">TL;DR — Lo más importante si tienes poco tiempo</h2>
 <ul>
   <li>El 78% de los clientes compra al primero que responde. La velocidad de respuesta es la primera variable a automatizar.</li>
   <li>Un pipeline automatizado cubre: captación → cualificación → propuesta → seguimiento → contrato. Cada paso puede funcionar sin intervención manual.</li>
@@ -185,7 +204,7 @@
   <li>No automatices la propuesta completa desde el principio. Automatiza el aviso de que toca enviarla y la plantilla base.</li>
 </ul>
 
-<h2>¿Por qué las pymes de servicios tienen un problema de ventas que no es de ventas?</h2>
+<h2 id="por-que-las-pymes-de-servicios-tienen-un-problema-de-ventas-que-no-es-de-ventas">¿Por qué las pymes de servicios tienen un problema de ventas que no es de ventas?</h2>
 
 <p>El problema no es que no lleguen leads. Es que el proceso entre "llegó un lead" y "firmó el contrato" está lleno de pasos manuales que dependen de la memoria y la disponibilidad de una persona. Cuando esa persona está ocupada o de vacaciones, el pipeline se para. La automatización comercial elimina esa dependencia.</p>
 
@@ -193,7 +212,7 @@
 
 <p>En una gestoría con la que trabajé en Vigo, los leads que llegaban por web tardaban una media de 6 horas en recibir respuesta. Con un flujo básico de notificación y respuesta automática, ese tiempo bajó a 4 minutos. La tasa de reuniones agendadas subió un 31% en el primer mes.</p>
 
-<h2>El mapa del proceso comercial que debes automatizar</h2>
+<h2 id="el-mapa-del-proceso-comercial-que-debes-automatizar">El mapa del proceso comercial que debes automatizar</h2>
 
 <p>Antes de hablar de herramientas, hay que entender qué pasos tiene un proceso de ventas típico en servicios y cuáles son automatizables. No todos lo son de la misma forma ni con el mismo impacto.</p>
 
@@ -258,7 +277,7 @@
   </tbody>
 </table>
 
-<h2>¿Qué herramientas usar para automatizar ventas en una pyme de servicios?</h2>
+<h2 id="que-herramientas-usar-para-automatizar-ventas-en-una-pyme-de-servicios">¿Qué herramientas usar para automatizar ventas en una pyme de servicios?</h2>
 
 <p>No hay una sola herramienta que haga todo. Un stack eficiente para pymes de servicios en España combina un CRM, una herramienta de automatización de flujos y herramientas específicas para firma digital y agendado. Lo importante es que se comuniquen entre sí sin fricción.</p>
 
@@ -282,7 +301,7 @@
   <li><strong>Brevo o ActiveCampaign</strong>: para secuencias de seguimiento por email si el CRM principal no las incluye.</li>
 </ul>
 
-<h2>Flujo real 1: respuesta inmediata al lead nuevo (el más importante)</h2>
+<h2 id="flujo-real-1-respuesta-inmediata-al-lead-nuevo-el-mas-importante">Flujo real 1: respuesta inmediata al lead nuevo (el más importante)</h2>
 
 <p>Este es el flujo con mayor impacto y menor complejidad. Se implementa en pocas horas y tiene efecto inmediato en la tasa de contacto. Funciona así: un lead rellena el formulario de tu web → n8n detecta el nuevo registro → envía email personalizado de respuesta en menos de 5 minutos → notifica al comercial por Slack o WhatsApp → crea la oportunidad en el CRM con estado "Nuevo" → agenda tarea de seguimiento en 24 horas.</p>
 
@@ -292,7 +311,7 @@
 
 <p>Una clínica dental recibe entre 40 y 60 solicitudes de presupuesto al mes por web y redes sociales. Antes, una administrativa revisaba el email tres veces al día. Con el flujo automatizado, cada solicitud recibe respuesta en menos de 3 minutos, con el nombre del paciente, el tratamiento solicitado y un enlace para elegir día de visita. El porcentaje de visitas que se concretan subió del 38% al 61%.</p>
 
-<h2>Flujo real 2: secuencia de seguimiento post-reunión</h2>
+<h2 id="flujo-real-2-secuencia-de-seguimiento-postreunion">Flujo real 2: secuencia de seguimiento post-reunión</h2>
 
 <p>El seguimiento es donde se pierden más ventas en servicios. La reunión fue bien, el cliente pareció interesado, pero nadie le escribió a los 3 días y la semana siguiente ya estaba hablando con la competencia. Un flujo de seguimiento automatizado elimina ese riesgo.</p>
 
@@ -300,7 +319,7 @@
 
 <p>Esta secuencia se configura en el CRM o en una herramienta como ActiveCampaign, y se activa automáticamente cuando la oportunidad pasa a estado "Reunión realizada". El comercial puede pausarla o modificarla si la situación lo requiere, pero el sistema funciona por defecto.</p>
 
-<h2>Flujo real 3: cualificación automática antes de la reunión</h2>
+<h2 id="flujo-real-3-cualificacion-automatica-antes-de-la-reunion">Flujo real 3: cualificación automática antes de la reunión</h2>
 
 <p>No todos los leads merecen el mismo tiempo. Una llamada de 45 minutos con alguien que no tiene presupuesto ni urgencia es tiempo que no se puede recuperar. La cualificación automática filtra antes de que eso ocurra.</p>
 
@@ -308,7 +327,7 @@
 
 <p>Esto parece arriesgado, pero los datos lo respaldan. Según <a href="https://www.gartner.com" target="_blank" rel="noopener">Gartner</a>, el 50% del tiempo de ventas en B2B se gasta en prospectos que nunca van a comprar (2023). Cualificar antes ahorra ese tiempo.</p>
 
-<h2>¿Cuánto tiempo lleva implementar esto y qué coste tiene?</h2>
+<h2 id="cuanto-tiempo-lleva-implementar-esto-y-que-coste-tiene">¿Cuánto tiempo lleva implementar esto y qué coste tiene?</h2>
 
 <p>Un flujo básico de respuesta inmediata y notificación al equipo se puede implementar en una tarde si ya tienes CRM. Una secuencia completa con cualificación, seguimiento post-reunión y firma digital lleva entre 6 y 10 semanas de trabajo real, incluyendo pruebas y ajustes.</p>
 
@@ -323,7 +342,7 @@
 
 <p>El retorno llega rápido. Si un comercial dedica 2 horas al día a tareas que se pueden automatizar (recordatorios, envío de información estándar, actualización del CRM), eso son 40 horas al mes. A un coste de oportunidad conservador de 25 €/hora, son 1.000 € al mes de tiempo liberado. Con una inversión de 150 € en herramientas.</p>
 
-<h2>Errores comunes al automatizar el proceso comercial</h2>
+<h2 id="errores-comunes-al-automatizar-el-proceso-comercial">Errores comunes al automatizar el proceso comercial</h2>
 
 <p>El error más frecuente es automatizar antes de tener el proceso definido. Si hoy tu proceso de ventas es caótico, automatizarlo solo acelera el caos. Antes de implementar cualquier flujo, mapea en papel los pasos que funcionan y los que no. Solo entonces automatiza.</p>
 
@@ -333,7 +352,7 @@
 
 <p>Si quieres ver cómo encaja la automatización comercial dentro de una estrategia de automatización más amplia para tu empresa, en el servicio de <a href="/servicios/automatizacion-ia.html">automatización con IA y n8n</a> trabajamos exactamente este tipo de implementaciones para pymes de servicios en España.</p>
 
-<h2>¿Qué métricas debes monitorizar en un pipeline automatizado?</h2>
+<h2 id="que-metricas-debes-monitorizar-en-un-pipeline-automatizado">¿Qué métricas debes monitorizar en un pipeline automatizado?</h2>
 
 <p>Un pipeline automatizado sin métricas es una caja negra. Las métricas que debes tener siempre visibles son: tiempo de respuesta al lead nuevo (objetivo: menos de 10 minutos), tasa de conversión de lead a reunión, tasa de conversión de reunión a propuesta, tasa de cierre (propuesta a contrato firmado) y duración media del ciclo de ventas. Con esos cinco datos sabes exactamente dónde se rompe tu embudo.</p>
 
@@ -341,7 +360,7 @@
 
 <hr>
 
-<h2>Preguntas frecuentes sobre automatización de ventas en pymes de servicios</h2>
+<h2 id="preguntas-frecuentes-sobre-automatizacion-de-ventas-en-pymes-de-servicios">Preguntas frecuentes sobre automatización de ventas en pymes de servicios</h2>
 
 <div class="faq-list">
   <div class="faq-item">
@@ -370,7 +389,7 @@
   </div>
 </div>
 
-<h2>Siguiente paso: empieza por un solo flujo</h2>
+<h2 id="siguiente-paso-empieza-por-un-solo-flujo">Siguiente paso: empieza por un solo flujo</h2>
 
 <p>No hace falta automatizar todo a la vez. El primer flujo que debes implementar es el de respuesta inmediata al lead nuevo. Tiene el mayor impacto, la menor complejidad técnica y los resultados se ven en la primera semana. Una vez funciona, añades la cualificación. Luego el seguimiento. Así es como se construye un proceso comercial que trabaja aunque el comercial esté en una reunión o de vacaciones.</p>
 
@@ -409,7 +428,7 @@
 
 <div class="cta-strip">
   <div class="cta-strip-text">
-    <h2>¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
+    <h2 id="quieres-aplicar-esto-en-tu-negocio">¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
     <p>Primera consulta gratuita, sin compromiso.</p>
   </div>
   <div class="cta-strip-actions">

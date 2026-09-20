@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -172,7 +172,24 @@
 
 <p>Los flujos de aprobación son el cuello de botella más silencioso de una pyme de servicios. Un presupuesto que espera firma tres días. Una factura de proveedor que nadie ha validado. Un contrato que lleva una semana en el correo del responsable sin respuesta. <strong>Automatizar estos flujos reduce los tiempos de espera hasta un 70%</strong> y elimina los errores por olvido. En este artículo te explico cómo funciona en la práctica, con qué herramientas y por dónde empezar.</p>
 
-<h2>TL;DR — Lo que necesitas saber</h2>
+<nav class="blog-toc" aria-label="Índice del artículo">
+  <p class="blog-toc-title">En este artículo</p>
+  <ol>
+    <li><a href="#tldr-lo-que-necesitas-saber">TL;DR — Lo que necesitas saber</a></li>
+    <li><a href="#por-que-los-flujos-de-aprobacion-manual-frenan-a-las-pymes-de-servicios">¿Por qué los flujos de aprobación manual frenan a las pymes de servicios?</a></li>
+    <li><a href="#que-documentos-se-pueden-automatizar-en-una-empresa-de-servicios">¿Qué documentos se pueden automatizar en una empresa de servicios?</a></li>
+    <li><a href="#como-funciona-un-flujo-de-aprobacion-automatizado-el-ciclo-completo">Cómo funciona un flujo de aprobación automatizado: el ciclo completo</a></li>
+    <li><a href="#flujos-de-aprobacion-con-n8n-un-ejemplo-real-para-una-pyme-de-servicios">Flujos de aprobación con n8n: un ejemplo real para una pyme de servicios</a></li>
+    <li><a href="#herramientas-para-automatizar-aprobaciones-que-usa-cada-tipo-de-pyme">Herramientas para automatizar aprobaciones: qué usa cada tipo de pyme</a></li>
+    <li><a href="#los-tres-errores-que-cometen-las-pymes-al-automatizar-aprobaciones">Los tres errores que cometen las pymes al automatizar aprobaciones</a></li>
+    <li><a href="#cuanto-cuesta-y-cuanto-ahorra-automatizar-las-aprobaciones">¿Cuánto cuesta y cuánto ahorra automatizar las aprobaciones?</a></li>
+    <li><a href="#por-donde-empezar-la-hoja-de-ruta-en-cuatro-pasos">Por dónde empezar: la hoja de ruta en cuatro pasos</a></li>
+    <li><a href="#preguntas-frecuentes-sobre-flujos-de-aprobacion-automatizados">Preguntas frecuentes sobre flujos de aprobación automatizados</a></li>
+    <li><a href="#quieres-aplicar-esto-en-tu-negocio">¿Quieres aplicar esto en tu negocio?</a></li>
+  </ol>
+</nav>
+
+<h2 id="tldr-lo-que-necesitas-saber">TL;DR — Lo que necesitas saber</h2>
 <ul>
   <li>Los flujos de aprobación manuales consumen entre 2 y 4 horas semanales por persona implicada, según <a href="https://www.mckinsey.com" target="_blank" rel="noopener">McKinsey</a>.</li>
   <li>Cualquier documento que necesite un «sí» antes de avanzar es candidato a automatizarse: presupuestos, facturas, contratos, gastos internos.</li>
@@ -182,7 +199,7 @@
   <li>No hace falta saber programar para implementar flujos básicos, pero un consultor especializado acelera el proceso.</li>
 </ul>
 
-<h2>¿Por qué los flujos de aprobación manual frenan a las pymes de servicios?</h2>
+<h2 id="por-que-los-flujos-de-aprobacion-manual-frenan-a-las-pymes-de-servicios">¿Por qué los flujos de aprobación manual frenan a las pymes de servicios?</h2>
 
 <p>Imagina que diriges una consultoría de doce personas. Cada semana se generan quince presupuestos, diez facturas de proveedores y tres o cuatro solicitudes de gasto. Cada una necesita que alguien las revise y diga que sí. Ese «alguien» tiene otras veinte cosas urgentes. El resultado: retrasos, clientes esperando, proveedores que llaman y un equipo frustrado.</p>
 
@@ -190,7 +207,7 @@
 
 <p>El flujo de aprobación manual tiene tres fallos estructurales. Primero, depende de que alguien recuerde revisar su correo. Segundo, no deja rastro auditado de quién aprobó qué y cuándo. Tercero, si el responsable está de vacaciones, todo se paraliza.</p>
 
-<h2>¿Qué documentos se pueden automatizar en una empresa de servicios?</h2>
+<h2 id="que-documentos-se-pueden-automatizar-en-una-empresa-de-servicios">¿Qué documentos se pueden automatizar en una empresa de servicios?</h2>
 
 <p>La respuesta corta: cualquier documento que necesite que alguien diga «sí» antes de que el proceso continúe. En pymes de servicios los más habituales son estos:</p>
 
@@ -205,7 +222,7 @@
 
 <p>En una pyme de servicios mediana, automatizar solo los presupuestos y las facturas de proveedores supone recuperar entre cuatro y seis horas semanales de trabajo productivo.</p>
 
-<h2>Cómo funciona un flujo de aprobación automatizado: el ciclo completo</h2>
+<h2 id="como-funciona-un-flujo-de-aprobacion-automatizado-el-ciclo-completo">Cómo funciona un flujo de aprobación automatizado: el ciclo completo</h2>
 
 <p>Un flujo de aprobación automatizado tiene siempre la misma lógica, aunque varíe la herramienta. Se activa cuando alguien genera un documento o hace una solicitud. El sistema identifica quién tiene que aprobarlo, le notifica por el canal adecuado (email, Slack, Teams), espera su respuesta y ejecuta la siguiente acción según la decisión tomada.</p>
 
@@ -224,7 +241,7 @@
 <h3>Fase 5: Registro y trazabilidad</h3>
 <p>Cada decisión queda registrada automáticamente: quién aprobó, cuándo, desde qué dispositivo. Esto es imprescindible para auditorías internas, cumplimiento normativo y para evitar los clásicos «yo no aprobé eso».</p>
 
-<h2>Flujos de aprobación con n8n: un ejemplo real para una pyme de servicios</h2>
+<h2 id="flujos-de-aprobacion-con-n8n-un-ejemplo-real-para-una-pyme-de-servicios">Flujos de aprobación con n8n: un ejemplo real para una pyme de servicios</h2>
 
 <p>Uno de los flujos que más impacto tiene en pymes de servicios es la aprobación de presupuestos. Te explico cómo funciona con n8n en un caso concreto.</p>
 
@@ -245,7 +262,7 @@
 
 <p>Si quieres entender cómo este tipo de automatización encaja en una estrategia más amplia, el artículo sobre <a href="/blog/automatizacion-procesos-pymes-servicios-espana.html">estrategia de automatización para pymes de servicios en España</a> te da el marco completo con hoja de ruta y cálculo de ROI.</p>
 
-<h2>Herramientas para automatizar aprobaciones: qué usa cada tipo de pyme</h2>
+<h2 id="herramientas-para-automatizar-aprobaciones-que-usa-cada-tipo-de-pyme">Herramientas para automatizar aprobaciones: qué usa cada tipo de pyme</h2>
 
 <table>
   <thead>
@@ -292,7 +309,7 @@
 
 <p>Mi recomendación general para pymes de servicios en España: n8n si tienes o contratas a alguien con conocimientos técnicos, Make si prefieres que sea un perfil no técnico del equipo quien lo gestione. Zapier tiene un ecosistema de integraciones enorme, pero su precio escala rápido con el volumen.</p>
 
-<h2>Los tres errores que cometen las pymes al automatizar aprobaciones</h2>
+<h2 id="los-tres-errores-que-cometen-las-pymes-al-automatizar-aprobaciones">Los tres errores que cometen las pymes al automatizar aprobaciones</h2>
 
 <p>He visto estos errores repetirse en casi todos los proyectos de automatización que he acompañado. No son errores técnicos. Son errores de diseño del proceso.</p>
 
@@ -305,7 +322,7 @@
 <h3>Error 3: No comunicar el cambio al equipo</h3>
 <p>El flujo automatizado puede ser técnicamente perfecto y fracasar porque el equipo no sabe que existe, no confía en él o sigue enviando correos al responsable de siempre. La implantación debe incluir formación y un período de acompañamiento. Si quieres saber cómo gestionar esto, en el apartado de <a href="/servicios/formacion-empresas.html">formación para empresas</a> trabajo específicamente la adopción de nuevas herramientas por parte del equipo.</p>
 
-<h2>¿Cuánto cuesta y cuánto ahorra automatizar las aprobaciones?</h2>
+<h2 id="cuanto-cuesta-y-cuanto-ahorra-automatizar-las-aprobaciones">¿Cuánto cuesta y cuánto ahorra automatizar las aprobaciones?</h2>
 
 <p>Las cifras varían según el tamaño de la empresa y la complejidad de los flujos, pero estos son los rangos habituales que veo en pymes de servicios españolas de entre cinco y treinta personas.</p>
 
@@ -317,7 +334,7 @@
 
 <p>El ROI en la mayoría de casos llega antes de los tres meses. Si quieres calcular el tuyo con números reales de tu empresa, el servicio de <a href="/servicios/consultoria-negocio.html">consultoría de negocio digital</a> incluye un análisis de procesos donde identificamos exactamente qué automatizar primero y qué retorno puedes esperar.</p>
 
-<h2>Por dónde empezar: la hoja de ruta en cuatro pasos</h2>
+<h2 id="por-donde-empezar-la-hoja-de-ruta-en-cuatro-pasos">Por dónde empezar: la hoja de ruta en cuatro pasos</h2>
 
 <p>No intentes automatizar todo a la vez. Empieza por el flujo que más fricción genera hoy en tu empresa. Este orden funciona bien en la mayoría de pymes de servicios:</p>
 
@@ -330,7 +347,7 @@
 
 <p>Si quieres contexto más amplio sobre cómo priorizar qué automatizar y en qué orden, el artículo sobre <a href="/servicios/automatizacion-ia.html">automatización con IA y n8n</a> explica el enfoque que usamos para construir la hoja de ruta de cada empresa.</p>
 
-<h2>Preguntas frecuentes sobre flujos de aprobación automatizados</h2>
+<h2 id="preguntas-frecuentes-sobre-flujos-de-aprobacion-automatizados">Preguntas frecuentes sobre flujos de aprobación automatizados</h2>
 
 <div class="faq-list">
   <div class="faq-item">
@@ -392,7 +409,7 @@
 
 <div class="cta-strip">
   <div class="cta-strip-text">
-    <h2>¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
+    <h2 id="quieres-aplicar-esto-en-tu-negocio">¿Quieres aplicar esto en tu <em>negocio</em>?</h2>
     <p>Primera consulta gratuita, sin compromiso.</p>
   </div>
   <div class="cta-strip-actions">
