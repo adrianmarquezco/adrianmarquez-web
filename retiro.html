@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/images/adrian-marquez-profesional.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retiro Digital — Lista de Espera | Adrián Márquez</title>
+<meta name="description" content="Un retiro para empresarios y profesionales del sector digital. Networking real, sinergias, invitados que aportan de verdad y una atmósfera completamente sin estrés. Apúntate a la lista de espera.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://adrianmarquez.es/retiro.html">
+<meta property="og:title" content="Retiro Digital — Lista de Espera | Adrián Márquez">
+<meta property="og:description" content="Un retiro para personas del sector digital que quieren hacer contactos reales, generar sinergias y aprender de invitados que sí que aportan. Sin estrés, en modo colegueo.">
+<meta property="og:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="1067">
+<meta name="twitter:image" content="https://adrianmarquez.es/images/adrian-marquez-profesional.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://adrianmarquez.es/retiro.html">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=16">
+<link rel="stylesheet" href="components-premium.css?v=10">
+<style>
+/* ── Retiro Hero ── */
+.retiro-hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 7rem 1.5rem 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.retiro-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.retiro-eyebrow {
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.retiro-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  max-width: 820px;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+.retiro-hero h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.retiro-lead {
+  font-size: clamp(1rem, 1.8vw, 1.18rem);
+  color: var(--text-muted);
+  max-width: 580px;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+.retiro-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.retiro-badge {
+  font-size: 0.73rem;
+  letter-spacing: 0.05em;
+  color: rgba(240,237,232,0.6);
+  border: 1px solid rgba(201,168,76,0.2);
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+}
+/* ── Form card ── */
+.retiro-form-wrap {
+  max-width: 480px;
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem 2rem 1.75rem;
+  text-align: left;
+}
+.retiro-form-title {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.3rem;
+}
+.retiro-form-subtitle {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+.rf-group { margin-bottom: 0.9rem; }
+.rf-label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.rf-input, .rf-select {
+  width: 100%;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.87rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.rf-input::placeholder { color: var(--text-muted); opacity: 0.5; }
+.rf-input:focus, .rf-select:focus {
+  border-color: rgba(201,168,76,0.65);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+}
+.rf-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.rf-consent input[type="checkbox"] {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+.rf-consent a { color: var(--gold); }
+.rf-submit {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+.rf-trust {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: 0.7rem;
+  text-align: center;
+  line-height: 1.55;
+}
+.rf-alert {
+  display: none;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  border-radius: 6px;
+}
+.rf-alert-error {
+  background: rgba(184,84,84,0.1);
+  border: 1px solid rgba(184,84,84,0.3);
+  color: #c97070;
+}
+.rf-alert-success {
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold);
+}
+.rf-alert.visible { display: block; }
+/* ── Pilares ── */
+.retiro-pillars {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 5rem 1.5rem;
+}
+.pillar {
+  padding: 1.75rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.pillar-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.85rem;
+  display: block;
+}
+.pillar-title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.pillar-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+/* ── Carta de Adrián ── */
+.retiro-carta {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+.retiro-carta-inner {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+.retiro-carta-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.25rem;
+  font-family: 'DM Sans', sans-serif;
+}
+.retiro-carta p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 1.1rem;
+}
+.retiro-carta p:last-child { margin-bottom: 0; }
+.retiro-carta strong { color: var(--text); font-weight: 500; }
+.retiro-firma {
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.retiro-firma img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(20%);
+}
+.retiro-firma-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+.retiro-firma-role {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+/* ── CTA final ── */
+.retiro-cta-bottom {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+}
+.retiro-cta-bottom h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+.retiro-cta-bottom h2 em { font-style: italic; color: var(--gold); }
+.retiro-cta-bottom p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+@media (max-width: 640px) {
+  .retiro-form-wrap { padding: 1.5rem; }
+  .retiro-carta-inner { padding: 1.5rem; }
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"Retiro Digital — Adrián Márquez","description":"Retiro para empresarios y profesionales del sector digital. Networking, sinergias, invitados especiales y ambiente sin estrés. Lista de espera abierta.","organizer":{"@type":"Person","name":"Adrián Márquez Corral","url":"https://adrianmarquez.es"},"eventStatus":"https://schema.org/EventScheduled","location":{"@type":"Place","name":"Por confirmar — España"},"url":"https://adrianmarquez.es/retiro.html"}
+</script>
+</head>
+<body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav>
+  <a href="/" class="nav-logo brand-wordmark" aria-label="Adrián Márquez — Inicio"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="16" r="3.5" fill="#C9A84C"/><circle cx="24" cy="8" r="3.5" fill="#C9A84C"/><circle cx="24" cy="24" r="3.5" fill="#C9A84C"/><path d="M11.5 15L20.5 9.5M11.5 17L20.5 22.5" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round"/></svg></span><span class="brand-text">Adrián <span class="brand-accent">Márquez</span></span></a>
+  <ul class="nav-links">
+    <li><a href="/">Inicio</a></li>
+    <li><a href="/sobre-mi.html">Sobre mí</a></li>
+    <li class="has-dropdown"><a href="/servicios.html">Servicios</a><ul class="nav-dropdown"><li><a href="/servicios/estrategia-digital.html">Estrategia Digital</a></li><li><a href="/servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad Digital</a></li><li><a href="/servicios/consultoria-negocio.html">Consultoría de Negocio</a></li><li><a href="/servicios/formacion-empresas.html">Formación Empresas</a></li><li><a href="/servicios/formacion-personalizada/">Formación Personalizada IA</a></li><li><a href="/servicios/diseno-web.html">Diseño Web</a></li><li><a href="/servicios/software-a-medida.html">Software a Medida</a></li></ul></li>
+    <li class="has-dropdown"><a href="/sectores/">Sectores</a><ul class="nav-dropdown"><li><a href="/sectores/abogados-despachos.html">Abogados y despachos</a></li><li><a href="/sectores/academias-formacion.html">Academias y formación</a></li><li><a href="/sectores/asesorias-despachos.html">Asesorías y despachos</a></li><li><a href="/sectores/clinicas-salud.html">Clínicas y salud</a></li><li><a href="/sectores/estetica-peluquerias.html">Estética y peluquerías</a></li><li><a href="/sectores/hosteleria.html">Hostelería</a></li><li><a href="/sectores/inmobiliarias.html">Inmobiliarias</a></li><li><a href="/sectores/psicologos-terapeutas.html">Psicólogos y terapeutas</a></li><li><a href="/sectores/reformas-construccion.html">Reformas y construcción</a></li></ul></li>
+    <li><a href="/proyectos.html">Proyectos</a></li>
+    <li><a href="/contacto.html">Contacto</a></li>
+  </ul>
+  <button class="nav-mobile-btn" id="navMobileBtn" aria-label="Menú">&#9776;</button>
+  <a href="#lista-espera" class="nav-cta">Apuntarme</a>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="retiro-hero">
+  <div class="retiro-eyebrow">Próximamente · Lista de espera abierta</div>
+  <h1>Un retiro para gente del <em>sector digital</em> que quiere hacer contactos de verdad</h1>
+  <p class="retiro-lead">Pocos días, ambiente completamente relajado, gente que realmente aporta e invitados que no encontrarías en ninguna conferencia. Sin ponencias interminables, sin tarjetas de visita que nadie guarda.</p>
+  <div class="retiro-badges">
+    <span class="retiro-badge">Networking real</span>
+    <span class="retiro-badge">Invitados especiales</span>
+    <span class="retiro-badge">Sin estrés</span>
+    <span class="retiro-badge">Sector digital &amp; negocio</span>
+    <span class="retiro-badge">Grupos reducidos</span>
+  </div>
+  <div class="retiro-form-wrap" id="lista-espera">
+    <div class="retiro-form-title">Apúntate a la lista de espera</div>
+    <p class="retiro-form-subtitle">Te avisaré cuando haya novedades sobre fechas, ubicación y plazas. Sin spam, solo lo que importe.</p>
+    <div class="rf-alert rf-alert-error" id="rfAlertError" role="alert"></div>
+    <div class="rf-alert rf-alert-success" id="rfAlertSuccess" role="status"></div>
+    <form id="retiroForm" action="https://formspree.io/f/mdajdpby" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Lista de espera — Retiro Digital">
+      <input type="hidden" name="origen" value="retiro-lista-espera">
+      <div class="rf-group">
+        <label class="rf-label" for="rf-nombre">Nombre *</label>
+        <input class="rf-input" type="text" id="rf-nombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required>
+      </div>
+      <div class="rf-group">
+        <label class="rf-label" for="rf-email">Email *</label>
+        <input class="rf-input" type="email" id="rf-email" name="email" placeholder="tu@email.com" autocomplete="email" required>
+      </div>
+      <div class="rf-group">
+        <label class="rf-label" for="rf-perfil">¿A qué te dedicas? (opcional)</label>
+        <input class="rf-input" type="text" id="rf-perfil" name="perfil" placeholder="Ej: founder de SaaS, consultor de marketing, dev...">
+      </div>
+      <label class="rf-consent">
+        <input type="checkbox" name="consentimiento" id="rf-consent" required>
+        Acepto recibir comunicaciones de Adrián Márquez sobre el retiro. Puedo darme de baja cuando quiera. <a href="/politica-privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>.
+      </label>
+      <button type="submit" class="btn-primary rf-submit" id="rfSubmitBtn">Quiero apuntarme →</button>
+      <p class="rf-trust">Datos confidenciales · Solo para avisarte del retiro · Sin spam</p>
+    </form>
+  </div>
+</section>
+
+<!-- ── PILARES ── -->
+<section style="background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div style="max-width:1100px;margin:0 auto;padding:5rem 1.5rem;">
+    <div style="text-align:center;margin-bottom:3rem;">
+      <div class="section-label">Por qué es diferente</div>
+      <h2 class="section-title" style="max-width:600px;margin:0.5rem auto 0;">Lo que hace que valga la pena desconectar unos días</h2>
+    </div>
+    <div class="retiro-pillars" style="padding:0;">
+      <div class="pillar">
+        <span class="pillar-icon">🤝</span>
+        <div class="pillar-title">Conexiones reales</div>
+        <p class="pillar-desc">Sin el ruido de un evento masivo. Grupos reducidos donde puedes tener conversaciones de fondo con personas que están en el mismo punto que tú.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">⚡</span>
+        <div class="pillar-title">Sinergias que se convierten en algo</div>
+        <p class="pillar-desc">El formato informal favorece que aparezcan colaboraciones, proyectos conjuntos y oportunidades que no surgen en una sala de conferencias.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🎤</span>
+        <div class="pillar-title">Invitados que aportan de verdad</div>
+        <p class="pillar-desc">Gente con trayectoria real en el sector digital, sin filtros de grandes eventos. Conversaciones cercanas, preguntas directas, sin protocolo.</p>
+      </div>
+      <div class="pillar">
+        <span class="pillar-icon">🌿</span>
+        <div class="pillar-title">Cero presión</div>
+        <p class="pillar-desc">No hay agenda que cumplir a rajatabla ni obligación de estar en todo. El ritmo lo marcas tú. La idea es que salgas con energía, no sin ella.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CARTA DE ADRIÁN ── -->
+<section>
+  <div class="retiro-carta">
+    <div class="retiro-carta-inner">
+      <div class="retiro-carta-label">Una nota de Adrián</div>
+      <p>Llevo tiempo pensando en lo raro que es el networking tradicional. Pagas 300€ por entrar a un evento, escuchas cuatro ponencias que podrías ver en YouTube, intercambias tarjetas con 40 personas a las que no vuelves a ver y vuelves a casa sin nada concreto. Y sin embargo, las mejores colaboraciones y oportunidades que he tenido vinieron de dos o tres conversaciones en un contexto completamente diferente — relajado, sin el corsé del "evento".</p>
+      <p>Quiero crear ese contexto de forma intencionada. <strong>Un retiro de pocos días para personas que trabajan en el sector digital o lideran negocios</strong>, donde la agenda informal sea la protagonista y los invitados estén ahí para hablar de verdad, no para dar un discurso de 45 minutos y desaparecer.</p>
+      <p>Todavía estoy cerrando detalles de fechas y ubicación. Si te apuntas a la lista de espera, te avisaré antes que a nadie cuando tenga algo concreto que contar.</p>
+      <div class="retiro-firma">
+        <img src="/images/adrian-marquez-profesional.png" alt="Adrián Márquez" loading="lazy">
+        <div>
+          <div class="retiro-firma-name">Adrián Márquez</div>
+          <div class="retiro-firma-role">Organizador del retiro · adrianmarquez.es</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA FINAL ── -->
+<section class="retiro-cta-bottom">
+  <h2>¿Te va este plan? <em>Apúntate ahora.</em></h2>
+  <p>La lista de espera es gratuita. Te aviso en cuanto haya fechas, ubicación y plazas disponibles. Las plazas serán limitadas para mantener el formato reducido.</p>
+  <a href="#lista-espera" class="btn-primary" style="display:inline-block;">Quiero apuntarme →</a>
+  <p style="margin-top:1rem;font-size:0.8rem;color:var(--text-muted);">¿Tienes dudas o quieres saber más antes? <a href="https://wa.me/34630780358" target="_blank" style="color:var(--gold);">Escríbeme por WhatsApp</a>.</p>
+</section>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand"><span class="footer-logo">Adrián <em>Márquez</em></span><p class="footer-tagline">Marketing digital, automatización con IA y producto digital · Galicia.</p></div>
+    <div><div class="footer-col-title">Servicios</div><ul class="footer-col-links"><li><a href="/servicios/consultoria-negocio.html">Consultoría de negocio</a></li><li><a href="/servicios/seo-geo.html">SEO, GEO y AEO</a></li><li><a href="/servicios/automatizacion-ia.html">Automatización &amp; IA</a></li><li><a href="/servicios/formacion-empresas.html">Formación empresas</a></li><li><a href="/servicios/formacion-personalizada/">Formación personalizada IA</a></li><li><a href="/servicios/publicidad-digital.html">Publicidad digital</a></li><li><a href="/servicios/estrategia-digital.html">Estrategia digital</a></li><li><a href="/servicios/diseno-web.html">Diseño web</a></li></ul></div>
+    <div><div class="footer-col-title">Sectores</div><ul class="footer-col-links"><li><a href="/sectores/abogados-despachos.html">Abogados y despachos</a></li><li><a href="/sectores/academias-formacion.html">Academias y formación</a></li><li><a href="/sectores/asesorias-despachos.html">Asesorías y despachos</a></li><li><a href="/sectores/clinicas-salud.html">Clínicas y salud</a></li><li><a href="/sectores/estetica-peluquerias.html">Estética y peluquerías</a></li><li><a href="/sectores/hosteleria.html">Hostelería</a></li><li><a href="/sectores/inmobiliarias.html">Inmobiliarias</a></li><li><a href="/sectores/psicologos-terapeutas.html">Psicólogos y terapeutas</a></li><li><a href="/sectores/reformas-construccion.html">Reformas y construcción</a></li></ul></div>
+    <div><div class="footer-col-title">Navegación</div><ul class="footer-col-links"><li><a href="/">Inicio</a></li><li><a href="/sobre-mi.html">Sobre mí</a></li><li><a href="/proyectos.html">Proyectos</a></li><li><a href="/blog/">Blog</a></li><li><a href="/retiro.html">Retiro Digital</a></li><li><a href="/contacto.html">Contacto</a></li></ul></div>
+    <div><div class="footer-col-title">Contacto directo</div><ul class="footer-col-links"><li><a href="mailto:hola@adrianmarquez.es">hola@adrianmarquez.es</a></li><li><a href="https://wa.me/34630780358" target="_blank">630 780 358</a></li></ul></div>
+    <div><div class="footer-col-title">Legal</div><ul class="footer-col-links"><li><a href="/aviso-legal.html">Aviso legal</a></li><li><a href="/politica-privacidad.html">Política de privacidad</a></li><li><a href="/politica-cookies.html">Política de cookies</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p class="footer-copy">© 2026 Adrián Márquez Corral · Galicia, España</p><div class="footer-social"><a href="https://www.tiktok.com/@marcs.ai" target="_blank" rel="noopener nofollow">TikTok</a><a href="https://www.youtube.com/@marcsai" target="_blank" rel="noopener nofollow">YouTube</a><a href="https://www.linkedin.com/in/adrian-marquez-corral/" target="_blank" rel="noopener">LinkedIn</a><a href="https://whatsapp.com/channel/0029Vb7n2e3JZg3zaqC4MV1L" target="_blank" rel="noopener nofollow">Canal IA</a></div></div>
+</footer>
+<script src="main.js?v=12"></script>
+<script>
+(function () {
+  const form = document.getElementById('retiroForm');
+  const submitBtn = document.getElementById('rfSubmitBtn');
+  const alertError = document.getElementById('rfAlertError');
+  const alertSuccess = document.getElementById('rfAlertSuccess');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    alertError.classList.remove('visible');
+    alertSuccess.classList.remove('visible');
+
+    const nombre = form.querySelector('#rf-nombre').value.trim();
+    const email = form.querySelector('#rf-email').value.trim();
+    const consent = form.querySelector('#rf-consent').checked;
+
+    if (!nombre) {
+      alertError.textContent = 'Por favor escribe tu nombre.';
+      alertError.classList.add('visible');
+      return;
+    }
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alertError.textContent = 'Por favor escribe un email válido.';
+      alertError.classList.add('visible');
+      return;
+    }
+    if (!consent) {
+      alertError.textContent = 'Necesito tu consentimiento para avisarte del retiro.';
+      alertError.classList.add('visible');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        alertSuccess.textContent = '¡Perfecto! Te he apuntado a la lista. Te aviso en cuanto haya novedades.';
+        alertSuccess.classList.add('visible');
+        if (window.dataLayer) window.dataLayer.push({ event: 'retiro_waitlist_signup' });
+        if (typeof gtag !== 'undefined') gtag('event', 'retiro_waitlist_signup');
+      } else {
+        throw new Error();
+      }
+    } catch {
+      alertError.textContent = 'Algo ha fallado. Escríbeme directamente a hola@adrianmarquez.es o por WhatsApp.';
+      alertError.classList.add('visible');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Quiero apuntarme →';
+    }
+  });
+})();
+</script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias, de Google Fonts y de Google Analytics (GTM) para análisis de visitas. Puedes aceptar o rechazar las analíticas. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
+<a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+</body>
+</html>
