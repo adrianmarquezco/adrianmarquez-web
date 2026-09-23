@@ -4,8 +4,6 @@ on:
   schedule:
     - cron: '0 */3 * * *'
   workflow_dispatch:
-  push:
-    branches: [main]
 
 concurrency:
   group: vigilante-adrianmarquez
@@ -22,10 +20,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Esperar despliegue (solo en push)
-        if: github.event_name == 'push'
-        run: sleep 300
 
       # ── Intento 1 ───────────────────────────────────────────────────────────
 
