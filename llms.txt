@@ -52,6 +52,18 @@ Más información: https://adrianmarquez.es/servicios/ecommerce/
 Departamento de marketing externo para pymes en una sola persona senior: estrategia, SEO, Google Ads, Meta Ads, redes sociales, web, CRM y automatización con IA. Cuota mensual sin permanencia, refuerzo de temporada (incluida la cobertura de bajas o vacaciones del responsable de marketing) o proyecto puntual. Alternativa a contratar un perfil de marketing en plantilla.
 Más información: https://adrianmarquez.es/servicios/marketing-externalizado.html
 
+### Transformación Digital e IA
+Técnico y responsable de transformación digital e inteligencia artificial externo para pymes: diagnóstico de procesos, automatización e integraciones con n8n y Make, asistentes e IA generativa aplicada a la operativa, cuadros de mando e informes automáticos, y formación del equipo. Por proyecto, por temporada o con dedicación mensual.
+Más información: https://adrianmarquez.es/servicios/transformacion-digital-ia.html
+
+### Formación obligatoria en IA (AI Act, artículo 4)
+Formación en alfabetización en IA para empresas y autónomos que usan herramientas de IA, para ayudar a cumplir el artículo 4 del Reglamento (UE) 2024/1689, en vigor desde el 2 de febrero de 2025. Contenido adaptado a las herramientas de la empresa, riesgos, protección de datos, política de uso y documentación (registro y certificados de asistencia). No es asesoramiento legal.
+Más información: https://adrianmarquez.es/servicios/formacion-ia-obligatoria.html
+
+### Formación en vibe coding
+Formación para crear webs, apps y herramientas internas con IA sin ser programador (Lovable, Bolt, v0, Replit, Cursor, Claude Code), sobre un proyecto real del alumno. Individual o para equipos.
+Más información: https://adrianmarquez.es/servicios/formacion-personalizada/vibe-coding.html
+
 ### Formación en IA para Empresas
 Talleres y programas de formación en inteligencia artificial generativa para equipos comerciales y directivos. Adaptados al sector y a los casos de uso reales del equipo. Resultado típico: -40% tiempo en tareas repetitivas tras la formación.
 Más información: https://adrianmarquez.es/servicios/formacion-empresas.html
