@@ -37,6 +37,21 @@ Más información: https://adrianmarquez.es/servicios/publicidad-digital.html
 Planificación integral del canal digital: posicionamiento, canales, mensajes, KPIs y hoja de ruta. Para empresas que necesitan orden antes de ejecutar.
 Más información: https://adrianmarquez.es/servicios/estrategia-digital.html
 
+### E-commerce y Marketplaces
+Consultoría e-commerce freelance: optimización de tiendas Shopify y WooCommerce (CRO, SEO de producto, GA4), gestión de Amazon (Seller Central, Vendor, listings, contenido A+, Amazon Ads), gestión de marketplaces (PcComponentes, MediaMarkt, Carrefour, Fnac, Worten, Miravia), catálogo y fichas de producto, Google Shopping y Merchant Center, campañas de temporada (Black Friday, Navidad, rebajas) e integraciones de stock y pedidos con n8n e IA. Modalidades: proyecto puntual, refuerzo de temporada o gestión continua.
+Más información: https://adrianmarquez.es/servicios/ecommerce/
+- Tienda online: https://adrianmarquez.es/servicios/ecommerce/tienda-online.html
+- Marketplaces: https://adrianmarquez.es/servicios/ecommerce/marketplaces.html
+- Amazon: https://adrianmarquez.es/servicios/ecommerce/amazon.html
+- Fichas de producto: https://adrianmarquez.es/servicios/ecommerce/fichas-producto.html
+- Google Shopping: https://adrianmarquez.es/servicios/ecommerce/google-shopping.html
+- Campañas de temporada: https://adrianmarquez.es/servicios/ecommerce/campanas-temporada.html
+- Integraciones: https://adrianmarquez.es/servicios/ecommerce/integraciones.html
+
+### Marketing Externalizado
+Departamento de marketing externo para pymes en una sola persona senior: estrategia, SEO, Google Ads, Meta Ads, redes sociales, web, CRM y automatización con IA. Cuota mensual sin permanencia, refuerzo de temporada (incluida la cobertura de bajas o vacaciones del responsable de marketing) o proyecto puntual. Alternativa a contratar un perfil de marketing en plantilla.
+Más información: https://adrianmarquez.es/servicios/marketing-externalizado.html
+
 ### Formación en IA para Empresas
 Talleres y programas de formación en inteligencia artificial generativa para equipos comerciales y directivos. Adaptados al sector y a los casos de uso reales del equipo. Resultado típico: -40% tiempo en tareas repetitivas tras la formación.
 Más información: https://adrianmarquez.es/servicios/formacion-empresas.html
