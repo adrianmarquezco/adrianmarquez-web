@@ -65,13 +65,17 @@
 .page-hero--about .about-hero-photo{justify-self:center;width:100%;max-width:420px}
 .page-hero--about .link-chips{flex-direction:row;flex-wrap:wrap;margin-top:0}
 .page-hero--about .about-photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
-.about-hero--text{grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);padding-top:5rem}
-.about-hero--text .about-aside{position:sticky;top:7rem}
+.about-story{padding:6rem 5rem}
+.about-story-inner{max-width:760px;margin:0 auto}
+.about-story .section-label{color:var(--gold-dim)}
+.about-story .about-story-quote{font-size:clamp(1.5rem,2.6vw,2.1rem);color:#1a1310!important;border-left:none;padding:0;margin:1.5rem 0 3rem;line-height:1.35}
+.about-story .about-story-quote::after{content:'';display:block;width:64px;height:2px;background:var(--gold);margin-top:2rem}
+.about-story .prose p{color:#4a413a;font-size:1rem}
+.about-story .prose h2{color:#1a1310}
 @media (max-width:900px){
 .page-hero--about{grid-template-columns:1fr;gap:2.5rem}
 .page-hero--about .about-hero-photo{justify-self:center;max-width:360px}
-.about-hero--text{grid-template-columns:1fr;padding-top:3rem}
-.about-hero--text .about-aside{position:static}
+.about-story{padding:4rem 1.5rem}
 }
 </style>
 </head>
@@ -118,11 +122,10 @@
   <div class="page-hero-line"></div>
 </div>
 
-<div class="about-hero about-hero--text">
-  <div class="about-aside slide-left">
-    <blockquote class="about-quote">"No soy un especialista. Soy el profesional que ve el cuadro completo y sabe ejecutarlo."</blockquote>
-  </div>
-  <div class="about-content slide-right">
+<section class="about-story" style="background:#f7f4ef;">
+  <div class="about-story-inner">
+    <div class="section-label">Mi historia</div>
+    <blockquote class="about-quote about-story-quote">"No soy un especialista. Soy el profesional que ve el cuadro completo y sabe ejecutarlo."</blockquote>
     <div class="prose">
       <p>Soy Adrián Márquez, nacido en Galicia y con más de cuatro años trabajando en marketing digital, automatización e inteligencia artificial para empresas de servicios. Mi perfil es híbrido por necesidad y por convicción: combino la visión estratégica de negocio con la capacidad técnica de implementación.</p>
       <p>Lo que me diferencia no es una especialidad concreta, sino la capacidad de entregar soluciones completas. Puedo diseñar la estrategia, montar las campañas, implementar las automatizaciones, optimizar el SEO y formar al equipo. Todo bajo el mismo criterio: resultados medibles, no actividad por actividad.</p>
@@ -137,7 +140,7 @@
       <p>La transparencia en la comunicación y el reporting es innegociable. Sabrás en todo momento qué se está haciendo, por qué y qué resultados está generando.</p>
     </div>
   </div>
-</div>
+</section>
 
 <div class="skills-section about-skills-block">
   <div class="section-label">Stack & Herramientas</div>
