@@ -104,14 +104,14 @@
   </div>
 
   <div id="blog-filters" class="projects-filter" style="margin-bottom:2rem;">
-    <button class="filter-btn active" onclick="filterArticles('all', this)">Todos</button>
-    <button class="filter-btn" onclick="filterArticles('IA', this)">IA</button>
-    <button class="filter-btn" onclick="filterArticles('Estrategia', this)">Estrategia</button>
-    <button class="filter-btn" onclick="filterArticles('Implementación', this)">Implementación</button>
-    <button class="filter-btn" onclick="filterArticles('Herramientas', this)">Herramientas</button>
-    <button class="filter-btn" onclick="filterArticles('Formación para empresas', this)">Formación para empresas</button>
-    <button class="filter-btn" onclick="filterArticles('SEO', this)">SEO, GEO y AEO</button>
-    <button class="filter-btn" onclick="filterArticles('Marketing Digital', this)">Marketing Digital</button>
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="IA">IA</button>
+    <button class="filter-btn" data-filter="Estrategia">Estrategia</button>
+    <button class="filter-btn" data-filter="Implementación">Implementación</button>
+    <button class="filter-btn" data-filter="Herramientas">Herramientas</button>
+    <button class="filter-btn" data-filter="Formación para empresas">Formación para empresas</button>
+    <button class="filter-btn" data-filter="SEO">SEO, GEO y AEO</button>
+    <button class="filter-btn" data-filter="Marketing Digital">Marketing Digital</button>
   </div>
 
   <div id="blog-grid" class="blog-index-grid">
@@ -172,188 +172,7 @@
 </footer>
 
 <script src="../main.js?v=14"></script>
-<script>
-  let allArticles = [];
-  let currentFilter = 'all';
-  let currentSearch = '';
-  const ARTICLES_PER_PAGE = 9;
-  let currentPage = 1;
-
-  const searchForm = document.getElementById('blog-search-form');
-  const searchInput = document.getElementById('blog-search-input');
-  const searchClear = document.getElementById('blog-search-clear');
-  const searchStatus = document.getElementById('blog-search-status');
-
-  function getSearchFromUrl() {
-    return new URLSearchParams(window.location.search).get('s')?.trim() || '';
-  }
-
-  function normalizeText(str) {
-    return (str || '')
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '');
-  }
-
-  function articleMatchesSearch(article, query) {
-    if (!query) return true;
-    const haystack = normalizeText([
-      article.title,
-      article.excerpt,
-      article.category,
-      article.clusterCategoria,
-      article.tipoArticulo,
-      article.slug,
-      ...(article.keywords || [])
-    ].join(' '));
-    const terms = normalizeText(query).split(/\s+/).filter(t => t.length >= 2);
-    if (terms.length === 0) return haystack.includes(normalizeText(query));
-    return terms.every(term => haystack.includes(term));
-  }
-
-  function getFilteredArticles() {
-    let list = allArticles.filter(a => articleMatchesSearch(a, currentSearch));
-    if (currentFilter !== 'all') {
-      list = list.filter(a => a.category && a.category.includes(currentFilter));
-    }
-    return list;
-  }
-
-  function updateSearchUI(total) {
-    if (searchInput) searchInput.value = currentSearch;
-    if (searchClear) searchClear.hidden = !currentSearch;
-    if (!searchStatus) return;
-    if (!currentSearch) {
-      searchStatus.hidden = true;
-      searchStatus.textContent = '';
-      return;
-    }
-    const countLabel = total === 1 ? '1 artículo' : `${total} artículos`;
-    searchStatus.hidden = false;
-    searchStatus.innerHTML = `Resultados para <strong>${escapeHtml(currentSearch)}</strong> <span class="blog-search-count">(${countLabel})</span>`;
-  }
-
-  function escapeHtml(str) {
-    return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  }
-
-  function syncSearchUrl() {
-    const url = new URL(window.location.href);
-    if (currentSearch) url.searchParams.set('s', currentSearch);
-    else url.searchParams.delete('s');
-    const qs = url.searchParams.toString();
-    history.replaceState(null, '', url.pathname + (qs ? `?${qs}` : ''));
-  }
-
-  function applySearch(query) {
-    currentSearch = query.trim();
-    currentPage = 1;
-    syncSearchUrl();
-    renderArticles();
-  }
-
-  if (searchForm) {
-    searchForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      applySearch(searchInput?.value || '');
-    });
-  }
-  if (searchClear) {
-    searchClear.addEventListener('click', () => {
-      if (searchInput) searchInput.value = '';
-      applySearch('');
-      searchInput?.focus();
-    });
-  }
-
-  window.addEventListener('popstate', () => {
-    if (!allArticles.length) return;
-    const next = getSearchFromUrl();
-    if (next === currentSearch) return;
-    currentSearch = next;
-    currentPage = 1;
-    if (searchInput) searchInput.value = currentSearch;
-    renderArticles();
-  });
-
-  // Cargar artículos desde index.json
-  fetch('/blog/index.json')
-    .then(r => r.json())
-    .then(data => {
-      allArticles = data;
-      currentSearch = getSearchFromUrl();
-      if (searchInput && currentSearch) searchInput.value = currentSearch;
-      renderArticles();
-    })
-    .catch(() => {
-      document.getElementById('blog-grid').innerHTML = `
-        <div class="blog-empty">
-          <p>Próximamente — los primeros artículos se publicarán en breve.</p>
-        </div>`;
-    });
-
-  function filterArticles(category, btn) {
-    currentFilter = category;
-    currentPage = 1;
-    document.querySelectorAll('#blog-filters .filter-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderArticles();
-  }
-
-  function renderArticles() {
-    const filtered = getFilteredArticles();
-    updateSearchUI(filtered.length);
-
-    const start = (currentPage - 1) * ARTICLES_PER_PAGE;
-    const paginated = filtered.slice(start, start + ARTICLES_PER_PAGE);
-
-    const grid = document.getElementById('blog-grid');
-
-    if (paginated.length === 0) {
-      const emptyMsg = currentSearch
-        ? `No hay artículos que coincidan con «${escapeHtml(currentSearch)}». Prueba con otras palabras o <button type="button" class="blog-search-inline-clear" onclick="document.getElementById('blog-search-clear').click()">ver todos</button>.`
-        : 'No hay artículos en esta categoría todavía.';
-      grid.innerHTML = `<div class="blog-empty"><p>${emptyMsg}</p></div>`;
-      document.getElementById('blog-pagination').innerHTML = '';
-      return;
-    }
-
-    grid.innerHTML = paginated.map(article => `
-      <a href="/blog/${article.slug}.html" class="blog-card fade-up">
-        ${article.imageUrl ? `<div style="height:180px;overflow:hidden;margin:-2rem -2rem 1.5rem;"><img src="${article.imageUrl}" alt="${article.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>` : ''}
-        <div class="blog-card-cat">${article.category || 'Marketing Digital'}</div>
-        <h2 class="blog-card-title">${article.title}</h2>
-        <p class="blog-card-excerpt">${article.excerpt || ''}</p>
-        <div class="blog-card-meta">
-          <span>${article.dateStr || article.date}</span>
-          <span class="blog-card-link">${article.readingTime || '8 min'} →</span>
-        </div>
-      </a>
-    `).join('');
-
-    // Reiniciar observer para fade-up
-    document.querySelectorAll('.fade-up').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Paginación
-    const totalPages = Math.ceil(filtered.length / ARTICLES_PER_PAGE);
-    const pagination = document.getElementById('blog-pagination');
-    if (totalPages <= 1) {
-      pagination.innerHTML = '';
-      return;
-    }
-    pagination.innerHTML = Array.from({length: totalPages}, (_, i) => i + 1).map(p => `
-      <button onclick="goToPage(${p})" class="filter-btn ${p === currentPage ? 'active' : ''}">${p}</button>
-    `).join('');
-  }
-
-  function goToPage(page) {
-    currentPage = page;
-    renderArticles();
-    window.scrollTo({top: 0, behavior: 'smooth'});
-  }
-</script>
+<script src="blog-index.js" defer></script>
 
 <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Aviso de cookies"><p class="cookie-banner-text">Usamos cookies técnicas propias, de Google Fonts y de Google Analytics (GTM) para análisis de visitas. Puedes aceptar o rechazar las analíticas. <a href="/politica-cookies.html">Más información</a>.</p><div class="cookie-banner-actions"><button class="cookie-btn-reject" id="cookieReject">Rechazar</button><button class="cookie-btn-accept" id="cookieAccept">Aceptar</button></div></div>
 <a href="https://wa.me/34630780358" target="_blank" rel="noopener noreferrer" class="whatsapp-fab" aria-label="Contactar por WhatsApp"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
