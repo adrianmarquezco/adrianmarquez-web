@@ -80,7 +80,7 @@
       "name": "¿Qué procesos administrativos de una empresa de servicios se pueden automatizar con n8n?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Con n8n puedes automatizar: captación y cualificación de leads (formulario ? CRM ? email), confirmación y recordatorio de citas (Calendly ? WhatsApp ? Gmail), seguimiento de presupuestos (secuencia de emails si no hay respuesta), generación de informes periódicos (Google Sheets ? PDF ? envío), onboarding de nuevos clientes (contrato ? accesos ? bienvenida) y reclamación de facturas impagadas (Holded/Billage ? secuencia email ? alerta)."
+        "text": "Con n8n puedes automatizar: captación y cualificación de leads (formulario → CRM → email), confirmación y recordatorio de citas (Calendly → WhatsApp → Gmail), seguimiento de presupuestos (secuencia de emails si no hay respuesta), generación de informes periódicos (Google Sheets → PDF → envío), onboarding de nuevos clientes (contrato → accesos → bienvenida) y reclamación de facturas impagadas (Holded/Billage → secuencia email → alerta)."
       }
     },
     {
@@ -255,7 +255,7 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Webhook] ? [Set] ? [IF: cualificación] ? [Notion: crear registro] ? [Gmail: email personalizado al lead] ? [Slack: alerta al equipo]<br>
+    [Webhook] → [Set] → [IF: cualificación] → [Notion: crear registro] → [Gmail: email personalizado al lead] → [Slack: alerta al equipo]<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;? (lead no cualificado)<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Gmail: respuesta automática de recursos]
   </div>
@@ -291,9 +291,9 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Calendly Trigger: cita reservada] ? [Gmail: confirmación inmediata]<br>
-    [Schedule: cada mañana 8:00] ? [Google Calendar: leer citas de las próximas 24h] ? [Loop sobre citas] ? [Twilio SMS o WA Business: recordatorio] ? [Gmail: recordatorio detallado]<br>
-    [Calendly Trigger: cita cancelada] ? [Gmail: notificación al equipo] ? [Slack: alerta]
+    [Calendly Trigger: cita reservada] → [Gmail: confirmación inmediata]<br>
+    [Schedule: cada mañana 8:00] → [Google Calendar: leer citas de las próximas 24h] → [Loop sobre citas] → [Twilio SMS o WA Business: recordatorio] → [Gmail: recordatorio detallado]<br>
+    [Calendly Trigger: cita cancelada] → [Gmail: notificación al equipo] → [Slack: alerta]
   </div>
 
   <h3>Nodos y configuración</h3>
@@ -327,9 +327,9 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Schedule: cada día 9:00] ? [Google Sheets: leer presupuestos] ? [IF: estado = "Enviado" AND días desde envío = 3] ? [Gmail: seguimiento 1]<br>
-    [IF: estado = "Enviado" AND días desde envío = 7] ? [Gmail: seguimiento 2 + propuesta de llamada]<br>
-    [IF: estado = "Enviado" AND días desde envío = 14] ? [Slack: alerta interna "presupuesto sin respuesta"]
+    [Schedule: cada día 9:00] → [Google Sheets: leer presupuestos] → [IF: estado = "Enviado" AND días desde envío = 3] → [Gmail: seguimiento 1]<br>
+    [IF: estado = "Enviado" AND días desde envío = 7] → [Gmail: seguimiento 2 + propuesta de llamada]<br>
+    [IF: estado = "Enviado" AND días desde envío = 14] → [Slack: alerta interna "presupuesto sin respuesta"]
   </div>
 
   <h3>Nodos y configuración</h3>
@@ -362,7 +362,7 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Schedule: día 1 de cada mes, 7:00] ? [Loop sobre lista de clientes] ? [Google Sheets: leer métricas del cliente] ? [OpenAI: generar resumen ejecutivo] ? [HTTP: Google Docs API crear informe] ? [Gmail: enviar informe al cliente] ? [Notion: registrar envío]
+    [Schedule: día 1 de cada mes, 7:00] → [Loop sobre lista de clientes] → [Google Sheets: leer métricas del cliente] → [OpenAI: generar resumen ejecutivo] → [HTTP: Google Docs API crear informe] → [Gmail: enviar informe al cliente] → [Notion: registrar envío]
   </div>
 
   <h3>Nodos y configuración</h3>
@@ -396,7 +396,7 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Webhook: nuevo cliente en CRM / Notion] ? [DocuSign/PandaDoc: enviar contrato] ? [Wait: contrato firmado] ? [Gmail: bienvenida + accesos] ? [Notion: crear workspace cliente] ? [Calendly: email con enlace reunión de inicio] ? [Slack: notificar al equipo asignado]
+    [Webhook: nuevo cliente en CRM / Notion] → [DocuSign/PandaDoc: enviar contrato] → [Wait: contrato firmado] → [Gmail: bienvenida + accesos] → [Notion: crear workspace cliente] → [Calendly: email con enlace reunión de inicio] → [Slack: notificar al equipo asignado]
   </div>
 
   <h3>Nodos y configuración</h3>
@@ -430,10 +430,10 @@
   <h3>El flujo automatizado</h3>
   <div style="background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--gold);padding:1.5rem 2rem;margin:1.5rem 0;font-family:monospace;font-size:0.88rem;line-height:2;">
     <strong style="font-family:DM Sans,sans-serif;color:var(--gold);font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;display:block;margin-bottom:1rem;">Diagrama del flujo n8n</strong>
-    [Schedule: cada día 8:30] ? [HTTP: Holded/Billage API leer facturas] ? [IF: vencida hace 5 días] ? [Gmail: recordatorio amable]<br>
-    [IF: vencida hace 15 días] ? [Gmail: segundo aviso con número de cuenta y referencia]<br>
-    [IF: vencida hace 30 días] ? [Gmail: aviso formal] ? [Slack: alerta urgente al equipo]<br>
-    [IF: vencida hace 45+ días] ? [Slack: alerta con opción de iniciar proceso de reclamación]
+    [Schedule: cada día 8:30] → [HTTP: Holded/Billage API leer facturas] → [IF: vencida hace 5 días] → [Gmail: recordatorio amable]<br>
+    [IF: vencida hace 15 días] → [Gmail: segundo aviso con número de cuenta y referencia]<br>
+    [IF: vencida hace 30 días] → [Gmail: aviso formal] → [Slack: alerta urgente al equipo]<br>
+    [IF: vencida hace 45+ días] → [Slack: alerta con opción de iniciar proceso de reclamación]
   </div>
 
   <h3>Nodos y configuración</h3>
@@ -497,7 +497,7 @@
   <div class="faq-list">
     <div class="faq-item">
       <div class="faq-q">¿Qué procesos administrativos se pueden automatizar con n8n en una empresa de servicios?</div>
-      <div class="faq-a">Con n8n puedes automatizar: captación y cualificación de leads (formulario ? CRM ? email), confirmación y recordatorio de citas, seguimiento de presupuestos en secuencia, generación de informes periódicos con IA, onboarding de nuevos clientes y reclamación de facturas impagadas. En conjunto, estos 6 flujos pueden liberar entre 15 y 35 horas al mes dependiendo del volumen de la empresa.</div>
+      <div class="faq-a">Con n8n puedes automatizar: captación y cualificación de leads (formulario → CRM → email), confirmación y recordatorio de citas, seguimiento de presupuestos en secuencia, generación de informes periódicos con IA, onboarding de nuevos clientes y reclamación de facturas impagadas. En conjunto, estos 6 flujos pueden liberar entre 15 y 35 horas al mes dependiendo del volumen de la empresa.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">¿Cuánto tiempo se ahorra al automatizar estos procesos en una pyme?</div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -434,7 +434,7 @@
     img.style.objectPosition = opx.toFixed(2) + '% ' + opy.toFixed(2) + '%';
 
     // Grade: al enfocar, un poco más de presencia (sin “efecto filtro”)
-    const focus = engaged && mode !== 'off' ? 1 : 0;
+    const focus = engaged && mode !== 'off' → 1 : 0;
     const br = 1 + focus * 0.035 * p.grade;
     const ct = 1.02 + focus * 0.04 * p.grade;
     const sat = 1 + focus * 0.04 * p.grade;
@@ -442,8 +442,8 @@
     img.style.setProperty('--ct', ct.toFixed(3));
     img.style.setProperty('--sat', sat.toFixed(3));
 
-    keyLight.style.opacity = mode === 'off' ? '0' : undefined;
-    rimLight.style.opacity = mode === 'off' ? '0' : undefined;
+    keyLight.style.opacity = mode === 'off' → '0' : undefined;
+    rimLight.style.opacity = mode === 'off' → '0' : undefined;
 
     // Scroll = producción
     wrap.style.transform =
