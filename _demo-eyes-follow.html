@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEMO — Presencia (prestigio) · no producción</title>
+<style>
+  :root {
+    --bg: #080808;
+    --gold: #C9A84C;
+    --text: #f0ede8;
+    --text-muted: rgba(240,237,232,0.55);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  .banner {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #1a1610;
+    border-bottom: 1px solid rgba(201,168,76,0.45);
+    color: #e8dcc0;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+  .banner strong { color: var(--gold); }
+
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+    cursor: default;
+  }
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 6rem 3rem 5rem 4rem;
+    position: relative;
+    z-index: 2;
+    background: var(--bg);
+  }
+  .eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.1rem;
+  }
+  .hero-left h1 {
+    font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.85rem;
+  }
+  .hero-left h1 em { font-style: italic; color: var(--gold); font-weight: 600; }
+  .hero-left p { color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; max-width: 28rem; }
+
+  .hero-right {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .hero-img-wrap {
+    position: absolute;
+    inset: 0;
+    will-change: transform;
+    background: var(--bg);
+    perspective: 1400px;
+  }
+
+  .presence {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    will-change: transform;
+    background: var(--bg);
+    transform-origin: 50% 30%;
+  }
+
+  .presence img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    /* margen extra: rotación/traslación sin bordes del PNG */
+    transform: scale(1.12);
+    transform-origin: 50% 28%;
+    filter:
+      brightness(var(--br, 1))
+      contrast(var(--ct, 1.02))
+      saturate(var(--sat, 1));
+    will-change: transform, filter, object-position;
+  }
+
+  /* Luz de estudio: key light + rim dorado */
+  .key-light {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        55% 48% at var(--kx, 58%) var(--ky, 24%),
+        rgba(255, 248, 235, 0.16) 0%,
+        rgba(255, 236, 200, 0.05) 32%,
+        transparent 62%
+      );
+    mix-blend-mode: soft-light;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+  }
+  .hero.is-engaged .key-light { opacity: 1; }
+
+  .rim-light {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        var(--rim-angle, 105deg),
+        transparent 42%,
+        rgba(201, 168, 76, 0.07) 58%,
+        rgba(201, 168, 76, 0.14) 72%,
+        transparent 88%
+      );
+    mix-blend-mode: screen;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+  }
+  .hero.is-engaged .rim-light { opacity: 0.9; }
+
+  /* Viñeta cinematográfica que se abre al enfocar */
+  .vignette {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: radial-gradient(
+      75% 70% at var(--vx, 62%) var(--vy, 30%),
+      transparent 30%,
+      rgba(0,0,0,0.35) 100%
+    );
+    opacity: 0.55;
+    transition: opacity 0.8s ease;
+  }
+  .hero.is-engaged .vignette { opacity: 0.28; }
+
+  .hero-img-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    background:
+      linear-gradient(to right, var(--bg) 0, rgba(8,8,8,0) 25%),
+      linear-gradient(to top, var(--bg) 0, rgba(8,8,8,0) 8%);
+  }
+
+  .scroll-hint {
+    position: absolute;
+    left: 4rem;
+    bottom: 2rem;
+    z-index: 4;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(240,237,232,0.28);
+  }
+
+  .below {
+    min-height: 140vh;
+    padding: 4rem;
+    background: var(--bg);
+    border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  .below h2 { font-size: 1.35rem; font-weight: 600; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+  .below p { color: var(--text-muted); max-width: 36rem; line-height: 1.75; margin-bottom: 1rem; }
+
+  .panel {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 60;
+    width: min(270px, calc(100vw - 2rem));
+    background: rgba(14,12,10,0.97);
+    border: 1px solid rgba(201,168,76,0.22);
+    padding: 0.95rem 1.05rem;
+    font-size: 0.74rem;
+  }
+  .panel h3 {
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .panel label {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0.32rem 0;
+    color: rgba(240,237,232,0.72);
+    cursor: pointer;
+  }
+  .panel .note {
+    margin-top: 0.65rem;
+    color: rgba(240,237,232,0.38);
+    line-height: 1.5;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { order: -1; height: 400px; }
+    .hero-left { padding: 1.5rem; }
+    .scroll-hint { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="banner">
+    <strong>DEMO · presencia de autoridad</strong> —
+    Sin respiración ni “juguete”. Física pesada, luz de estudio, seguimiento contenido.
+    Fondo <code>#080808</code> + parallax de scroll intactos.
+  </div>
+
+  <section class="hero" id="hero">
+    <div class="hero-left">
+      <div class="eyebrow">Demo · control, no ornamento</div>
+      <h1>Marketing, IA y automatización que <em>mueven negocios</em></h1>
+      <p>Mueve el cursor con calma por el hero. La presencia responde con peso — como quien te mira con intención, no como un widget.</p>
+    </div>
+    <div class="hero-right" id="heroRight">
+      <div class="hero-img-wrap" id="heroImgWrap" data-hero-parallax>
+        <div class="presence" id="presence">
+          <img
+            id="heroImg"
+            src="images/adrian-marquez-profesional.png"
+            alt="Adrián Márquez"
+            width="843"
+            height="1264"
+            draggable="false">
+        </div>
+        <div class="key-light" id="keyLight" aria-hidden="true"></div>
+        <div class="rim-light" id="rimLight" aria-hidden="true"></div>
+        <div class="vignette" id="vignette" aria-hidden="true"></div>
+      </div>
+      <div class="hero-img-overlay" aria-hidden="true"></div>
+    </div>
+    <div class="scroll-hint">Scroll ↓</div>
+  </section>
+
+  <section class="below">
+    <h2>Parallax de scroll (igual que producción)</h2>
+    <p>Al bajar, la imagen sigue el mismo criterio que la home. La presencia es una capa de control encima, no un reemplazo.</p>
+    <p style="opacity:0.3">···</p>
+  </section>
+
+  <aside class="panel">
+    <h3>Registro</h3>
+    <label><input type="radio" name="g" value="authority" checked> Autoridad</label>
+    <label><input type="radio" name="g" value="cinema"> Cinemático</label>
+    <label><input type="radio" name="g" value="contained"> Contenido</label>
+    <label><input type="radio" name="g" value="off"> Off</label>
+    <p class="note">Masa alta, poco overshoot. Luz de estudio + rim dorado. Sin idle errático.</p>
+  </aside>
+
+<script>
+(function () {
+  const hero = document.getElementById('hero');
+  const wrap = document.getElementById('heroImgWrap');
+  const presence = document.getElementById('presence');
+  const img = document.getElementById('heroImg');
+  const keyLight = document.getElementById('keyLight');
+  const rimLight = document.getElementById('rimLight');
+  const vignette = document.getElementById('vignette');
+
+  let mode = 'authority';
+  let scrollYApplied = 0;
+  let scrollTick = false;
+  let engaged = false;
+  let engageT = 0;
+
+  // Estado físico (masa / resorte)
+  let tx = 0, ty = 0, rx = 0, ry = 0;
+  let vx = 0, vy = 0, vrx = 0, vry = 0;
+  let targetX = 0, targetY = 0, targetRX = 0, targetRY = 0;
+  let lx = 58, ly = 24; // luz suavizada
+  let opx = 50, opy = 25;
+
+  const presets = {
+    // Peso, amplitud contenida, respuesta segura → autoridad
+    authority: {
+      shift: 18, tiltX: 7.5, tiltY: 9.5,
+      stiff: 28, damp: 14, mass: 1,
+      light: 1, grade: 1
+    },
+    // Más viaje de cámara + luz dramática
+    cinema: {
+      shift: 28, tiltX: 11, tiltY: 14,
+      stiff: 22, damp: 11, mass: 1.15,
+      light: 1.25, grade: 1.2
+    },
+    // Casi imperceptible, solo para quien mira
+    contained: {
+      shift: 9, tiltX: 3.5, tiltY: 4.5,
+      stiff: 36, damp: 18, mass: 1,
+      light: 0.7, grade: 0.6
+    },
+    off: {
+      shift: 0, tiltX: 0, tiltY: 0,
+      stiff: 40, damp: 20, mass: 1,
+      light: 0, grade: 0
+    }
+  };
+
+  document.querySelectorAll('input[name=g]').forEach(function (r) {
+    r.addEventListener('change', function () {
+      if (!r.checked) return;
+      mode = r.value;
+      if (mode === 'off') {
+        engaged = false;
+        hero.classList.remove('is-engaged');
+        targetX = targetY = targetRX = targetRY = 0;
+      }
+    });
+  });
+
+  function setTargets(clientX, clientY) {
+    const rect = hero.getBoundingClientRect();
+    // Ancla en la cara (columna der., tercio superior)
+    const faceX = rect.left + rect.width * 0.74;
+    const faceY = rect.top + rect.height * 0.26;
+    const nx = (clientX - faceX) / (rect.width * 0.42);
+    const ny = (clientY - faceY) / (rect.height * 0.5);
+    const cx = Math.max(-1, Math.min(1, nx));
+    const cy = Math.max(-1, Math.min(1, ny));
+
+    const p = presets[mode];
+    // Invertimos tilt en Y: al subir el cursor, levanta ligeramente la mirada
+    targetX = cx * p.shift;
+    targetY = cy * p.shift * 0.45;
+    targetRY = cx * p.tiltY;   // yaw
+    targetRX = -cy * p.tiltX;  // pitch
+
+    lx += ((58 + cx * 16) - lx) * 0.08;
+    ly += ((24 + cy * 10) - ly) * 0.08;
+    keyLight.style.setProperty('--kx', lx.toFixed(1) + '%');
+    keyLight.style.setProperty('--ky', ly.toFixed(1) + '%');
+    vignette.style.setProperty('--vx', (62 + cx * 6).toFixed(1) + '%');
+    vignette.style.setProperty('--vy', (30 + cy * 5).toFixed(1) + '%');
+
+    const angle = 105 + cx * 28;
+    rimLight.style.setProperty('--rim-angle', angle.toFixed(1) + 'deg');
+  }
+
+  hero.addEventListener('mousemove', function (e) {
+    if (mode === 'off') return;
+    if (!engaged) {
+      engaged = true;
+      hero.classList.add('is-engaged');
+    }
+    engageT = performance.now();
+    setTargets(e.clientX, e.clientY);
+  });
+
+  hero.addEventListener('mouseleave', function () {
+    // Vuelve al centro con gravedad — no “mira alrededor”
+    targetX = 0;
+    targetY = 0;
+    targetRX = 0;
+    targetRY = 0;
+    setTimeout(function () {
+      if (performance.now() - engageT > 400) {
+        engaged = false;
+        hero.classList.remove('is-engaged');
+      }
+    }, 500);
+  });
+
+  window.addEventListener('scroll', function () {
+    if (scrollTick) return;
+    scrollTick = true;
+    requestAnimationFrame(function () {
+      const y = window.scrollY;
+      if (y < 1.1 * window.innerHeight) scrollYApplied = y;
+      scrollTick = false;
+    });
+  }, { passive: true });
+
+  let last = performance.now();
+
+  function spring(pos, vel, target, stiff, damp, mass, dt) {
+    // F = -k(x - target) - c·v ; a = F/m
+    const force = -stiff * (pos - target) - damp * vel;
+    const acc = force / mass;
+    const nVel = vel + acc * dt;
+    const nPos = pos + nVel * dt;
+    return [nPos, nVel];
+  }
+
+  function tick(now) {
+    const p = presets[mode] || presets.authority;
+    const dt = Math.min(0.033, (now - last) / 1000);
+    last = now;
+
+    var s;
+    s = spring(tx, vx, targetX, p.stiff, p.damp, p.mass, dt); tx = s[0]; vx = s[1];
+    s = spring(ty, vy, targetY, p.stiff, p.damp, p.mass, dt); ty = s[0]; vy = s[1];
+    s = spring(rx, vrx, targetRX, p.stiff * 0.9, p.damp, p.mass, dt); rx = s[0]; vrx = s[1];
+    s = spring(ry, vry, targetRY, p.stiff * 0.9, p.damp, p.mass, dt); ry = s[0]; vry = s[1];
+
+    // Object-position: desplazamiento fotográfico de la mirada
+    const tOpx = 50 + (ry / (p.tiltY || 1)) * 3.2 * (p.grade);
+    const tOpy = 25 + (-rx / (p.tiltX || 1)) * 2.0 * (p.grade);
+    opx += (tOpx - opx) * 0.06;
+    opy += (tOpy - opy) * 0.06;
+    img.style.objectPosition = opx.toFixed(2) + '% ' + opy.toFixed(2) + '%';
+
+    // Grade: al enfocar, un poco más de presencia (sin “efecto filtro”)
+    const focus = engaged && mode !== 'off' ? 1 : 0;
+    const br = 1 + focus * 0.035 * p.grade;
+    const ct = 1.02 + focus * 0.04 * p.grade;
+    const sat = 1 + focus * 0.04 * p.grade;
+    img.style.setProperty('--br', br.toFixed(3));
+    img.style.setProperty('--ct', ct.toFixed(3));
+    img.style.setProperty('--sat', sat.toFixed(3));
+
+    keyLight.style.opacity = mode === 'off' ? '0' : undefined;
+    rimLight.style.opacity = mode === 'off' ? '0' : undefined;
+
+    // Scroll = producción
+    wrap.style.transform =
+      'translate3d(0, ' + (scrollYApplied * 0.14).toFixed(2) + 'px, 0) scale(1.06)';
+
+    // Presencia: translate + rotate3d con perspectiva (peso, no bounce)
+    presence.style.transform =
+      'translate3d(' + tx.toFixed(2) + 'px, ' + ty.toFixed(2) + 'px, 0) ' +
+      'rotateX(' + rx.toFixed(3) + 'deg) rotateY(' + ry.toFixed(3) + 'deg)';
+
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
