@@ -7,6 +7,7 @@
 .nav-mega .nav-dd-group{list-style:none}
 .nav-mega .nav-dd-group ul{list-style:none;padding:0;margin:0}
 .nav-dd-title{display:block;padding:0 1.3rem .55rem;margin-bottom:.35rem;font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid rgba(201,168,76,.15)}
+.nav-links.open .has-dropdown:hover .nav-dropdown.nav-mega{display:none}
 .nav-links.open li.has-dropdown.dd-open .nav-dropdown.nav-mega{display:flex;flex-direction:column;width:auto;max-width:none;padding:.4rem 0}
 .nav-links.open>li.has-mega{padding-bottom:0;margin-bottom:0}
 .nav-links.open .nav-dd-title{padding:1rem 2rem .5rem;border-bottom:none;margin:0}
