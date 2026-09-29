@@ -158,7 +158,7 @@ function renderArticles() {
 
   grid.innerHTML = paginated.map(article => `
     <a href="/blog/${article.slug}.html" class="blog-card fade-up">
-      ${article.imageUrl ? `<div style="height:180px;overflow:hidden;margin:-2rem -2rem 1.5rem;"><img src="${article.imageUrl}" alt="${article.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>` : ''}
+      ${article.imageUrl ? `<div class="blog-card-img"><img src="${article.imageUrl}" alt="${article.title}" style="width:100%;height:100%;object-fit:cover;" loading="lazy"></div>` : ''}
       <div class="blog-card-cat">${article.category || 'Marketing Digital'}</div>
       <h2 class="blog-card-title">${article.title}</h2>
       <p class="blog-card-excerpt">${article.excerpt || ''}</p>

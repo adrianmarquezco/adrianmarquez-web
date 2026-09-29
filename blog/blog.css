@@ -45,6 +45,7 @@
 /* BLOG INDEX PAGE */
 .blog-index-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--border); margin-top: 3rem; }
 .blog-card { background: var(--bg); padding: 2rem; text-decoration: none; color: inherit; display: block; position: relative; overflow: hidden; transition: background 0.3s; }
+.blog-card-img { height: 180px; overflow: hidden; margin: -2rem -2rem 1.5rem; }
 .blog-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s; }
 .blog-card:hover { background: var(--bg3); }
 .blog-card:hover::before { height: 100%; }
@@ -171,6 +172,7 @@
   .blog-search-clear { flex: 1; }
   .blog-section-wrap { padding: 2rem 1.5rem 4rem; }
   .blog-card { padding: 1.5rem; }
+  .blog-card-img { margin: -1.5rem -1.5rem 1.5rem; }
   .blog-card h2.blog-card-title { font-size: 1.05rem; }
   .blog-content { overflow-wrap: anywhere; }
   .blog-content table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
