@@ -123,6 +123,9 @@ document.getElementById('blog-grid')?.addEventListener('click', e => {
   if (e.target.closest('[data-action="clear-search"]')) searchClear?.click();
 });
 
+const blogGrid = document.getElementById('blog-grid');
+if (blogGrid) blogGrid.innerHTML = '<div class="blog-loading" aria-live="polite"><span></span><span></span><span></span></div>';
+
 fetch('/blog/index.json')
   .then(r => r.json())
   .then(data => {
