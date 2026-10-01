@@ -4,7 +4,7 @@
 .blog-cat { font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding: 0.3rem 0.8rem; border: 1px solid rgba(201,168,76,0.3); }
 .blog-date { font-size: 0.78rem; color: var(--text-muted); }
 .blog-read { font-size: 0.78rem; color: var(--text-muted); }
-.blog-read::before { content: '·'; margin-right: 1.5rem; }
+.blog-read::before { content: '\00B7'; margin-right: 1.5rem; }
 
 .blog-layout { display: grid; grid-template-columns: 1fr 300px; gap: 4rem; padding: 3rem 5rem 5rem; max-width: 1400px; margin: 0 auto; align-items: start; }
 
@@ -32,7 +32,7 @@
 .tldr-blog-label { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; }
 .tldr-blog ul { list-style: none; padding: 0; }
 .tldr-blog li { font-size: 0.88rem; line-height: 1.7; color: rgba(240,237,232,0.82); margin-bottom: 0.4rem; padding-left: 1.2rem; position: relative; }
-.tldr-blog li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 0.8rem; }
+.tldr-blog li::before { content: '\2192'; position: absolute; left: 0; color: var(--gold); font-size: 0.8rem; }
 
 /* Author card */
 .blog-author-card { display: flex; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg3); border: 1px solid var(--border); margin-top: 3rem; }
@@ -78,7 +78,7 @@
 .faq-item { border-bottom: 1px solid var(--border); padding: 1.8rem 0; }
 .faq-item:first-child { border-top: 1px solid var(--border); }
 .faq-q { appearance: none; -webkit-appearance: none; background: none; border: none; border-radius: 0; width: 100%; text-align: left; cursor: pointer; font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 700; color: var(--gold); margin-bottom: 0.7rem; display: flex; gap: 0.6rem; }
-.faq-q::before { content: '→'; flex-shrink: 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin-top: 0.1rem; }
+.faq-q::before { content: '\2192'; flex-shrink: 0; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; margin-top: 0.1rem; }
 .faq-a { font-size: 0.92rem; line-height: 1.85; color: rgba(240,237,232,0.78); margin: 0; padding-left: 1.4rem; }
 
 .blog-section-wrap { padding: 3rem 5rem 5rem; }
