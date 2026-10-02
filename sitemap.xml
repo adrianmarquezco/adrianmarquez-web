@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://adrianmarquez.es/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://adrianmarquez.es/</loc><lastmod>2026-10-02</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
   <url><loc>https://adrianmarquez.es/sobre-mi.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/proyectos.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/blog/</loc><lastmod>2026-06-02</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/contacto.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -19,7 +19,7 @@
   <url><loc>https://adrianmarquez.es/servicios/ecommerce/integraciones.html</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/transformacion-digital-ia.html</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/formacion-ia-obligatoria.html</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/vibe-coding.html</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/vibe-coding.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/auditoria-marketing.html</loc><lastmod>2026-09-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/automatizacion-ia.html</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/automatizacion-ia/power-automate/</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -27,13 +27,13 @@
   <url><loc>https://adrianmarquez.es/servicios/ia-aplicada/</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/ia-aplicada/avatares-ia/</loc><lastmod>2026-09-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/formacion-empresas.html</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/chatgpt.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/microsoft-copilot.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/claude.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/gemini.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/claude-code.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/modelos-ia.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/chatgpt.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/microsoft-copilot.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/claude.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/gemini.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/claude-code.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://adrianmarquez.es/servicios/formacion-personalizada/modelos-ia.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/retiro.html</loc><lastmod>2026-09-22</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/publicidad-digital.html</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/servicios/estrategia-digital.html</loc><lastmod>2026-08-26</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -45,16 +45,16 @@
   <url><loc>https://adrianmarquez.es/blog/automatizacion-procesos-pymes-servicios-espana.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/blog/automatizar-procesos-administrativos-pymes-servicios.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://adrianmarquez.es/blog/automatizar-procesos-pyme-servicios-herramientas-ia.html</loc><lastmod>2026-05-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/asesorias-despachos.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/clinicas-salud.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/hosteleria.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/inmobiliarias.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/abogados-despachos.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/academias-formacion.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/estetica-peluquerias.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/reformas-construccion.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://adrianmarquez.es/sectores/psicologos-terapeutas.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/asesorias-despachos.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/clinicas-salud.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/hosteleria.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/inmobiliarias.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/abogados-despachos.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/academias-formacion.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/estetica-peluquerias.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/reformas-construccion.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://adrianmarquez.es/sectores/psicologos-terapeutas.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://adrianmarquez.es/blog/seo-geo-aeo-empresas-servicios-espana-guia-completa.html</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/sectores/asesorias-despachos/seo/</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://adrianmarquez.es/sectores/clinicas-salud/seo/</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
