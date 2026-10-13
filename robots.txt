@@ -1,28 +1,37 @@
 User-agent: *
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: Googlebot
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: GoogleOther
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: GPTBot
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: Anthropic-ai
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /contacto.html?
 
 User-agent: Bingbot
 Allow: /
+Disallow: /contacto.html?
 
 Sitemap: https://adrianmarquez.es/sitemap.xml
