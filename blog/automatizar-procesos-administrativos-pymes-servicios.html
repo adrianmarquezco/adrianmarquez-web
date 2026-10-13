@@ -71,24 +71,25 @@
     {"@type": "ListItem", "position": 3, "name": "6 procesos administrativos para automatizar con n8n en empresas de servicios"}
   ]
 }</script>
-<script type="application/ld+json">{
+<script type="application/ld+json">
+{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Qué procesos administrativos de una empresa de servicios se pueden automatizar con n8n?",
+      "name": "¿Qué procesos administrativos se pueden automatizar con n8n en una empresa de servicios?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Con n8n puedes automatizar: captación y cualificación de leads (formulario → CRM → email), confirmación y recordatorio de citas (Calendly → WhatsApp → Gmail), seguimiento de presupuestos (secuencia de emails si no hay respuesta), generación de informes periódicos (Google Sheets → PDF → envío), onboarding de nuevos clientes (contrato → accesos → bienvenida) y reclamación de facturas impagadas (Holded/Billage → secuencia email → alerta)."
+        "text": "Con n8n puedes automatizar: captación y cualificación de leads (formulario → CRM → email), confirmación y recordatorio de citas, seguimiento de presupuestos en secuencia, generación de informes periódicos con IA, onboarding de nuevos clientes y reclamación de facturas impagadas. En conjunto, estos 6 flujos pueden liberar entre 15 y 35 horas al mes dependiendo del volumen de la empresa."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cuánto tiempo se ahorra al automatizar los procesos administrativos de una pyme de servicios?",
+      "name": "¿Cuánto tiempo se ahorra al automatizar estos procesos en una pyme?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El ahorro varía por proceso: el flujo de captación de leads ahorra entre 4 y 8 horas al mes, los recordatorios de citas entre 3 y 6 horas más el coste de las ausencias reducidas, el seguimiento de presupuestos entre 3 y 5 horas, los informes periódicos entre 2 y 4 horas por cliente, el onboarding de clientes entre 2 y 4 horas por cliente nuevo, y la gestión de impagados entre 2 y 5 horas al mes. En conjunto, automatizar estos 6 procesos puede liberar entre 15 y 35 horas al mes dependiendo del volumen."
+        "text": "El ahorro varía por proceso: captación de leads (4–8 h/mes), recordatorios de citas (3–6 h/mes más reducción de ausencias), seguimiento de presupuestos (3–5 h/mes), informes periódicos (2–4 h por cliente al mes), onboarding de clientes (2–4 h por cliente nuevo) y gestión de impagados (2–5 h/mes). Automatizando los 6 flujos, una pyme con volumen medio libera fácilmente 15–25 horas mensuales."
       }
     },
     {
@@ -96,35 +97,36 @@
       "name": "¿Necesito saber programar para configurar estos flujos en n8n?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Para los flujos básicos (recordatorios, captación de leads, onboarding) no se necesita programación: n8n tiene una interfaz visual donde se conectan nodos arrastrando. Para flujos que incluyen lógica condicional compleja, transformación de datos o integración con IA, se usan expresiones JavaScript básicas en nodos Code, que se pueden aprender en pocas horas o configurar con ayuda de un especialista."
+        "text": "Para los flujos básicos (recordatorios, captación de leads, onboarding) no hace falta programación: n8n tiene interfaz visual de nodos arrastrables. Para flujos con lógica condicional compleja o integración con IA, se usan expresiones JavaScript básicas en nodos Code. La curva de aprendizaje es de días, no semanas, o puedes contar con un especialista para la configuración inicial."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cómo garantiza n8n el cumplimiento del RGPD en procesos administrativos con datos de clientes?",
+      "name": "¿Cómo garantiza n8n el cumplimiento del RGPD con datos de clientes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "n8n en modalidad self-hosted (servidor propio en la UE) garantiza que los datos no salen de tu infraestructura. En modalidad Cloud, los servidores están en la Unión Europea. Para cumplimiento RGPD en procesos administrativos hay que asegurarse de: firmar el DPA con cada herramienta del flujo (n8n, CRM, herramienta de email), documentar los flujos que procesan datos personales en el registro de actividades, y configurar retención y borrado automático donde corresponda."
+        "text": "n8n self-hosted (servidor propio en la UE) garantiza que los datos no salen de tu infraestructura. En n8n Cloud, los servidores están en la UE. Para cumplimiento completo hay que firmar el DPA con cada herramienta del stack (Notion, HubSpot, Holded, Gmail), documentar los flujos en el Registro de Actividades de Tratamiento, y configurar retención y borrado automático de datos inactivos."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Cuánto cuesta implementar estos flujos de automatización en n8n?",
+      "name": "¿Cuánto cuesta implementar estos 6 flujos de automatización?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "El coste tiene dos componentes: la herramienta y el tiempo de configuración. n8n Cloud cuesta desde 20 €/mes (plan Starter). El tiempo de configuración por flujo oscila entre 4 y 12 horas dependiendo de la complejidad. Si un profesional lo configura externamente, el coste de implementación de los 6 flujos descritos en este artículo está típicamente entre 800 y 2.500 euros en total, con un ROI que se recupera antes del tercer mes de funcionamiento."
+        "text": "El coste tiene dos componentes: herramienta (n8n Cloud desde 20 €/mes o 0 € self-hosted) y configuración (entre 4 y 12 horas por flujo). Si un especialista lo configura externamente, el coste total de los 6 flujos está típicamente entre 800 y 2.500 euros, con un ROI que se recupera antes del tercer mes de funcionamiento dado el ahorro en horas de trabajo."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Por qué usar n8n en lugar de Make o Zapier para procesos administrativos de una pyme?",
+      "name": "¿Por qué usar n8n en lugar de Make o Zapier para procesos administrativos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "n8n tiene tres ventajas clave sobre Make y Zapier para procesos administrativos: control total de datos (self-hosted o cloud en la UE), coste sin límite de operaciones en el plan auto-alojado, y capacidad de lógica compleja con nodos de código. Make es mejor para empezar rápido con presupuesto bajo. Zapier es ideal cuando priorizas la simplicidad sobre el control. Para una pyme con volumen creciente y datos sensibles de clientes, n8n es la opción más sostenible a largo plazo."
+        "text": "n8n tiene tres ventajas clave: control total de datos (self-hosted o cloud en la UE), coste sin límite de operaciones en el plan auto-alojado (Make y Zapier cobran por ejecución), y capacidad de lógica compleja con nodos de código. Make es mejor para empezar rápido. Zapier para simplicidad máxima. Para una pyme con volumen creciente y datos sensibles de clientes, n8n es la opción más sostenible."
       }
     }
   ]
-}</script>
+}
+</script>
 
 </head>
 <body>
@@ -522,6 +524,17 @@
   </div>
 
 </article>
+<!-- blog-related:start -->
+<section class="blog-related" aria-label="Artículos relacionados" style="margin:3rem 0 0;padding-top:2rem;border-top:1px solid var(--border);">
+  <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;margin-bottom:1.2rem;">Sigue leyendo</h2>
+  <ul style="list-style:none;padding:0;margin:0;display:grid;gap:1.1rem;">
+    <li><a href="/blog/automatizacion-procesos-pymes-servicios-espana.html" style="color:var(--gold);text-decoration:none;font-weight:500;line-height:1.5;">Estrategia de automatización para pymes de servicios en España: ROI real y hoja de ruta 2026</a><span style="display:block;font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-top:0.2rem;">Cómo calcular el ROI de la automatización en tu pyme con datos reales del INE (22,8 €/hora), cuánto financia el Kit…</span></li>
+    <li><a href="/blog/automatizacion-operaciones-internas-pymes-servicios.html" style="color:var(--gold);text-decoration:none;font-weight:500;line-height:1.5;">Automatizar operaciones internas en pymes de servicios</a><span style="display:block;font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-top:0.2rem;">Las operaciones internas son el mayor sumidero de horas en las pymes de servicios. Descubre qué procesos automatizar…</span></li>
+    <li><a href="/blog/automatizar-procesos-pyme-servicios-herramientas-ia.html" style="color:var(--gold);text-decoration:none;font-weight:500;line-height:1.5;">n8n, Make o Zapier: qué herramienta de automatización elegir para tu pyme de servicios en 2026</a><span style="display:block;font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-top:0.2rem;">Comparativa completa de n8n, Make, Zapier, Power Automate y ActiveCampaign para pymes de servicios: precios reales,…</span></li>
+    <li><a href="/blog/automatizacion-documentacion-contratos-pymes-servicios.html" style="color:var(--gold);text-decoration:none;font-weight:500;line-height:1.5;">Automatizar contratos y documentos en pymes | 2026</a><span style="display:block;font-size:0.85rem;color:var(--text-muted);line-height:1.6;margin-top:0.2rem;">Generar contratos, acuerdos y documentación de servicio a mano consume horas cada semana. En este artículo ves cómo…</span></li>
+  </ul>
+</section>
+<!-- blog-related:end -->
 
     <div class="blog-author-card">
       <div class="author-img" style="width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dim),var(--gold));display:flex;align-items:center;justify-content:center;font-family:Playfair Display,serif;font-size:1.2rem;font-weight:900;color:#000;flex-shrink:0;">AM</div>
