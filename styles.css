@@ -10,3 +10,8 @@
 .nav-links.open li.has-dropdown.dd-open .nav-dropdown.nav-mega{display:flex;flex-direction:column;width:auto;max-width:none;padding:.4rem 0}
 .nav-links.open>li.has-mega{padding-bottom:0;margin-bottom:0}
 .nav-links.open .nav-dd-title{padding:1rem 2rem .5rem;border-bottom:none;margin:0}
+
+.cta-strip-right{display:flex;flex-direction:column;align-items:flex-end;gap:.8rem;flex-shrink:0}
+.cta-strip-note{font-size:.8rem;color:var(--text-muted);text-align:right;max-width:420px;line-height:1.6}
+.cta-strip-note a{color:var(--gold)}
+@media(max-width:900px){.cta-strip-right{align-items:flex-start;width:100%}.cta-strip-note{text-align:left}}
