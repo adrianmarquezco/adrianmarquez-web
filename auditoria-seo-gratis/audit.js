@@ -1,7 +1,7 @@
 (function () {
   'use strict';
   var PSI_ENDPOINT = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
-  var PSI_KEY = '';
+  var PSI_KEY = 'AIzaSyBepPD766Pp4XcPq2CgHtn85x-huk0x7mQ';
   var FORM_ENDPOINT = 'https://formspree.io/f/mdajdpby';
 
   var $ = function (id) { return document.getElementById(id); };
